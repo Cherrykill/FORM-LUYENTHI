@@ -12,3 +12,8 @@ cau tru trong file question.js phai nhu the nay
     "favorite": false
   },
 ]
+
+CHU Y!!!
+Ban co the tao mot file json khac trong folder data 
+nhung cau truc phai giong nhu tren, sau khi tao xong 
+ban phai chinh lai ten file trong .env vd nhu question.json

@@ -1,0 +1,2236 @@
+[
+  {
+    "question": "An toàn máy tính là gì?",
+    "answers": [
+      "Là tập hợp các công cụ thiết kế để bảo vệ dữ liệu và trống Hacker",
+      "Là bảo vệ máy tính khỏi mất mát dữ liệu",
+      "Là bảo vệ máy tính khỏi Virus",
+      "Là những phần mềm trống Hacker"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "An toàn mạng là gì?",
+    "answers": [
+      "Là tập hợp các công cụ thiết kế để bảo vệ dữ liệu và trống Hacker",
+      "Là các phương tiện bảo vệ mạng khi truyền chúng.",
+      "Là các phương tiện bảo vệ dữ liệu khi truyền chúng trên tập các mạng liên kết với nhau.",
+      "Là những phần mềm trống Hacker"
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "An toàn Internet là gì?",
+    "answers": [
+      "Là các phương tiện bảo vệ dữ liệu khi truyền chúng trên tập các mạng liên kết với nhau.",
+      "Là các phương tiện bảo vệ mạng khi truyền chúng.",
+      "Là tập hợp các công cụ thiết kế để bảo vệ dữ liệu và trống Hacker.",
+      "Là những phần mềm trống Hacker"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Hiểm họa vô tình là gì?",
+    "answers": [
+      "Là khi người dùng khởi động hệ thống ở chế độ đặc quyền, có thể tuỳ ý chỉnh sửa hệ thống. Sau đó không chuyển ng chế độ thông thường, vô tình kẻ xấu lợi dụng.",
+      "Quên không đặt Password.",
+      "Quên không tắt phần máy.",
+      "Vô tình để lộ thông tin."
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Hiểm họa cố ý là gì?",
+    "answers": [
+      "Cố tình gây mất mất dữ liệu.",
+      "Cố tình lấy cắp dữ liệu.",
+      "Cố tình để lộ thông tin.",
+      "Cố tình truy nhập hệ thống trái phép."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Hiểm họa thụ động là gì?",
+    "answers": [
+      "Là việc sửa đổi thông tin, thay đổi tình trạng hoặc hoạt động của hệ thống.",
+      "Cố tình truy nhập hệ thống trái phép.",
+      "Là hiểm họa nhưng chưa hoặc không tác động trực tiếp lên hệ thống.",
+      "Vô tình để lộ thông tin."
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Hiểm họa chủ động là gì?",
+    "answers": [
+      "Cố tình truy nhập hệ thống trái phép.",
+      "Là việc sửa đổi thông tin, thay đổi tình trạng hoặc hoạt động của hệ thống.",
+      "Là hiểm họa nhưng chưa hoặc không tác động trực tiếp lên hệ thống.",
+      "Cố tình để lộ thông tin."
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "Tấn công bị động là?",
+    "answers": [
+      "Là quá trình do thám, theo dõi đường truyền để nhận được nội dung bản tin hoặc theo dõi luồng truyền tin.",
+      "Là thay đổi luồng dữ liệu để: giả mạo một người nào đó, lặp lại bản tin trước, thay đổi bản tin khi truyền, từ chối dịch vụ.",
+      "Là quá trình do thám, theo dõi đường truyền để nhận được nội dung bản tin hoặc theo dõi luồng truyền tin.",
+      "Là một thực thể tấn công giả danh một thực thể khác."
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Tấn công chủ động là?",
+    "answers": [
+      "Là quá trình do thám, theo dõi đường truyền để nhận được nội dung bản tin hoặc theo dõi luồng truyền tin.",
+      "Là thay đổi luồng dữ liệu để: giả mạo một người nào đó, lặp lại bản tin trước, thay đổi bản tin khi truyền, từ chối dịch vụ.",
+      "Là một thực thể tấn công giả danh một thực thể khác.",
+      "Là phương thức tấn công làm cho thông tin được gửi đi nhiều lần, gây ra các tác động tiêu cực."
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "Tấn công giả mạo là?",
+    "answers": [
+      "Là quá trình do thám, theo dõi đường truyền để nhận được nội dung bản tin hoặc theo dõi luồng truyền tin.",
+      "Là thay đổi luồng dữ liệu để: giả mạo một người nào đó, lặp lại bản tin trước, thay đổi bản tin khi truyền, từ chối dịch vụ.",
+      "Là một thực thể tấn công giả danh một thực thể khác.",
+      "Là phương thức tấn công làm cho thông tin được gửi đi nhiều lần, gây ra các tác động tiêu cực."
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Tấn công chuyển tiếp là?",
+    "answers": [
+      "Là một thực thể tấn công giả danh một thực thể khác.",
+      "Là phương thức tấn công làm cho thông tin được gửi đi nhiều lần, gây ra các tác động tiêu cực.",
+      "Là thay đổi luồng dữ liệu để: giả mạo một người nào đó, lặp lại bản tin trước, thay đổi bản tin khi truyền, từ chối dịch vụ.",
+      "Là việc nghe trộm, thu chặn, giả mạo người dùng hợp pháp vượt quyền hoặc lách qua các cơ chế kiểm soát truy cập."
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Tấn công sửa đổi là?",
+    "answers": [
+      "Là phương thức tấn công làm cho thông tin được gửi đi nhiều lần, gây ra các tác động tiêu cực.",
+      "Là hình thức tấn công khiến một thực thể không thực hiện được chức năng của mình gây cản trở cho thực thể khác thực hiện chức năng của nó.",
+      "Là một thực thể tấn công giả danh một thực thể khác.",
+      "Là hình thức tấn công làm nội dung của thông tin bị sửa đổi nhưng không bị phát hiện."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Tấn công từ chối dịch vụ là?",
+    "answers": [
+      "Là phương thức tấn công làm cho thông tin được gửi đi nhiều lần, gây ra các tác động tiêu cực.",
+      "Là một thực thể tấn công giả danh một thực thể khác.",
+      "Là hình thức tấn công khiến một thực thể không thực hiện được chức năng của mình gây cản trở cho thực thể khác thực hiện chức năng của nó.",
+      "Là việc nghe trộm, thu chặn, giả mạo người dùng hợp pháp vượt quyền hoặc lách qua các cơ chế kiểm soát truy cập."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Tấn công từ bên trong hệ thống là?",
+    "answers": [
+      "Là phương thức tấn công làm cho thông tin được gửi đi nhiều lần, gây ra các tác động tiêu cực.",
+      "Là khi người dùng hợp pháp vô tình hoặc cố ý can thiệp hệ thống trái phép.",
+      "Là một thực thể tấn công giả danh một thực thể khác.",
+      "Là việc nghe trộm, thu chặn, giả mạo người dùng hợp pháp vượt quyền hoặc lách qua các cơ chế kiểm soát truy cập."
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "Tấn công từ bên ngoài hệ thống là?",
+    "answers": [
+      "Là hình thức tấn công khiến một thực thể không thực hiện được chức năng của mình gây cản trở cho thực thể khác thực hiện chức năng của nó.",
+      "Là khi người dùng hợp pháp vô tình hoặc cố ý can thiệp hệ thống trái phép.",
+      "Là phương thức tấn công làm cho thông tin được gửi đi nhiều lần, gây ra các tác động tiêu cực.",
+      "Là việc nghe trộm, thu chặn, giả mạo người dùng hợp pháp vượt quyền hoặc lách qua các cơ chế kiểm soát truy cập."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Hãy cho biết kết quả của 8 mod 9 + 7 mod 9",
+    "answers": [
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Hãy cho biết kết quả của 8 mod 9 * 7 mod 9",
+    "answers": [
+      "56",
+      "57",
+      "58",
+      "59"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Hãy cho biết kết quả của 8 mod 9 * 7 mod 9",
+    "answers": [
+      "56",
+      "57",
+      "58",
+      "59"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Hãy cho biết kết quả của 7^2010 mod 13",
+    "answers": [
+      "7",
+      "1",
+      "12",
+      "Tất cả đều i"
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Hãy cho biết kết quả của 7^2010 mod 13",
+    "answers": [
+      "7",
+      "1",
+      "12",
+      "Tất cả đều i"
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Hãy cho biết kết quả của hàm phi Euler(440) là",
+    "answers": [
+      "439",
+      "240",
+      "160",
+      "Tất cả đều i"
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Hãy cho biết kết quả của 32086 mod 440 là",
+    "answers": [
+      "289",
+      "1",
+      "3",
+      "81"
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Cho biết kết quả phép toán u: 2^6 mod 12",
+    "answers": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho biết kết quả phép toán u: 2^6 mod 12",
+    "answers": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho biết kết quả phép toán u: (1234 + 2345) mod 17",
+    "answers": [
+      "9",
+      "8",
+      "7",
+      "6"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho biết kết quả phép toán u: (213 * 345) mod 19",
+    "answers": [
+      "12",
+      "11",
+      "10",
+      "9"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho biết kết quả phép toán u: 5 mod 11 – 9 mod 11",
+    "answers": [
+      "-4",
+      "4",
+      "-3",
+      "-2"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Tìm ra các kết luận i trong các khẳng định u",
+    "answers": [
+      "2^6 mod 1 = 1",
+      "412 mod 2A = 1",
+      "58 mod 2A = 4",
+      "5^6 mod 12 = 1"
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Hàm băm là gì?",
+    "answers": [
+      "Là quá trình biến đầu vào một nội dung có kích thước cố định rồi sử dụng những thuật toán, công thức toán học để biến đầu ra các giá trị kích thước thay đổi. Các giá trị được trả về bởi hàm băm được gọi là giá trị băm.",
+      "Là quá trình biến một dữ liệu đầu vào có độ dài bất kỳ thành một chuỗi đầu ra đặc trưng có độ dài bất kỳ. Hashing được thực hiện thông qua hàm băm (hash function).",
+      "Là các thuật toán dùng để ánh xạ dữ liệu có kích thước cố định thành các giá trị kích thước cố định. Các giá trị được trả về bởi hàm băm được gọi là giá trị băm, giá trị của hàm băm phụ thuộc vào nội dung đầu vào.",
+      "Là các thuật toán dùng để ánh xạ dữ liệu có kích thước tùy ý thành các giá trị kích thước cố định. Các giá trị được trả về bởi hàm băm được gọi là giá trị băm, mã băm, thông điệp băm, hoặc đơn giản là “hash”. Giá trị của hàm băm là duy nhất, và không thể suy ngược lại được nội dung thông điệp từ giá trị băm này."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Hàm băm có những tính chất gì?",
+    "answers": [
+      "Tính xác định. Khó tính toán. Có thể đảo ngược. Có hiệu ứng lan truyền. Chấp nhận mọi kiểu dữ liệu truyền vào.",
+      "Tính xác định. Dễ tính toán, tính được nhanh. Không thể đảo ngược. Chống chịu được những xung đột. Có hiệu ứng lở tuyết. Chấp nhận mọi kiểu dữ liệu truyền vào.",
+      "Không thể đảo ngược. Chống chịu được những xung đột. Có hiệu ứng lở tuyết. Kiểu dữ liệu truyền vào tùy vào thuật toán.",
+      "Tính xác định. Khó tính toán. Có thể đảo ngược. Chống chịu được những xung đột. Có hiệu ứng lan truyền. Chấp nhận mọi kiểu dữ liệu truyền vào."
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "Kích thước đầu vào cuả khối MD4?",
+    "answers": [
+      "64 bit",
+      "128 bit",
+      "512 bit",
+      "1024 bit"
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Kích thước đầu ra của MD4?",
+    "answers": [
+      "32 bit",
+      "64 bit",
+      "128 bit",
+      "512 bit"
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Kích thước đầu vào cuả khối MD5?",
+    "answers": [
+      "32 bit",
+      "64 bit",
+      "128 bit",
+      "512 bit"
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Kích thước đầu ra của MD5?",
+    "answers": [
+      "32 bit",
+      "64 bit",
+      "128 bit",
+      "512 bit"
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Kích thước đầu ra của SHA256?",
+    "answers": [
+      "128 bit",
+      "256 bit",
+      "512 bit",
+      "1024 bit"
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "Kích thước đầu vào cuả khối SHA512?",
+    "answers": [
+      "128 bit",
+      "256 bit",
+      "512 bit",
+      "1024 bit"
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Kích thước đầu ra của SHA512?",
+    "answers": [
+      "128 bit",
+      "256 bit",
+      "512 bit",
+      "1024 bit"
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "MD5 là viết tắt của từ gì?",
+    "answers": [
+      "Manager Digital 5",
+      "Mesge Digest 5",
+      "Mesge Digital 5",
+      "Manager Digest 5"
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "Trong thuật toán MD5 Một bộ đệm có mấy từ? Kích thước của mỗi từ là bao nhiêu bit?",
+    "answers": [
+      "Một bộ đệm có 4 từ ( A, B, C, D), Kích thước mỗi từ là một thanh ghi 32 bit.",
+      "Một bộ đệm có 4 từ ( A, B, C, D), Kích thước mỗi từ là một thanh ghi 64 bit.",
+      "Một bộ đệm có 8 từ ( A, B, C, D, E, F, G, H), Kích thước mỗi từ là một thanh ghi 64 bit.",
+      "Một bộ đệm có 8 từ ( A, B, C, D, E, F, G, H), Kích thước mỗi từ là một thanh ghi 128 bit."
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Trong thuật toán MD5 Quá trình xử lý khối tin có mấy vòng? Mỗi vòng có mấy tác vụ?",
+    "answers": [
+      "4 vòng, mỗi vòng 16 tác vụ",
+      "64 vòng, mỗi vòng 16 tác vụ",
+      "80 vòng, mỗi vòng 32 tác vụ",
+      "4 vòng, mỗi vòng 32 tác vụ"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Những thanh ghi trong MD5 được khởi tạo theo những giá trị hex như thế nào?",
+    "answers": [
+      "A=01234567; B=89abcdef; C=fedcba98; D=76543210",
+      "A=01234567; B=87654321; C=fedcba98; D=76543210",
+      "A=01234567; B= fedcba98; C=89abcdef; D=76543210",
+      "A=76543210; B=89abcdef; C=fedcba98; D=01234567"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Trong công thức h=H(M) thì h, H, M lần lượt là:",
+    "answers": [
+      "H là hash code. h là hash function và M là meege.",
+      "h là hash code có độ dài cố định. H là hash function và M là meege có độ dài thay đổi.",
+      "h là hash code có độ dài thay đổi. H là hash function và M là meege có độ dài cố định.",
+      "H là hash code có độ dài thay đổi. h là hash function và M là meege có độ dài thay đổi."
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "SHA 512 là viết tắt của từ gì?",
+    "answers": [
+      "securitization Hash Algorithm",
+      "securiti Hash Algorithm",
+      "secure Hash Although",
+      "Secure Hash Algorithm"
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Trong thuật toán SHA 512, quá trình xử lý khối tin có mấy vòng? Mỗi vòng sử dụng những gì?",
+    "answers": [
+      "4 vòng. Mỗi vòng sử dụng một hằng số K và 1 khối Mi.",
+      "64 vòng. Mỗi vòng sử dụng một hằng số K, 1 khối Mi và bộ đệm 8 từ (A, B, C, D, E, F, G, H).",
+      "80 vòng. Mỗi vòng sử dụng một hằng số K và khối Mi.",
+      "80 vòng. Mỗi vòng sử dụng một hằng số K, bộ đệm 8 từ (A, B, C, D, E, F, G, H) để lưu trữ các kết quả trung gian và đầu ra, một Qword (w) có kích thước 64 bit được tạo ra từ plain text."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Quá trình bắt tay giao thức TLS v1.3 bao gồm 03 giai đoạn, các giai đoạn nào được mã hóa?",
+    "answers": [
+      "Giai đoạn Key Exchange, Authentication.",
+      "Giai đoạn Server Parameters, Authentication.",
+      "Giai đoạn Key Exchange, Server Parameters.",
+      "Giai đoạn Key Exchange, Server Parameters, Authentication."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "TLS v1.3 là giao thức bảo mật độc lập với ứng dụng qua Internet cho giao thức HTTPS, dữ liệu ứng dụng được trao đổi sau khi thực hiện điều gì?",
+    "answers": [
+      "Bắt tay 03 bước TCP trước khi client có thể bắt đầu nhận dữ liệu.",
+      "Bắt tay giao thức TLS 03 giai đoạn, sau đó là trao đổi dữ liệu thực tế.",
+      "Bắt tay 03 Round-trip time (RTT) kiểm tra dữ liệu đi từ điểm yêu cầu đến điểm kết thúc.",
+      "Bắt tay 01 Round-trip time (RTT) kiểm tra kết nối đã được khởi tạo hay chưa."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Giao thức an toàn nào được thiết kế để hoạt động trên giao thức giao vận UDP?",
+    "answers": [
+      "TLS và SSL.",
+      "TLS.",
+      "SSL.",
+      "DTLS."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Khi sử dụng giao thức Transport Layer Security (TLS v1.3), client kết nối với server với cổng mặc định là bao nhiêu?",
+    "answers": [
+      "Kết nối TCP với server tại cổng 993.",
+      "Kết nối TCP với server tại cổng 636.",
+      "Kết nối TCP với server tại cổng 563.",
+      "Kết nối TCP với server tại cổng 443."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Các khóa mật mã sử dụng trong mã hóa và xác thực thông điệp cho giao thức Transport Layer Security (TLS 1.3) là gì?",
+    "answers": [
+      "Hai khóa mã hóa cho dữ liệu, hai khóa MAC cho dữ liệu (client-to-server, server-to-client).",
+      "Một Khóa MAC cho dữ liệu client-to-server, một khóa mã hóa cho dữ liệu server-to-client.",
+      "Dùng một khóa master secret (MS) cho nhiều hơn một chức năng mật mã.",
+      "Dùng Key Derivation Function (KDF) để tạo khóa phiên cho mỗi lần mã hóa và xác thực."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Trong giao thức Transport Layer Security (TLS 1.3), để chống tấn công trên luồng dữ liệu (re-ordering, replay) sử dụng giải pháp nào?",
+    "answers": [
+      "Sử dụng giao thức giao vận khác thay vì TCP.",
+      "Sử dụng TLS sequence number, sử dụng số nounce (số dùng một lần trong đời).",
+      "Sử dụng MAC cho mỗi bản ghi client-to-server (ngắt luồng trong mỗi bản ghi).",
+      "Sử dụng API mà TLS cung cấp, ứng dụng nào cũng có thể sử dụng."
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "Giao thức Transport Layer Security (TLS v1.3) sử dụng bao nhiêu bộ mật mã (cipher suites)?",
+    "answers": [
+      "Hỗ trợ 37 cipher suites.",
+      "Hỗ trợ 319 cipher suites.",
+      "Hỗ trợ 5 cipher suites.",
+      "Hỗ trợ 32 cipher suites."
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Pretty Good Privacy (PGP) lưu chuỗi khóa công khai gồm những khóa nào?",
+    "answers": [
+      "Tất cả các khóa công khai trên máy chủ khóa PGP.",
+      "Các danh sách khóa công khai được người dùng bình chọn.",
+      "Các khóa công khai từ những cá nhân mà người dùng biết và tin tưởng.",
+      "Các khóa công khai lấy từ bên thứ ba (như các trung tâm xác thực khóa – CA)."
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Nêu ví dụ về sự kết hợp băm (hashing), nén (compression), khóa bí mật (SKC) và khóa công khai (PKC) trong Pretty Good Privacy (PGP)?",
+    "answers": [
+      "SHA hoặc MD5 để băm thông điệp; CAST, Triple-DES hoặc IDEA để mã hóa; R hoặc Diffe-Hellman để trao đổi khóa và chữ ký số.",
+      "HMAC hoặc MAC để băm thông điệp; SHA, IDEA hoặc MD5 để mã hóa; R hoặc Diffe-Hellman để trao đổi khóa và chữ ký số.",
+      "MD2, MD4, MD5 đề băm thông điệp; DES, AES để mã hóa; R hoặc Diffe-Hellman để trao đổi khóa và chữ ký số.",
+      "MD5 để băm thông điệp, RC5 hoặc RC6 để mã hóa; tiêu chuẩn mã hóa công khai (PKCS) để trao đổi khóa và chữ ký số."
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Pretty Good Privacy (PGP) có sẵn như một plug-in cho các ứng dụng nào?",
+    "answers": [
+      "Facebook, Linkedin, Telegram, Tictok,…",
+      "Apple Mail, Gmail, Microsoft Outlook, Proton Mail,…",
+      "Microsoft Office, Libre Office, Open Office, AO Office,…",
+      "Google Chrome, Mozilla Firefox, Safari, Microsoft Edge,…"
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "Kerberos là một sơ đồ xác thực được sử dụng phổ biến trên Internet, nó xác thực theo cách nào?",
+    "answers": [
+      "User-to-User.",
+      "User-to-Server.",
+      "Client-to-Server.",
+      "Host-to-Host."
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Kerberos xác minh tính hợp lệ của người sử dụng trong hệ thống như thế nào?",
+    "answers": [
+      "Người sử dụng cung cấp khóa công khai hợp lệ được Authentication Server xác minh.",
+      "Người sử dụng cung cấp khóa bí mật được cấp riêng khi đăng ký vào Kerberos.",
+      "Người sử dụng cung cấp khóa xác thực nhận từ Key Distribution Center (KDC).",
+      "Người sử dụng cung cấp được khóa phiên TGS và phiếu cấp vé (TGT)."
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Secure Multipurpose Internet Mail Extensions (S/MIME) là gì?",
+    "answers": [
+      "S/MIME là một tiêu chuẩn IETF để sử dụng mã hóa đối xứng và xác thực nội dung e-mail.",
+      "S/MIME là một tiêu chuẩn IETF để sử dụng bổ sung chữ ký số và nhận e-mail an toàn.",
+      "S/MIME là một tiêu chuẩn IETF để sử dụng mã hóa dựa trên khóa công khai và ký e-mail.",
+      "S/MIME là một tiêu chuẩn IETF để sử dụng cho các tin nhắn MINE và PKCS #7 của R."
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Để sử dụng chức năng S/MIME của ứng dụng e-mail client, chúng ta cần điều kiện gì?",
+    "answers": [
+      "Chỉ cần có phần mềm quản lý thư điện tử.",
+      "Không cần điều kiện gì, nó là plug-in có sẵn.",
+      "Phải có chứng chỉ S/MIME.",
+      "Phải có khóa cá nhân và lưu khóa công khai của Mail Server."
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Secure Multipurpose Internet Mail Extensions (S/MIME) được thiết kế để mã hóa theo mô hình nào?",
+    "answers": [
+      "Client-to-Client.",
+      "Server-to-Server.",
+      "Client-to-Server.",
+      "Server-to-Client."
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Trong gửi e-mail an toàn sử dụng mã hóa end-to-end, kiểu mã hóa này nghĩa là gì?",
+    "answers": [
+      "E-mail phải được mã hóa trước khi rời khỏi máy tính người gửi và không thể được giải mã cho đến khi e-mail đến hệ thống của người nhận.",
+      "E-mail phải được mã hóa trước khi rời khỏi máy tính người gửi và được giải mã khi e-mail đến máy chủ thư của người nhận.",
+      "E-mail phải được mã hóa trên máy chủ thư của người gửi và được giải mã khi e-mail đến máy chủ thư của người nhận.",
+      "E-mail phải được mã hóa trước khi rời khỏi máy tính người gửi và được giải mã trên máy chủ thư, sau đó được chuyển đến hệ thống của người nhận."
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Bản rõ là?",
+    "answers": [
+      "Là bản tin gốc",
+      "Là bản tin gốc được mã hóa",
+      "Là thông tin tham số dùng để mã hóa",
+      "Là nghiên cứu các nguyên lý và phương pháp"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Bản mã là?",
+    "answers": [
+      "Là bản tin gốc đã được mã hóa",
+      "Là bản tin gốc",
+      "Là thông tin tham số dùng để mã hóa",
+      "Là nghiên cứu các nguyên lý và phương pháp"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Khóa là?",
+    "answers": [
+      "Là thông tin tham số dùng để mã hóa, chỉ người nhận và người gửi biết",
+      "Là bản tin gốc đã được mã hóa",
+      "Là bản tin gốc",
+      "Là nghiên cứu các nguyên lý và phương pháp"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Giải mã là?",
+    "answers": [
+      "Chuyển bản mã thành bản rõ, đây là quá trình ngược của mã hóa",
+      "Là bản tin gốc đã được mã hóa",
+      "Là bản tin gốc",
+      "Là nghiên cứu các nguyên lý và phương pháp"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mật mã?",
+    "answers": [
+      "Là chuyên ngành khoa học của Khoa học máy tính nghiên cứu về các nguyên lý và phương pháp mã hoá",
+      "Chuyển bản mã thành bản rõ, đây là quá trình ngược của mã hóa",
+      "Là bản tin gốc đã được mã hóa",
+      "Là bản tin gốc"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Kiểu thao tác mã hóa được sử dụng trên bản rõ?",
+    "answers": [
+      "Phép thế, hoán vị, tích",
+      "Khối, dòng",
+      "Cột, dòng",
+      "Phép thế, hoán vị"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Thám mã là gì?",
+    "answers": [
+      "Quá trình tấn công hệ mật mã để tìm bản rõ hoặc khóa bí mật",
+      "Quá trình giải mã",
+      "Quá trình biến đổi thông tin từ dạng không đọc được ng dạng đọc được",
+      "Dò tìm thông tin có ích"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Tiếp cận tấn công mã đối xứng có mấy cách",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "5"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Phương pháp tiếp cận tấn công mã đối xứng là?",
+    "answers": [
+      "Tấn công thám mã và tấn công duyệt toàn bộ",
+      "Tấn công thám mã",
+      "Tấn công duyệt toàn bộ",
+      "Tấn công thám mã và không tấn công duyệt toàn bộ"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Tấn công thám mã dựa vào?",
+    "answers": [
+      "Thuật toán và một số thông tin về các đặc trưng chung về bản rõ hoặc một số mẫu bản rõ/bản mã",
+      "Chuyển bản mã thành bản rõ, đây là quá trình ngược của mã hóa",
+      "Là bản tin gốc đã được mã hóa",
+      "Là bản tin gốc"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Tấn công toàn bộ là gì?",
+    "answers": [
+      "Tìm mọi cách thử tất cả các khóa trên bản mã cho đến khi nhận được bản rõ",
+      "Chuyển bản mã thành bản rõ, đây là quá trình ngược của mã hóa",
+      "Là bản tin gốc đã được mã hóa",
+      "Là bản tin gốc"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Các kiểu tấn công thám mã",
+    "answers": [
+      "Chỉ dùng bản mã, biết bản rõ, chọn bản rõ, chọn bản mã, chọn bản tin",
+      "Chuyển bản mã thành bản rõ, đây là quá trình ngược của mã hóa",
+      "Chọn bản rõ, chọn bản mã, chọn bản tin",
+      "Chỉ dùng bản mã, biết bản rõ, chọn bản tin"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Độ an toàn trong mã đối xứng là?",
+    "answers": [
+      "An toàn không điều kiện, an toàn tính toán",
+      "An toàn không điều kiện, không gồm an toàn tính toán",
+      "An toàn không điều kiện",
+      "An toàn tính toán"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã thay thế cổ điển có mấy loại?",
+    "answers": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Các loại mã thay thế cổ điển là?",
+    "answers": [
+      "Mã thay thế và mã hoán vị",
+      "Mã thay thế",
+      "Mã hoán vị",
+      "Tất cả đều i"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã thay thế là?",
+    "answers": [
+      "Là phương pháp mà từng kí tự (nhóm kí tự) trong bản rõ được thay thế bằng một kí tự (một nhóm kí tự) khác để tạo ra bản mã",
+      "Chỉ dùng bản mã, biết bản rõ, chọn bản rõ, chọn bản mã, chọn bản tin",
+      "Là phương pháp mà từng kí tự (nhóm kí tự) trong bản rõ được thay thế bằng một kí tự (một nhóm kí tự) khác để tạo ra bản rõ",
+      "Là phương pháp mà từng kí tự trong bản rõ được thay thế bằng một nhóm kí tự khác để tạo ra bản mã"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hoán vị là?",
+    "answers": [
+      "Các kí tự trong bản rõ được giữ nguyên, chúng chỉ được sắp xếp lại vị trí để tạo ra bản mã",
+      "Chỉ dùng bản mã, biết bản rõ, chọn bản rõ, chọn bản mã, chọn bản tin",
+      "Là phương pháp mà từng kí tự (nhóm kí tự) trong bản rõ được thay thế bằng một kí tự (một nhóm kí tự) khác để tạo ra bản rõ",
+      "Là phương pháp mà từng kí tự trong bản rõ được thay thế bằng một nhóm kí tự khác để tạo ra bản mã"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã Cear được thực hiện như thế nào?",
+    "answers": [
+      "Thay mỗi chữ trong bản rõ bằng chữ thứ ba tiếp theo trong bảng chữ cái",
+      "Thay mỗi chữ trong bản rõ bằng chữ thứ hai tiếp theo trong bảng chữ cái",
+      "Thay mỗi chữ trong bản rõ bằng chữ thứ tư tiếp theo trong bảng chữ cái",
+      "Thay mỗi chữ trong bản rõ bằng chữ thứ năm tiếp theo trong bảng chữ cái"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Chọn phương án đúng cho mã hóa “chung tay” bằng mã Cear?",
+    "answers": [
+      "FKXQJ WDB",
+      "WDB FKXQJ",
+      "FKXQJWDB",
+      "WDBFKXQJ"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Chọn phương án đúng cho mã hóa “thi” bằng mã Cear?",
+    "answers": [
+      "WKL",
+      "KLW",
+      "LKW",
+      "ZWK"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã Playfair?",
+    "answers": [
+      "Mã bộ các chữ, nghĩa là mỗi chữ sẽ được mã bằng một số chữ khác nhau tùy thuộc vào các chữ mà nó đứng cạnh",
+      "Mã bộ các ảnh, nghĩa là mỗi chữ sẽ được mã bằng một số chữ khác nhau tùy thuộc vào các chữ mà nó đứng cạnh",
+      "Mã bộ các chữ, nghĩa là mỗi chữ sẽ không được mã bằng một số chữ khác nhau tùy thuộc vào các chữ mà nó đứng cạnh",
+      "Không có đáp án đúng"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Ma trận Playfair là?",
+    "answers": [
+      "Ma trận cỡ 5 x 5",
+      "Ma trận cỡ 3 x 3",
+      "Ma trận cỡ 4 x 4",
+      "Ma trận cỡ 16 x 4"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Mã Playfair là?",
+    "answers": [
+      "là một hệ mã hóa nhiều chữ, giảm bớt tương quan giữa văn bản mã hóa và nguyên bản bằng cách mã hóa đồng thời nhiều chữ cái của nguyên bản",
+      "là một hệ mã hóa nhiều chữ, tăng sự tương quan giữa văn bản mã hóa và nguyên bản bằng cách mã hóa đồng thời nhiều chữ cái của nguyên bản",
+      "là một hệ mã hóa nhiều chữ, tăng sự tương quan giữa văn bản mã hóa và nguyên bản bằng cách mã hóa đồng thời xóa chữ cái của nguyên bản",
+      "Tất cả đều đúng"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Cho bản rõ NUOC, khóa k là IT. Khi mã hóa bản rõ với khóa k theo hệ mã Vigenere ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "VNWV",
+      "NVVW",
+      "MVNV",
+      "VWNV"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Cho bản mã ICVM, khóa k là GO. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "copy",
+      "page",
+      "pase",
+      "cont"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Cho bản mã RXVA, khóa k là KP. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "Hill",
+      "bill",
+      "sice",
+      "viet"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Cho bản mã JZOP, khóa k là CL. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "home",
+      "move",
+      "mail",
+      "name"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Cho bản mã PMGQ, khóa k là AM. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "page",
+      "ge",
+      "seft",
+      "stef"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Cho bản mã AGTA, khóa k là AM. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "auto",
+      "into",
+      "atin",
+      "tobe"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Cho bản mã OEUH, khóa k là HE. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "hand",
+      "hend",
+      "band",
+      "name"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Cho bản mã AKIGZ, khóa k là PC. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "litek",
+      "lytek",
+      "litte",
+      "liner"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Cho bản mã URV, khóa k là IN. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "men",
+      "nam",
+      "kem",
+      "sem"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Cho bản mã TEBBC, khóa k là MEM. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "happy",
+      "micky",
+      "lucky",
+      "nbi"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Cho bản mã IESC, khóa k là BE. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "hary",
+      "hapy",
+      "kaki",
+      "jupi"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Hacker cố gắng tấn công một máy chủ qua internet được gọi là loại tấn công ?",
+    "answers": [
+      "Tấn công từ xa",
+      "Tấn công nội bộ",
+      "Tấn công truy cập vật lý",
+      "Tấn công truy cập địa phương"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Kỹ thuật tấn công phổ biến trên web là?",
+    "answers": [
+      "Chèn câu truy vấn SQL",
+      "Chiếm hữu phiên làm việc",
+      "Tràn bộ đệm",
+      "Tấn công từ chối dịch vụ"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Chiều dài tối thiểu của mật khẩu cần phải là",
+    "answers": [
+      "8 ký tự",
+      "3->5 ký tự",
+      "12->15 ký tự",
+      "16 ký tự"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Mật khẩu an toàn phải bao gồm",
+    "answers": [
+      "Ký tự hoa, ký tự thường, chữ số, ký tự đặc biệt",
+      "Ký tự thường, hoa, số",
+      "Ký tự đặc biệt, ký tự hoa, ký tự số",
+      "Phương án khác"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Một user báo cáo là anh ta đang nhận một lỗi chỉ ra rằng địa chỉ TCP/IP của anh ta đã bị sử dụng khi anh ta bật máy tính. Tấn công nào có thể đang thực hiện ?",
+    "answers": [
+      "TCP/IP hijacking",
+      "Tấn công dạng Man in the middle",
+      "Tấn công cửa hậu",
+      "Sâu"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "IPSec là",
+    "answers": [
+      "Là cơ chế an toàn IP tổng quan được dùng trên mạng LAN, WAN, Internet",
+      "Là cơ chế an toàn cho địa chỉ IP sử dụng trên mạng Internet",
+      "Là cơ chế an toàn cho địa chỉ IP sử dụng trên mạng LAN",
+      "Không có đáp án đúng"
+    ],
+    "correct_answer": 0,
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 101,
+    "question": "Cơ chế an toàn IP tổng quan – IPSec cung cấp chức năng gì",
+    "answers": [
+      "Xác thực, Bảo mật, Quản trị khóa",
+      "Xác thực",
+      "Bảo mật",
+      "Bảo mật, Quản trị khóa"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 102,
+    "question": "IPSec nằm ở tầng nào trong mô hình OSI",
+    "answers": [
+      "Mạng",
+      "Vật lý",
+      "Ứng dụng",
+      "Vận chuyển"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 103,
+    "question": "Lợi ích của IPSec là",
+    "answers": [
+      "Nó không cho phép đi vòng qua Tường lửa và Router",
+      "Nó cho phép việc đi vòng qua Tường lửa và Router",
+      "Nó không cho phép đi vòng qua Tường lửa",
+      "Nó cho phép đi qua Router và đi vòng qua Tường lửa"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 104,
+    "question": "Dịch vụ IPSec không cung cấp chức năng nào dưới đây:",
+    "answers": [
+      "Cho phép tải lại gói tin",
+      "Kiểm soát truy cập",
+      "Xác thực nguồn gốc dữ liệu",
+      "Bảo mật luồng vận chuyển có giới hạn"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 105,
+    "question": "AH - Phần đầu xác thực là viết tắt của:",
+    "answers": [
+      "Authentication Header",
+      "Auto Header",
+      "Authentic Header",
+      "Authentic Head"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 106,
+    "question": "ESP – Tải trọng an toàn đóng gói là viết tắt của:",
+    "answers": [
+      "Encapsulating Security Payload",
+      "Encapsulate Security Pay",
+      "Exception Security Payload",
+      "Encapsulated security payload"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 107,
+    "question": "Cho hệ mật mã khóa công khai R, khóa công khai là K1=(n, e), khóa bí mật là K2={p, q, d}, với n=p*q, p, q là số nguyên tố. Khi đó số trường hợp bị lộ bản rõ là",
+    "answers": [
+      "S=(1+UCLN(p-1, e-1))*(1+UCLN(d-1, q-1))",
+      "S=(1+UCLN(p, e))*(1+UCLN(d-1, q-1))",
+      "S=(1+UCLN(p-1, e-1))*(1+UCLN(d-1, q-1))",
+      "S=(1+UCLN(p, e))*(1+UCLN(d-1, q-1))"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 108,
+    "question": "Tìm đáp án đúng về chế độ vận chuyển ESP:",
+    "answers": [
+      "Dữ liệu được mã hóa hoàn toàn",
+      "Có thể phân tích vận chuyển một cách hiệu quả",
+      "Tốt đối với ESP máy chủ vận chuyển tới máy chủ",
+      "Dữ liệu được bảo vệ nhưng phần đầu vẫn để rõ để biết địa chỉ đích"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 109,
+    "question": "Oakley là thủ tục gì:",
+    "answers": [
+      "Trao đổi khóa",
+      "Liên kết an toàn",
+      "Quản trị khóa",
+      "Tất cả đều đúng"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 110,
+    "question": "IKMP là thủ tục gì:",
+    "answers": [
+      "Liên kết an toàn trên mạng và quản trị khóa",
+      "Trao đổi khóa",
+      "Quản trị khóa",
+      "Liên kết an toàn trên mạng"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 111,
+    "question": "Kiểu nào không phải là kiểu trao đổi mẫu tin IKMP:",
+    "answers": [
+      "Mã hóa",
+      "Cơ sở",
+      "Bảo vệ định danh và xác thực",
+      "Tích cực"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 112,
+    "question": "Mã hóa R. Cho p, q là số nguyên tố lớn. Hàm Phi(n)=(p-1)*(q-1), e là số mũ được chọn để mã hóa. Số e được chọn như thế nào?",
+    "answers": [
+      "Chọn e sao cho : 1<e< Phi(n), e và Phi(n) là 2 số nguyên tố cùng nhau",
+      "Chọn e sao cho : 1<e< n, e và n là 2 số nguyên tố cùng nhau",
+      "Chọn e sao cho : 1<e< p, e và n là 2 số nguyên tố cùng nhau",
+      "Chọn e sao cho : 1<e< q, e và n là 2 số nguyên tố cùng nhau"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 113,
+    "question": "Quá trình tạo khóa của hệ mật mã R như sau:\n- Chọn p, q là hai số nguyên tố lớn\n- Tính n=p*q, Phi(n)=(p-1)*(q-1)\n- Chọn e sao cho : 1<e< Phi(n), e và Phi(n) là 2 số nguyên tố cùng nhau\n- Tính d=e^(-1) mod Phi(n)\nKhóa bí mật của hệ mật mã này là gì?",
+    "answers": [
+      "K={p, q, d}",
+      "K={Phi(n), p, q}",
+      "K={p, q, n}",
+      "K={p, q, e}"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 114,
+    "question": "Quá trình tạo khóa của hệ mật mã R như sau:\n- Chọn p, q là hai số nguyên tố lớn\n- Tính n=p*q, Phi(n)=(p-1)*(q-1)\n- Chọn e sao cho : 1<e< Phi(n), e và Phi(n) là 2 số nguyên tố cùng nhau\n- Tính d=e^(-1) mod Phi(n)\nĐể hệ mật mã trên an toàn cần phải giữ bí mật thành phần nào?",
+    "answers": [
+      "p, q, d",
+      "d",
+      "p, q",
+      "Phi(n), p, q"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "id": 115,
+    "question": "Hệ mật mã R:\n- Chọn p, q là hai số nguyên tố lớn\n- Tính n=p*q, Phi(n)=(p-1)*(q-1)\n- Chọn e sao cho : 1<e< Phi(n), e và Phi(n) là 2 số nguyên tố cùng nhau\nHỏi để mã hóa bản rõ x cần sử dụng hàm nào dưới đây?",
+    "answers": [
+      "Ek(x)=x^e mod n",
+      "Ek(x)=x^e mod Phi(n)",
+      "Ek(x)=e^(-1) mod Phi(n)",
+      "Ek(x)=x^(-1) mod Phi(n)"
+    ],
+    "favorite": false,
+    "correct": "A"
+  },
+  {
+    "question": "Một bảng băm MD5 thường được diễn tả bằng một số hệ thập lục phân gồm bao nhiêu ký tự?",
+    "answers": [
+      "32",
+      "16.",
+      "64",
+      "128"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Một thao tác MD5—MD5 bao gồm bao nhiêu tác vụ?",
+    "answers": [
+      "64",
+      "16.",
+      "256",
+      "128"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Quá trình xử lý khối tin trong MD5 gồm bao nhiêu giai đoạn giống nhau?",
+    "answers": [
+      "4",
+      "16.",
+      "8",
+      "2"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Quá trình thực hiện xử lý của 4 hàm F, G, H, I trong MD5 ?",
+    "answers": [
+      "32",
+      "16.",
+      "64",
+      "128"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Năm thuật toán SHA là ?",
+    "answers": [
+      "SHA-1, SHA-224 . SHA-256, SHA- 384, SHA-512",
+      "SHA-1, SHA-225 . SHA-256, SHA- 384, SHA-512",
+      "SHA-1, SHA-128 . SHA-256, SHA- 384, SHA-512",
+      "SHA-1, SHA-64 . SHA-256, SHA- 384, SHA-512"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "SHA-1 trả lại kết quả dài bao nhiêu bit?",
+    "answers": [
+      "160 bit",
+      "512 bit",
+      "64 bit",
+      "128 bit"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "SHA-224 trả lại kết quả dài bao nhiêu bit?",
+    "answers": [
+      "224 bit",
+      "160 bit",
+      "640 bit",
+      "128 bit"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "SHA-256 trả lại kết quả dài bao nhiêu bit?",
+    "answers": [
+      "256 bit",
+      "128 bit",
+      "64 bit",
+      "224 bit"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "SHA-384 trả lại kết quả dài bao nhiêu bit?",
+    "answers": [
+      "384 bit",
+      "256 bit",
+      "224 bit",
+      "128 bit"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Thuật toán SHA là thuật giải băm mật được phát triển bởi?",
+    "answers": [
+      "Cục an ninh quốc gia Mĩ",
+      "Cục an ninh Microsoft",
+      "BKAV",
+      "Kpersky"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "SHA-512 trả lại kết quả dài bao nhiêu bit?",
+    "answers": [
+      "512",
+      "256",
+      "128",
+      "128"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "SHA-1 được sử dụng rộng rãi trong nhiều ứng dụng và giao thức an ninh nào?",
+    "answers": [
+      "TLS và SSL, PGP, SSH, S/MIME, IPSec",
+      "SSL, PGP, SSH, MIME, IPSec",
+      "TLS, PGP, SSH, S, IPSec",
+      "PGP, SSH, S/MIME, IPSec"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Bảng chữ cái được sử dụng trong hệ mã hóa Veginere là?",
+    "answers": [
+      "26^m cách chọn khóa",
+      "312 cách chọn khóa",
+      "26 !cách chọn khóa",
+      "m !cách chọn khóa"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản rõ text, khóa k = 9. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "CNGC",
+      "RHJV",
+      "RHIE",
+      "RPOQ"
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản rõ AMO, khóa k = 22. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "WIK",
+      "XNC",
+      "XNK",
+      "CNN"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản rõ FE, khóa k = 18. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "HSKK",
+      "KISJ",
+      "KOIK",
+      "KSXL"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản rõ KITY, khóa k = 19. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "DBMR",
+      "DBMI",
+      "DBNI",
+      "DBMO"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản rõ LOVE, khóa k = 12. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "XAHQ",
+      "VHJJ",
+      "VJKH",
+      "VHKL"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản rõ EAR, khóa k = 17. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "VRI",
+      "VGJ",
+      "VRT",
+      "VRE"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản rõ THI, khóa k = 13. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "GUV",
+      "OVB",
+      "OBJ",
+      "ONK"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản rõ BAOMAT, khóa k=18. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "EDRPDW",
+      "VSFWEV",
+      "VBWCQS",
+      "BWQADX"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản rõ LATE, khóa k=16. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "BQJU",
+      "BQRT",
+      "BQTY",
+      "BQRY"
+    ],
+    "correct": "D",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản mã SBWKRQ, khóa k. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "PYTHON",
+      "LTJAVA",
+      "LTOOP",
+      "SCRIPT"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản mã XJHZYJ, khóa k=5. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "secute",
+      "secuto",
+      "sectyy",
+      "sectrg"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản mã cykpi, khóa k=2. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "awing",
+      "mists",
+      "teste",
+      "misrv"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản mã QNUY, khóa k=9. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "HELP",
+      "LATIN",
+      "HAVE",
+      "HOST"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản mã AUB, khóa k=7. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "tnu",
+      "tne",
+      "tni",
+      "tnk"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản mã DVEL, khóa k=17. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "menu",
+      "meno",
+      "momo",
+      "memo"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản mã WBQZIRS, khóa k=14. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "INCLUDE",
+      "INLINES",
+      "HAVEYOU",
+      "INSWING"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(1,4,2,3,5). Khi mã hóa bản rõ INFOR theo hoán vị ta sẽ thu được bản mã nào?",
+    "answers": [
+      "IONFR",
+      "NORFI",
+      "FRONI",
+      "RONFI"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "HA(31): Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (3, 2, 4, 1, 5). Khi mã hóa bản rõ PLAIN theo mã hoán vị, ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "NLIPA",
+      "NIJKB",
+      "NLIPD",
+      "NKLJG"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(1,3,4,2,?). Khi mã hóa bản rõ SOME theo hoán vị ta sẽ thu được bản mã nào?",
+    "answers": [
+      "SMEO",
+      "SNAP",
+      "SMAO",
+      "SMEU"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "HA(33): Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (2, 4, 1, 3, 5). Khi mã hóa bản rõ PLAIN theo mã hoán vị, ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "NLIPA",
+      "NLIOJ",
+      "NLOPA",
+      "NLPOJ"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "HA(34): Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (1, 3, 4, 5, 2). Khi mã hóa bản rõ CLOCK theo mã hoán vị, ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "COCKL",
+      "COCKH",
+      "COCKF",
+      "COCKJ"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(4,2,1,3,?). Khi mã hóa bản rõ WIND theo hoán vị ta sẽ thu được bản mã nào?",
+    "answers": [
+      "DIWN",
+      "DIWH",
+      "DIWE",
+      "DIWI"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(?,1,3,4,2). Khi mã hóa bản rõ PASCA theo hoán vị ta sẽ thu được bản mã nào?",
+    "answers": [
+      "APSCA",
+      "APDCA",
+      "APDXE",
+      "APC"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4)→(1,3,4,2). Khi mã hóa bản rõ EART theo hoán vị ta sẽ thu được bản mã nào?",
+    "answers": [
+      "ERTA",
+      "THJG",
+      "ERAH",
+      "ERGA"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(?,2,1,4,3). Khi mã hóa bản rõ KALVI theo hoán vị ta sẽ thu được bản mã nào?",
+    "answers": [
+      "IAKVL",
+      "FJHFK",
+      "FHJKH"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(3,1,4,2,5). Khi mã hóa bản rõ JUSTS theo hoán vị ta sẽ thu được bản mã nào?",
+    "answers": [
+      "SJTUS",
+      "GJHJH",
+      "GSHDG",
+      "GTHDD"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(3,1,2,4). Khi mã hóa bản rõ HAIHA theo hoán vị ta sẽ thu được bản mã nào?",
+    "answers": [
+      "AIHAH",
+      "FJJGJ",
+      "FJHHU",
+      "FHGJG"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4) là (4, 2, 1, 3). Khi mã hóa bản rõ FIST theo mã hoán vị ta sẽ thu được bản mã nào dưới đây?",
+    "answers": [
+      "TIFS",
+      "GJHJ",
+      "BHGS",
+      "JKHK"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (3, 2, 4, 5, 1). Khi giải mã bản mã LIKSM theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "milks",
+      "millkf",
+      "milkh",
+      "millk"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (4, 1, 5, 3, 2). Khi giải mã bản mã LSLIT theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "still",
+      "stell",
+      "stoll",
+      "stall"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản mã XZEL, khóa k = (19, 3). Khi giải mã bản mã với khóa k theo hệ mã Affine ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "milk",
+      "since",
+      "kills",
+      "bines"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (1, 3, 2, 4, 5). Khi giải mã bản mã EEVRY theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "every",
+      "evrfj",
+      "everr",
+      "enfgd"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (1, 3, 2, 4, 5). Khi giải mã bản mã FURIT theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "fruit",
+      "frajt",
+      "friat",
+      "frakh"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (3, 5, 4, 2, 1). Khi giải mã bản mã SECDO theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "codes",
+      "coeds",
+      "cojhf",
+      "codek"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (4, 2, 5, 3, 1). Khi giải mã bản mã CIENS theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "since",
+      "sincr",
+      "sinkf",
+      "sincg"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (1, 3, 4, 5, 2). Khi giải mã bản mã HYAPP theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "happy",
+      "happk",
+      "haohj",
+      "hfjgj"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (2, 4, 1, 5, 3). Khi giải mã bản mã IGSUT theo mã hoán vị, ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "guits",
+      "guist",
+      "giuts",
+      "suigt"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (1, 3, 2, 5, 4). Khi giải mã bản mã JSUIT theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "justi",
+      "fsdgf",
+      "ghjgg",
+      "gsgsf"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (3, 5, 4, 1, 2). Khi giải mã bản mã ESMNI theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "mines",
+      "fsggs",
+      "mhuj",
+      "hjjhg"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Tấn công từ chối dịch vụ là gì?",
+    "answers": [
+      "Tấn công từ chối dịch vụ là một loại hình tấn công nhằm ngăn chặn những người dùng hợp lệ được sử dụng một dịch vụ đó.",
+      "Là hình thức tấn công nhằm chiếm đoạt các thông tin có giá trị",
+      "Là hình thức tấn công chiếm quyền điều khiển",
+      "Là hình thức tấn công vào cơ sở dữ liệu"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cho bản mã CODE, khóa k = 7. Khi giải mã bản mã với khóa k theo Caesar ta sẽ thu được bản rõ nào dưới đây?",
+    "answers": [
+      "JVKL",
+      "TNEO",
+      "PMGD",
+      "DWQA"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Các cuộc tấn công từ chối dịch vụ thường nhằm vào các thiết bị nào?",
+    "answers": [
+      "Các thiết bị định tuyến, web, thư điện tử và hệ thống DNS.",
+      "Chỉ có thể tấn công vào web server",
+      "Chỉ có thể tấn công vào các thiết bị định tuyến",
+      "Chỉ có thể tấn công vào DNS server"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Phòng chống tấn công Tấn công từ chối dịch vụ phân bố (DDoS)",
+    "answers": [
+      "Có thể hạn chế trong bước bằng cách lập trình",
+      "Chỉ có thể dùng tường lửa",
+      "Hiện nay đã có cách phòng chống hiệu quả",
+      "Cách hiệu quả duy nhất là lưu trữ và phục hồi (backup và restore)"
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Backdoor (cửa hậu)",
+    "answers": [
+      "Là một điểm vào chương trình bí mật",
+      "Là một lỗi hỏng trong kiến trúc phần cứng",
+      "Đáp án khác",
+      "Là một tiện ích của chương trình"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Trong IP header gồm những thành phần nào?",
+    "answers": [
+      "IP nguồn, IP đích của gói tin",
+      "IP nguồn của gói tin",
+      "IP đích của gói tin",
+      "Thông số port của gói tin"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Một IP flood theo các host phát tán trực tiếp đến một Web server là một ví dụ của loại tấn công gì?",
+    "answers": [
+      "DoS phân tán (DDoS)",
+      "Sâu",
+      "Tấn công IP",
+      "Trojan Horse"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Loại virus nào biết tự thay đổi hình thức của nó, gây ra sự khó khăn cho các chương trình chống virus?",
+    "answers": [
+      "Polymorphic virus",
+      "Retrovirus",
+      "Sâu",
+      "Armored virus"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Sâu máy tính (worm) là gì?",
+    "answers": [
+      "Là các chương trình có khả năng tự nhân bản, tự tìm cách lan truyền qua hệ thống mạng với mục đích làm giảm khả năng hoạt động hay hủy hoại các hệ thống mạng.",
+      "Là 1 loại trojan",
+      "Là 1 Phần mềm",
+      "Đáp án khác"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Trojan Horse có thể nhân bản giống virus được không?",
+    "answers": [
+      "Không thể",
+      "Có thể",
+      "Tùy thuộc vào từng loại trojan horse",
+      "Tất cả đều đúng"
+    ],
+    "correct": "B",
+    "favorite": false
+  },
+  {
+    "question": "Botnet là gì?",
+    "answers": [
+      "Là những máy tính bị điều khiển bởi người khác thông qua trojan, virus",
+      "Là một hệ thống phòng chống tấn công từ chối dịch vụ",
+      "Là tên của một loại virus",
+      "Là tên của một loại trojan horse"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Keylogger là gì?",
+    "answers": [
+      "Là loại phần mềm cho phép ghi lại các thao tác trên màn hình, bàn phím, chuột, các thiết bị nhập liệu",
+      "Là loại phần mềm chống virus",
+      "Là loại chương trình phá hoại bàn phím máy tính",
+      "Là một công cụ nghe lén trên đường truyền"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mục đích của việc tạo ra botnet là gì?",
+    "answers": [
+      "Hacker sử dụng mạng botnet tấn công DDoS tới đích nào đó",
+      "Hacker sử dụng mạng botnet tấn công DoS tới đích nào đó",
+      "Hacker sử dụng mạng botnet để tấn công vào các máy đã bị lây nhiễm lấy ra thông tin có giá trị",
+      "Tất cả đều sai"
+    ],
+    "correct": "C",
+    "favorite": false
+  },
+  {
+    "question": "Chọn phương án đúng cho mã hóa “chung tay” bằng mã Ceasar?",
+    "answers": [
+      "FKXQJ WDB",
+      "WDB FKXQJ",
+      "FKXQJWDB",
+      "WDBFKXQJ"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Chọn kết quả đúng : 1 mod 160=7 ?",
+    "answers": [
+      "23",
+      "12",
+      "21",
+      "15"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Chọn kết quả đúng : 1 mod 129=6?",
+    "answers": [
+      "5",
+      "8",
+      "6",
+      "4"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Chọn kết quả đúng : 1 mod 224=5?",
+    "answers": [
+      "45",
+      "30",
+      "12",
+      "32"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "1 mod 83=12?",
+    "answers": [
+      "7",
+      "6",
+      "9",
+      "5"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "1 mod 161=18?",
+    "answers": [
+      "9",
+      "6",
+      "9",
+      "5"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "326 mod 23?",
+    "answers": [
+      "3",
+      "7",
+      "1",
+      "5"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "6416 mod 161?",
+    "answers": [
+      "141",
+      "121",
+      "123",
+      "112"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "36 mod 9 ?",
+    "answers": [
+      "0",
+      "4",
+      "7",
+      "2"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "123 mod 161 ?",
+    "answers": [
+      "118",
+      "116",
+      "4 9",
+      "35"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "(97 mod 7) + (82 mod 5)?",
+    "answers": [
+      "3",
+      "6",
+      "1",
+      "4"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "(86 mod 5) + (63 mod 3)?",
+    "answers": [
+      "4",
+      "6",
+      "7",
+      "9"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "(91 mod 161) + (25 mod 8) ?",
+    "answers": [
+      "0",
+      "6",
+      "9",
+      "5"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "(38 mod 6)+1?",
+    "answers": [
+      "3",
+      "5",
+      "7",
+      "1"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "(72 mod 5) + (126 mod 7)?",
+    "answers": [
+      "3",
+      "7",
+      "9",
+      "0"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Ứng dụng nổi tiếng nhất của SHA là gì?",
+    "answers": [
+      "Hệ thống Tiền tệ Bitcoin",
+      "Hệ thống giao dịch tiền tệ phân tán",
+      "Hệ thống ngân hàng",
+      "Hệ thống giám sát an ninh"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mã SHA-256 để xác thực các giao dịch và lưu trữ dạng gì?",
+    "answers": [
+      "Lưu trữ dạng chuỗi các sự kiện lịch sử theo thời gian được liên kết với nhau bởi các mã xác thực BlockChain",
+      "Lưu trữ các ký tự và kiểu số",
+      "Lưu trữ các mã xác thực",
+      "Lưu trữ các dãy số bit"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Mục đích chính của mã MD5 chủ yếu là gì?",
+    "answers": [
+      "Dùng kiểm tra tính toàn vẹn của một tập tin và cũng được dùng để kiểm tra về bảo mật của tập tin.",
+      "Dùng kiểm bảo toàn vẹn của một tập tin",
+      "Dùng để bảo mật của tập tin.",
+      "Dùng để kiểm tra về bảo mật của tập tin."
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "MD5 hoạt động khi bạn tải xuống một tập tin trên một máy chủ nó sẽ?",
+    "answers": [
+      "Được máy chủ đó tạo ra một checksum MD5 của tập để bạn có thể so sánh với checksum MD5 đã tải về",
+      "So sánh MD5 để kiểm tra xem tập tin có toàn vẹn không",
+      "Gặp lỗi gì bên trong tập tin hay nó có phải là tập tin gốc từ nhà cung cấp",
+      "Kiểm tra tính toàn vẹn"
+    ],
+    "correct": "A",
+    "favorite": false
+  },
+  {
+    "question": "Cách kiểm tra mã MD5 là gì?",
+    "answers": [
+      "Kiểm tra bằng phần mềm dựa trên nền tảng hệ điều hành",
+      "Những hệ điều hành dựa trên nền tảng Unix",
+      "Kiểm tra trực tuyến thông qua các trang web miễn phí",
+      "Người dùng Windows sử dụng ứng dụng của hãng thứ ba"
+    ],
+    "correct": "A",
+    "favorite": false
+  }
+]
