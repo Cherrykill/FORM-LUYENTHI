@@ -143,23 +143,40 @@ function startQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
         return;
     }
 
+    if(shuffleQuestions==false && shuffleAnswers==false && showAnswers==false) {
+    document.getElementById("mode-label").innerText = "Bình thường";
+    }
+    if(shuffleQuestions==true && shuffleAnswers==true && showAnswers==false) {
+    document.getElementById("mode-label").innerText = "Trộn câu hỏi và đáp án";
+    }
+    if(shuffleQuestions==false && shuffleAnswers==true && showAnswers==false) {
+    document.getElementById("mode-label").innerText = "Trộn đáp án";
+    }
+    if(shuffleQuestions==false && shuffleAnswers==true && showAnswers==true) {
+    document.getElementById("mode-label").innerText = "Hiển thị đáp án";
+    }
+
     showAnswerMode = showAnswers;
 
     if (shuffleQuestions) {
         questions = questions.sort(() => Math.random() - 0.5);
+
     }
 
     if (shuffleAnswers) {
+
         questions.forEach(q => {
             const correctIndex = getCorrectIndex(q.correct);
             const correctAnswer = q.answers[correctIndex];
             q.answers = q.answers.sort(() => Math.random() - 0.5);
             q.correct = String.fromCharCode(q.answers.indexOf(correctAnswer) + 65);
         });
+
     }
 
     selectedAnswers = new Array(questions.length).fill(null);
     currentQuestionIndex = 0;
+
 
     // Xử lý thời gian giới hạn
     const timeLimitMinutes = parseInt(document.getElementById("time-limit-select").value);
