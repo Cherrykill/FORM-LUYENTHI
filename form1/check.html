@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kiểm tra kết quả</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/check.css" />
+    
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body class="dark-mode">
+    <!-- Nút cuộn lên/xuống -->
+    <div class="scroll-btn-container">
+      <button id="scrollUpBtn" class="scroll-btn">▲</button>
+      <button id="scrollDownBtn" class="scroll-btn">▼</button>
+    </div>
+
+    <!-- Tiêu đề -->
+    <h1>Kiểm tra đáp án bạn đã chọn</h1>
+
+    <!-- Bộ lọc -->
+    <div id="filterContainer">
+      <label>
+        Lọc kết quả:
+        <select id="filterSelect">
+          <option value="all">-- Tất cả --</option>
+          <option value="notAnswered">Chưa chọn đáp án</option>
+          <option value="wrongA">Chọn sai A</option>
+          <option value="wrongB">Chọn sai B</option>
+          <option value="wrongC">Chọn sai C</option>
+          <option value="wrongD">Chọn sai D</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Điều khiển -->
+    <input type="file" id="answerFile" accept=".xlsx" />
+    <button class="btn" id="toggleDarkModeBtn">Chế độ sáng</button>
+    <button class="btn" id="checkBtn">So sánh kết quả</button>
+    <button class="btn" onclick="resetAnswers()">Làm lại bài</button>
+    <button class="btn" id="showPopupBtn">Xem điểm chi tiết</button>
+
+    <!-- Kết quả -->
+    <div id="result"></div>
+    <div id="chartContainer"><canvas id="chartCanvas"></canvas></div>
+    <div id="levelText"></div>
+
+    <!-- Popup thống kê chi tiết -->
+    <div id="detailedModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <canvas id="detailedChartCanvas" width="400" height="400"></canvas>
+        <p id="score10Text"></p>
+      </div>
+    </div>
+
+    <!-- Script xử lý -->
+    <script src="./js/check.js"></script>
+  </body>
+</html>

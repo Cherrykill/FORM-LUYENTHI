@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Toàn bộ nội dung chính -->
+    <div class="container">
+      <!-- Sidebar bên trái: danh sách câu hỏi + Auto Next + Nộp bài -->
+      <div class="sidebar">
+        <h3>Questions</h3>
+        <div class="question-boxes" id="question-list"></div>
+
+        <div class="sidebar-bottom">
+          <div class="auto-next">
+            <label for="sidebar-auto-next">Auto Next:</label>
+            <select id="sidebar-auto-next">
+              <option value="0">Off</option>
+              <option value="1000">1s</option>
+              <option value="2000">2s</option>
+              <option value="5000">5s</option>
+            </select>
+          </div>
+        </div>
+
+        <button onclick="handleSubmit()" class="submit-btn">Nộp bài</button>
+      </div>
+
+      <!-- Phần chính giữa: hiển thị câu hỏi và lựa chọn -->
+      <div class="main-content">
+        <div class="quiz-container">
+          <div class="question" id="question-text"></div>
+          <div class="options" id="options"></div>
+          <div class="navigation">
+            <button onclick="prevQuestion()">Previous</button>
+            <button onclick="nextQuestion()">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bảng bên phải: thông tin thời gian + điều hướng đến admin -->
+      <div class="right-panel">
+        <h3>Thời gian còn lại:</h3>
+        <p id="countdown">--:--</p>
+        <br />
+        <h3>Thông tin</h3>
+        <p>Chế độ: <span id="mode-label">Bình thường</span></p>
+        <p>Thời gian: <span id="time-info">Không giới hạn</span></p>
+
+        <button
+          class="admin-btn"
+          onclick="window.location.href='./admin/admin.html'"
+          title="Chuyển đến trang Quản lý"
+        >
+          ⚙️ Quan lý Câu hỏi
+        </button>
+      </div>
+    </div>
+
+    <!-- Nút đổi giao diện Light/Dark -->
+    <div class="toggle-theme">
+      <button onclick="toggleTheme()">Toggle Dark/Light</button>
+    </div>
+
+    <!-- Popup: Chọn chế độ làm bài -->
+    <div class="popup-overlay" id="settings-popup">
+      <div class="popup">
+        <h2>Select Quiz Mode</h2>
+
+        <div class="time-limit">
+          <label for="time-limit-select">Thời gian làm bài:</label>
+          <select id="time-limit-select">
+            <option value="0">Không giới hạn</option>
+            <option value="15">15 phút</option>
+            <option value="30">30 phút</option>
+            <option value="60">60 phút</option>
+          </select>
+        </div>
+
+        <div class="auto-next">
+          <label for="popup-auto-next">Auto Next:</label>
+          <select id="popup-auto-next">
+            <option value="0">Off</option>
+            <option value="1000">1s</option>
+            <option value="2000">2s</option>
+            <option value="5000">5s</option>
+          </select>
+        </div>
+
+        <button id="btn-mode-1" onclick="startQuiz(false, false, false)">
+          Chế độ bình thường
+        </button>
+        <button id="btn-mode-2" onclick="handleStartQuiz(true, true, false)">
+          Xáo trộn Câu hỏi & Đáp án
+        </button>
+        <button id="btn-mode-3" onclick="handleStartQuiz(false, true, false)">
+          Xáo trộn Đáp án
+        </button>
+        <button id="btn-mode-4" onclick="handleStartQuiz(false, true, true)">
+          Chế độ luyện tập (Hiện đáp án)
+        </button>
+      </div>
+    </div>
+
+    <!-- Popup: Xác nhận nộp bài -->
+    <div id="confirm-submit-popup" class="popup-overlay hidden">
+      <div class="popup">
+        <h2>Xác nhận nộp bài?</h2>
+        <button onclick="confirmSubmit()">Nộp bài</button>
+        <button onclick="closeConfirmPopup()">Hủy</button>
+      </div>
+    </div>
+
+    <!-- Popup: Hiển thị kết quả sau khi nộp bài -->
+    <div id="score-popup" class="popup-overlay hidden">
+      <div class="popup">
+        <h2>Kết quả</h2>
+        <div id="score-detail">Bạn đúng X/Y câu.</div>
+        <div id="score-chart"></div>
+        <div
+          id="score-feedback"
+          style="margin-top: 10px; font-weight: bold; font-size: 16px"
+        >
+          <!-- Câu đánh giá sẽ được thêm bằng JavaScript -->
+        </div>
+        <button onclick="closeScorePopup()">Đóng</button>
+      </div>
+    </div>
+
+    <!-- Google Charts để vẽ biểu đồ kết quả -->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+
+    <!-- Script chính của quiz -->
+    <script src="script.js"></script>
+  </body>
+</html>

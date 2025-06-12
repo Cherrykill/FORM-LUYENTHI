@@ -1,0 +1,197 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+h1,
+h3 {
+  text-align: center;
+}
+.correct {
+  background-color: #d4edda;
+}
+.incorrect {
+  background-color: #f8d7da;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+}
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.btn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btn:hover {
+  background-color: #0056b3;
+}
+#chartContainer {
+  width: 300px;
+  margin: 30px auto;
+  /* Gợi ý: dùng max-width: 100% nếu muốn hiển thị tốt hơn trên thiết bị nhỏ */
+}
+#detailedChartContainer {
+  width: 400px;
+  margin: 30px auto;
+  display: none;
+  /* Gợi ý: kiểm tra modal cha có căn giữa không nếu popup lệch */
+}
+#score10Text {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+#levelText {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+#filterContainer {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+}
+select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.scroll-btn-container {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  /* Gợi ý: nếu che nội dung, nên điều chỉnh sang trái hoặc hạ thấp */
+}
+
+.scroll-btn {
+  position: fixed;
+  right: 20px;
+  width: 50px; /* Tăng kích thước */
+  height: 50px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Bo góc mềm hơn */
+  cursor: pointer;
+  opacity: 0.85;
+  font-size: 24px; /* Tăng biểu tượng mũi tên */
+  z-index: 1000;
+  user-select: none;
+  transition: opacity 0.3s ease;
+}
+.scroll-btn:hover {
+  opacity: 1;
+  background-color: #007bff;
+}
+/* Đặt nút cuộn giữa màn hình theo chiều dọc */
+#scrollUpBtn {
+  top: 50%;
+  transform: translateY(-120%);
+  /* Gợi ý: có thể đổi translateY(-100%) nếu muốn nút gần hơn */
+}
+#scrollDownBtn {
+  top: 50%;
+  transform: translateY(20%);
+  /* Gợi ý: nên giữ khoảng cách hợp lý giữa các nút */
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark-mode table {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+body.dark-mode th,
+body.dark-mode td {
+  border-color: #555;
+}
+body.dark-mode .correct {
+  background-color: #155724;
+}
+body.dark-mode .incorrect {
+  background-color: #721c24;
+}
+body.dark-mode .btn {
+  background-color: #444;
+  color: #eee;
+}
+body.dark-mode .btn:hover {
+  background-color: #666;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+  position: relative;
+  background-color: #2a2a2a;
+  color: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center; /* Canh giữa mọi thứ bên trong */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa biểu đồ theo trục ngang */
+  justify-content: center;
+  /* Gợi ý: nếu hiển thị modal bị lệch dọc, nên dùng margin-top: 10vh */
+}
+#detailedChartCanvas {
+  max-width: 100%;
+  height: auto;
+}
+#score10Text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+body.dark-mode .modal-content {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+.close:hover {
+  color: red;
+  /* Gợi ý: có thể thêm transition để hiệu ứng mượt hơn */
+}

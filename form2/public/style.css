@@ -1,0 +1,416 @@
+:root {
+  /* Các biến màu (dễ dùng lại và chuyển dark/light mode) */
+  --bg-light: #f9f9f9;
+  --bg-dark: #1e1e1e;
+  --text-light: #333;
+  --text-dark: #f1f1f1;
+  --accent: #007bff;
+  --btn-bg: #444;
+  --btn-hover: #666;
+  --border: #ccc;
+  --green: #28a745;
+  --red: #dc3545;
+  --yellow: #ffc107;
+  --option-bg-light: #333;
+  --option-bg-dark: #444;
+  --popup-bg-light: #fff;
+  --popup-bg-dark: #2a2a2a;
+  --popup-text-light: #000;
+  --popup-text-dark: #fff;
+}
+
+/* Thiết lập mặc định cho body */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  height: 100vh;
+  overflow: hidden; /* tránh cuộn toàn trang */
+}
+
+/* Giao diện khi ở chế độ dark */
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Dark mode cho dropdown */
+body.dark .auto-next select,
+body.dark .time-limit select {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* Khung chính chia 3 cột: sidebar, main-content, right-panel */
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* SIDEBAR BÊN TRÁI */
+.sidebar {
+  width: 30%;
+  background-color: #f5f5f5;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow-y: auto; /* cho phép cuộn riêng */
+}
+
+/* Tiêu đề sidebar */
+.sidebar h3 {
+  margin: 0 0 1rem 0;
+}
+
+/* Bố cục các ô câu hỏi */
+.question-boxes {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 cột */
+  gap: 0.5rem;
+}
+
+/* Nút câu hỏi trong sidebar */
+.question-boxes button {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* giữ nút hình vuông */
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-color: #f0f0f0;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Dark mode cho nút câu hỏi */
+body.dark .question-boxes button {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+/* Nút câu hỏi đang active */
+.question-boxes button.active {
+  background-color: #cce5ff;
+  border-color: #007bff;
+  color: #004085;
+}
+
+body.dark .question-boxes button.active {
+  background-color: #0056b3;
+  border-color: #66b2ff;
+}
+
+/* Nút câu hỏi đã trả lời */
+.question-boxes button.answered {
+  background-color: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+
+body.dark .question-boxes button.answered {
+  background-color: #225c42;
+  border-color: #4caf50;
+  color: #c9f7df;
+}
+
+/* Trạng thái vừa active vừa đã trả lời */
+.question-boxes button.answered.active {
+  background-color: #b8daff;
+}
+
+body.dark .question-boxes button.answered.active {
+  background-color: #3382cc;
+  border-color: #88cfff;
+}
+
+/* Khu vực chọn Auto next ở dưới sidebar */
+.sidebar-bottom {
+  margin-top: 2rem;
+}
+
+/* Dropdown chọn chế độ auto next */
+.auto-next select {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* NỘI DUNG CHÍNH (CÂU HỎI VÀ ĐÁP ÁN) */
+.main-content {
+  width: 50%;
+  padding: 1.5rem;
+  overflow-y: auto; /* cho phép cuộn riêng */
+  box-sizing: border-box;
+}
+
+/* Container của phần câu hỏi */
+.quiz-container {
+  max-width: 100%;
+}
+
+/* Câu hỏi chính */
+.question {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Các nút đáp án */
+.options button {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background-color: var(--option-bg-light);
+  color: white;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Dark mode cho đáp án */
+body.dark .options button {
+  background-color: var(--option-bg-dark);
+}
+
+/* Khi hover hoặc đã chọn đáp án */
+.options button:hover,
+.options button.selected {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Nút điều hướng câu hỏi tiếp theo/trước */
+.navigation {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation button {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.navigation button:hover {
+  background-color: #0056b3;
+}
+
+/* PANEL BÊN PHẢI */
+.right-panel {
+  width: 20%;
+  padding: 1rem;
+  border-left: 1px solid var(--border);
+  background-color: #eee;
+  box-sizing: border-box;
+  overflow-y: auto; /* cho phép cuộn riêng */
+}
+
+/* Nút truy cập admin.html */
+.admin-btn {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.admin-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #c4605d, #ff0000);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Nút nộp bài */
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: var(--green);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+/* Toggle chuyển chế độ sáng/tối */
+.toggle-theme {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.toggle-theme button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--btn-bg);
+  color: white;
+  cursor: pointer;
+}
+
+.toggle-theme button:hover {
+  background-color: var(--btn-hover);
+}
+
+/* POPUP hiện điểm sau khi nộp bài */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: var(--popup-bg-light);
+  color: var(--popup-text-light);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+body.dark .popup {
+  background-color: var(--popup-bg-dark);
+  color: var(--popup-text-dark);
+}
+
+.popup button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
+
+/* Tùy chọn giới hạn thời gian */
+.time-limit {
+  margin-top: 1rem;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.time-limit label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.time-limit select {
+  width: 100%;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+body.dark .time-limit {
+  background-color: #333;
+}
+
+body.dark .time-limit select {
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
+}
+
+/* Màu câu đúng/sai khi hiện kết quả */
+.correct-answer {
+  background-color: #d4edda;
+  border: 2px solid #28a745;
+  color: #155724;
+}
+
+.wrong-answer {
+  background-color: #f8d7da;
+  border: 2px solid #dc3545;
+  color: #721c24;
+}
+
+/* Biểu đồ điểm */
+#score-popup .popup {
+  text-align: center;
+}
+
+#score-chart {
+  margin-top: 1rem;
+  height: 200px;
+}
+
+/* Ẩn phần tử */
+.hidden {
+  display: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .sidebar,
+  .main-content,
+  .right-panel {
+    width: 100%;
+    height: auto;
+  }
+
+  .question-boxes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .question-boxes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

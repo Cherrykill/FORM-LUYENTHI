@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý Câu hỏi</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <!-- Thanh điều hướng trên cùng -->
+    <div class="navbar">
+      <div class="left-buttons">
+        <button id="toggle-form-btn">➕ Thêm Câu hỏi</button>
+        <button id="favorite-toggle-btn">⭐ Câu hỏi yêu thích</button>
+      </div>
+      <div class="right-search">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Tìm kiếm câu hỏi..."
+        />
+        <button onclick="searchQuestions()">🔍 Tìm kiếm</button>
+        <button id="missing-answer-btn">Câu chưa có đáp án</button>
+      </div>
+    </div>
+
+    <!-- Giao diện chính gồm form + danh sách -->
+    <div class="main-container">
+      <!-- Form thêm/sửa câu hỏi (slide in/out) -->
+      <div class="slide-form" id="slide-form">
+        <button id="close-form" class="close-btn">✖</button>
+
+        <h3 id="form-title">Thêm / Sửa Câu hỏi</h3>
+        <input type="hidden" id="edit-index" />
+
+        <textarea
+          id="question-text"
+          placeholder="Nội dung câu hỏi"
+          rows="3"
+        ></textarea>
+
+        <input type="text" id="answer-A" placeholder="Đáp án A" />
+        <input type="text" id="answer-B" placeholder="Đáp án B" />
+        <input type="text" id="answer-C" placeholder="Đáp án C" />
+        <input type="text" id="answer-D" placeholder="Đáp án D" />
+
+        <select id="correct-answer">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select>
+
+        <button onclick="saveQuestion()">💾 Lưu</button>
+      </div>
+
+      <!-- Danh sách câu hỏi và phân trang -->
+      <div class="content" id="content-area">
+        <h3>Danh sách Câu hỏi</h3>
+        <div id="questions-container"></div>
+        <div id="pagination-controls"></div>
+      </div>
+    </div>
+
+    <!-- Nút cuộn trang lên/xuống -->
+    <button id="scroll-up" onclick="scrollToTop()">⬆</button>
+    <button id="scroll-down" onclick="scrollToBottom()">⬇</button>
+
+    <!-- Script xử lý logic quản lý câu hỏi -->
+    <script src="admin.js"></script>
+  </body>
+</html>

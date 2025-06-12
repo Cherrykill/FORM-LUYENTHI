@@ -1,0 +1,150 @@
+/* Reset và thiết lập cơ bản cho body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  height: 100%;
+}
+
+/* Thanh điều hướng trên cùng (navbar) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+}
+
+/* Các cụm nút bên trái và ô tìm kiếm bên phải trong navbar */
+.left-buttons,
+.right-search {
+  display: flex;
+  gap: 10px;
+}
+
+/* Thiết lập chung cho các control form: button, input, select, textarea */
+button,
+input,
+select,
+textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Style riêng cho button */
+button {
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  border: none;
+  transition: 0.2s;
+}
+
+/* Hover effect cho button */
+button:hover {
+  background: #0056b3;
+}
+
+/* Container chính chia làm 2 phần: slide-form và content */
+.main-container {
+  display: flex;
+  height: calc(
+    100vh - 60px
+  ); /* Chiếm toàn bộ chiều cao trừ chiều cao của navbar */
+  overflow: hidden; /* Ẩn nội dung tràn */
+}
+
+/* Bảng điều khiển bên trái ẩn/hiện để tạo câu hỏi */
+.slide-form {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  border-right: 1px solid #ddd;
+  display: none; /* Mặc định ẩn đi */
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Khu vực hiển thị nội dung câu hỏi */
+.content {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 80px; /* Tránh việc nút phân trang bị che khuất */
+}
+
+/* Style cho từng khối câu hỏi */
+.question {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+  position: relative;
+}
+
+/* Nút đánh dấu yêu thích cho câu hỏi */
+.question .fav-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Nút cuộn lên và xuống cố định ở phía phải màn hình */
+#scroll-up,
+#scroll-down {
+  position: fixed;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* Vị trí nút scroll lên nằm trên giữa */
+#scroll-up {
+  top: 40%;
+}
+
+/* Vị trí nút scroll xuống nằm dưới giữa */
+#scroll-down {
+  top: 50%;
+}
+
+/* Vùng phân trang bên dưới danh sách */
+#pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px; /* Tránh bị che khuất bởi content padding */
+}
+
+/* Style cho nút trong phân trang */
+#pagination-controls button {
+  margin: 0 5px;
+}
+
+/* Nút phân trang đang được chọn */
+.active-page {
+  background-color: #0056b3;
+  color: white;
+  font-weight: bold;
+}

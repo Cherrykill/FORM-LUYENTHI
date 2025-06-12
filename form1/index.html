@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bài kiểm tra 120 câu</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  </head>
+  <body class="dark-mode">
+    <!-- ✅ Mặc định giao diện tối -->
+
+    <!-- Nút cuộn lên/xuống -->
+    <button id="scrollUpBtn" class="scroll-btn">▲</button>
+    <button id="scrollDownBtn" class="scroll-btn">▼</button>
+
+    <!-- Phần tiêu đề & điều khiển -->
+    <header>
+      <h1 id="questionTitle">Bài kiểm tra 120 câu</h1>
+
+      <div class="controls">
+        <!-- Bộ lọc -->
+        <label for="filterSelect">Lọc câu hỏi:</label>
+        <select id="filterSelect">
+          <option value="all">Tất cả</option>
+          <option value="A">Đáp án A</option>
+          <option value="B">Đáp án B</option>
+          <option value="C">Đáp án C</option>
+          <option value="D">Đáp án D</option>
+          <option value="null">Chưa chọn</option>
+        </select>
+
+        <!-- Số câu hiển thị -->
+        <label for="numRows" style="margin-left: 20px">Số câu hiển thị:</label>
+        <input
+          type="number"
+          id="numRows"
+          min="1"
+          max="1000"
+          value="50"
+          style="width: 60px; padding: 2px 5px; margin-left: 5px"
+        />
+
+        <!-- Thiết lập thời gian và bắt đầu -->
+        <div id="timerSetup">
+          <label for="examTimeInput">Thời gian làm bài (phút):</label>
+          <input
+            type="number"
+            id="examTimeInput"
+            min="1"
+            max="180"
+            value="30"
+          />
+          <button class="btn" onclick="startExam()">Bắt đầu thi</button>
+        </div>
+
+        <!-- Đồng hồ đếm ngược -->
+        <div
+          id="countdownTimer"
+          style="font-size: 24px; font-weight: bold; margin-top: 10px"
+        ></div>
+
+        <!-- Nút điều khiển -->
+        <button id="toggleThemeBtn">Chế độ sáng</button>
+        <button id="submitBtn">Xuất kết quả</button>
+        <button id="goToCheckBtn">Check kết quả</button>
+      </div>
+    </header>
+
+    <!-- Nội dung chính -->
+    <main>
+      <div id="quiz"></div>
+      <div id="stats"></div>
+    </main>
+
+    <!-- Popup: Thông báo hoàn thành -->
+    <div id="congratsPopup" class="popup-overlay" style="display: none">
+      <div class="popup-content">
+        <h2>🎉 Chúc mừng!</h2>
+        <p>Bạn đã xuất kết quả thành công!</p>
+        <button id="closePopupBtn">Đóng</button>
+      </div>
+    </div>
+
+    <!-- Modal: Hết giờ -->
+    <div id="timeoutModal" class="modal">
+      <div class="modal-content">
+        <p style="font-size: 20px; font-weight: bold">⏰ Hết giờ làm bài!</p>
+      </div>
+    </div>
+
+    <!-- Script đổi giao diện sáng/tối -->
+    <script>
+      const toggleBtn = document.getElementById("toggleThemeBtn");
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        toggleBtn.textContent = document.body.classList.contains("dark-mode")
+          ? "Chế độ sáng"
+          : "Chế độ tối";
+      });
+    </script>
+
+    <!-- Script xử lý chính -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
