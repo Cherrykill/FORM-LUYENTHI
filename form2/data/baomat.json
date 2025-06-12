@@ -8,7 +8,8 @@
       "Là những phần mềm trống Hacker"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "An toàn mạng là gì?",
@@ -19,7 +20,8 @@
       "Là những phần mềm trống Hacker"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": true,
+    "wrongCount": 1
   },
   {
     "question": "An toàn Internet là gì?",
@@ -63,7 +65,8 @@
       "Vô tình để lộ thông tin."
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "Hiểm họa chủ động là gì?",
@@ -85,7 +88,8 @@
       "Là một thực thể tấn công giả danh một thực thể khác."
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "Tấn công chủ động là?",
@@ -107,7 +111,8 @@
       "Là phương thức tấn công làm cho thông tin được gửi đi nhiều lần, gây ra các tác động tiêu cực."
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "Tấn công chuyển tiếp là?",
@@ -118,7 +123,8 @@
       "Là việc nghe trộm, thu chặn, giả mạo người dùng hợp pháp vượt quyền hoặc lách qua các cơ chế kiểm soát truy cập."
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "Tấn công sửa đổi là?",
@@ -195,7 +201,8 @@
       "59"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "Hãy cho biết kết quả của 7^2010 mod 13",
@@ -228,7 +235,8 @@
       "Tất cả đều i"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "Hãy cho biết kết quả của 32086 mod 440 là",
@@ -250,7 +258,8 @@
       "1"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "Cho biết kết quả phép toán u: 2^6 mod 12",
@@ -261,7 +270,8 @@
       "1"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "Cho biết kết quả phép toán u: (1234 + 2345) mod 17",
@@ -272,7 +282,8 @@
       "6"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "Cho biết kết quả phép toán u: (213 * 345) mod 19",
@@ -2033,7 +2044,8 @@
       "15"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "Chọn kết quả đúng : 1 mod 129=6?",
@@ -2044,7 +2056,8 @@
       "4"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "Chọn kết quả đúng : 1 mod 224=5?",
@@ -2055,7 +2068,8 @@
       "32"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "1 mod 83=12?",
@@ -2066,7 +2080,8 @@
       "5"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "1 mod 161=18?",
@@ -2077,7 +2092,8 @@
       "5"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "326 mod 23?",
@@ -2110,7 +2126,8 @@
       "2"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "123 mod 161 ?",
@@ -2165,7 +2182,8 @@
       "1"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0
   },
   {
     "question": "(72 mod 5) + (126 mod 7)?",

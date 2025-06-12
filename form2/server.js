@@ -34,6 +34,33 @@ app.post('/save-questions', (req, res) => {
   });
 });
 
+// Thêm số lần làm sai vào file questions.json
+app.post('/update-questions', (req, res) => {
+  const updatedQuestions = req.body;
+
+  fs.writeFile(DATA_PATH, JSON.stringify(updatedQuestions, null, 2), 'utf8', (err) => {
+    if (err) {
+      console.error('Lỗi khi ghi file:', err);
+      return res.status(500).json({ message: 'Không thể ghi file' });
+    }
+    res.json({ message: 'Đã cập nhật thành công' });
+  });
+});
+
+// Xu ly form khi truy cap vao admin
+app.post('/api/login', (req, res) => {
+  const { username, password } = req.body;
+  const validUser = process.env.ADMIN_USER;
+  const validPass = process.env.ADMIN_PASS;
+
+  if (username === validUser && password === validPass) {
+    res.json({ success: true });
+  } else {
+    res.json({ success: false });
+  }
+});
+
+
 app.listen(PORT, () => {
   console.log(`✅ Server đang chạy tại http://localhost:${PORT}`);
 });

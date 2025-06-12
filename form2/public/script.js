@@ -143,42 +143,37 @@ function startQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
         return;
     }
 
-    if(shuffleQuestions==false && shuffleAnswers==false && showAnswers==false) {
-    document.getElementById("mode-label").innerText = "Bình thường";
+    if (shuffleQuestions == false && shuffleAnswers == false && showAnswers == false) {
+        document.getElementById("mode-label").innerText = "Bình thường";
     }
-    if(shuffleQuestions==true && shuffleAnswers==true && showAnswers==false) {
-    document.getElementById("mode-label").innerText = "Trộn câu hỏi và đáp án";
+    if (shuffleQuestions == true && shuffleAnswers == true && showAnswers == false) {
+        document.getElementById("mode-label").innerText = "Trộn câu hỏi và đáp án";
     }
-    if(shuffleQuestions==false && shuffleAnswers==true && showAnswers==false) {
-    document.getElementById("mode-label").innerText = "Trộn đáp án";
+    if (shuffleQuestions == false && shuffleAnswers == true && showAnswers == false) {
+        document.getElementById("mode-label").innerText = "Trộn đáp án";
     }
-    if(shuffleQuestions==false && shuffleAnswers==true && showAnswers==true) {
-    document.getElementById("mode-label").innerText = "Hiển thị đáp án";
+    if (shuffleQuestions == false && shuffleAnswers == true && showAnswers == true) {
+        document.getElementById("mode-label").innerText = "Hiển thị đáp án";
     }
 
     showAnswerMode = showAnswers;
 
     if (shuffleQuestions) {
         questions = questions.sort(() => Math.random() - 0.5);
-
     }
 
     if (shuffleAnswers) {
-
         questions.forEach(q => {
             const correctIndex = getCorrectIndex(q.correct);
             const correctAnswer = q.answers[correctIndex];
             q.answers = q.answers.sort(() => Math.random() - 0.5);
             q.correct = String.fromCharCode(q.answers.indexOf(correctAnswer) + 65);
         });
-
     }
 
     selectedAnswers = new Array(questions.length).fill(null);
     currentQuestionIndex = 0;
 
-
-    // Xử lý thời gian giới hạn
     const timeLimitMinutes = parseInt(document.getElementById("time-limit-select").value);
     const countdownDisplay = document.getElementById("countdown");
     const timeInfo = document.getElementById("time-info");
@@ -246,19 +241,27 @@ function closeConfirmPopup() {
 function submitQuiz() {
     let correct = 0;
     let unanswered = 0;
+
     questions.forEach((q, i) => {
         if (!q.correct) return;
         const userAnswer = selectedAnswers[i];
-        if (userAnswer === null) unanswered++;
-        else if (userAnswer === getCorrectIndex(q.correct)) correct++;
+
+        if (userAnswer === null) {
+            unanswered++;
+        } else if (userAnswer === getCorrectIndex(q.correct)) {
+            correct++;
+        } else {
+            if (!q.wrongCount) q.wrongCount = 1;
+            else q.wrongCount += 1;
+        }
     });
 
     const wrong = questions.length - correct - unanswered;
 
     document.getElementById('score-detail').innerText =
         `Đúng: ${correct}, Sai: ${wrong}, Bỏ qua: ${unanswered}`;
-
     drawChart(correct, wrong, unanswered);
+
     const feedbackEl = document.getElementById("score-feedback");
     const total = questions.length;
     const percent = (correct / total) * 100;
@@ -271,7 +274,28 @@ function submitQuiz() {
 
     feedbackEl.textContent = feedback;
     document.getElementById('score-popup').classList.remove('hidden');
+
+    // Gửi dữ liệu sai/số lần sai về server
+    fetch('/update-questions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(questions)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log('✅ Đã cập nhật file:', data.message);
+        })
+        .catch(err => {
+            console.error('❌ Lỗi khi gửi dữ liệu:', err);
+        });
+
+    // ✅ Thêm đoạn sau để RESET lại trạng thái:
+    selectedAnswers = new Array(questions.length).fill(null);
+    currentQuestionIndex = 0;
+    renderQuestionButtons();
+    renderQuestion();
 }
+
 
 function closeScorePopup() {
     document.getElementById('score-popup').classList.add('hidden');
@@ -326,4 +350,39 @@ function setupAutoNext() {
 // ============================
 function toggleTheme() {
     document.body.classList.toggle('dark');
+}
+
+
+// ============================
+// Form validation
+// ============================
+function showLoginPopup() {
+    document.getElementById('login-popup').classList.remove('hidden');
+}
+
+function closeLoginPopup() {
+    document.getElementById('login-popup').classList.add('hidden');
+    document.getElementById('login-error').textContent = '';
+}
+
+async function handleAdminLogin() {
+    const username = document.getElementById('admin-username').value;
+    const password = document.getElementById('admin-password').value;
+
+    try {
+        const response = await fetch('/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password }),
+        });
+
+        const result = await response.json();
+        if (result.success) {
+            window.location.href = './admin/admin.html';
+        } else {
+            document.getElementById('login-error').textContent = 'Sai tên đăng nhập hoặc mật khẩu.';
+        }
+    } catch (error) {
+        document.getElementById('login-error').textContent = 'Lỗi khi kết nối server.';
+    }
 }

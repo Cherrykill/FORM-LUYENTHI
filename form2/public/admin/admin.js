@@ -41,6 +41,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("search-input").addEventListener("input", handleSearch);
+
+    // loc cac cau loi theo thu tu tu nhieu den it
+    document.getElementById("wrongcount-btn").addEventListener("click", () => {
+        const filtered = questions
+            .filter(q => typeof q.wrongCount === "number")
+            .sort((a, b) => b.wrongCount - a.wrongCount);
+
+        currentPage = 1;
+        renderSearchResults(filtered);
+    });
+
+    // Reset du lieu cac cau sai
+    document.getElementById("reset-wrongcount-btn").addEventListener("click", async () => {
+        if (!confirm("Bạn có chắc muốn đặt lại số lần sai về 0 cho tất cả câu hỏi?")) return;
+
+        questions.forEach(q => {
+            if (typeof q.wrongCount === "number") q.wrongCount = 0;
+        });
+
+        await saveToFile();
+        renderQuestions();
+    });
+
+
 });
 
 // ====== 4. DỮ LIỆU: TẢI & LƯU FILE ======
@@ -87,6 +111,8 @@ function renderQuestions() {
             <button onclick="editQuestion(${realIndex})">✏ Sửa</button>
             <button onclick="deleteQuestion(${realIndex})">🗑 Xóa</button>
             <button class="fav-btn" onclick="toggleFavorite(${realIndex})">${q.favorite ? "⭐" : "☆"}</button>
+            ${typeof q.wrongCount === "number" ? `<div class="wrong-count">Sai: ${q.wrongCount} lần</div>` : ""}
+
         `;
         container.appendChild(div);
     });
@@ -96,24 +122,31 @@ function renderQuestions() {
 
 function renderSearchResults(list) {
     const container = document.getElementById("questions-container");
-    const pagination = document.getElementById("pagination-controls");
     container.innerHTML = "";
-    pagination.innerHTML = "";
 
-    list.forEach((q, index) => {
+    const totalPages = Math.ceil(list.length / pageSize);
+    if (currentPage > totalPages) currentPage = totalPages || 1;
+
+    const start = (currentPage - 1) * pageSize;
+    const pageItems = list.slice(start, start + pageSize);
+
+    pageItems.forEach((q, index) => {
         const realIndex = questions.indexOf(q);
         const div = document.createElement("div");
         div.className = "question";
         div.innerHTML = `
-            <strong>${index + 1}. ${q.question}</strong><br>
+            <strong>${start + index + 1}. ${q.question}</strong><br>
             ${q.answers.map((a, i) => `<div>${String.fromCharCode(65 + i)}: ${a}</div>`).join('')}
             <div>Đáp án đúng: ${q.correct}</div>
             <button onclick="editQuestion(${realIndex})">✏ Sửa</button>
             <button onclick="deleteQuestion(${realIndex})">🗑 Xóa</button>
             <button class="fav-btn" onclick="toggleFavorite(${realIndex})">${q.favorite ? "⭐" : "☆"}</button>
+            ${typeof q.wrongCount === "number" ? `<div class="wrong-count">Sai: ${q.wrongCount} lần</div>` : ""}
         `;
         container.appendChild(div);
     });
+
+    renderCustomPagination(totalPages, list);
 }
 
 function renderPagination(totalPages) {
@@ -149,6 +182,40 @@ function renderPagination(totalPages) {
     if (end < totalPages - 1) pagination.appendChild(createButton("...", null, true));
     if (totalPages > 1) pagination.appendChild(createButton(totalPages, totalPages));
 }
+
+function renderCustomPagination(totalPages, currentList) {
+    const pagination = document.getElementById("pagination-controls");
+    pagination.innerHTML = "";
+
+    if (totalPages <= 1) return;
+
+    const maxVisible = 3;
+    const createButton = (label, page = null, disabled = false) => {
+        const btn = document.createElement("button");
+        btn.textContent = label;
+        if (page !== null) {
+            btn.onclick = () => {
+                currentPage = page;
+                renderSearchResults(currentList);  // sử dụng lại danh sách hiện tại
+            };
+        }
+        if (disabled) btn.disabled = true;
+        if (page === currentPage) btn.classList.add("active-page");
+        return btn;
+    };
+
+    pagination.appendChild(createButton("1", 1));
+    const start = Math.max(2, currentPage - maxVisible);
+    const end = Math.min(totalPages - 1, currentPage + maxVisible);
+
+    if (start > 2) pagination.appendChild(createButton("...", null, true));
+    for (let i = start; i <= end; i++) {
+        pagination.appendChild(createButton(i, i));
+    }
+    if (end < totalPages - 1) pagination.appendChild(createButton("...", null, true));
+    if (totalPages > 1) pagination.appendChild(createButton(totalPages, totalPages));
+}
+
 
 // ====== 6. XỬ LÝ CÂU HỎI ======
 function toggleFavorite(index) {
@@ -215,17 +282,23 @@ function handleSearch() {
     const keyword = removeVietnameseTones(document.getElementById("search-input").value.trim().toLowerCase());
 
     if (!keyword) {
-        renderQuestions(); // Nếu không nhập gì thì hiển thị lại toàn bộ
+        renderQuestions(); // Nếu ô tìm kiếm rỗng -> render toàn bộ như bình thường
         return;
     }
 
-    const filtered = questions.filter(q =>
-        removeVietnameseTones(q.question.toLowerCase()).includes(keyword)
-    );
+    const list = showFavoritesOnly ? questions.filter(q => q.favorite) : questions;
+
+    const filtered = list.filter(q => {
+        const text = removeVietnameseTones(q.question.toLowerCase());
+        const answers = q.answers.map(a => removeVietnameseTones(a.toLowerCase())).join(" ");
+        const correct = removeVietnameseTones((q.correct || "").toLowerCase());
+        return text.includes(keyword) || answers.includes(keyword) || correct.includes(keyword);
+    });
 
     currentPage = 1;
     renderSearchResults(filtered);
 }
+
 
 // ====== 8. CUỘN TRANG & RESET FORM ======
 function scrollToTop() {
