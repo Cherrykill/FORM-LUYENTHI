@@ -462,3 +462,22 @@ function updateQuizProgress() {
 
     text.textContent = `${message} (${answered}/${total})`;
 }
+
+// =========================================================================
+// 12. 📏 RESPONSIVE
+// =========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const sidebar = document.getElementById('sidebar');
+
+    hamburgerBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
+
+    // Tùy chọn: Đóng sidebar khi nhấp ra ngoài
+    document.addEventListener('click', (e) => {
+        if (!sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+            sidebar.classList.remove('active');
+        }
+    });
+});

@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz System</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <!-- Toàn bộ nội dung chính -->
+    <!-- Nút hamburger (thêm vào đầu .main-content hoặc một vị trí cố định) -->
+    <button class="hamburger-btn hidden" id="hamburger-btn">☰</button>
+
+    <!-- Cấu trúc container hiện tại -->
     <div class="container">
       <!-- Sidebar bên trái: danh sách câu hỏi + Auto Next + Nộp bài -->
-      <div class="sidebar">
+      <div class="sidebar" id="sidebar">
         <h3>Questions</h3>
         <div class="question-boxes" id="question-list"></div>
-
         <div class="sidebar-bottom">
           <div class="auto-next">
             <label for="sidebar-auto-next">Auto Next:</label>
@@ -75,7 +84,7 @@
     <!-- Popup: Chọn chế độ làm bài -->
     <div class="popup-overlay" id="settings-popup">
       <div class="popup">
-        <h2 style="color: silver;">⚙️ Select Quiz Mode</h2>
+        <h2 style="color: silver">⚙️ Select Quiz Mode</h2>
 
         <div class="time-limit">
           <label for="time-limit-select">🕒Thời gian làm bài:</label>
@@ -90,7 +99,7 @@
         <div class="auto-next">
           <label for="popup-auto-next">🕒Auto Next:</label>
           <select id="popup-auto-next">
-            <option value="1000" >1s</option>
+            <option value="1000">1s</option>
             <option value="2000">2s</option>
             <option value="5000">5s</option>
             <option value="0">Off</option>
@@ -104,7 +113,7 @@
           🎮Xáo trộn Câu hỏi & Đáp án
         </button>
         <button id="btn-mode-3" onclick="handleStartQuiz(false, true, false)">
-         🎮 Xáo trộn Đáp án
+          🎮 Xáo trộn Đáp án
         </button>
         <button id="btn-mode-4" onclick="handleStartQuiz(false, true, true)">
           -------------------- ❤️XEM ĐÁP ÁN❤️ --------------------
@@ -141,7 +150,7 @@
     <!-- Popup: Đăng nhập quản ly câu hỏi -->
     <div id="login-popup" class="popup-overlay hidden">
       <div class="popup">
-        <h2 style="color: rgb(255, 0, 0); font-weight: bold;">LOGIN ADMIN</h2>
+        <h2 style="color: rgb(255, 0, 0); font-weight: bold">LOGIN ADMIN</h2>
         <input type="text" id="admin-username" placeholder="Tên đăng nhập" />
         <input type="password" id="admin-password" placeholder="Mật khẩu" />
         <button onclick="handleAdminLogin()">Đăng nhập</button>

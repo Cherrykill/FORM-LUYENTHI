@@ -748,3 +748,87 @@ body.dark *::-webkit-scrollbar-thumb {
 body.dark *::-webkit-scrollbar-thumb:hover {
   background: #999; /* Màu thumb khi hover tối */
 }
+
+/* =========================================================================
+   8. RESPONSIVE DESIGN
+   ========================================================================= */
+
+/* Nút hamburger */
+.hamburger-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background-color: var(--btn-bg);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+body.dark .hamburger-btn {
+  background-color: var(--btn-bg);
+}
+
+body.dark .hamburger-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Chuyển thành cột */
+    overflow: auto; /* Cho phép cuộn */
+  }
+
+  /* Ẩn sidebar mặc định */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Ẩn sidebar ra khỏi màn hình */
+    width: 80%; /* Chiều rộng sidebar trên mobile */
+    height: 100vh;
+    z-index: 999;
+    transition: left 0.3s ease; /* Hiệu ứng trượt */
+  }
+
+  /* Hiển thị sidebar khi active */
+  .sidebar.active {
+    left: 0;
+  }
+
+  /* Hiển thị nút hamburger */
+  .hamburger-btn {
+    display: block;
+  }
+
+  .main-content {
+    width: 100%; /* Chiều rộng chiếm toàn màn hình */
+  }
+
+  .right-panel {
+    width: 100%; /* Chiều rộng chiếm toàn màn hình */
+    height: auto;
+  }
+
+  .question-boxes {
+    grid-template-columns: repeat(4, 1fr); /* 4 cột */
+  }
+}
+
+@media (max-width: 480px) {
+  .question-boxes {
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+  }
+
+  .sidebar {
+    width: 90%; /* Tăng chiều rộng sidebar trên màn hình rất nhỏ */
+  }
+}
