@@ -413,11 +413,11 @@ function updateQuizProgress() {
 
     // Nội dung động
     let message = '';
-    if (percent === 0) message = 'Bắt đầu nhé!';
-    else if (percent < 30) message = 'Mới khởi động thôi...';
-    else if (percent < 60) message = 'Tiếp tục nào!';
-    else if (percent < 90) message = 'Gần về đích rồi!';
-    else if (percent < 100) message = 'Sắp hoàn tất!';
+    if (percent === 0) message = '🚀Bắt đầu nhé!';
+    else if (percent < 30) message = '🐢Mới khởi động thôi...';
+    else if (percent < 60) message = '💪Tiếp tục nào!';
+    else if (percent < 90) message = '🏃‍♂️Gần về đích rồi!';
+    else if (percent < 100) message = '🎯Sắp hoàn tất!';
     else message = 'Hoàn thành! 🎉';
 
     text.textContent = `${message} (${answered}/${total})`;
