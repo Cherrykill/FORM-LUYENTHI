@@ -4,23 +4,23 @@
 
 /* Định nghĩa các biến màu để dễ dàng tái sử dụng và chuyển đổi dark/light mode */
 :root {
-  --bg-light: #f9f9f9;    /* Màu nền chế độ sáng */
-  --bg-dark: #1e1e1e;     /* Màu nền chế độ tối */
-  --text-light: #333;     /* Màu chữ chế độ sáng */
-  --text-dark: #f1f1f1;   /* Màu chữ chế độ tối */
-  --accent: #007bff;      /* Màu nhấn (nút, highlight) */
-  --btn-bg: #444;         /* Màu nền nút mặc định */
-  --btn-hover: #666;      /* Màu nền nút khi hover */
-  --border: #ccc;         /* Màu viền */
-  --green: #28a745;       /* Màu xanh (đúng) */
-  --red: #dc3545;         /* Màu đỏ (sai) */
-  --yellow: #ffc107;      /* Màu vàng */
-  --option-bg-light: #333;/* Màu nền nút đáp án chế độ sáng */
+  --bg-light: #f9f9f9; /* Màu nền chế độ sáng */
+  --bg-dark: #1e1e1e; /* Màu nền chế độ tối */
+  --text-light: #333; /* Màu chữ chế độ sáng */
+  --text-dark: #f1f1f1; /* Màu chữ chế độ tối */
+  --accent: #007bff; /* Màu nhấn (nút, highlight) */
+  --btn-bg: #444; /* Màu nền nút mặc định */
+  --btn-hover: #666; /* Màu nền nút khi hover */
+  --border: #ccc; /* Màu viền */
+  --green: #28a745; /* Màu xanh (đúng) */
+  --red: #dc3545; /* Màu đỏ (sai) */
+  --yellow: #ffc107; /* Màu vàng */
+  --option-bg-light: #333; /* Màu nền nút đáp án chế độ sáng */
   --option-bg-dark: #444; /* Màu nền nút đáp án chế độ tối */
   --popup-bg-light: #fff; /* Màu nền popup chế độ sáng */
   --popup-bg-dark: #2a2a2a; /* Màu nền popup chế độ tối */
   --popup-text-light: #000; /* Màu chữ popup chế độ sáng */
-  --popup-text-dark: #fff;  /* Màu chữ popup chế độ tối */
+  --popup-text-dark: #fff; /* Màu chữ popup chế độ tối */
 }
 
 /* Thiết lập mặc định cho body */
@@ -28,16 +28,16 @@ body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background-color: var(--bg-light); /* Màu nền mặc định */
-  color: var(--text-light);          /* Màu chữ mặc định */
-  transition: all 0.3s ease;         /* Hiệu ứng chuyển đổi mượt mà */
-  height: 100vh;                     /* Chiều cao toàn màn hình */
-  overflow: hidden;                  /* Ngăn cuộn toàn trang */
+  color: var(--text-light); /* Màu chữ mặc định */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+  height: 100vh; /* Chiều cao toàn màn hình */
+  overflow: hidden; /* Ngăn cuộn toàn trang */
 }
 
 /* Chuyển sang chế độ tối */
 body.dark {
   background-color: var(--bg-dark); /* Màu nền chế độ tối */
-  color: var(--text-dark);          /* Màu chữ chế độ tối */
+  color: var(--text-dark); /* Màu chữ chế độ tối */
 }
 
 /* =========================================================================
@@ -48,8 +48,8 @@ body.dark {
 body.dark .auto-next select,
 body.dark .time-limit select {
   background-color: #333; /* Màu nền dropdown */
-  color: white;          /* Màu chữ */
-  border: 1px solid #555;/* Viền dropdown */
+  color: white; /* Màu chữ */
+  border: 1px solid #555; /* Viền dropdown */
 }
 
 /* =========================================================================
@@ -58,9 +58,9 @@ body.dark .time-limit select {
 
 /* Khung chính chia 3 cột: sidebar, main-content, right-panel */
 .container {
-  display: flex;         /* Sử dụng flexbox */
-  height: 100vh;         /* Chiều cao toàn màn hình */
-  overflow: hidden;      /* Ngăn cuộn toàn container */
+  display: flex; /* Sử dụng flexbox */
+  height: 100vh; /* Chiều cao toàn màn hình */
+  overflow: hidden; /* Ngăn cuộn toàn container */
 }
 
 /* =========================================================================
@@ -69,97 +69,97 @@ body.dark .time-limit select {
 
 /* Thiết lập sidebar */
 .sidebar {
-  width: 30%;                   /* Chiều rộng 30% */
-  background-color: #f5f5f5;    /* Màu nền mặc định */
+  width: 30%; /* Chiều rộng 30% */
+  background-color: #f5f5f5; /* Màu nền mặc định */
   border-right: 1px solid var(--border); /* Viền phải */
   display: flex;
-  flex-direction: column;       /* Cột dọc */
-  padding: 1rem;                /* Padding */
-  overflow-y: auto;             /* Cho phép cuộn dọc */
+  flex-direction: column; /* Cột dọc */
+  padding: 1rem; /* Padding */
+  overflow-y: auto; /* Cho phép cuộn dọc */
 }
 
 /* Tiêu đề sidebar */
 .sidebar h3 {
-  margin: 0 0 1rem 0;          /* Margin dưới */
+  margin: 0 0 1rem 0; /* Margin dưới */
 }
 
 /* Bố cục các ô câu hỏi */
 .question-boxes {
-  display: grid;                /* Sử dụng grid */
+  display: grid; /* Sử dụng grid */
   grid-template-columns: repeat(6, 1fr); /* 6 cột */
-  gap: 0.5rem;                  /* Khoảng cách giữa các ô */
+  gap: 0.5rem; /* Khoảng cách giữa các ô */
 }
 
 /* Nút câu hỏi trong sidebar */
 .question-boxes button {
-  width: 100%;                  /* Chiều rộng 100% */
-  aspect-ratio: 1 / 1;          /* Giữ tỷ lệ vuông */
-  border-radius: 6px;           /* Bo góc */
-  border: 2px solid transparent;/* Viền trong suốt */
-  background-color: #f0f0f0;    /* Màu nền mặc định */
-  color: #000;                  /* Màu chữ */
-  font-weight: bold;            /* Đậm chữ */
+  width: 100%; /* Chiều rộng 100% */
+  aspect-ratio: 1 / 1; /* Giữ tỷ lệ vuông */
+  border-radius: 6px; /* Bo góc */
+  border: 2px solid transparent; /* Viền trong suốt */
+  background-color: #f0f0f0; /* Màu nền mặc định */
+  color: #000; /* Màu chữ */
+  font-weight: bold; /* Đậm chữ */
   display: flex;
-  align-items: center;          /* Căn giữa theo chiều dọc */
-  justify-content: center;      /* Căn giữa theo chiều ngang */
-  cursor: pointer;              /* Con trỏ tay */
-  transition: all 0.2s ease;    /* Hiệu ứng chuyển đổi */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  cursor: pointer; /* Con trỏ tay */
+  transition: all 0.2s ease; /* Hiệu ứng chuyển đổi */
 }
 
 /* Nút câu hỏi trong chế độ tối */
 body.dark .question-boxes button {
-  background-color: #2a2a2a;    /* Màu nền tối */
-  color: #fff;                  /* Màu chữ trắng */
+  background-color: #2a2a2a; /* Màu nền tối */
+  color: #fff; /* Màu chữ trắng */
 }
 
 /* Nút câu hỏi đang active */
 .question-boxes button.active {
-  background-color: #cce5ff;    /* Màu nền khi active */
-  border-color: #007bff;        /* Viền màu accent */
-  color: #004085;               /* Màu chữ */
+  background-color: #cce5ff; /* Màu nền khi active */
+  border-color: #007bff; /* Viền màu accent */
+  color: #004085; /* Màu chữ */
 }
 
 body.dark .question-boxes button.active {
-  background-color: #0056b3;    /* Màu nền tối khi active */
-  border-color: #66b2ff;        /* Viền sáng hơn */
+  background-color: #0056b3; /* Màu nền tối khi active */
+  border-color: #66b2ff; /* Viền sáng hơn */
 }
 
 /* Nút câu hỏi đã trả lời */
 .question-boxes button.answered {
-  background-color: #d4edda;    /* Màu nền khi đã trả lời */
-  border-color: #28a745;        /* Viền màu xanh */
-  color: #155724;               /* Màu chữ */
+  background-color: #d4edda; /* Màu nền khi đã trả lời */
+  border-color: #28a745; /* Viền màu xanh */
+  color: #155724; /* Màu chữ */
 }
 
 body.dark .question-boxes button.answered {
-  background-color: #225c42;    /* Màu nền tối khi đã trả lời */
-  border-color: #4caf50;        /* Viền xanh đậm */
-  color: #c9f7df;               /* Màu chữ sáng */
+  background-color: #225c42; /* Màu nền tối khi đã trả lời */
+  border-color: #4caf50; /* Viền xanh đậm */
+  color: #c9f7df; /* Màu chữ sáng */
 }
 
 /* Trạng thái vừa active vừa đã trả lời */
 .question-boxes button.answered.active {
-  background-color: #b8daff;    /* Màu nền kết hợp */
+  background-color: #b8daff; /* Màu nền kết hợp */
 }
 
 body.dark .question-boxes button.answered.active {
-  background-color: #3382cc;    /* Màu nền tối kết hợp */
-  border-color: #88cfff;        /* Viền sáng hơn */
+  background-color: #3382cc; /* Màu nền tối kết hợp */
+  border-color: #88cfff; /* Viền sáng hơn */
 }
 
 /* Khu vực chọn Auto next */
 .sidebar-bottom {
-  margin-top: 2rem;             /* Khoảng cách từ trên */
+  margin-top: 2rem; /* Khoảng cách từ trên */
 }
 
 /* Dropdown chọn chế độ auto next */
 .auto-next select {
-  width: 100%;                  /* Chiều rộng 100% */
-  padding: 0.4rem 0.6rem;       /* Padding */
-  border-radius: 6px;           /* Bo góc */
+  width: 100%; /* Chiều rộng 100% */
+  padding: 0.4rem 0.6rem; /* Padding */
+  border-radius: 6px; /* Bo góc */
   border: 1px solid var(--border); /* Viền */
-  font-size: 1rem;              /* Kích thước chữ */
-  margin-top: 0.5rem;           /* Margin trên */
+  font-size: 1rem; /* Kích thước chữ */
+  margin-top: 0.5rem; /* Margin trên */
 }
 
 /* =========================================================================
@@ -168,48 +168,48 @@ body.dark .question-boxes button.answered.active {
 
 /* Main content container */
 .main-content {
-  width: 50%;                   /* Chiều rộng 50% */
-  height: 100vh;                /* Chiều cao toàn màn hình */
-  overflow-y: auto;             /* Cho phép cuộn dọc */
-  padding: 20px;                /* Padding */
-  box-sizing: border-box;       /* Bao gồm padding trong chiều rộng */
+  width: 50%; /* Chiều rộng 50% */
+  height: 100vh; /* Chiều cao toàn màn hình */
+  overflow-y: auto; /* Cho phép cuộn dọc */
+  padding: 20px; /* Padding */
+  box-sizing: border-box; /* Bao gồm padding trong chiều rộng */
   display: flex;
-  flex-direction: column;       /* Cột dọc */
-  align-items: center;          /* Căn giữa */
-  background-color: inherit;    /* Kế thừa màu nền từ body */
+  flex-direction: column; /* Cột dọc */
+  align-items: center; /* Căn giữa */
+  background-color: inherit; /* Kế thừa màu nền từ body */
 }
 
 /* Quiz box */
 .quiz-container {
-  width: 100%;                  /* Chiều rộng 100% */
-  max-width: 800px;             /* Giới hạn tối đa */
-  background-color: #fff;       /* Màu nền mặc định */
-  padding: 24px;                /* Padding */
+  width: 100%; /* Chiều rộng 100% */
+  max-width: 800px; /* Giới hạn tối đa */
+  background-color: #fff; /* Màu nền mặc định */
+  padding: 24px; /* Padding */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bóng */
-  margin-bottom: 24px;          /* Margin dưới */
-  border-radius: 10px;          /* Bo góc */
+  margin-bottom: 24px; /* Margin dưới */
+  border-radius: 10px; /* Bo góc */
 }
 
 /* Progress container */
 #quiz-progress-container {
-  position: absolute;           /* Vị trí tuyệt đối */
-  top: 89%;                     /* Vị trí từ trên */
-  left: 56%;                    /* Vị trí từ trái */
-  transform: translateX(-50%);  /* Căn giữa theo chiều ngang */
-  width: 46vw;                  /* Chiều rộng 46% viewport */
-  max-width: 800px;             /* Giới hạn tối đa */
-  height: 30px;                 /* Chiều cao */
-  background-color: #d1cccc;    /* Màu nền */
-  border-radius: 20px;          /* Bo góc */
+  position: absolute; /* Vị trí tuyệt đối */
+  top: 89%; /* Vị trí từ trên */
+  left: 56%; /* Vị trí từ trái */
+  transform: translateX(-50%); /* Căn giữa theo chiều ngang */
+  width: 46vw; /* Chiều rộng 46% viewport */
+  max-width: 800px; /* Giới hạn tối đa */
+  height: 30px; /* Chiều cao */
+  background-color: #d1cccc; /* Màu nền */
+  border-radius: 20px; /* Bo góc */
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1); /* Bóng bên trong */
-  z-index: 100;                 /* Ưu tiên hiển thị */
-  overflow: hidden;             /* Ẩn nội dung tràn */
+  z-index: 100; /* Ưu tiên hiển thị */
+  overflow: hidden; /* Ẩn nội dung tràn */
 }
 
 /* Thanh tiến trình */
 #quiz-progress-bar {
-  height: 100%;                 /* Chiều cao 100% container */
-  width: 0%;                    /* Chiều rộng ban đầu */
+  height: 100%; /* Chiều cao 100% container */
+  width: 0%; /* Chiều rộng ban đầu */
   background: linear-gradient(90deg, #28a745, #85e085); /* Gradient */
   transition: width 0.4s ease, background 0.4s ease; /* Hiệu ứng */
   border-radius: 20px 0 0 20px; /* Bo góc trái */
@@ -217,41 +217,41 @@ body.dark .question-boxes button.answered.active {
 
 /* Text trong thanh tiến trình */
 #quiz-progress-text {
-  position: absolute;           /* Vị trí tuyệt đối */
-  top: 0;                       /* Căn trên */
-  left: 50%;                    /* Căn giữa */
-  transform: translateX(-50%);  /* Căn giữa chính xác */
-  height: 100%;                 /* Chiều cao 100% */
+  position: absolute; /* Vị trí tuyệt đối */
+  top: 0; /* Căn trên */
+  left: 50%; /* Căn giữa */
+  transform: translateX(-50%); /* Căn giữa chính xác */
+  height: 100%; /* Chiều cao 100% */
   display: flex;
-  align-items: center;          /* Căn giữa dọc */
-  justify-content: center;      /* Căn giữa ngang */
-  color: white;                 /* Màu chữ */
-  font-weight: bold;            /* Đậm chữ */
-  font-size: 13px;              /* Kích thước chữ */
-  white-space: nowrap;          /* Không ngắt dòng */
-  pointer-events: none;         /* Ngăn tương tác */
+  align-items: center; /* Căn giữa dọc */
+  justify-content: center; /* Căn giữa ngang */
+  color: white; /* Màu chữ */
+  font-weight: bold; /* Đậm chữ */
+  font-size: 13px; /* Kích thước chữ */
+  white-space: nowrap; /* Không ngắt dòng */
+  pointer-events: none; /* Ngăn tương tác */
 }
 
 /* Câu hỏi chính */
 .question {
-  font-size: 30px;              /* Kích thước chữ */
-  font-weight: bold;            /* Đậm chữ */
-  margin-bottom: 1rem;          /* Margin dưới */
+  font-size: 30px; /* Kích thước chữ */
+  font-weight: bold; /* Đậm chữ */
+  margin-bottom: 1rem; /* Margin dưới */
 }
 
 /* Các nút đáp án */
 .options button {
-  display: block;               /* Hiển thị dạng khối */
-  width: 100%;                  /* Chiều rộng 100% */
-  padding: 12px 16px;           /* Padding */
-  margin-bottom: 10px;          /* Margin dưới */
+  display: block; /* Hiển thị dạng khối */
+  width: 100%; /* Chiều rộng 100% */
+  padding: 12px 16px; /* Padding */
+  margin-bottom: 10px; /* Margin dưới */
   background-color: var(--option-bg-light); /* Màu nền */
-  color: white;                 /* Màu chữ */
-  border-radius: 8px;           /* Bo góc */
-  text-align: left;             /* Căn trái */
-  font-size: 1rem;              /* Kích thước chữ */
-  border: none;                 /* Không viền */
-  cursor: pointer;              /* Con trỏ tay */
+  color: white; /* Màu chữ */
+  border-radius: 8px; /* Bo góc */
+  text-align: left; /* Căn trái */
+  font-size: 1rem; /* Kích thước chữ */
+  border: none; /* Không viền */
+  cursor: pointer; /* Con trỏ tay */
   transition: background-color 0.2s; /* Hiệu ứng */
 }
 
@@ -264,28 +264,34 @@ body.dark .options button {
 .options button:hover,
 .options button.selected {
   background-color: var(--accent); /* Màu nhấn */
-  color: white;                   /* Màu chữ */
+  color: white; /* Màu chữ */
+}
+/* Che do toi */
+body.dark .options button:hover,
+body.dark .options button.selected {
+  background-color: var(--accent); /* Màu nhấn (#007bff) */
+  color: white; /* Màu chữ trắng */
 }
 
 /* Nút điều hướng */
 .navigation {
-  margin-top: 1rem;             /* Margin trên */
-  display: flex;                /* Sử dụng flexbox */
-  gap: 1rem;                    /* Khoảng cách giữa nút */
+  margin-top: 1rem; /* Margin trên */
+  display: flex; /* Sử dụng flexbox */
+  gap: 1rem; /* Khoảng cách giữa nút */
 }
 
 .navigation button {
-  flex: 1;                      /* Chia đều không gian */
-  padding: 0.6rem;              /* Padding */
-  border: none;                 /* Không viền */
-  border-radius: 6px;           /* Bo góc */
+  flex: 1; /* Chia đều không gian */
+  padding: 0.6rem; /* Padding */
+  border: none; /* Không viền */
+  border-radius: 6px; /* Bo góc */
   background-color: var(--accent); /* Màu nền */
-  color: white;                 /* Màu chữ */
-  cursor: pointer;              /* Con trỏ tay */
+  color: white; /* Màu chữ */
+  cursor: pointer; /* Con trỏ tay */
 }
 
 .navigation button:hover {
-  background-color: #0056b3;    /* Màu khi hover */
+  background-color: #0056b3; /* Màu khi hover */
 }
 
 /* =========================================================================
@@ -294,67 +300,67 @@ body.dark .options button {
 
 /* Thiết lập right-panel */
 .right-panel {
-  width: 20%;                   /* Chiều rộng 20% */
-  padding: 1rem;                /* Padding */
+  width: 20%; /* Chiều rộng 20% */
+  padding: 1rem; /* Padding */
   border-left: 1px solid var(--border); /* Viền trái */
-  background-color: #eee;       /* Màu nền mặc định */
-  box-sizing: border-box;       /* Bao gồm padding */
-  overflow-y: auto;             /* Cho phép cuộn dọc */
+  background-color: #eee; /* Màu nền mặc định */
+  box-sizing: border-box; /* Bao gồm padding */
+  overflow-y: auto; /* Cho phép cuộn dọc */
 }
 
 /* Nút truy cập admin */
 .admin-btn {
   background: linear-gradient(135deg, #4caf50, #2e7d32); /* Gradient */
-  border: none;                 /* Không viền */
-  color: white;                 /* Màu chữ */
-  padding: 12px 20px;           /* Padding */
-  margin: 20px 0;               /* Margin */
-  border-radius: 8px;           /* Bo góc */
-  font-size: 16px;              /* Kích thước chữ */
-  font-weight: bold;            /* Đậm chữ */
-  cursor: pointer;              /* Con trỏ tay */
+  border: none; /* Không viền */
+  color: white; /* Màu chữ */
+  padding: 12px 20px; /* Padding */
+  margin: 20px 0; /* Margin */
+  border-radius: 8px; /* Bo góc */
+  font-size: 16px; /* Kích thước chữ */
+  font-weight: bold; /* Đậm chữ */
+  cursor: pointer; /* Con trỏ tay */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bóng */
   transition: transform 0.2s, box-shadow 0.2s; /* Hiệu ứng */
 }
 
 .admin-btn:hover {
-  transform: translateY(-2px);  /* Nâng lên khi hover */
+  transform: translateY(-2px); /* Nâng lên khi hover */
   background: linear-gradient(135deg, #c4605d, #ff0000); /* Gradient hover */
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3); /* Bóng đậm hơn */
 }
 
 /* Nút nộp bài */
 .submit-btn {
-  width: 100%;                  /* Chiều rộng 100% */
-  padding: 0.75rem;             /* Padding */
-  margin-top: 1rem;             /* Margin trên */
+  width: 100%; /* Chiều rộng 100% */
+  padding: 0.75rem; /* Padding */
+  margin-top: 1rem; /* Margin trên */
   background-color: var(--green); /* Màu nền */
-  color: white;                 /* Màu chữ */
-  border: none;                 /* Không viền */
-  border-radius: 6px;           /* Bo góc */
-  font-weight: bold;            /* Đậm chữ */
-  font-size: 1rem;              /* Kích thước chữ */
-  cursor: pointer;              /* Con trỏ tay */
+  color: white; /* Màu chữ */
+  border: none; /* Không viền */
+  border-radius: 6px; /* Bo góc */
+  font-weight: bold; /* Đậm chữ */
+  font-size: 1rem; /* Kích thước chữ */
+  cursor: pointer; /* Con trỏ tay */
 }
 
 .submit-btn:hover {
-  background-color: #218838;    /* Màu khi hover */
+  background-color: #218838; /* Màu khi hover */
 }
 
 /* Toggle chế độ sáng/tối */
 .toggle-theme {
-  position: fixed;              /* Vị trí cố định */
-  top: 10px;                    /* Cách top 10px */
-  right: 10px;                  /* Cách right 10px */
+  position: fixed; /* Vị trí cố định */
+  top: 10px; /* Cách top 10px */
+  right: 10px; /* Cách right 10px */
 }
 
 .toggle-theme button {
-  padding: 0.4rem 0.8rem;       /* Padding */
-  border-radius: 6px;           /* Bo góc */
-  border: none;                 /* Không viền */
+  padding: 0.4rem 0.8rem; /* Padding */
+  border-radius: 6px; /* Bo góc */
+  border: none; /* Không viền */
   background-color: var(--btn-bg); /* Màu nền */
-  color: white;                 /* Màu chữ */
-  cursor: pointer;              /* Con trỏ tay */
+  color: white; /* Màu chữ */
+  cursor: pointer; /* Con trỏ tay */
 }
 
 .toggle-theme button:hover {
@@ -368,94 +374,94 @@ body.dark .options button {
 /* Popup chung */
 .popup {
   background-color: var(--popup-bg-light); /* Màu nền */
-  color: var(--popup-text-light);          /* Màu chữ */
-  padding: 2rem;                          /* Padding */
-  border-radius: 10px;                    /* Bo góc */
-  border: 1px solid var(--border);        /* Viền */
-  width: 90%;                             /* Chiều rộng */
-  max-width: 400px;                       /* Giới hạn tối đa */
+  color: var(--popup-text-light); /* Màu chữ */
+  padding: 2rem; /* Padding */
+  border-radius: 10px; /* Bo góc */
+  border: 1px solid var(--border); /* Viền */
+  width: 90%; /* Chiều rộng */
+  max-width: 400px; /* Giới hạn tối đa */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Bóng */
-  text-align: center;                     /* Căn giữa */
+  text-align: center; /* Căn giữa */
 }
 
 body.dark .popup {
   background-color: var(--popup-bg-dark); /* Màu nền tối */
-  color: var(--popup-text-dark);          /* Màu chữ tối */
+  color: var(--popup-text-dark); /* Màu chữ tối */
 }
 
 .popup button {
-  margin-top: 1rem;             /* Margin trên */
-  width: 100%;                  /* Chiều rộng 100% */
-  padding: 0.6rem;              /* Padding */
-  border: none;                 /* Không viền */
-  border-radius: 6px;           /* Bo góc */
+  margin-top: 1rem; /* Margin trên */
+  width: 100%; /* Chiều rộng 100% */
+  padding: 0.6rem; /* Padding */
+  border: none; /* Không viền */
+  border-radius: 6px; /* Bo góc */
   background-color: var(--accent); /* Màu nền */
-  color: white;                 /* Màu chữ */
-  cursor: pointer;              /* Con trỏ tay */
+  color: white; /* Màu chữ */
+  cursor: pointer; /* Con trỏ tay */
 }
 
 .popup button:hover {
-  background-color: #0056b3;    /* Màu khi hover */
+  background-color: #0056b3; /* Màu khi hover */
 }
 
 /* Tùy chọn giới hạn thời gian */
 .time-limit {
-  margin-top: 1rem;             /* Margin trên */
-  background-color: #f5f5f5;    /* Màu nền */
-  padding: 10px;                /* Padding */
-  border-radius: 8px;           /* Bo góc */
+  margin-top: 1rem; /* Margin trên */
+  background-color: #f5f5f5; /* Màu nền */
+  padding: 10px; /* Padding */
+  border-radius: 8px; /* Bo góc */
 }
 
 .time-limit label {
-  font-weight: bold;            /* Đậm chữ */
-  margin-bottom: 5px;           /* Margin dưới */
-  display: block;               /* Hiển thị dạng khối */
+  font-weight: bold; /* Đậm chữ */
+  margin-bottom: 5px; /* Margin dưới */
+  display: block; /* Hiển thị dạng khối */
 }
 
 .time-limit select {
-  width: 100%;                  /* Chiều rộng 100% */
-  padding: 8px;                 /* Padding */
-  font-size: 15px;              /* Kích thước chữ */
-  border: 1px solid #ccc;       /* Viền */
-  border-radius: 6px;           /* Bo góc */
+  width: 100%; /* Chiều rộng 100% */
+  padding: 8px; /* Padding */
+  font-size: 15px; /* Kích thước chữ */
+  border: 1px solid #ccc; /* Viền */
+  border-radius: 6px; /* Bo góc */
 }
 
 body.dark .time-limit {
-  background-color: #333;       /* Màu nền tối */
+  background-color: #333; /* Màu nền tối */
 }
 
 body.dark .time-limit select {
-  background-color: #444;       /* Màu nền select */
-  color: white;                 /* Màu chữ */
-  border: 1px solid #666;       /* Viền */
+  background-color: #444; /* Màu nền select */
+  color: white; /* Màu chữ */
+  border: 1px solid #666; /* Viền */
 }
 
 /* Màu câu đúng/sai khi hiện kết quả */
 .correct-answer {
-  background-color: #d4edda;    /* Màu nền đúng */
-  border: 2px solid #28a745;    /* Viền xanh */
-  color: #155724;               /* Màu chữ */
+  background-color: #d4edda; /* Màu nền đúng */
+  border: 2px solid #28a745; /* Viền xanh */
+  color: #155724; /* Màu chữ */
 }
 
 .wrong-answer {
-  background-color: #f8d7da;    /* Màu nền sai */
-  border: 2px solid #dc3545;    /* Viền đỏ */
-  color: #721c24;               /* Màu chữ */
+  background-color: #f8d7da; /* Màu nền sai */
+  border: 2px solid #dc3545; /* Viền đỏ */
+  color: #721c24; /* Màu chữ */
 }
 
 /* Biểu đồ điểm */
 #score-popup .popup {
-  text-align: center;           /* Căn giữa */
+  text-align: center; /* Căn giữa */
 }
 
 #score-chart {
-  margin-top: 1rem;             /* Margin trên */
-  height: 200px;                /* Chiều cao */
+  margin-top: 1rem; /* Margin trên */
+  height: 200px; /* Chiều cao */
 }
 
 /* Ẩn phần tử */
 .hidden {
-  display: none;                /* Ẩn hoàn toàn */
+  display: none; /* Ẩn hoàn toàn */
 }
 
 /* =========================================================================
@@ -464,15 +470,15 @@ body.dark .time-limit select {
 
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;     /* Chuyển thành cột */
-    overflow: auto;             /* Cho phép cuộn */
+    flex-direction: column; /* Chuyển thành cột */
+    overflow: auto; /* Cho phép cuộn */
   }
 
   .sidebar,
   .right-panel {
-    width: 100vh;               /* Chiều rộng 100% viewport height */
-    height: auto;               /* Chiều cao tự động */
-    box-sizing: border-box;     /* Bao gồm padding */
+    width: 100vh; /* Chiều rộng 100% viewport height */
+    height: auto; /* Chiều cao tự động */
+    box-sizing: border-box; /* Bao gồm padding */
   }
 
   .question-boxes {
@@ -492,96 +498,96 @@ body.dark .time-limit select {
 
 /* Overlay phủ nền */
 .popup-overlay.hidden {
-  display: none;                /* Ẩn khi có class hidden */
+  display: none; /* Ẩn khi có class hidden */
 }
 
 .popup-overlay {
-  position: fixed;              /* Vị trí cố định */
-  top: 0;                       /* Căn trên */
-  left: 0;                      /* Căn trái */
-  z-index: 999;                 /* Ưu tiên hiển thị */
-  width: 100vw;                 /* Chiều rộng 100% viewport */
-  height: 100vh;                /* Chiều cao 100% viewport */
+  position: fixed; /* Vị trí cố định */
+  top: 0; /* Căn trên */
+  left: 0; /* Căn trái */
+  z-index: 999; /* Ưu tiên hiển thị */
+  width: 100vw; /* Chiều rộng 100% viewport */
+  height: 100vh; /* Chiều cao 100% viewport */
   background: rgba(0, 0, 0, 0.6); /* Nền mờ */
   display: flex;
-  align-items: center;          /* Căn giữa dọc */
-  justify-content: center;      /* Căn giữa ngang */
-  animation: fadeIn 0.3s ease;  /* Hiệu ứng fade in */
+  align-items: center; /* Căn giữa dọc */
+  justify-content: center; /* Căn giữa ngang */
+  animation: fadeIn 0.3s ease; /* Hiệu ứng fade in */
 }
 
 /* Popup chính */
 .popup {
-  background: #ffffff;          /* Màu nền */
-  color: #333;                  /* Màu chữ */
-  padding: 30px 25px;           /* Padding */
-  border-radius: 16px;          /* Bo góc */
+  background: #ffffff; /* Màu nền */
+  color: #333; /* Màu chữ */
+  padding: 30px 25px; /* Padding */
+  border-radius: 16px; /* Bo góc */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bóng */
-  max-width: 400px;             /* Giới hạn tối đa */
-  width: 90%;                   /* Chiều rộng */
+  max-width: 400px; /* Giới hạn tối đa */
+  width: 90%; /* Chiều rộng */
   animation: slideUp 0.3s ease; /* Hiệu ứng slide up */
   display: flex;
-  flex-direction: column;       /* Cột dọc */
-  gap: 16px;                    /* Khoảng cách giữa các phần tử */
+  flex-direction: column; /* Cột dọc */
+  gap: 16px; /* Khoảng cách giữa các phần tử */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Font */
 }
 
 /* Tiêu đề popup */
 .popup h2 {
-  margin-bottom: 10px;          /* Margin dưới */
-  font-size: 24px;              /* Kích thước chữ */
-  color: #111;                  /* Màu chữ */
-  text-align: center;           /* Căn giữa */
+  margin-bottom: 10px; /* Margin dưới */
+  font-size: 24px; /* Kích thước chữ */
+  color: #111; /* Màu chữ */
+  text-align: center; /* Căn giữa */
 }
 
 /* Input đẹp */
 .popup input[type="text"],
 .popup input[type="password"] {
-  padding: 10px 12px;           /* Padding */
-  font-size: 16px;              /* Kích thước chữ */
-  border: 1px solid #ccc;       /* Viền */
-  border-radius: 8px;           /* Bo góc */
-  outline: none;                /* Không viền focus mặc định */
+  padding: 10px 12px; /* Padding */
+  font-size: 16px; /* Kích thước chữ */
+  border: 1px solid #ccc; /* Viền */
+  border-radius: 8px; /* Bo góc */
+  outline: none; /* Không viền focus mặc định */
   transition: border-color 0.2s ease; /* Hiệu ứng */
 }
 
 .popup input:focus {
-  border-color: #007bff;        /* Viền khi focus */
+  border-color: #007bff; /* Viền khi focus */
 }
 
 /* Nút trong popup */
 .popup button {
-  padding: 10px 14px;           /* Padding */
-  font-size: 16px;              /* Kích thước chữ */
-  border: none;                 /* Không viền */
-  border-radius: 8px;           /* Bo góc */
-  cursor: pointer;              /* Con trỏ tay */
+  padding: 10px 14px; /* Padding */
+  font-size: 16px; /* Kích thước chữ */
+  border: none; /* Không viền */
+  border-radius: 8px; /* Bo góc */
+  cursor: pointer; /* Con trỏ tay */
   transition: background 0.2s ease; /* Hiệu ứng */
 }
 
 .popup button:first-of-type {
-  background-color: #007bff;    /* Màu nền nút chính */
-  color: white;                 /* Màu chữ */
+  background-color: #007bff; /* Màu nền nút chính */
+  color: white; /* Màu chữ */
 }
 
 .popup button:last-of-type {
-  background-color: #eee;       /* Màu nền nút phụ */
-  color: #333;                  /* Màu chữ */
+  background-color: #eee; /* Màu nền nút phụ */
+  color: #333; /* Màu chữ */
 }
 
 .popup button:first-of-type:hover {
-  background-color: #0056b3;    /* Màu hover nút chính */
+  background-color: #0056b3; /* Màu hover nút chính */
 }
 
 .popup button:last-of-type:hover {
-  background-color: #ddd;       /* Màu hover nút phụ */
+  background-color: #ddd; /* Màu hover nút phụ */
 }
 
 /* Lỗi */
 #login-error {
-  color: red;                   /* Màu chữ lỗi */
-  font-size: 14px;              /* Kích thước chữ */
-  text-align: center;           /* Căn giữa */
-  min-height: 20px;             /* Chiều cao tối thiểu */
+  color: red; /* Màu chữ lỗi */
+  font-size: 14px; /* Kích thước chữ */
+  text-align: center; /* Căn giữa */
+  min-height: 20px; /* Chiều cao tối thiểu */
 }
 
 /* =========================================================================
@@ -590,21 +596,21 @@ body.dark .time-limit select {
 
 @keyframes fadeIn {
   from {
-    opacity: 0;                 /* Độ mờ ban đầu */
+    opacity: 0; /* Độ mờ ban đầu */
   }
   to {
-    opacity: 1;                 /* Độ mờ cuối */
+    opacity: 1; /* Độ mờ cuối */
   }
 }
 
 @keyframes slideUp {
   from {
-    transform: translateY(40px);/* Vị trí ban đầu */
-    opacity: 0;                 /* Độ mờ ban đầu */
+    transform: translateY(40px); /* Vị trí ban đầu */
+    opacity: 0; /* Độ mờ ban đầu */
   }
   to {
-    transform: translateY(0);   /* Vị trí cuối */
-    opacity: 1;                 /* Độ mờ cuối */
+    transform: translateY(0); /* Vị trí cuối */
+    opacity: 1; /* Độ mờ cuối */
   }
 }
 
@@ -614,18 +620,18 @@ body.dark .time-limit select {
 
 /* Sidebar trong chế độ tối */
 body.dark .sidebar {
-  background-color: #1e1e1e;    /* Màu nền tối */
+  background-color: #1e1e1e; /* Màu nền tối */
   border-right: 1px solid #444; /* Viền phải */
 }
 
 body.dark .question-boxes button {
-  background-color: #2a2a2a;    /* Màu nền nút tối */
-  color: #f1f1f1;               /* Màu chữ trắng */
+  background-color: #2a2a2a; /* Màu nền nút tối */
+  color: #f1f1f1; /* Màu chữ trắng */
 }
 
 /* Progress container trong chế độ tối */
 body.dark #quiz-progress-container {
-  background-color: #444;       /* Màu nền tối */
+  background-color: #444; /* Màu nền tối */
 }
 
 body.dark #quiz-progress-bar {
@@ -633,17 +639,17 @@ body.dark #quiz-progress-bar {
 }
 
 body.dark #quiz-progress-text {
-  color: #fff;                  /* Màu chữ trắng */
+  color: #fff; /* Màu chữ trắng */
 }
 
 /* Nút điều hướng trong chế độ tối */
 body.dark .navigation button {
-  background-color: #0056b3;    /* Màu nền tối */
-  color: #fff;                  /* Màu chữ trắng */
+  background-color: #0056b3; /* Màu nền tối */
+  color: #fff; /* Màu chữ trắng */
 }
 
 body.dark .navigation button:hover {
-  background-color: #003d80;    /* Màu hover tối */
+  background-color: #003d80; /* Màu hover tối */
 }
 
 /* Nút admin trong chế độ tối */
@@ -652,32 +658,36 @@ body.dark .admin-btn {
 }
 
 body.dark .admin-btn:hover {
-  background: linear-gradient(135deg, #ff0000, #c4605d); /* Gradient hover tối */
+  background: linear-gradient(
+    135deg,
+    #ff0000,
+    #c4605d
+  ); /* Gradient hover tối */
 }
 
 /* Quiz container trong chế độ tối */
 body.dark .quiz-container {
-  background-color: #2a2a2a;    /* Màu nền tối */
+  background-color: #2a2a2a; /* Màu nền tối */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Bóng tối */
 }
 
 body.dark .question {
-  color: #f1f1f1;               /* Màu chữ trắng */
+  color: #f1f1f1; /* Màu chữ trắng */
 }
 
 /* Right-panel trong chế độ tối */
 body.dark .right-panel {
-  background-color: #1e1e1e;    /* Màu nền tối */
-  border-left: 1px solid #444;  /* Viền trái */
+  background-color: #1e1e1e; /* Màu nền tối */
+  border-left: 1px solid #444; /* Viền trái */
 }
 
 body.dark .right-panel h3,
 body.dark .right-panel p {
-  color: #f1f1f1;               /* Màu chữ trắng */
+  color: #f1f1f1; /* Màu chữ trắng */
 }
 
 body.dark #countdown {
-  color: #f1f1f1;               /* Màu thời gian trắng */
+  color: #f1f1f1; /* Màu thời gian trắng */
 }
 
 /* =========================================================================
@@ -686,55 +696,55 @@ body.dark #countdown {
 
 /* Thanh cuộn cho sidebar */
 .sidebar::-webkit-scrollbar {
-  width: 10px;                  /* Độ rộng thanh cuộn dọc */
+  width: 10px; /* Độ rộng thanh cuộn dọc */
 }
 
 .sidebar::-webkit-scrollbar-track {
-  background: var(--bg-light);  /* Màu nền track */
+  background: var(--bg-light); /* Màu nền track */
 }
 
 .sidebar::-webkit-scrollbar-thumb {
-  background: #888;             /* Màu thumb */
-  border-radius: 5px;           /* Bo góc */
+  background: #888; /* Màu thumb */
+  border-radius: 5px; /* Bo góc */
 }
 
 /* Thanh cuộn trong chế độ tối cho sidebar */
 body.dark .sidebar::-webkit-scrollbar-track {
-  background: var(--bg-dark);   /* Màu nền track tối */
+  background: var(--bg-dark); /* Màu nền track tối */
 }
 
 body.dark .sidebar::-webkit-scrollbar-thumb {
-  background: #666;             /* Màu thumb tối */
+  background: #666; /* Màu thumb tối */
 }
 
 /* Tùy chỉnh thanh cuộn cho tất cả các phần tử */
 *::-webkit-scrollbar {
-  width: 10px;                  /* Độ rộng thanh cuộn dọc */
-  height: 10px;                 /* Độ cao thanh cuộn ngang */
+  width: 10px; /* Độ rộng thanh cuộn dọc */
+  height: 10px; /* Độ cao thanh cuộn ngang */
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--bg-light);  /* Màu nền track */
+  background: var(--bg-light); /* Màu nền track */
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #888;             /* Màu thumb */
-  border-radius: 5px;           /* Bo góc */
+  background: #888; /* Màu thumb */
+  border-radius: 5px; /* Bo góc */
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #555;             /* Màu thumb khi hover */
+  background: #555; /* Màu thumb khi hover */
 }
 
 /* Tùy chỉnh thanh cuộn trong chế độ tối */
 body.dark *::-webkit-scrollbar-track {
-  background: var(--bg-dark);   /* Màu nền track tối */
+  background: var(--bg-dark); /* Màu nền track tối */
 }
 
 body.dark *::-webkit-scrollbar-thumb {
-  background: #666;             /* Màu thumb tối */
+  background: #666; /* Màu thumb tối */
 }
 
 body.dark *::-webkit-scrollbar-thumb:hover {
-  background: #999;             /* Màu thumb khi hover tối */
+  background: #999; /* Màu thumb khi hover tối */
 }
