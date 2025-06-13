@@ -357,3 +357,18 @@ async function exportToPDF(includeAnswers = false) {
     document.body.removeChild(container);
 }
 
+
+// Chờ trang tải xong
+document.addEventListener('DOMContentLoaded', () => {
+  // Đặt chế độ tối làm mặc định khi tải trang
+  document.body.classList.add('dark');
+
+  // Lấy nút chuyển đổi chế độ
+  const themeToggle = document.getElementById('theme-toggle');
+
+  // Xử lý sự kiện click để chuyển đổi chế độ
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    themeToggle.textContent = document.body.classList.contains('dark') ? 'Chế độ Sáng' : 'Chế độ Tối';
+  });
+});

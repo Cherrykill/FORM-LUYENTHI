@@ -75,7 +75,7 @@
     <!-- Popup: Chọn chế độ làm bài -->
     <div class="popup-overlay" id="settings-popup">
       <div class="popup">
-        <h2>⚙️ Select Quiz Mode</h2>
+        <h2 style="color: silver;">⚙️ Select Quiz Mode</h2>
 
         <div class="time-limit">
           <label for="time-limit-select">🕒Thời gian làm bài:</label>
@@ -90,10 +90,10 @@
         <div class="auto-next">
           <label for="popup-auto-next">🕒Auto Next:</label>
           <select id="popup-auto-next">
-            <option value="0">Off</option>
-            <option value="1000">1s</option>
+            <option value="1000" >1s</option>
             <option value="2000">2s</option>
             <option value="5000">5s</option>
+            <option value="0">Off</option>
           </select>
         </div>
 
@@ -141,7 +141,7 @@
     <!-- Popup: Đăng nhập quản ly câu hỏi -->
     <div id="login-popup" class="popup-overlay hidden">
       <div class="popup">
-        <h2>Đăng nhập quản trị</h2>
+        <h2 style="color: rgb(255, 0, 0); font-weight: bold;">LOGIN ADMIN</h2>
         <input type="text" id="admin-username" placeholder="Tên đăng nhập" />
         <input type="password" id="admin-password" placeholder="Mật khẩu" />
         <button onclick="handleAdminLogin()">Đăng nhập</button>

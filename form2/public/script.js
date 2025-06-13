@@ -1,6 +1,8 @@
-// ============================
-// 🔧 Biến toàn cục & Khởi tạo
-// ============================
+// =========================================================================
+// 1. 🔧 BIẾN TOÀN CỤC & KHỞI TẠO
+// =========================================================================
+
+// Khai báo biến toàn cục
 let questions = [];
 let currentQuestionIndex = 0;
 let selectedAnswers = [];
@@ -9,19 +11,25 @@ let autoNextDelay = 0;
 let countdownInterval;
 let timeLeftInSeconds = 0;
 
+// Hàm khởi tạo khi tải trang
 window.onload = async () => {
-    await loadQuestions();
-    setupAutoNext();
+    await loadQuestions();          // Tải câu hỏi
+    setupAutoNext();                // Cài đặt tự động chuyển câu
 
-    // ✅ Kích hoạt nút chọn chế độ sau khi tải câu hỏi
+    // Kích hoạt nút chọn chế độ sau khi tải xong
     document.querySelectorAll('button[id^="btn-mode"]').forEach(btn => {
         btn.disabled = false;
     });
+
+    // 🌙 Đặt chế độ tối làm mặc định khi tải trang
+    document.body.classList.add('dark');
 };
 
-// ============================
-// 📦 Xử lý dữ liệu & trạng thái
-// ============================
+// =========================================================================
+// 2. 📦 XỬ LÝ DỮ LIỆU & TRẠNG THÁI
+// =========================================================================
+
+// Tải danh sách câu hỏi từ server
 async function loadQuestions() {
     try {
         const res = await fetch('/questions');
@@ -33,10 +41,12 @@ async function loadQuestions() {
     }
 }
 
+// Lấy chỉ số đúng từ ký tự (A=0, B=1, ...)
 function getCorrectIndex(letter) {
     return letter.charCodeAt(0) - 65;
 }
 
+// Kiểm tra xem có đáp án đúng nào không hợp lệ
 function hasInvalidCorrectAnswers() {
     for (const q of questions) {
         if (!q.correct || typeof q.correct !== 'string' || getCorrectIndex(q.correct) >= q.answers.length) {
@@ -46,9 +56,11 @@ function hasInvalidCorrectAnswers() {
     return false;
 }
 
-// ============================
-// 🖼️ Hiển thị câu hỏi & giao diện
-// ============================
+// =========================================================================
+// 3. 🖼️ HIỂN THỊ CÂU HỎI & GIAO DIỆN
+// =========================================================================
+
+// Hiển thị câu hỏi hiện tại
 function renderQuestion() {
     const question = questions[currentQuestionIndex];
     if (!question) return;
@@ -78,6 +90,7 @@ function renderQuestion() {
     updateQuestionButtons();
 }
 
+// Tạo danh sách nút câu hỏi
 function renderQuestionButtons() {
     const list = document.getElementById('question-list');
     list.innerHTML = '';
@@ -92,6 +105,7 @@ function renderQuestionButtons() {
     });
 }
 
+// Cập nhật trạng thái nút câu hỏi
 function updateQuestionButtons() {
     const buttons = document.querySelectorAll('#question-list button');
     buttons.forEach((btn, i) => {
@@ -101,9 +115,11 @@ function updateQuestionButtons() {
     });
 }
 
-// ============================
-// ✍️ Xử lý chọn đáp án & điều hướng
-// ============================
+// =========================================================================
+// 4. ✍️ XỬ LÝ CHỌN ĐÁP ÁN & ĐIỀU HƯỚNG
+// =========================================================================
+
+// Chọn đáp án
 function selectAnswer(index) {
     selectedAnswers[currentQuestionIndex] = index;
     renderQuestion();
@@ -111,9 +127,9 @@ function selectAnswer(index) {
         setTimeout(() => nextQuestion(), autoNextDelay);
     }
     updateQuizProgress();
-
 }
 
+// Chuyển đến câu hỏi trước
 function prevQuestion() {
     if (currentQuestionIndex > 0) {
         currentQuestionIndex--;
@@ -121,6 +137,7 @@ function prevQuestion() {
     }
 }
 
+// Chuyển đến câu hỏi tiếp theo
 function nextQuestion() {
     if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
@@ -128,9 +145,11 @@ function nextQuestion() {
     }
 }
 
-// ============================
-// 🎯 Bắt đầu quiz với tùy chọn chế độ
-// ============================
+// =========================================================================
+// 5. 🎯 BẮT ĐẦU QUIZ VỚI TÙY CHỌN CHẾ ĐỘ
+// =========================================================================
+
+// Xử lý bắt đầu quiz
 function handleStartQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
     if (hasInvalidCorrectAnswers()) {
         alert("⚠️ Có câu hỏi chưa được định nghĩa đáp án. Vui lòng sửa trước khi bắt đầu.");
@@ -139,6 +158,7 @@ function handleStartQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
     startQuiz(shuffleQuestions, shuffleAnswers, showAnswers);
 }
 
+// Khởi tạo quiz
 function startQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
     if (!questions || questions.length === 0) {
         alert("Câu hỏi chưa được tải xong.");
@@ -195,12 +215,13 @@ function startQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
     renderQuestionButtons();
     renderQuestion();
     updateQuizProgress();
-
 }
 
-// ============================
-// ⏳ Đếm ngược thời gian làm bài
-// ============================
+// =========================================================================
+// 6. ⏳ ĐẾM NGƯỢC THỜI GIAN LÀM BÀI
+// =========================================================================
+
+// Bắt đầu đếm ngược
 function startCountdown() {
     const countdownDisplay = document.getElementById("countdown");
     clearInterval(countdownInterval);
@@ -221,9 +242,11 @@ function startCountdown() {
     }, 1000);
 }
 
-// ============================
-// 📊 Nộp bài & xử lý kết quả
-// ============================
+// =========================================================================
+// 7. 📊 NỘP BÀI & XỬ LÝ KẾT QUẢ
+// =========================================================================
+
+// Xử lý nộp bài
 function handleSubmit() {
     const unanswered = selectedAnswers.filter(ans => ans === null).length;
     if (unanswered > 0) {
@@ -233,15 +256,18 @@ function handleSubmit() {
     }
 }
 
+// Xác nhận nộp bài
 function confirmSubmit() {
     document.getElementById('confirm-submit-popup').classList.add('hidden');
     submitQuiz();
 }
 
+// Đóng popup xác nhận
 function closeConfirmPopup() {
     document.getElementById('confirm-submit-popup').classList.add('hidden');
 }
 
+// Xử lý nộp bài và tính điểm
 function submitQuiz() {
     let correct = 0;
     let unanswered = 0;
@@ -293,18 +319,19 @@ function submitQuiz() {
             console.error('❌ Lỗi khi gửi dữ liệu:', err);
         });
 
-    // ✅ Thêm đoạn sau để RESET lại trạng thái:
+    // Reset trạng thái sau khi nộp
     selectedAnswers = new Array(questions.length).fill(null);
     currentQuestionIndex = 0;
     renderQuestionButtons();
     renderQuestion();
 }
 
-
+// Đóng popup điểm
 function closeScorePopup() {
     document.getElementById('score-popup').classList.add('hidden');
 }
 
+// Vẽ biểu đồ kết quả
 function drawChart(correct, wrong, skipped) {
     google.charts.load('current', { packages: ['corechart'] });
     google.charts.setOnLoadCallback(() => {
@@ -328,9 +355,11 @@ function drawChart(correct, wrong, skipped) {
     });
 }
 
-// ============================
-// ⚙️ Cài đặt tự động chuyển câu hỏi
-// ============================
+// =========================================================================
+// 8. ⚙️ CÀI ĐẶT TỰ ĐỘNG CHUYỂN CÂU HỎI
+// =========================================================================
+
+// Cài đặt tự động chuyển câu hỏi
 function setupAutoNext() {
     const sidebarSelect = document.getElementById('sidebar-auto-next');
     const popupSelect = document.getElementById('popup-auto-next');
@@ -349,26 +378,33 @@ function setupAutoNext() {
     updateDelay();
 }
 
-// ============================
-// 🌙 Chuyển chế độ sáng / tối
-// ============================
+// =========================================================================
+// 9. 🌙 CHUYỂN CHẾ ĐỘ SÁNG / TỐI
+// =========================================================================
+
+// Chuyển đổi chế độ sáng/tối
 function toggleTheme() {
     document.body.classList.toggle('dark');
+    renderQuestion(); // Cập nhật lại câu hỏi và đáp án
+    updateQuizProgress(); // Cập nhật thanh tiến trình
 }
 
+// =========================================================================
+// 10. 🔑 FORM ĐĂNG NHẬP VÀ XÁC THỰC
+// =========================================================================
 
-// ============================
-// Form validation
-// ============================
+// Hiển thị popup đăng nhập
 function showLoginPopup() {
     document.getElementById('login-popup').classList.remove('hidden');
 }
 
+// Đóng popup đăng nhập
 function closeLoginPopup() {
     document.getElementById('login-popup').classList.add('hidden');
     document.getElementById('login-error').textContent = '';
 }
 
+// Xử lý đăng nhập admin
 async function handleAdminLogin() {
     const username = document.getElementById('admin-username').value;
     const password = document.getElementById('admin-password').value;
@@ -391,7 +427,11 @@ async function handleAdminLogin() {
     }
 }
 
-//Thanh tien trinh
+// =========================================================================
+// 11. 📏 CẬP NHẬT THANH TIẾN TRÌNH
+// =========================================================================
+
+// Cập nhật thanh tiến trình
 function updateQuizProgress() {
     const total = questions.length;
     const answered = selectedAnswers.filter(a => a !== null).length;
@@ -422,6 +462,3 @@ function updateQuizProgress() {
 
     text.textContent = `${message} (${answered}/${total})`;
 }
-
-
-
