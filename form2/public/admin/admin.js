@@ -318,4 +318,42 @@ function resetForm() {
     document.getElementById("correct-answer").value = "A";
 }
 
+// ====== 7. XUAT PDFPDF ======
+async function exportToPDF(includeAnswers = false) {
+    const container = document.createElement('div');
+    container.style.padding = '20px';
+    container.style.backgroundColor = 'white';
+    container.style.color = 'black';
+    container.style.fontFamily = 'Arial, sans-serif';
+    container.style.fontSize = '14px';
+    container.style.width = '800px'; // fix độ rộng để canh trang tốt hơn
+
+    questions.forEach((q, index) => {
+        const div = document.createElement('div');
+        div.style.marginBottom = '15px';
+        let html = `<b>${index + 1}. ${q.question}</b><br>`;
+        q.answers.forEach((ans, i) => {
+            const letter = String.fromCharCode(65 + i);
+            html += `${letter}. ${ans}<br>`;
+        });
+        if (includeAnswers && q.correct) {
+            html += `<i>Đáp án đúng: ${q.correct}</i>`;
+        }
+        div.innerHTML = html;
+        container.appendChild(div);
+    });
+
+    document.body.appendChild(container);
+
+    const opt = {
+        margin: 0.5,
+        filename: includeAnswers ? 'Cau_hoi_CO_dap_an.pdf' : 'Cau_hoi_KHONG_dap_an.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+
+    await html2pdf().from(container).set(opt).save();
+    document.body.removeChild(container);
+}
 

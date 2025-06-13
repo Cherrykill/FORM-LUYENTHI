@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quản lý Câu hỏi</title>
     <link rel="stylesheet" href="admin.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
   </head>
   <body>
     <!-- Thanh điều hướng trên cùng -->
@@ -12,6 +14,10 @@
       <div class="left-buttons">
         <button id="toggle-form-btn">➕ Thêm Câu hỏi</button>
         <button id="favorite-toggle-btn">⭐ Câu hỏi yêu thích</button>
+        <button onclick="exportToPDF(true)">📄 Xuất PDF (có đáp án)</button>
+        <button onclick="exportToPDF(false)">
+          📄 Xuất PDF (không có đáp án)
+        </button>
       </div>
       <div class="right-search">
         <input
@@ -21,9 +27,18 @@
         />
         <button onclick="searchQuestions()">🔍 Tìm kiếm</button>
         <button id="missing-answer-btn">Câu chưa có đáp án</button>
-        <button id="wrongcount-btn" style="background-color: yellow;color: white">Lỗi nhiều nhất</button>
-        <button id="reset-wrongcount-btn" style="background-color: red;color: white">🔄 Reset câu sai</button>
-
+        <button
+          id="wrongcount-btn"
+          style="background-color: yellow; color: white"
+        >
+          Lỗi nhiều nhất
+        </button>
+        <button
+          id="reset-wrongcount-btn"
+          style="background-color: red; color: white"
+        >
+          🔄 Reset câu sai
+        </button>
       </div>
     </div>
 

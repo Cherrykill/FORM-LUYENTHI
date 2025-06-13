@@ -110,6 +110,8 @@ function selectAnswer(index) {
     if (autoNextDelay > 0) {
         setTimeout(() => nextQuestion(), autoNextDelay);
     }
+    updateQuizProgress();
+
 }
 
 function prevQuestion() {
@@ -192,6 +194,8 @@ function startQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
     document.getElementById("settings-popup").classList.add("hidden");
     renderQuestionButtons();
     renderQuestion();
+    updateQuizProgress();
+
 }
 
 // ============================
@@ -386,3 +390,38 @@ async function handleAdminLogin() {
         document.getElementById('login-error').textContent = 'Lỗi khi kết nối server.';
     }
 }
+
+//Thanh tien trinh
+function updateQuizProgress() {
+    const total = questions.length;
+    const answered = selectedAnswers.filter(a => a !== null).length;
+    const percent = Math.round((answered / total) * 100);
+
+    const bar = document.getElementById('quiz-progress-bar');
+    const text = document.getElementById('quiz-progress-text');
+
+    bar.style.width = `${percent}%`;
+
+    // Đổi màu theo % tiến độ
+    if (percent < 30) {
+        bar.style.background = 'linear-gradient(90deg, #dc3545, #ff6b6b)'; // đỏ
+    } else if (percent < 70) {
+        bar.style.background = 'linear-gradient(90deg, #ffc107, #ffe066)'; // vàng
+    } else {
+        bar.style.background = 'linear-gradient(90deg, #28a745, #85e085)'; // xanh
+    }
+
+    // Nội dung động
+    let message = '';
+    if (percent === 0) message = 'Bắt đầu nhé!';
+    else if (percent < 30) message = 'Mới khởi động thôi...';
+    else if (percent < 60) message = 'Tiếp tục nào!';
+    else if (percent < 90) message = 'Gần về đích rồi!';
+    else if (percent < 100) message = 'Sắp hoàn tất!';
+    else message = 'Hoàn thành! 🎉';
+
+    text.textContent = `${message} (${answered}/${total})`;
+}
+
+
+

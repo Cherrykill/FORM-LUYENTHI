@@ -147,16 +147,71 @@ body.dark .question-boxes button.answered.active {
 }
 
 /* NỘI DUNG CHÍNH (CÂU HỎI VÀ ĐÁP ÁN) */
+/* Main container */
+/* Main content container */
 .main-content {
   width: 50%;
-  padding: 1.5rem;
-  overflow-y: auto; /* cho phép cuộn riêng */
+  height: 100vh;
+  overflow-y: auto; /* cuộn riêng */
+  padding: 20px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: inherit; /* giữ màu theo light/dark mode */
 }
 
-/* Container của phần câu hỏi */
+/* Quiz box */
 .quiz-container {
-  max-width: 100%;
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  border-radius: 10px;
+}
+
+/* Progress container (không border-radius) */
+#quiz-progress-container {
+  position: absolute;
+  top: 89%; /* Hoặc top: calc(50% - ...px) nếu muốn linh động */
+  left: 56%;
+  transform: translateX(-50%);
+  width: 46vw; /* Bằng chiều rộng .main-content nếu là 50% */
+  max-width: 800px;
+  height: 30px;
+  background-color: #d1cccc;
+  border-radius: 20px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* Thanh tiến trình màu */
+#quiz-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #28a745, #85e085);
+  transition: width 0.4s ease, background 0.4s ease;
+  border-radius: 20px 0 0 20px; /* Bo góc trái thôi */
+}
+
+/* Text nằm giữa thanh */
+#quiz-progress-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  white-space: nowrap;
+  pointer-events: none; /* để không bị ảnh hưởng khi click */
 }
 
 /* Câu hỏi chính */
@@ -385,10 +440,10 @@ body.dark .time-limit select {
   }
 
   .sidebar,
-  .main-content,
   .right-panel {
-    width: 100%;
+    width: 100vh;
     height: auto;
+    box-sizing: border-box;
   }
 
   .question-boxes {
@@ -435,7 +490,7 @@ body.dark .time-limit select {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Tiêu đề popup */
@@ -499,11 +554,21 @@ body.dark .time-limit select {
 
 /* Animation */
 @keyframes fadeIn {
-  from { opacity: 0 }
-  to   { opacity: 1 }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(40px); opacity: 0; }
-  to   { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
