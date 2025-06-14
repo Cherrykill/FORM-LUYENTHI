@@ -9,7 +9,7 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q1"
   },
   {
@@ -36,7 +36,7 @@
     "correct_answer": 0,
     "favorite": false,
     "correct": "C",
-    "wrongCount": 5,
+    "wrongCount": 0,
     "id": "q3"
   },
   {
@@ -350,7 +350,7 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 2,
+    "wrongCount": 0,
     "id": "q27"
   },
   {
@@ -837,7 +837,7 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 2,
+    "wrongCount": 0,
     "id": "q64"
   },
   {
@@ -1021,7 +1021,7 @@
     ],
     "favorite": false,
     "correct": "A",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(3,1,4,2,5). Khi mã hóa bản rõ JUSTS theo hoán vị ta sẽ thu được bản mã nào?",
@@ -1323,7 +1323,7 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 2,
+    "wrongCount": 0,
     "id": "q101"
   },
   {
@@ -2013,7 +2013,7 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q154"
   },
   {
