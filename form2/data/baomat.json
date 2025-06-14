@@ -8,7 +8,9 @@
       "Cố tình để lộ thông tin."
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 1,
+    "id": "q1"
   },
   {
     "question": "Kích thước đầu ra của MD4?",
@@ -19,7 +21,9 @@
       "64 bit"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q2"
   },
   {
     "question": "Cho bản rõ NUOC, khóa k là IT. Khi mã hóa bản rõ với khóa k theo hệ mã Vigenere ta sẽ thu được bản mã nào dưới đây?",
@@ -31,7 +35,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "C"
+    "correct": "C",
+    "wrongCount": 5,
+    "id": "q3"
   },
   {
     "id": 104,
@@ -43,7 +49,8 @@
       "Cho phép tải lại gói tin"
     ],
     "favorite": false,
-    "correct": "D"
+    "correct": "D",
+    "wrongCount": 0
   },
   {
     "question": "Hàm băm có những tính chất gì?",
@@ -54,7 +61,9 @@
       "Tính xác định. Khó tính toán. Có thể đảo ngược. Có hiệu ứng lan truyền. Chấp nhận mọi kiểu dữ liệu truyền vào."
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q5"
   },
   {
     "question": "Hãy cho biết kết quả của 7^2010 mod 13",
@@ -65,7 +74,9 @@
       "Tất cả đều i"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q6"
   },
   {
     "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(?,1,3,4,2). Khi mã hóa bản rõ PASCA theo hoán vị ta sẽ thu được bản mã nào?",
@@ -76,7 +87,9 @@
       "APC"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q7"
   },
   {
     "question": "Cho bản mã WBQZIRS, khóa k=14. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
@@ -87,7 +100,9 @@
       "INCLUDE"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q8"
   },
   {
     "id": 108,
@@ -99,7 +114,8 @@
       "Có thể phân tích vận chuyển một cách hiệu quả"
     ],
     "favorite": false,
-    "correct": "A"
+    "correct": "A",
+    "wrongCount": 0
   },
   {
     "question": "Các cuộc tấn công từ chối dịch vụ thường nhằm vào các thiết bị nào?",
@@ -111,7 +127,8 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q10"
   },
   {
     "question": "(72 mod 5) + (126 mod 7)?",
@@ -122,7 +139,9 @@
       "9"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q11"
   },
   {
     "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(3,1,2,4). Khi mã hóa bản rõ HAIHA theo hoán vị ta sẽ thu được bản mã nào?",
@@ -133,7 +152,9 @@
       "FJHHU"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q12"
   },
   {
     "question": "Trong thuật toán MD5 Quá trình xử lý khối tin có mấy vòng? Mỗi vòng có mấy tác vụ?",
@@ -144,7 +165,9 @@
       "64 vòng, mỗi vòng 16 tác vụ"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q13"
   },
   {
     "question": "SHA-1 được sử dụng rộng rãi trong nhiều ứng dụng và giao thức an ninh nào?",
@@ -155,7 +178,9 @@
       "TLS và SSL, PGP, SSH, S/MIME, IPSec"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q14"
   },
   {
     "question": "IPSec là",
@@ -167,7 +192,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "D"
+    "correct": "D",
+    "wrongCount": 0,
+    "id": "q15"
   },
   {
     "question": "Những thanh ghi trong MD5 được khởi tạo theo những giá trị hex như thế nào?",
@@ -178,7 +205,9 @@
       "A=76543210; B=89abcdef; C=fedcba98; D=01234567"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q16"
   },
   {
     "question": "Hãy cho biết kết quả của 32086 mod 440 là",
@@ -189,7 +218,9 @@
       "289"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q17"
   },
   {
     "question": "Mã hoán vị là?",
@@ -200,7 +231,9 @@
       "Là phương pháp mà từng kí tự trong bản rõ được thay thế bằng một nhóm kí tự khác để tạo ra bản mã"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q18"
   },
   {
     "question": "Hàm băm là gì?",
@@ -211,7 +244,9 @@
       "Là quá trình biến một dữ liệu đầu vào có độ dài bất kỳ thành một chuỗi đầu ra đặc trưng có độ dài bất kỳ. Hashing được thực hiện thông qua hàm băm (hash function)."
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q19"
   },
   {
     "question": "Kích thước đầu vào cuả khối SHA512?",
@@ -222,7 +257,9 @@
       "512 bit"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q20"
   },
   {
     "question": "Trong IP header gồm những thành phần nào?",
@@ -233,7 +270,9 @@
       "IP nguồn, IP đích của gói tin"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q21"
   },
   {
     "question": "Một IP flood theo các host phát tán trực tiếp đến một Web server là một ví dụ của loại tấn công gì?",
@@ -244,7 +283,9 @@
       "DoS phân tán (DDoS)"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q22"
   },
   {
     "id": 103,
@@ -256,7 +297,8 @@
       "Nó cho phép việc đi vòng qua Tường lửa và Router"
     ],
     "favorite": false,
-    "correct": "C"
+    "correct": "C",
+    "wrongCount": 0
   },
   {
     "question": "Chọn phương án đúng cho mã hóa “thi” bằng mã Cear?",
@@ -267,7 +309,9 @@
       "WKL"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q24"
   },
   {
     "question": "Mục đích của việc tạo ra botnet là gì?",
@@ -279,7 +323,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q25"
   },
   {
     "question": "Cho bản mã RXVA, khóa k là KP. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
@@ -291,7 +336,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "D"
+    "correct": "D",
+    "wrongCount": 0,
+    "id": "q26"
   },
   {
     "question": "Khi sử dụng giao thức Transport Layer Security (TLS v1.3), client kết nối với server với cổng mặc định là bao nhiêu?",
@@ -302,7 +349,9 @@
       "Kết nối TCP với server tại cổng 443."
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 2,
+    "id": "q27"
   },
   {
     "question": "Hiểm họa chủ động là gì?",
@@ -313,7 +362,9 @@
       "Là hiểm họa nhưng chưa hoặc không tác động trực tiếp lên hệ thống."
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q28"
   },
   {
     "question": "Hacker cố gắng tấn công một máy chủ qua internet được gọi là loại tấn công ?",
@@ -325,7 +376,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "C"
+    "correct": "C",
+    "wrongCount": 0,
+    "id": "q29"
   },
   {
     "question": "Quá trình bắt tay giao thức TLS v1.3 bao gồm 03 giai đoạn, các giai đoạn nào được mã hóa?",
@@ -336,7 +389,9 @@
       "Giai đoạn Key Exchange, Authentication."
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q30"
   },
   {
     "question": "(86 mod 5) + (63 mod 3)?",
@@ -347,7 +402,9 @@
       "9"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q31"
   },
   {
     "question": "Thuật toán SHA là thuật giải băm mật được phát triển bởi?",
@@ -358,7 +415,9 @@
       "Cục an ninh quốc gia Mĩ"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q32"
   },
   {
     "question": "Các loại mã thay thế cổ điển là?",
@@ -369,7 +428,9 @@
       "Mã thay thế"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q33"
   },
   {
     "question": "Nêu ví dụ về sự kết hợp băm (hashing), nén (compression), khóa bí mật (SKC) và khóa công khai (PKC) trong Pretty Good Privacy (PGP)?",
@@ -380,7 +441,9 @@
       "MD5 để băm thông điệp, RC5 hoặc RC6 để mã hóa; tiêu chuẩn mã hóa công khai (PKCS) để trao đổi khóa và chữ ký số."
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q34"
   },
   {
     "question": "Tấn công từ bên ngoài hệ thống là?",
@@ -391,7 +454,9 @@
       "Là hình thức tấn công khiến một thực thể không thực hiện được chức năng của mình gây cản trở cho thực thể khác thực hiện chức năng của nó."
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q35"
   },
   {
     "question": "Mã SHA-256 để xác thực các giao dịch và lưu trữ dạng gì?",
@@ -402,7 +467,9 @@
       "Lưu trữ các mã xác thực"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q36"
   },
   {
     "question": "Tấn công từ chối dịch vụ là gì?",
@@ -413,7 +480,9 @@
       "Tấn công từ chối dịch vụ là một loại hình tấn công nhằm ngăn chặn những người dùng hợp lệ được sử dụng một dịch vụ đó."
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q37"
   },
   {
     "question": "Mã thay thế cổ điển có mấy loại?",
@@ -424,7 +493,9 @@
       "3"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q38"
   },
   {
     "question": "Quá trình thực hiện xử lý của 4 hàm F, G, H, I trong MD5 ?",
@@ -435,7 +506,9 @@
       "64"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q39"
   },
   {
     "question": "Backdoor (cửa hậu)",
@@ -446,7 +519,9 @@
       "Là một tiện ích của chương trình"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q40"
   },
   {
     "question": "Secure Multipurpose Internet Mail Extensions (S/MIME) là gì?",
@@ -457,7 +532,9 @@
       "S/MIME là một tiêu chuẩn IETF để sử dụng mã hóa đối xứng và xác thực nội dung e-mail."
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q41"
   },
   {
     "question": "Cho bản mã OEUH, khóa k là HE. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
@@ -469,7 +546,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0,
+    "id": "q42"
   },
   {
     "question": "Kích thước đầu ra của SHA256?",
@@ -480,7 +559,9 @@
       "1024 bit"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q43"
   },
   {
     "question": "Hãy cho biết kết quả của hàm phi Euler(440) là",
@@ -492,7 +573,8 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q44"
   },
   {
     "question": "Chiều dài tối thiểu của mật khẩu cần phải là",
@@ -504,7 +586,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "D"
+    "correct": "D",
+    "wrongCount": 0,
+    "id": "q45"
   },
   {
     "question": "Cho bản rõ BAOMAT, khóa k=18. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
@@ -515,7 +599,9 @@
       "VSFWEV"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q46"
   },
   {
     "question": "Cho biết kết quả phép toán u: 5 mod 11 – 9 mod 11",
@@ -526,7 +612,9 @@
       "-3"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q47"
   },
   {
     "question": "Kỹ thuật tấn công phổ biến trên web là?",
@@ -538,7 +626,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "D"
+    "correct": "D",
+    "wrongCount": 0,
+    "id": "q48"
   },
   {
     "question": "Trong gửi e-mail an toàn sử dụng mã hóa end-to-end, kiểu mã hóa này nghĩa là gì?",
@@ -549,7 +639,9 @@
       "E-mail phải được mã hóa trước khi rời khỏi máy tính người gửi và không thể được giải mã cho đến khi e-mail đến hệ thống của người nhận."
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q49"
   },
   {
     "question": "SHA-256 trả lại kết quả dài bao nhiêu bit?",
@@ -560,7 +652,9 @@
       "224 bit"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q50"
   },
   {
     "question": "Mật khẩu an toàn phải bao gồm",
@@ -572,7 +666,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0,
+    "id": "q51"
   },
   {
     "question": "Tấn công giả mạo là?",
@@ -584,7 +680,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q52"
   },
   {
     "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (3, 2, 4, 5, 1). Khi giải mã bản mã LIKSM theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
@@ -595,7 +692,9 @@
       "milkh"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q53"
   },
   {
     "question": "Cho bản rõ THI, khóa k = 13. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
@@ -606,7 +705,9 @@
       "OVB"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q54"
   },
   {
     "question": "Keylogger là gì?",
@@ -617,7 +718,9 @@
       "Là loại phần mềm chống virus"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q55"
   },
   {
     "question": "Cho bản mã URV, khóa k là IN. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
@@ -629,7 +732,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0,
+    "id": "q56"
   },
   {
     "question": "Chọn phương án đúng cho mã hóa “chung tay” bằng mã Cear?",
@@ -640,7 +745,9 @@
       "WDBFKXQJ"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q57"
   },
   {
     "question": "Cho bản rõ LOVE, khóa k = 12. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
@@ -651,7 +758,9 @@
       "VHJJ"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q58"
   },
   {
     "question": "36 mod 9 ?",
@@ -663,7 +772,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q59"
   },
   {
     "question": "Cho bản rõ AMO, khóa k = 22. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
@@ -674,7 +784,9 @@
       "XNC"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q60"
   },
   {
     "question": "Tấn công sửa đổi là?",
@@ -685,7 +797,9 @@
       "Là một thực thể tấn công giả danh một thực thể khác."
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q61"
   },
   {
     "question": "Tấn công từ bên trong hệ thống là?",
@@ -696,7 +810,9 @@
       "Là khi người dùng hợp pháp vô tình hoặc cố ý can thiệp hệ thống trái phép."
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q62"
   },
   {
     "question": "Cho bản rõ EAR, khóa k = 17. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
@@ -707,7 +823,9 @@
       "VRE"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q63"
   },
   {
     "question": "SHA 512 là viết tắt của từ gì?",
@@ -718,7 +836,9 @@
       "secure Hash Although"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 2,
+    "id": "q64"
   },
   {
     "question": "1 mod 161=18?",
@@ -730,7 +850,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q65"
   },
   {
     "question": "Mật mã?",
@@ -742,7 +863,8 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q66"
   },
   {
     "question": "Cho bản mã CODE, khóa k = 7. Khi giải mã bản mã với khóa k theo Caesar ta sẽ thu được bản rõ nào dưới đây?",
@@ -753,7 +875,9 @@
       "DWQA"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q67"
   },
   {
     "question": "Cho bản mã ICVM, khóa k là GO. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
@@ -765,7 +889,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0,
+    "id": "q68"
   },
   {
     "question": "Tiếp cận tấn công mã đối xứng có mấy cách",
@@ -776,7 +902,9 @@
       "2"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q69"
   },
   {
     "question": "Độ an toàn trong mã đối xứng là?",
@@ -787,7 +915,9 @@
       "An toàn không điều kiện"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q70"
   },
   {
     "question": "Phòng chống tấn công Tấn công từ chối dịch vụ phân bố (DDoS)",
@@ -799,7 +929,8 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q71"
   },
   {
     "question": "Trong công thức h=H(M) thì h, H, M lần lượt là:",
@@ -810,7 +941,9 @@
       "H là hash code có độ dài thay đổi. h là hash function và M là meege có độ dài thay đổi."
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q72"
   },
   {
     "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(1,3,4,2,?). Khi mã hóa bản rõ SOME theo hoán vị ta sẽ thu được bản mã nào?",
@@ -821,7 +954,9 @@
       "SNAP"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q73"
   },
   {
     "question": "Phương pháp tiếp cận tấn công mã đối xứng là?",
@@ -832,7 +967,9 @@
       "Tấn công duyệt toàn bộ"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q74"
   },
   {
     "question": "An toàn máy tính là gì?",
@@ -844,7 +981,8 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q75"
   },
   {
     "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (1, 3, 2, 5, 4). Khi giải mã bản mã JSUIT theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
@@ -855,7 +993,9 @@
       "ghjgg"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q76"
   },
   {
     "id": 110,
@@ -867,7 +1007,8 @@
       "Trao đổi khóa"
     ],
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0
   },
   {
     "id": 102,
@@ -879,7 +1020,8 @@
       "Ứng dụng"
     ],
     "favorite": false,
-    "correct": "A"
+    "correct": "A",
+    "wrongCount": 2
   },
   {
     "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(3,1,4,2,5). Khi mã hóa bản rõ JUSTS theo hoán vị ta sẽ thu được bản mã nào?",
@@ -890,7 +1032,9 @@
       "SJTUS"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q79"
   },
   {
     "question": "Năm thuật toán SHA là ?",
@@ -901,7 +1045,9 @@
       "SHA-1, SHA-64 . SHA-256, SHA- 384, SHA-512"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q80"
   },
   {
     "question": "Ứng dụng nổi tiếng nhất của SHA là gì?",
@@ -912,7 +1058,9 @@
       "Hệ thống Tiền tệ Bitcoin"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q81"
   },
   {
     "question": "6416 mod 161?",
@@ -924,7 +1072,8 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q82"
   },
   {
     "question": "Quá trình xử lý khối tin trong MD5 gồm bao nhiêu giai đoạn giống nhau?",
@@ -936,7 +1085,8 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q83"
   },
   {
     "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4) là (4, 2, 1, 3). Khi mã hóa bản rõ FIST theo mã hoán vị ta sẽ thu được bản mã nào dưới đây?",
@@ -947,7 +1097,9 @@
       "BHGS"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q84"
   },
   {
     "id": 111,
@@ -959,7 +1111,8 @@
       "Bảo vệ định danh và xác thực"
     ],
     "favorite": false,
-    "correct": "A"
+    "correct": "A",
+    "wrongCount": 0
   },
   {
     "question": "Tấn công từ chối dịch vụ là?",
@@ -971,7 +1124,8 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q86"
   },
   {
     "question": "Các kiểu tấn công thám mã",
@@ -982,7 +1136,9 @@
       "Chỉ dùng bản mã, biết bản rõ, chọn bản rõ, chọn bản mã, chọn bản tin"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q87"
   },
   {
     "question": "Một thao tác MD5—MD5 bao gồm bao nhiêu tác vụ?",
@@ -993,7 +1149,9 @@
       "16."
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q88"
   },
   {
     "question": "Giao thức Transport Layer Security (TLS v1.3) sử dụng bao nhiêu bộ mật mã (cipher suites)?",
@@ -1004,7 +1162,9 @@
       "Hỗ trợ 5 cipher suites."
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q89"
   },
   {
     "question": "Cho biết kết quả phép toán u: 2^6 mod 12",
@@ -1016,7 +1176,8 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q90"
   },
   {
     "question": "Mã thay thế là?",
@@ -1027,7 +1188,9 @@
       "Là phương pháp mà từng kí tự (nhóm kí tự) trong bản rõ được thay thế bằng một kí tự (một nhóm kí tự) khác để tạo ra bản mã"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q91"
   },
   {
     "question": "Kích thước đầu ra của MD5?",
@@ -1038,7 +1201,9 @@
       "128 bit"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q92"
   },
   {
     "question": "Mã Playfair?",
@@ -1050,7 +1215,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "D"
+    "correct": "D",
+    "wrongCount": 0,
+    "id": "q93"
   },
   {
     "question": "Cho bản mã JZOP, khóa k là CL. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
@@ -1062,7 +1229,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0,
+    "id": "q94"
   },
   {
     "question": "1 mod 83=12?",
@@ -1074,7 +1243,8 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q95"
   },
   {
     "question": "Cho biết kết quả phép toán u: (1234 + 2345) mod 17",
@@ -1086,7 +1256,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q96"
   },
   {
     "question": "SHA-1 trả lại kết quả dài bao nhiêu bit?",
@@ -1097,7 +1268,9 @@
       "160 bit"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q97"
   },
   {
     "question": "Cho bản mã AKIGZ, khóa k là PC. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
@@ -1109,7 +1282,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0,
+    "id": "q98"
   },
   {
     "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(4,2,1,3,?). Khi mã hóa bản rõ WIND theo hoán vị ta sẽ thu được bản mã nào?",
@@ -1120,7 +1295,9 @@
       "DIWH"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q99"
   },
   {
     "question": "Ma trận Playfair là?",
@@ -1132,7 +1309,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "D"
+    "correct": "D",
+    "wrongCount": 0,
+    "id": "q100"
   },
   {
     "question": "Secure Multipurpose Internet Mail Extensions (S/MIME) được thiết kế để mã hóa theo mô hình nào?",
@@ -1143,7 +1322,9 @@
       "Client-to-Server."
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 2,
+    "id": "q101"
   },
   {
     "question": "Cho bản mã PMGQ, khóa k là AM. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
@@ -1155,7 +1336,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0,
+    "id": "q102"
   },
   {
     "question": "Chọn phương án đúng cho mã hóa “chung tay” bằng mã Ceasar?",
@@ -1166,7 +1349,9 @@
       "WDBFKXQJ"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q103"
   },
   {
     "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(1,4,2,3,5). Khi mã hóa bản rõ INFOR theo hoán vị ta sẽ thu được bản mã nào?",
@@ -1177,7 +1362,9 @@
       "RONFI"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q104"
   },
   {
     "id": 113,
@@ -1201,7 +1388,9 @@
       "Dùng để bảo mật của tập tin."
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q106"
   },
   {
     "question": "SHA-224 trả lại kết quả dài bao nhiêu bit?",
@@ -1212,7 +1401,9 @@
       "640 bit"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q107"
   },
   {
     "question": "(91 mod 161) + (25 mod 8) ?",
@@ -1223,7 +1414,9 @@
       "0"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q108"
   },
   {
     "question": "Cho bản mã SBWKRQ, khóa k. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
@@ -1234,7 +1427,9 @@
       "LTJAVA"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q109"
   },
   {
     "question": "Pretty Good Privacy (PGP) có sẵn như một plug-in cho các ứng dụng nào?",
@@ -1245,7 +1440,9 @@
       "Facebook, Linkedin, Telegram, Tictok,…"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q110"
   },
   {
     "question": "MD5 là viết tắt của từ gì?",
@@ -1256,7 +1453,9 @@
       "Mesge Digital 5"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q111"
   },
   {
     "question": "Tấn công thám mã dựa vào?",
@@ -1267,7 +1466,9 @@
       "Chuyển bản mã thành bản rõ, đây là quá trình ngược của mã hóa"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q112"
   },
   {
     "question": "Hiểm họa thụ động là gì?",
@@ -1279,7 +1480,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q113"
   },
   {
     "id": 115,
@@ -1291,7 +1493,8 @@
       "Ek(x)=e^(-1) mod Phi(n)"
     ],
     "favorite": false,
-    "correct": "A"
+    "correct": "A",
+    "wrongCount": 0
   },
   {
     "question": "Bản rõ là?",
@@ -1302,7 +1505,9 @@
       "Là bản tin gốc được mã hóa"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q115"
   },
   {
     "question": "Kích thước đầu vào cuả khối MD5?",
@@ -1314,7 +1519,8 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q116"
   },
   {
     "question": "Kích thước đầu ra của SHA512?",
@@ -1325,7 +1531,9 @@
       "512 bit"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q117"
   },
   {
     "question": "(97 mod 7) + (82 mod 5)?",
@@ -1336,7 +1544,9 @@
       "6"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q118"
   },
   {
     "id": 105,
@@ -1348,7 +1558,8 @@
       "Authentic Header"
     ],
     "favorite": false,
-    "correct": "C"
+    "correct": "C",
+    "wrongCount": 0
   },
   {
     "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (1, 3, 4, 5, 2). Khi giải mã bản mã HYAPP theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
@@ -1359,7 +1570,9 @@
       "happk"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q120"
   },
   {
     "question": "Trong giao thức Transport Layer Security (TLS 1.3), để chống tấn công trên luồng dữ liệu (re-ordering, replay) sử dụng giải pháp nào?",
@@ -1370,7 +1583,9 @@
       "Sử dụng TLS sequence number, sử dụng số nounce (số dùng một lần trong đời)."
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q121"
   },
   {
     "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (1, 3, 2, 4, 5). Khi giải mã bản mã FURIT theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
@@ -1381,7 +1596,9 @@
       "frakh"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q122"
   },
   {
     "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (3, 5, 4, 2, 1). Khi giải mã bản mã SECDO theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
@@ -1392,7 +1609,9 @@
       "codes"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q123"
   },
   {
     "question": "Kerberos là một sơ đồ xác thực được sử dụng phổ biến trên Internet, nó xác thực theo cách nào?",
@@ -1403,7 +1622,9 @@
       "User-to-Server."
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q124"
   },
   {
     "question": "Trong thuật toán SHA 512, quá trình xử lý khối tin có mấy vòng? Mỗi vòng sử dụng những gì?",
@@ -1414,7 +1635,9 @@
       "80 vòng. Mỗi vòng sử dụng một hằng số K, bộ đệm 8 từ (A, B, C, D, E, F, G, H) để lưu trữ các kết quả trung gian và đầu ra, một Qword (w) có kích thước 64 bit được tạo ra từ plain text."
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q125"
   },
   {
     "id": 112,
@@ -1426,7 +1649,8 @@
       "Chọn e sao cho: 1 < e < n, e và n là 2 số nguyên tố cùng nhau"
     ],
     "favorite": false,
-    "correct": "A"
+    "correct": "A",
+    "wrongCount": 0
   },
   {
     "id": 107,
@@ -1438,7 +1662,8 @@
       "S=(1+UCLN(p, e))*(1+UCLN(d-1, q-1))"
     ],
     "favorite": false,
-    "correct": "C"
+    "correct": "C",
+    "wrongCount": 0
   },
   {
     "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4,5)→(?,2,1,4,3). Khi mã hóa bản rõ KALVI theo hoán vị ta sẽ thu được bản mã nào?",
@@ -1448,7 +1673,9 @@
       "IAKVL"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q128"
   },
   {
     "question": "Khóa là?",
@@ -1459,7 +1686,9 @@
       "Là thông tin tham số dùng để mã hóa, chỉ người nhận và người gửi biết"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q129"
   },
   {
     "question": "Giao thức an toàn nào được thiết kế để hoạt động trên giao thức giao vận UDP?",
@@ -1470,7 +1699,9 @@
       "DTLS."
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q130"
   },
   {
     "question": "Cho bản rõ LATE, khóa k=16. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
@@ -1481,7 +1712,9 @@
       "BQRY"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q131"
   },
   {
     "question": "Kerberos xác minh tính hợp lệ của người sử dụng trong hệ thống như thế nào?",
@@ -1493,7 +1726,8 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q132"
   },
   {
     "question": "Cho bản mã DVEL, khóa k=17. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
@@ -1504,7 +1738,9 @@
       "meno"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q133"
   },
   {
     "question": "An toàn mạng là gì?",
@@ -1516,7 +1752,8 @@
     ],
     "correct": "C",
     "favorite": true,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q134"
   },
   {
     "question": "Chọn kết quả đúng : 1 mod 160=7 ?",
@@ -1528,7 +1765,8 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q135"
   },
   {
     "question": "Hãy cho biết kết quả của 8 mod 9 + 7 mod 9",
@@ -1539,7 +1777,9 @@
       "18"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q136"
   },
   {
     "question": "Mã Playfair là?",
@@ -1551,7 +1791,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "C"
+    "correct": "C",
+    "wrongCount": 0,
+    "id": "q137"
   },
   {
     "question": "Hãy cho biết kết quả của 7^2010 mod 13",
@@ -1562,7 +1804,8 @@
       "7"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "id": "q138"
   },
   {
     "question": "Cho biết kết quả phép toán u: 2^6 mod 12",
@@ -1574,7 +1817,8 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q139"
   },
   {
     "question": "MD5 hoạt động khi bạn tải xuống một tập tin trên một máy chủ nó sẽ?",
@@ -1585,7 +1829,9 @@
       "Gặp lỗi gì bên trong tập tin hay nó có phải là tập tin gốc từ nhà cung cấp"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q140"
   },
   {
     "question": "Cho bản mã cykpi, khóa k=2. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
@@ -1596,7 +1842,9 @@
       "misrv"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q141"
   },
   {
     "id": 106,
@@ -1608,7 +1856,8 @@
       "Exception Security Payload"
     ],
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0
   },
   {
     "question": "Chọn kết quả đúng : 1 mod 129=6?",
@@ -1620,7 +1869,8 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q143"
   },
   {
     "question": "123 mod 161 ?",
@@ -1631,7 +1881,9 @@
       "116"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q144"
   },
   {
     "question": "An toàn Internet là gì?",
@@ -1642,7 +1894,9 @@
       "Là tập hợp các công cụ thiết kế để bảo vệ dữ liệu và trống Hacker."
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q145"
   },
   {
     "question": "Cho bản rõ KITY, khóa k = 19. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
@@ -1653,7 +1907,9 @@
       "DBNI"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q146"
   },
   {
     "question": "Cho bản mã TEBBC, khóa k là MEM. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
@@ -1665,7 +1921,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0,
+    "id": "q147"
   },
   {
     "question": "Tấn công chuyển tiếp là?",
@@ -1677,7 +1935,8 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q148"
   },
   {
     "question": "Cho bản mã QNUY, khóa k=9. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
@@ -1688,7 +1947,9 @@
       "HOST"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q149"
   },
   {
     "question": "Giải mã là?",
@@ -1699,7 +1960,9 @@
       "Là nghiên cứu các nguyên lý và phương pháp"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q150"
   },
   {
     "question": "Loại virus nào biết tự thay đổi hình thức của nó, gây ra sự khó khăn cho các chương trình chống virus?",
@@ -1710,7 +1973,9 @@
       "Armored virus"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q151"
   },
   {
     "id": 109,
@@ -1722,7 +1987,8 @@
       "Quản trị khóa"
     ],
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0
   },
   {
     "question": "Một bảng băm MD5 thường được diễn tả bằng một số hệ thập lục phân gồm bao nhiêu ký tự?",
@@ -1733,7 +1999,9 @@
       "128"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q153"
   },
   {
     "question": "Để sử dụng chức năng S/MIME của ứng dụng e-mail client, chúng ta cần điều kiện gì?",
@@ -1744,7 +2012,9 @@
       "Phải có khóa cá nhân và lưu khóa công khai của Mail Server."
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 1,
+    "id": "q154"
   },
   {
     "question": "Các khóa mật mã sử dụng trong mã hóa và xác thực thông điệp cho giao thức Transport Layer Security (TLS 1.3) là gì?",
@@ -1755,7 +2025,9 @@
       "Một Khóa MAC cho dữ liệu client-to-server, một khóa mã hóa cho dữ liệu server-to-client."
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q155"
   },
   {
     "question": "Trojan Horse có thể nhân bản giống virus được không?",
@@ -1767,7 +2039,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q156"
   },
   {
     "question": "Cho bản rõ FE, khóa k = 18. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
@@ -1778,7 +2051,9 @@
       "HSKK"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q157"
   },
   {
     "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (3, 5, 4, 1, 2). Khi giải mã bản mã ESMNI theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
@@ -1789,7 +2064,9 @@
       "mines"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q158"
   },
   {
     "question": "Tìm ra các kết luận i trong các khẳng định u",
@@ -1800,7 +2077,9 @@
       "5^6 mod 12 = 1"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q159"
   },
   {
     "question": "Pretty Good Privacy (PGP) lưu chuỗi khóa công khai gồm những khóa nào?",
@@ -1811,7 +2090,9 @@
       "Tất cả các khóa công khai trên máy chủ khóa PGP."
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q160"
   },
   {
     "question": "Hãy cho biết kết quả của 8 mod 9 * 7 mod 9",
@@ -1823,7 +2104,8 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q161"
   },
   {
     "question": "Tấn công toàn bộ là gì?",
@@ -1834,7 +2116,9 @@
       "Là bản tin gốc đã được mã hóa"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q162"
   },
   {
     "id": 101,
@@ -1846,7 +2130,8 @@
       "Xác thực"
     ],
     "favorite": false,
-    "correct": "A"
+    "correct": "A",
+    "wrongCount": 0
   },
   {
     "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (4, 2, 5, 3, 1). Khi giải mã bản mã CIENS theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
@@ -1857,7 +2142,9 @@
       "since"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q164"
   },
   {
     "question": "326 mod 23?",
@@ -1868,7 +2155,9 @@
       "3"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q165"
   },
   {
     "question": "Hãy cho biết kết quả của 8 mod 9 * 7 mod 9",
@@ -1879,7 +2168,8 @@
       "57"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "id": "q166"
   },
   {
     "question": "SHA-512 trả lại kết quả dài bao nhiêu bit?",
@@ -1890,7 +2180,9 @@
       "128"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q167"
   },
   {
     "question": "Bảng chữ cái được sử dụng trong hệ mã hóa Veginere là?",
@@ -1902,7 +2194,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q168"
   },
   {
     "question": "HA(31): Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (3, 2, 4, 1, 5). Khi mã hóa bản rõ PLAIN theo mã hoán vị, ta sẽ thu được bản mã nào dưới đây?",
@@ -1914,7 +2207,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q169"
   },
   {
     "question": "SHA-384 trả lại kết quả dài bao nhiêu bit?",
@@ -1925,7 +2219,9 @@
       "384 bit"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q170"
   },
   {
     "question": "Tấn công bị động là?",
@@ -1937,7 +2233,8 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q171"
   },
   {
     "question": "Kích thước đầu vào cuả khối MD4?",
@@ -1948,7 +2245,9 @@
       "64 bit"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q172"
   },
   {
     "question": "Botnet là gì?",
@@ -1959,7 +2258,9 @@
       "Là những máy tính bị điều khiển bởi người khác thông qua trojan, virus"
     ],
     "correct": "D",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q173"
   },
   {
     "question": "Cho bản mã IESC, khóa k là BE. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
@@ -1972,7 +2273,8 @@
     "correct_answer": 0,
     "favorite": false,
     "correct": "D",
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q174"
   },
   {
     "question": "Cho bản mã AUB, khóa k=7. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
@@ -1983,7 +2285,9 @@
       "tne"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q175"
   },
   {
     "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (1, 3, 2, 4, 5). Khi giải mã bản mã EEVRY theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
@@ -1994,7 +2298,9 @@
       "enfgd"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q176"
   },
   {
     "question": "Cho bản mã XZEL, khóa k = (19, 3). Khi giải mã bản mã với khóa k theo hệ mã Affine ta sẽ thu được bản rõ nào dưới đây?",
@@ -2006,7 +2312,8 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q177"
   },
   {
     "question": "HA(33): Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (2, 4, 1, 3, 5). Khi mã hóa bản rõ PLAIN theo mã hoán vị, ta sẽ thu được bản mã nào dưới đây?",
@@ -2017,7 +2324,9 @@
       "NLOPA"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q178"
   },
   {
     "question": "(38 mod 6)+1?",
@@ -2029,7 +2338,8 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q179"
   },
   {
     "question": "Mã Cear được thực hiện như thế nào?",
@@ -2040,7 +2350,9 @@
       "Thay mỗi chữ trong bản rõ bằng chữ thứ tư tiếp theo trong bảng chữ cái"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q180"
   },
   {
     "question": "Mã hóa hoán vị: cho hoán vị (1,2,3,4)→(1,3,4,2). Khi mã hóa bản rõ EART theo hoán vị ta sẽ thu được bản mã nào?",
@@ -2052,7 +2364,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q181"
   },
   {
     "question": "Tấn công chủ động là?",
@@ -2064,7 +2377,8 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q182"
   },
   {
     "question": "Chọn kết quả đúng : 1 mod 224=5?",
@@ -2076,7 +2390,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q183"
   },
   {
     "question": "Một user báo cáo là anh ta đang nhận một lỗi chỉ ra rằng địa chỉ TCP/IP của anh ta đã bị sử dụng khi anh ta bật máy tính. Tấn công nào có thể đang thực hiện ?",
@@ -2088,7 +2403,9 @@
     ],
     "correct_answer": 0,
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0,
+    "id": "q184"
   },
   {
     "question": "TLS v1.3 là giao thức bảo mật độc lập với ứng dụng qua Internet cho giao thức HTTPS, dữ liệu ứng dụng được trao đổi sau khi thực hiện điều gì?",
@@ -2099,7 +2416,9 @@
       "Bắt tay giao thức TLS 03 giai đoạn, sau đó là trao đổi dữ liệu thực tế."
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q185"
   },
   {
     "id": 114,
@@ -2111,7 +2430,8 @@
       "Phi(n), p, q"
     ],
     "favorite": false,
-    "correct": "B"
+    "correct": "B",
+    "wrongCount": 0
   },
   {
     "question": "Bản mã là?",
@@ -2122,7 +2442,9 @@
       "Là thông tin tham số dùng để mã hóa"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q187"
   },
   {
     "question": "Trong thuật toán MD5 Một bộ đệm có mấy từ? Kích thước của mỗi từ là bao nhiêu bit?",
@@ -2133,7 +2455,9 @@
       "Một bộ đệm có 8 từ ( A, B, C, D, E, F, G, H), Kích thước mỗi từ là một thanh ghi 64 bit."
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q188"
   },
   {
     "question": "Cho bản rõ text, khóa k = 9. Khi mã hóa bản rõ với khóa k theo CAESAR ta sẽ thu được bản mã nào dưới đây?",
@@ -2144,7 +2468,9 @@
       "RHIE"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q189"
   },
   {
     "question": "Cho bản mã AGTA, khóa k là AM. Khi giải mã bản mã với khóa k theo hệ mã Vigenere ta sẽ thu được bản rõ nào dưới đây?",
@@ -2157,7 +2483,8 @@
     "correct_answer": 0,
     "favorite": false,
     "correct": "D",
-    "wrongCount": 0
+    "wrongCount": 0,
+    "id": "q190"
   },
   {
     "question": "Cho bản mã XJHZYJ, khóa k=5. Khi giải mã bản mã với khóa k theo CAESAR ta sẽ thu được bản rõ nào dưới đây?",
@@ -2168,7 +2495,9 @@
       "sectyy"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q191"
   },
   {
     "question": "Hiểm họa vô tình là gì?",
@@ -2179,7 +2508,9 @@
       "Quên không đặt Password."
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q192"
   },
   {
     "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (4, 1, 5, 3, 2). Khi giải mã bản mã LSLIT theo mã hoán vị ta sẽ thu được bản rõ nào dưới đây?",
@@ -2190,7 +2521,9 @@
       "stall"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q193"
   },
   {
     "question": "Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (2, 4, 1, 5, 3). Khi giải mã bản mã IGSUT theo mã hoán vị, ta sẽ thu được bản rõ nào dưới đây?",
@@ -2201,7 +2534,9 @@
       "giuts"
     ],
     "correct": "B",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q194"
   },
   {
     "question": "Cách kiểm tra mã MD5 là gì?",
@@ -2212,7 +2547,9 @@
       "Người dùng Windows sử dụng ứng dụng của hãng thứ ba"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q195"
   },
   {
     "question": "HA(34): Mã hóa hoán vị. Cho hoán vị của (1, 2, 3, 4, 5) là (1, 3, 4, 5, 2). Khi mã hóa bản rõ CLOCK theo mã hoán vị, ta sẽ thu được bản mã nào dưới đây?",
@@ -2223,7 +2560,9 @@
       "COCKF"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q196"
   },
   {
     "question": "Kiểu thao tác mã hóa được sử dụng trên bản rõ?",
@@ -2234,7 +2573,9 @@
       "Phép thế, hoán vị"
     ],
     "correct": "A",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q197"
   },
   {
     "question": "Thám mã là gì?",
@@ -2245,7 +2586,9 @@
       "Quá trình biến đổi thông tin từ dạng không đọc được ng dạng đọc được"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q198"
   },
   {
     "question": "Sâu máy tính (worm) là gì?",
@@ -2256,7 +2599,9 @@
       "Đáp án khác"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q199"
   },
   {
     "question": "Cho biết kết quả phép toán u: (213 * 345) mod 19",
@@ -2267,6 +2612,8 @@
       "9"
     ],
     "correct": "C",
-    "favorite": false
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q200"
   }
 ]

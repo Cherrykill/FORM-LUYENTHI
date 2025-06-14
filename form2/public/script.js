@@ -239,10 +239,10 @@ function startWrongQuestionsQuiz() {
         return;
     }
 
-    questions = JSON.parse(JSON.stringify(wrongQuestions)); // Sao chép để không ảnh hưởng gốc
-    isWrongQuestionsMode = true; // Bật chế độ câu sai
+    questions = JSON.parse(JSON.stringify(wrongQuestions));
+    isWrongQuestionsMode = true;
     document.getElementById("mode-label").innerText = "Làm lại câu sai";
-    showAnswerMode = false; // Không hiển thị đáp án đúng
+    showAnswerMode = false;
 
     selectedAnswers = new Array(questions.length).fill(null);
     currentQuestionIndex = 0;
@@ -323,22 +323,41 @@ function submitQuiz() {
     let correct = 0;
     let unanswered = 0;
 
+    // Tạo bản đồ ánh xạ câu hỏi hiện tại sang câu hỏi gốc
+    const questionMap = new Map();
+    questions.forEach((q, i) => {
+        const originalIndex = originalQuestions.findIndex(oq => oq.question === q.question);
+        if (originalIndex !== -1) {
+            questionMap.set(i, originalIndex);
+        }
+    });
+
+    // Đánh giá câu trả lời và cập nhật wrongCount
     questions.forEach((q, i) => {
         if (!q.correct) return;
         const userAnswer = selectedAnswers[i];
+        const originalIndex = questionMap.get(i);
 
         if (userAnswer === null) {
             unanswered++;
         } else if (userAnswer === getCorrectIndex(q.correct)) {
             correct++;
         } else {
-            if (!q.wrongCount) q.wrongCount = 1;
-            else q.wrongCount += 1;
+            // Cập nhật wrongCount cho câu hỏi gốc
+            if (originalIndex !== -1) {
+                const originalQ = originalQuestions[originalIndex];
+                if (!originalQ.wrongCount) {
+                    originalQ.wrongCount = 1; // Thêm wrongCount nếu chưa có
+                } else {
+                    originalQ.wrongCount += 1; // Tăng wrongCount
+                }
+            }
         }
     });
 
     const wrong = questions.length - correct - unanswered;
 
+    // Hiển thị kết quả
     document.getElementById('score-detail').innerText =
         `Đúng: ${correct}, Sai: ${wrong}, Bỏ qua: ${unanswered}`;
     drawChart(correct, wrong, unanswered);
@@ -356,28 +375,35 @@ function submitQuiz() {
     feedbackEl.textContent = feedback;
     document.getElementById('score-popup').classList.remove('hidden');
 
-    // Reset wrongCount về 0 nếu ở chế độ câu sai
+    // Reset wrongCount về 0 nếu ở chế độ câu sai và trả lời đúng
     if (isWrongQuestionsMode) {
-        questions.forEach(q => {
-            const originalQ = originalQuestions.find(oq => oq.question === q.question);
-            if (originalQ) originalQ.wrongCount = 0;
+        questions.forEach((q, i) => {
+            const originalIndex = originalQuestions.findIndex(oq => oq.question === q.question);
+            if (originalIndex !== -1 && selectedAnswers[i] === getCorrectIndex(q.correct)) {
+                originalQuestions[originalIndex].wrongCount = 0; // Reset wrongCount nếu trả lời đúng
+            }
         });
-        questions = JSON.parse(JSON.stringify(originalQuestions)); // Khôi phục danh sách gốc
         isWrongQuestionsMode = false;
     }
 
-    // Gửi dữ liệu sai/số lần sai về server
+    // Gửi dữ liệu cập nhật về server
     fetch('/update-questions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(originalQuestions) // Gửi danh sách gốc
+        body: JSON.stringify(originalQuestions) // Gửi danh sách gốc đã cập nhật
     })
-        .then(res => res.json())
+        .then(res => {
+            if (!res.ok) throw new Error('Lỗi khi gửi yêu cầu');
+            return res.json();
+        })
         .then(data => {
             console.log('✅ Đã cập nhật file:', data.message);
+            // Cập nhật questions từ originalQuestions để đồng bộ
+            questions = JSON.parse(JSON.stringify(originalQuestions));
         })
         .catch(err => {
             console.error('❌ Lỗi khi gửi dữ liệu:', err);
+            alert('Không thể cập nhật dữ liệu câu hỏi. Vui lòng thử lại.');
         });
 
     // Reset trạng thái sau khi nộp
@@ -390,6 +416,7 @@ function submitQuiz() {
 // Đóng popup điểm
 function closeScorePopup() {
     document.getElementById('score-popup').classList.add('hidden');
+    startQuiz(false, false, false); // Bắt đầu lại quiz với chế độ bình thường
 }
 
 // Vẽ biểu đồ kết quả
