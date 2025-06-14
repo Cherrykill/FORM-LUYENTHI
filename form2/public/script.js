@@ -10,6 +10,8 @@ let showAnswerMode = false;
 let autoNextDelay = 0;
 let countdownInterval;
 let timeLeftInSeconds = 0;
+let originalQuestions = []; // Lưu danh sách câu hỏi gốc
+let isWrongQuestionsMode = false; // Cờ để xác định chế độ làm lại câu sai
 
 // Hàm khởi tạo khi tải trang
 window.onload = async () => {
@@ -34,6 +36,7 @@ async function loadQuestions() {
     try {
         const res = await fetch('/questions');
         questions = await res.json();
+        originalQuestions = JSON.parse(JSON.stringify(questions)); // Sao lưu câu hỏi gốc
         selectedAnswers = new Array(questions.length).fill(null);
     } catch (err) {
         alert('Không thể tải câu hỏi!');
@@ -80,8 +83,13 @@ function renderQuestion() {
             btn.classList.add('selected');
         }
 
-        if (showAnswerMode && i === getCorrectIndex(question.correct)) {
-            btn.style.border = '2px solid green';
+        // Chỉ hiển thị viền xanh/đỏ nếu ở chế độ showAnswerMode và đã chọn đáp án
+        if (showAnswerMode && selectedAnswers[currentQuestionIndex] !== null) {
+            if (i === getCorrectIndex(question.correct)) {
+                btn.style.border = '2px solid green'; // Đáp án đúng
+            } else if (i === selectedAnswers[currentQuestionIndex] && i !== getCorrectIndex(question.correct)) {
+                btn.style.border = '2px solid red'; // Đáp án sai đã chọn
+            }
         }
 
         optionsEl.appendChild(btn);
@@ -122,7 +130,7 @@ function updateQuestionButtons() {
 // Chọn đáp án
 function selectAnswer(index) {
     selectedAnswers[currentQuestionIndex] = index;
-    renderQuestion();
+    renderQuestion(); // Cập nhật lại giao diện để hiển thị viền màu nếu ở chế độ showAnswerMode
     if (autoNextDelay > 0) {
         setTimeout(() => nextQuestion(), autoNextDelay);
     }
@@ -155,6 +163,7 @@ function handleStartQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
         alert("⚠️ Có câu hỏi chưa được định nghĩa đáp án. Vui lòng sửa trước khi bắt đầu.");
         return;
     }
+    isWrongQuestionsMode = false; // Tắt chế độ câu sai
     startQuiz(shuffleQuestions, shuffleAnswers, showAnswers);
 }
 
@@ -212,6 +221,48 @@ function startQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
     }
 
     document.getElementById("settings-popup").classList.add("hidden");
+    renderQuestionButtons();
+    renderQuestion();
+    updateQuizProgress();
+}
+
+// =========================================================================
+// 5.1 🎯 CHẾ ĐỘ LÀM LẠI CÂU SAI
+// =========================================================================
+
+// Bắt đầu quiz với các câu hỏi sai
+function startWrongQuestionsQuiz() {
+    const wrongQuestions = originalQuestions.filter(q => q.wrongCount && q.wrongCount > 0);
+    if (wrongQuestions.length === 0) {
+        alert("🎉 Không có câu hỏi nào bạn làm sai!");
+        closeScorePopup();
+        return;
+    }
+
+    questions = JSON.parse(JSON.stringify(wrongQuestions)); // Sao chép để không ảnh hưởng gốc
+    isWrongQuestionsMode = true; // Bật chế độ câu sai
+    document.getElementById("mode-label").innerText = "Làm lại câu sai";
+    showAnswerMode = false; // Không hiển thị đáp án đúng
+
+    selectedAnswers = new Array(questions.length).fill(null);
+    currentQuestionIndex = 0;
+
+    const timeLimitMinutes = parseInt(document.getElementById("time-limit-select").value);
+    const countdownDisplay = document.getElementById("countdown");
+    const timeInfo = document.getElementById("time-info");
+
+    if (timeLimitMinutes > 0) {
+        timeLeftInSeconds = timeLimitMinutes * 60;
+        timeInfo.textContent = `${timeLimitMinutes} phút`;
+        startCountdown();
+    } else {
+        timeLeftInSeconds = 0;
+        timeInfo.textContent = "Không giới hạn";
+        countdownDisplay.textContent = "--:--";
+        clearInterval(countdownInterval);
+    }
+
+    document.getElementById("score-popup").classList.add("hidden");
     renderQuestionButtons();
     renderQuestion();
     updateQuizProgress();
@@ -305,11 +356,21 @@ function submitQuiz() {
     feedbackEl.textContent = feedback;
     document.getElementById('score-popup').classList.remove('hidden');
 
+    // Reset wrongCount về 0 nếu ở chế độ câu sai
+    if (isWrongQuestionsMode) {
+        questions.forEach(q => {
+            const originalQ = originalQuestions.find(oq => oq.question === q.question);
+            if (originalQ) originalQ.wrongCount = 0;
+        });
+        questions = JSON.parse(JSON.stringify(originalQuestions)); // Khôi phục danh sách gốc
+        isWrongQuestionsMode = false;
+    }
+
     // Gửi dữ liệu sai/số lần sai về server
     fetch('/update-questions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(questions)
+        body: JSON.stringify(originalQuestions) // Gửi danh sách gốc
     })
         .then(res => res.json())
         .then(data => {
