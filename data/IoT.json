@@ -1,0 +1,1082 @@
+[
+  {
+    "question": "IoT tiến hóa từ sự hội tụ của các công nghệ nào?",
+    "answers": [
+      "Công nghệ không dây , hệ thống vi cơ điện tử và Internet",
+      "Điện toán di động, dữ liệu lớn và internet",
+      "Công nghệ không dây, trí tuệ nhân tạo và dữ liệu lớn",
+      "Cảm biến, điện toán đám mây và công  nghệ máy học"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "1"
+  },
+  {
+    "question": "IoT phải có 2 thuộc tính nào sau đây?",
+    "answers": [
+      "Phải có là ứng dụng internet và lấy được thông tin vật chủ",
+      "Phải có cảm biến và kết nối bluetooth",
+      "Phải có trao đổi dữ liệu và phân tích hệ thống",
+      "Không có câu trả lời nào đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "2"
+  },
+  {
+    "question": "Người được gọi là chả đẻ của IoT là ai?",
+    "answers": [
+      "Kevin Ashton",
+      "Vinton Gray Cerf",
+      "Satoshi Nakamoto",
+      "Hal Finney"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "3"
+  },
+  {
+    "question": "Các công nghệ nào được sử dụng trong Iot",
+    "answers": [
+      "RFID",
+      "Bluetooth",
+      "Wifi",
+      "Tất cả"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "4"
+  },
+  {
+    "question": "Các thiết bị IoT trong nhà giúp ích trong việc nào sau đây?",
+    "answers": [
+      "Tự động hóa",
+      "Tiết kiệm năng lượng",
+      "An toàn và bảo mật",
+      "Tất cả các câu trả lời là chính xác"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "5"
+  },
+  {
+    "question": "Một số tính năng mà ô tô thông minh có thể cung cấp là gì?",
+    "answers": [
+      "Xác định vị trí các điểm đỗ xe có sẵn",
+      "Gọi dịch vụ khẩn cấp trong trường hợp xảy ra tai nạn",
+      "Tự lái xe",
+      "Tất cả các tùy chọn đều đúng"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "6"
+  },
+  {
+    "question": "Giao thông công cộng được hưởng lợi như thế nào từ internet vạn vật?",
+    "answers": [
+      "Thông tin từ các thiết bị được kết nối với nhau được sử dụng để cải thiện chất lượng và bảo mật",
+      "Nếu tất cả ô tô cá nhân đều có IoT, thì phương tiện giao thông công cộng không còn cần thiết nữa",
+      "IoT làm giảm nhu cầu giao thông công cộng trong giờ cao điểm",
+      "Thông tin từ các thiết bị được kết nối với nhau được sử dụng để cung cấp dịch vụ được cá nhân hóa"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "7"
+  },
+  {
+    "question": "Trong ý tưởng về thiết bị di động, điểm hấp dẫn chính của máy tính xách tay khiến nó trở thành thiết bị phổ biến là gì?",
+    "answers": [
+      "Máy tính xách tay có chức năng máy tính để bàn có thể mang đi mọi nơi",
+      "Chi phí của máy tính xách tay thấp hơn máy tính để bàn",
+      "Máy tính xách tay hiệu quả hơn máy tính để bàn",
+      "Không câu trả lời nào trong số này đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "8"
+  },
+  {
+    "question": "Phần cứng của Iot thu thập dữ liệu thông qua việc sử dụng ?",
+    "answers": [
+      "Khúc xạ ánh sáng",
+      "Thiết bị Giám sát",
+      "Thiết bị truyền động",
+      "Cảm biến"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "9"
+  },
+  {
+    "question": "Thách thức nào giữa thiết bị IoT với các thiết bị thông minh hoặc thiết bị được kết nối?",
+    "answers": [
+      "Giá trị mà chúng mang lại",
+      "Chi phí đầu tư",
+      "Các cách chúng được sử dụng",
+      "Tất cả các ý đều đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "10"
+  },
+  {
+    "question": "IOT là viết tắt?",
+    "answers": [
+      "Internet of Things",
+      "Internet of Think",
+      "Internet of Technology",
+      "Intelligent of Technology"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "11"
+  },
+  {
+    "question": "Tuyên bố nào phù hợp nhất với Internet of Things?",
+    "answers": [
+      "Internet of Things bao gồm hàng tỷ thiết bị trên khắp thế giới được kết nối với internet",
+      "Internet of Things nhằm mục đích xây dựng phần mềm đáng tin cậy",
+      "Internet of Things nhằm kết nối con người và vạn vật",
+      "Không có tuyên bố nào phù hợp"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "12"
+  },
+  {
+    "question": "Các thiết bị IoT phải được cập nhật khi nào?",
+    "answers": [
+      "1 tuần cập nhật 1 lần",
+      "1 ngày cập nhật 1 lần",
+      "1 tháng cập nhật 1 lần",
+      "Phải luôn được cập nhật"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "13"
+  },
+  {
+    "question": "Một thiết bị nhận thông tin từ nhiều điểm trên mạng và truyền nó đến một mạng khác là gì?",
+    "answers": [
+      "Cảm biến",
+      "Máy với Máy (M2M)",
+      "Dữ liệu lớn",
+      "Thiết bị đeo tay"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "14"
+  },
+  {
+    "question": "Nền tảng Internet of Things?",
+    "answers": [
+      "Cho phép các thiết bị và ứng dụng giao tiếp với nhau",
+      "Cung cấp các dịch vụ để truy cập, sử dụng hoặc tham gia vào Internet",
+      "Cho phép các cá nhân và tổ chức làm cho trang web của họ có thể truy cập được",
+      "Không có phát biểu đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "15"
+  },
+  {
+    "question": "Ai đặt ra thuật ngữ IoT?",
+    "answers": [
+      "Kevin Ashton",
+      "IBM",
+      "Ross Ihaka",
+      "Guido van Rossum"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "16"
+  },
+  {
+    "question": "Thuật ngữ IoT được đặt ra vào năm nào?",
+    "answers": [
+      "1999",
+      "2000",
+      "2001",
+      "1998"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "17"
+  },
+  {
+    "question": "Thuật ngữ IIoT là viết tắt của những chữ nào?",
+    "answers": [
+      "Industrial Internet of Things",
+      "Index Internet of Technology",
+      "Intense Internet of Things",
+      "Incorporate Internet  of Technology"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "18"
+  },
+  {
+    "question": "Thành phần nào sau đây không phải là thành phần cơ bản của hệ thống IoT?",
+    "answers": [
+      "Máy biến áp",
+      "Cảm biến",
+      "Giao diện người dùng",
+      "Kết nối và xử lý dữ liệu"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "19"
+  },
+  {
+    "question": "Giao thức MQTT là viết tắt của những chữ nào?",
+    "answers": [
+      "Message Query Telemetry Transport",
+      "MetaQuery Telemetry Transport",
+      "Multiple Query Telemetry Transport",
+      "Multi-Queue Query Telemetry Transport"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "20"
+  },
+  {
+    "question": "DHCP sử dụng giao thức lớp vận chuyển nào?",
+    "answers": [
+      "UDP",
+      "TCP",
+      "RSVP",
+      "DCCP"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "21"
+  },
+  {
+    "question": "Thiết bị nào không phải thiết bị mạng?",
+    "answers": [
+      "Traffic analyzer",
+      "Bridge",
+      "Switch",
+      "Router"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "22"
+  },
+  {
+    "question": "Arduino UNO là gì?",
+    "answers": [
+      "Protocol",
+      "Network",
+      "Software",
+      "Hardware device"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "23"
+  },
+  {
+    "question": "Thiết bị IoT nào dùng để thu thập dữ liệu từ thế giới thực?",
+    "answers": [
+      "Sensors",
+      "Actuators",
+      "Microprocessors",
+      "Microcontrollers"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "24"
+  },
+  {
+    "question": "Thành phần của hệ thống IoT thực thi một chương trình là gì?",
+    "answers": [
+      "Cảm biến",
+      "Bộ chuyển đổi kỹ thuật số sang tương tự",
+      "Bộ truyền động",
+      "Bộ vi điều khiển"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "25"
+  },
+  {
+    "question": "Thiết bị nào sau đây không thể được coi là thiết bị IoT?",
+    "answers": [
+      "Đồng hồ thông minh",
+      "Điện thoại Android",
+      "Máy tính xách tay",
+      "Đèn huỳnh quang"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "26"
+  },
+  {
+    "question": "Mạng nào sau đây không phải là mạng không dây tầm ngắn?",
+    "answers": [
+      "VPN",
+      "Wifi",
+      "Bluetooth",
+      "Điểm phát sóng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "27"
+  },
+  {
+    "question": "Thông số kỹ thuật quan trọng của cảm biến hình ảnh?",
+    "answers": [
+      "Độ phân giải, kích thước điểm ảnh",
+      "Độ nhạy sáng, tốc độ phản hồi",
+      "Độ lệch màu",
+      "Tất cả phương án"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "28"
+  },
+  {
+    "question": "Phân loại cảm biến hình ảnh dựa trên tiêu chí nào?",
+    "answers": [
+      "Công nghệ sản xuất chip",
+      "Kích thước và độ phân giải",
+      "Ứng dụng",
+      "Tất cả phương án"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "29"
+  },
+  {
+    "question": "Trong các thành phần liên kết trong IoT, thành phần nào nằm ở giữa sơ đồ biểu diễn IoT?",
+    "answers": [
+      "Định danh",
+      "Cảm biến",
+      "Kết nối",
+      "Đối tượng"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "30"
+  },
+  {
+    "question": "Bốn lĩnh vực công nghệ chính luôn gắn liền với sự phát triển xu thế IoT, chọn phương án đúng nhất?",
+    "answers": [
+      "Phần cứng, truyền thông kết nối, phần mềm, ứng dụng",
+      "Phần cứng, phần mềm, thương mại, năng lượng",
+      "Phần cứng, phần mềm, dữ liệu lớn, internet",
+      "Phần mềm, internet, mã hóa, dữ liệu"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "31"
+  },
+  {
+    "question": "Giao nào là thức mạng dùng IPv6, cho phép quy định cơ chế đóng gói bản tin và nén header?",
+    "answers": [
+      "6LoWPAN",
+      "Zigbee",
+      "Bluetooth",
+      "Z-wave"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "32"
+  },
+  {
+    "question": "Sóng WiFi truyền và phát tín hiệu ở tần số?",
+    "answers": [
+      "1.4 GHz hoặc 2.3 GHz",
+      "6 GHz hoặc 10 GHz",
+      "15 GHz hoặc 30 GHz",
+      "2.4 GHz hoặc 5 GHz"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "33"
+  },
+  {
+    "question": "NFC (Near-Field Communications) là công nghệ kết nối không dây trong phạm vi tầm ngắn trong khoảng cách",
+    "answers": [
+      "4 cm",
+      "15 cm",
+      "20 cm",
+      "25 cm"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "34"
+  },
+  {
+    "question": "Đâu là công nghệ không dây sử dụng các bóng đèn LED để truyền dữ liệu với tốc độ  nhanh hơn Wifi tới 100 lần?",
+    "answers": [
+      "LIFI",
+      "Sigfox",
+      "Neul",
+      "Thread"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "35"
+  },
+  {
+    "question": "Một cảm biến tốt tuân theo quy tắc nào?",
+    "answers": [
+      "Nó nhạy cảm với thuộc tính được đo lường",
+      "Nó không nhạy cảm đến bất kỳ thuộc tính nào khác có thể gặp trong ứng dụng của nó",
+      "Nó không ảnh hưởng đến thuộc tính được đo lường",
+      "Tất cả phương án"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "36"
+  },
+  {
+    "question": "Chip xử lý hình ảnh CCD viết tắt là gì?",
+    "answers": [
+      "Charge Coupled Device",
+      "Computer Controlled Display",
+      "Computer Crimes Divison",
+      "Coarse Control Damper"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "37"
+  },
+  {
+    "question": "Chip xử lý hình ảnh CMOS  viết tắt là gì?",
+    "answers": [
+      "Complementary Metal Oxide Semiconductor",
+      "Complementary Metal Oxide Silicon",
+      "Complementary Metal Oxide Substrate",
+      "Cargo Movement Operating System"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "38"
+  },
+  {
+    "question": "Trong Cảm biến lực Loadcell , thành phần Strain gauge là gì?",
+    "answers": [
+      "Là một loại điện trở đặc biệt. Được cấp nguồn điện và giá trị điện trở thay đổi khi bị tác động lực lên nó",
+      "Là một thanh kim loại chịu tải có tính đàn hồi, thường là hợp kim nhôm",
+      "Là một hình thanh kim loại vòng tròn cố định trên thiết bị, có khả năng chịu tải tốt chuyên truyền điện và nhiệt",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "39"
+  },
+  {
+    "question": "Trong Cảm biến lực Loadcell , thành phần thân loadcell là gì?",
+    "answers": [
+      "Là một thanh kim loại chịu tải có tính đàn hồi, thường là hợp kim nhôm",
+      "Là một loại điện trở đặc biệt. Được cấp nguồn điện và giá trị điện trở thay đổi khi bị tác động lực lên nó",
+      "Là một hình thanh kim loại vòng tròn cố định trên thiết bị, có khả năng chịu tải tốt chuyên truyền điện và nhiệt",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "40"
+  },
+  {
+    "question": "Cảm biến khói nào sử dụng các chất đồng vị phóng xạ để hoạt động?",
+    "answers": [
+      "(a) Cảm biến khói Ion hóa",
+      "(b) Cảm biến khói quang điện",
+      "Cả (a) và (b) đều đúng",
+      "Cả (a) và (b) đều sai"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "41"
+  },
+  {
+    "question": "Cảm biến hồng ngoại thụ động có đặc điểm gì?",
+    "answers": [
+      "Chỉ phát hiện ra được bức xạ từ các vật thể khác như người, động vật hay nguồn nhiệt, chứ sẽ không phát ra tia hồng ngoại",
+      "Phát hiện mọi vật thể, với khoảng cách giới hạn",
+      "Khi vật thể đến gần với cảm biến, thiết bị sẽ phát ra ánh sáng hồng ngoại từ đèn Led và sẽ phản xạ vào vật thể trở lại mà người nhận có thể nhận thấy được",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "42"
+  },
+  {
+    "question": "Light Sensor/Photoelectric Sensor là tên gọi của cảm biến nào?",
+    "answers": [
+      "Cảm biến chuyển động",
+      "Cảm biến hạt",
+      "Cảm biến rò rỉ",
+      "Cảm biến quang"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "43"
+  },
+  {
+    "question": "Đâu là ưu điểm của cảm biến hồng ngoại?",
+    "answers": [
+      "Có độ nhạy cao trong việc xác định vật thể phát ra bức xạ hồng ngoại trong không gian",
+      "Điều kiện nhiệt độ môi trường. Những môi trường có nhiệt độ cao thì cảm biến sẽ hoạt động hiệu quả",
+      "Phạm vi quét cảm biến hồng ngoại không có góc bị chết",
+      "Không bị nhầm lẫn khi phát hiện ra chuyển động"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "44"
+  },
+  {
+    "question": "Đâu là các hãng sản xuất hình ảnh?",
+    "answers": [
+      "AUTONICS",
+      "MISUMI",
+      "SUNX",
+      "Tất cả các ý trên"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "45"
+  },
+  {
+    "question": "Công nghệ nhiều lớp cho phép cung cấp, quản lý và tự động hóa đơn giản các thiết bị được kết nối trong IoT?",
+    "answers": [
+      "IoT Platform",
+      "Machine Learning (ML )",
+      "Artificial Intelligence (AI)",
+      "Robotic Process Automation (RPA)"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "46"
+  },
+  {
+    "question": "Cách thức truyền dữ liệu trong IoT là gì?",
+    "answers": [
+      "Blutooth",
+      "Zigbee",
+      "Z-wave",
+      "Tất cả đáp án"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "47"
+  },
+  {
+    "question": "LoRaWAN là gì?",
+    "answers": [
+      "Giao thức truyền thông không dây cho IoT",
+      "Ngôn ngữ lập trình cho IoT",
+      "Công nghệ kết nối dữ liệu sản xuất",
+      "Màn hình cảm ứng cho IoT"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "48"
+  },
+  {
+    "question": "Mục đích chính của IoT là gì ?",
+    "answers": [
+      "Kết nối các thiết bị và đối tượng để chia sẻ dữ liệu",
+      "Tạo ra một Internet mới dành riêng cho các thiết bị di động",
+      "Mở rộng sự phổ biến của trò chơi trực tuyến",
+      "Tăng cường an ninh mạng cho doanh nghiệp"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "49"
+  },
+  {
+    "question": "5G là gì và vai trò của nó trong IoT là gì?",
+    "answers": [
+      "Một loại cảm biến tiên tiến được sử dụng trong IoT",
+      "Một dạng phân tích dữ liệu trong IoT",
+      "Một mô hình kinh doanh cho các ứng dụng IoT",
+      "Tiêu chuẩn kết nối không dây mới với tốc độ nhanh và độ trễ thấp, hỗ trợ việc triển khai IoT"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "50"
+  },
+  {
+    "question": "Giao thức nào làm trung gian cho các gói tin trên lớp ứng dụng với mục đích thay thế các hệ thống truyền tin độc quyền và không tương thích trong IoT?",
+    "answers": [
+      "DDS",
+      "MQTT",
+      "CoAP",
+      "AMQP"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "51"
+  },
+  {
+    "question": "Hệ thống nhúng được hiểu như thế nào ?",
+    "answers": [
+      "Là hệ thống tự trị các nhúng trong môi trường hoặc hệ thống mẹ",
+      "Là hệ thống kết hợp phần mềm và phần cứng để giải quyết các bài toán chuyên dụng",
+      "Là hệ thống có khả năng tự động hóa cao và hoạt động ổn định",
+      "Tất cả các phương án trên"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "52"
+  },
+  {
+    "question": "Hệ thống nhúng được thiết kế để thực hiện nhiệm vụ chuyên dụng nào?",
+    "answers": [
+      "Đảm bảo tính an toàn và ứng dụng trong các lĩnh vực cụ thể",
+      "Tối ưu hóa hiệu suất và giảm thiểu chi phí sản xuất",
+      "Tăng cường tính linh hoạt và đa dạng của hệ thống",
+      "Tất cả các phương án trên"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "53"
+  },
+  {
+    "question": "Đâu không phải là đặc điểm của hệ thống nhúng?",
+    "answers": [
+      "Tính tương tác và kết nối mạng lưới rộng lớn",
+      "Tính hoạt động ổn định và tự động hóa cao",
+      "Tính linh hoạt và đa dạng trong việc thực hiện các nhiệm vụ",
+      "Tính chuyên dụng, không phải là hệ thống máy tính đa chức năng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "54"
+  },
+  {
+    "question": "IoT được hiểu như thế nào so với hệ thống nhúng?",
+    "answers": [
+      "IoT là một công nghệ độc lập, trong khi hệ thống nhúng là một phần của IoT",
+      "IoT là một hệ thống tổng hợp, trong khi hệ thống nhúng là một phần của hệ thống IoT",
+      "IoT là một công nghệ chủ đạo, trong khi hệ thống nhúng chủ yếu tập trung vào việc điều khiển các thiết bị trong một hệ thống cụ thể",
+      "IoT là một mạng lưới các thiết bị kết nối qua Internet, trong khi hệ thống nhúng là một tập hợp con của IoT"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "55"
+  },
+  {
+    "question": "Cảm biến quang loại nào sử dụng trong công nghiệp sản xuất và tự động hóa có khả năng phát hiện vật thể khá xa?",
+    "answers": [
+      "Cảm biến quang khuếch tán",
+      "Cảm biến quang hồng ngoại",
+      "Cảm biến gương phản xạ",
+      "Tầm xa đều như nhau"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "56"
+  },
+  {
+    "question": "Tổ chức hay ai là người sáng tạo ra Raspberry Pi?",
+    "answers": [
+      "Eben Upton",
+      "Sinh viên Hernando Barragan",
+      "Bởi hãng Espressif Systems",
+      "Google"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "57"
+  },
+  {
+    "question": "Tổ chức hay ai là người tham gia chính sáng tạo ra Adruino?",
+    "answers": [
+      "Sinh viên Hernando Barragan",
+      "Eben Upton",
+      "Bởi hãng Espressif Systems",
+      "Google"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "58"
+  },
+  {
+    "question": "Raspberry Pi dùng ngôn ngữ lập trình nào chính thức?",
+    "answers": [
+      "",
+      "Java",
+      "C#",
+      "Go"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "59"
+  },
+  {
+    "question": "Raspberry Pi hỗ trợ trên nền tảng và phần mềm nào?",
+    "answers": [
+      "Raspbian",
+      "Raspbmc",
+      "OSMC",
+      "Tất cả đáp án đều đúng"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "60"
+  },
+  {
+    "question": "Arduino đã chính thức được giới thiệu năm?",
+    "answers": [
+      "2005",
+      "2006",
+      "2007",
+      "2008"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "61"
+  },
+  {
+    "question": "Arduino ra đời ở nước nào?",
+    "answers": [
+      "Ý",
+      "Pháp",
+      "Mỹ",
+      "Nga"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "62"
+  },
+  {
+    "question": "Khi làm việc với UPnP, một thiết bị tự gán cái gì của chính nó?",
+    "answers": [
+      "Địa chỉ IP",
+      "Địa chỉ gửi thư",
+      "Địa chỉ doanh nghiệp",
+      "Địa chỉ UpnP"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "63"
+  },
+  {
+    "question": "Dịch vụ nào đã được sử dụng làm mẫu thử  các mối đe dọa của trung tâm điều khiển?",
+    "answers": [
+      "Amazon Echo",
+      "Apple Store",
+      "Google Play",
+      "Tất cả đáp án"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "64"
+  },
+  {
+    "question": "Những thách thức lớn của IoT là gì?",
+    "answers": [
+      "An ninh và sự riêng tư",
+      "Không có gì cả",
+      "Chia sẻ thông tin",
+      "Nó rất dễ tạo và thực hiện"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "65"
+  },
+  {
+    "question": "Phát biểu đúng nhất về dữ liệu khi sử dụng IoT là gì?",
+    "answers": [
+      "Dữ liệu thu được theo thời gian thực",
+      "Dữ liệu thu được hạn chế",
+      "Dữ liệu thu được rất khó quan sát",
+      "Dữ liệu thu được rất khó phân tích"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "66"
+  },
+  {
+    "question": "Điều nào sau đây là nhược điểm của việc sử dụng IoT?",
+    "answers": [
+      "Chi phí quá đắt",
+      "Lối sống xấu đi",
+      "Năng suất không tăng",
+      "Quá phụ thuộc vào công nghệ"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "67"
+  },
+  {
+    "question": "Ngôn ngữ ưa thích cho phân tích IoT là ngôn ngữ nào?",
+    "answers": [
+      "Python",
+      "HTML",
+      "PHP",
+      "C++"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "68"
+  },
+  {
+    "question": "Thành phần nào tham gia vận hành phần tử cốt lõi của IoT?",
+    "answers": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "Nhà cung cấp dịch vụ IoT"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "69"
+  },
+  {
+    "question": "Lợi thế nào không chính xác đối với IoT?",
+    "answers": [
+      "Bảo mật",
+      "Giảm thiểu lãng phí",
+      "Thu thập dữ liệu nâng cao",
+      "Cải thiện sự tham gia của khách hàng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "70"
+  },
+  {
+    "question": "Bước cuối cùng của việc truyền dữ liệu đáng tin cậy là gì?",
+    "answers": [
+      "Khởi tạo",
+      "Chuyển tiếp tin nhắn",
+      "Phát hiện tin nhắn bị mất",
+      "Phục hồi có chọn lọc"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "71"
+  },
+  {
+    "question": "Giao thức được sử dụng để liên kết tất cả các thiết bị trong IoT?",
+    "answers": [
+      "Mạng",
+      "UDP",
+      "HTTP",
+      "TCP/IP"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "72"
+  },
+  {
+    "question": "Arduino IDE được viết bằng ngôn ngữ lập trình nào?",
+    "answers": [
+      "C/C++",
+      "Java",
+      "JavaScript",
+      "Python"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "73"
+  },
+  {
+    "question": "Mạng IoT có phạm vi ngắn nhất là mạng nào trong các mạng sau?",
+    "answers": [
+      "SigFox",
+      "LPWAN",
+      "Short network",
+      "Short-range wireless network"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "74"
+  },
+  {
+    "question": "Giao thức nhẹ (lightweight protocol) là giao thức nào trong số các giao thức sau?",
+    "answers": [
+      "IP",
+      "CoAP",
+      "HTTP",
+      "MQTT"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "75"
+  },
+  {
+    "question": "Công nghệ nào sau đây không phải là công nghệ ở lớp liên kết dữ liệu?",
+    "answers": [
+      "HTTP",
+      "UART",
+      "wifi",
+      "Bluetooth"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "76"
+  },
+  {
+    "question": "MQTT dựa trên kiến trúc nào?",
+    "answers": [
+      "Publish-subscribe architecture",
+      "Client-server architecture",
+      "Peer-to-peer architecture",
+      "Request-responde architecture"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "77"
+  },
+  {
+    "question": "Thuật ngữ LPWAN là viết tắt của những chữ nào?",
+    "answers": [
+      "Low Power Wide Area Network",
+      "Low Protocol Wide Area Network",
+      "Long Power Wide Area Network",
+      "Long Protocol Wide Area Network"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "78"
+  },
+  {
+    "question": "Mô hình mạng sử dụng cho ZigBee Smart Energy?",
+    "answers": [
+      "Star Topology",
+      "Bus Topology",
+      "Ring Topology",
+      "Không cần mô hình"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "79"
+  },
+  {
+    "question": "Công nghệ cảm biến hình ảnh nào cần ít điện năng hơn?",
+    "answers": [
+      "CMOS",
+      "CCD",
+      "ADC",
+      "Nikon Coolpix"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "80"
+  },
+  {
+    "question": "Arduino Uno R3 dùng vi điều khiển gì?",
+    "answers": [
+      "Atmega 328",
+      "Quad core Cortex-A72",
+      "Intel® Atom ™ SoC",
+      "Tensilica Diamond Standard 106Micro"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "81"
+  },
+  {
+    "question": "Raspberry Pi 4 Model B dùng vi điều khiển gì?",
+    "answers": [
+      "Quad core Cortex-A72",
+      "Atmega 328",
+      "Intel® Atom ™ SoC",
+      "Tensilica Diamond Standard 106Micro"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "82"
+  },
+  {
+    "question": "Cổng bảo mật tiêu chuẩn của MQTT là cổng nào?",
+    "answers": [
+      "8000",
+      "8888",
+      "1883",
+      "8883"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "83"
+  },
+  {
+    "question": "Phạm vi của z-wave có khoảng cách là bao nhiêu mét?",
+    "answers": [
+      "30-100m",
+      "300-1000 m",
+      "<10m",
+      "100-1000m"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "84"
+  },
+  {
+    "question": "Tần số của z-wave là bao nhiêu GHz?",
+    "answers": [
+      "708,49 GHz",
+      "888,42 GHz",
+      "928,49 GHz",
+      "908,42GHz"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "85"
+  },
+  {
+    "question": "I2C là viết tắt của những chữ nào?",
+    "answers": [
+      "Inter-Integrated Communication",
+      "Internet Integrated Communication",
+      "Integrated Internet Communication",
+      "Internet Instigate Communication"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "86"
+  },
+  {
+    "question": "Thiết bị nào không phải thiết bị truyền động (actuator) trong IoT?",
+    "answers": [
+      "Stepper motor",
+      "Celling fan",
+      "RGB LED",
+      "Raspberry Pi"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "87"
+  },
+  {
+    "question": "Giao thức nào không tồn tại trong tầng liên kết dữ liệu (data link)?",
+    "answers": [
+      "ZigBee Smart Energy",
+      "LoRaWAN",
+      "WirelessHART",
+      "Secure MQTT"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "88"
+  },
+  {
+    "question": "NFC có thể truyền dữ liệu ở tốc độ nào?",
+    "answers": [
+      "424 Kb/giây",
+      "848 Kb/giây",
+      "216 Kb/giâ",
+      "Tất cả các phương án trên"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "id": "89"
+  },
+  {
+    "question": "Phạm vi của Bluetooth 4.2?",
+    "answers": [
+      "50m-150m",
+      "1m-20m",
+      "20m-40m",
+      "300m - 500m"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "90"
+  }
+]

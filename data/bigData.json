@@ -1,0 +1,962 @@
+[
+    {
+        "question": "Dữ liệu của Big Data là loại nào ?",
+        "answers": [
+            "Structured Data",
+            "Semi-Structured Data",
+            "Unstructured Data",
+            "Tất cả"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "1"
+    },
+    {
+        "question": "Đặc trưng nào không phải của Big Data",
+        "answers": [
+            "Volume",
+            "Variety",
+            "Vision",
+            "Velocity"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "2"
+    },
+    {
+        "question": "NoSQL là ?",
+        "answers": [
+            "Database",
+            "Field",
+            "Document",
+            "Collection"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "3"
+    },
+    {
+        "question": "Mục tiêu của NoSQL là gì?",
+        "answers": [
+            "NoSQL cung cấp một giải pháp thay thế cho cơ sở dữ liệu SQL để lưu trữ dữ liệu dạng văn bản.",
+            "Cơ sở dữ liệu NoSQL cho phép lưu trữ dữ liệu không có cấu trúc.",
+            "NoSQL không thích hợp để lưu trữ dữ liệu có cấu trúc.",
+            "NoSQL là một định dạng dữ liệu mới để lưu trữ các tập dữ liệu lớn."
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "4"
+    },
+    {
+        "question": "Cloudera phát triển công cụ nào ?",
+        "answers": [
+            "HCatalog",
+            "Hbase",
+            "Imphala",
+            "Oozie"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "5"
+    },
+    {
+        "question": "Loại nào không phải là CSDL NoSQL ?",
+        "answers": [
+            "SQL Server",
+            "MongoDB",
+            "Cassandra",
+            "Không có"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "6"
+    },
+    {
+        "question": "Đâu là một kiểu của CSDL NoSQL",
+        "answers": [
+            "SQL",
+            "Document databases",
+            "JSON",
+            "Tất cả"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "7"
+    },
+    {
+        "question": "Chọn đúng 5 đặc trưng cho Big Data ?",
+        "answers": [
+            "Volume, Velocity, Variety, Veracity, Value",
+            "Volume, Videos, Velocity, Variability, Value",
+            "Volume, Variability, Veracity, Visualization, Value",
+            "Volume, Velocity, Veracity, Visualization, Value"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "8"
+    },
+    {
+        "question": "Velocity (Tốc độ) là đặc trưng nói về?",
+        "answers": [
+            "Tốc độ gia tăng khối lượng dữ liệu lớn",
+            "Tốc độ cập nhật dữ liệu lớn",
+            "Tốc độ xử lý dữ liệu lớn",
+            "Tốc độ lưu trữ dữ liệu lớn"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "9"
+    },
+    {
+        "question": "Variety (Tính đa dạng) là đặc trưng về ?",
+        "answers": [
+            "Kiêu dữ liệu thu thập",
+            "Kiểu nội dung dữ liệu",
+            "Nguồn thu thập dữ liệu",
+            "Phương thức xử lý dữ liệu"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "10"
+    },
+    {
+        "question": "Đặc trưng quan trọng nhất của Big Data?",
+        "answers": [
+            "Khối lượng",
+            "Tính đa dạng",
+            "Tốc độ",
+            "Tất cả"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "11"
+    },
+    {
+        "question": "Đâu là đặc trưng quyết việc triển khai Dữ liệu lớn?",
+        "answers": [
+            "Khối lượng",
+            "Giá trị",
+            "Tốc Độ",
+            "Tính đa dạng"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "12"
+    },
+    {
+        "question": "Tích hợp dữ liệu là quá trình ?",
+        "answers": [
+            "Kết hợp các dữ liệu không đồng nhất từ nhiều nguồn khác nhau",
+            "Sao chép dữ liệu vào CSDL hệ thống để tiến hành phân tích",
+            "Làm sạch các dữ liệu thu thập được từ các hệ thống thành phần",
+            "Tăng giá trị từ các tài nguyên dữ liệu đang lưu trữ phân tán"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "13"
+    },
+    {
+        "question": "Thuật ngữ Thuật ngữ Dữ liệu lớn ra đời năm nào?",
+        "answers": [
+            "1997",
+            "2000",
+            "1998",
+            "1941"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "14"
+    },
+    {
+        "question": "Các dạng thức khoa học dữ liệu của Jim Gray?",
+        "answers": [
+            "Thực nghiệm",
+            "Lý thuyết",
+            "Tính toán",
+            "Tất cả các ý"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "15"
+    },
+    {
+        "question": "Phát biểu nào không phải dạng thức nghiên cứu Khoa học dữ liệu của Jim Gray?",
+        "answers": [
+            "Khai thác dữ liệu",
+            "Mô phỏng",
+            "Tính toán",
+            "Thực nghiệm"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "16"
+    },
+    {
+        "question": "Đâu không phải là phương thức xử lý dữ liệu lớn?",
+        "answers": [
+            "Thu thập (acquire)",
+            "Đánh giá (reviews)",
+            "Tổ chức (organize)",
+            "Phân tích (analyze)"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "17"
+    },
+    {
+        "question": "RDBMS là gì ?",
+        "answers": [
+            "Relational Database Management System",
+            "Relat Data Management System",
+            "Relational Database Microsoft System",
+            "Tất cả"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "18"
+    },
+    {
+        "question": "Thị trường Big Data bao gồm:",
+        "answers": [
+            "Phần cứng",
+            "Phần Mềm",
+            "Tất cả",
+            "Dịch vụ"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "19"
+    },
+    {
+        "question": "Nhược điểm của tích hợp dữ liệu theo phương pháp Tight Coupling",
+        "answers": [
+            "Độ trễ",
+            "Phản hồi truy vấn",
+            "Phụ thuộc vào nguồn dữ liệu",
+            "Tất cả"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "20"
+    },
+    {
+        "question": "Nhược điểm của tích hợp dữ liệu theo phương pháp Loose Coupling",
+        "answers": [
+            "Tất cả",
+            "Chi phí cao",
+            "Độ trễ",
+            "Phụ thuộc mạng / băng thông"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "21"
+    },
+    {
+        "question": "Công cụ nào hỗ trợ tốt NoSQL?",
+        "answers": [
+            "SAP Data Services",
+            "Oracle Data Integrator",
+            "SQL Server Integration Services",
+            "Tất cả"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "22"
+    },
+    {
+        "question": "Công cụ tích hợp dữ liệu Boomi là của?",
+        "answers": [
+            "Dell",
+            "IBM",
+            "Microsoft",
+            "SAP"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "23"
+    },
+    {
+        "question": "Công cụ SQL Server Integrator do ai phát triển ?",
+        "answers": [
+            "Oracle",
+            "IBM",
+            "Microsoft",
+            "SAP"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "24"
+    },
+    {
+        "question": "SAP Data Service là công cụ để làm gì ?",
+        "answers": [
+            "Lưu trữ dữ liệu",
+            "Tích hợp dữ liệu",
+            "Phân tích dữ liệu",
+            "Tất cả"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "25"
+    },
+    {
+        "question": "Hệ quản trị CSLD DynamoDB là kiểu nào ?",
+        "answers": [
+            "Key value",
+            "Wide Column based",
+            "Document based",
+            "Graph based"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "26"
+    },
+    {
+        "question": "Hệ quản trị CSLD MongoDB là kiểu nào ?",
+        "answers": [
+            "Document based",
+            "Key value",
+            "Wide Column based",
+            "Graph based"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "27"
+    },
+    {
+        "question": "Hệ quản trị CSLD Neo4J là kiểu nào ?",
+        "answers": [
+            "Key value",
+            "Wide Column based",
+            "Document based",
+            "Graph based"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "28"
+    },
+    {
+        "question": "Hệ quản trị CSLD IBM Graph là kiểu nào ?",
+        "answers": [
+            "Key value",
+            "Document based",
+            "Graph based",
+            "Wide Column based"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "29"
+    },
+    {
+        "question": "Hệ quản trị CSLD Google Big Table là kiểu nào ?",
+        "answers": [
+            "Key value",
+            "Wide Column based",
+            "Document based",
+            "Graph based"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "30"
+    },
+    {
+        "question": "Đâu không phải là RDBMS ?",
+        "answers": [
+            "IBM DB2",
+            "MS SQL Server",
+            "MS Access",
+            "Cassandra"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "31"
+    },
+    {
+        "question": "Loại nào là dữ liệu Bán cấu trúc?",
+        "answers": [
+            "Tất cả",
+            "JSON",
+            "CSV",
+            "XML"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "32"
+    },
+    {
+        "question": "Loại nào là dữ liệu Unstructured?",
+        "answers": [
+            "Video",
+            "XML",
+            "Table",
+            "Tất cả"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "33"
+    },
+    {
+        "question": "Yếu tố nào quyết định để sử dụng NoSQL",
+        "answers": [
+            "Tốc độ gia tăng CSDL",
+            "Tính đa dạng của dữ liệu",
+            "Tốc độ truy cập dữ liệu",
+            "Tất cả"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "34"
+    },
+    {
+        "question": "CSDL nào không phải kiểu Key-Value:",
+        "answers": [
+            "MongoDB",
+            "DynamoDB",
+            "Redis",
+            "Riak"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "35"
+    },
+    {
+        "question": "CSDL nào không phải kiểu Document:",
+        "answers": [
+            "MongoDB",
+            "CouchDB",
+            "Elasticsearch",
+            "Riak"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "36"
+    },
+    {
+        "question": "CSDL nào không phải kiểu Graph:",
+        "answers": [
+            "InfoGrid",
+            "Hbase",
+            "InfiniteGraph",
+            "IBM Graph"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "37"
+    },
+    {
+        "question": "CSDL nào không phải kiểu Wide-Column:",
+        "answers": [
+            "Hbase",
+            "Cassandra",
+            "BigTable",
+            "Dex"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "38"
+    },
+    {
+        "question": "Ưu điểm của hệ thống HDFS là gì ?",
+        "answers": [
+            "Lưu trữ phân tán, xử lý song song, khả năng chịu lỗi cao",
+            "Lưu trữ song song, xử lý phân tán, tính sẵn sàng cao",
+            "Xử lý phân tán song song, khả năng chịu lỗi chấp nhận sai sót",
+            "Tất cả"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "39"
+    },
+    {
+        "question": "Ưu điểm của DFS là gì ?",
+        "answers": [
+            "Hệ thống lưu trữ song song nên tránh được ảnh hưởng khi một máy chủ hoặc bộ nhớ bị lỗi",
+            "Hệ thống được sao lưu tại Server thứ hai nên đảm bảo việc cung cấp dữ liệu",
+            "Khi một máy chủ hoặc bộ nhớ bị lỗi, hệ thống tệp phân tán vẫn đảm bảo có thể cung cấp dữ liệu ổn định",
+            "Tất cả"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "40"
+    },
+    {
+        "question": "Ưu điểm của công nghệ Cluster",
+        "answers": [
+            "Tất cả",
+            "Hiệu quả chi phí",
+            "TÍnh sẵn sàng cao",
+            "Khả năng mở rộng linh hoạt"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "41"
+    },
+    {
+        "question": "Cluster node có mấy loại ?",
+        "answers": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "42"
+    },
+    {
+        "question": "Nguồn của kiến trúc HDFS trong Hadoop có nguồn gốc là",
+        "answers": [
+            "Hệ thống tệp phân phối của Google",
+            "Hệ thống tệp phân tán của Yahoo",
+            "Hệ thống tệp phân tán của Facebook",
+            "Hệ thống tệp phân tán Azure"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "43"
+    },
+    {
+        "question": "Loại dữ liệu mà Hadoop có thể xử lý là",
+        "answers": [
+            "Structred (Có cấu trúc)",
+            "Semi-structured (Bán cấu trúc)",
+            "Unstructured (Không có cấu trúc)",
+            "All of the above (Tất cả những điều trên)"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "44"
+    },
+    {
+        "question": "YARN là viết tắt của",
+        "answers": [
+            "Yahoo's another resource name",
+            "Yet another resource negotiator",
+            "Yahoo's archived Resource names",
+            "Yet another resource need."
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "45"
+    },
+    {
+        "question": "Điều nào sau đây không phải là mục tiêu của HDFS?",
+        "answers": [
+            "Phát hiện lỗi và khôi phục",
+            "Xử lý tập dữ liệu khổng lồ",
+            "Ngăn chặn việc xóa dữ liệu",
+            "Cung cấp băng thông mạng cao để di chuyển dữ liệu"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "46"
+    },
+    {
+        "question": "Trong HDFS, các tệp không thể",
+        "answers": [
+            "Đọc",
+            "Xóa",
+            "Thực thi",
+            "Lưu trữ"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "47"
+    },
+    {
+        "question": "So với RDBMS, Hadoop",
+        "answers": [
+            "Có tính toàn vẹn dữ liệu cao hơn.",
+            "Có giao dịch ACID không",
+            "Thích hợp để đọc và truy vấn nhanh",
+            "Hoạt động tốt hơn trên dữ liệu phi cấu trúc và bán cấu trúc."
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "48"
+    },
+    {
+        "question": "Vấn đề chính gặp phải khi đọc và ghi dữ liệu song song từ nhiều đĩa là gì?",
+        "answers": [
+            "Xử lý khối lượng lớn dữ liệu nhanh hơn.",
+            "Kết hợp dữ liệu từ nhiều đĩa.",
+            "Phần mềm cần thiết để thực hiện nhiệm vụ này là cực kỳ tốn kém.",
+            "Phần cứng cần thiết để thực hiện tác vụ này là cực kỳ tốn kém."
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "49"
+    },
+    {
+        "question": "Tính năng định vị dữ liệu trong Hadoop có nghĩa là",
+        "answers": [
+            "lưu trữ cùng một dữ liệu trên nhiều nút.",
+            "chuyên vị trí dữ liệu từ nút này sang nút khác.",
+            "đồng định vị dữ liệu với các nút tính toán.",
+            "Phân phối dữ liệu trên nhiều nút."
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "50"
+    },
+    {
+        "question": "Các tệp HDFS được thiết kế cho",
+        "answers": [
+            "Nhiều người viết và sửa đổi ở các hiệu số tùy ý.",
+            "Chỉ nối vào cuối tệp.",
+            "Chỉ ghi thành tệp một lần.",
+            "Truy cập dữ liệu có độ trễ thấp."
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "51"
+    },
+    {
+        "question": "Hệ thống Apache Hadoop được viết bằng ngôn ngữ nào?",
+        "answers": [
+            "C ++",
+            "Python",
+            "Java",
+            "Go"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "52"
+    },
+    {
+        "question": "Cái nào không phải là một trong đặc trưng 3Vs của dữ liệu lớn?",
+        "answers": [
+            "Vận tốc - Velocity",
+            "Tính xác thực - Veracity",
+            "Khối lượng - Volume",
+            "Đa dạng - Variety"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "53"
+    },
+    {
+        "question": "Điều nào sau đây đúng đối với Hadoop?",
+        "answers": [
+            "Đây là một khung phân tán.",
+            "Thuật toán chính được sử dụng trong đó là Map Reduce.",
+            "Nó chạy có thể thực thi trên hạ tầng Cloud Computing.",
+            "Tất cả đều đúng"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "54"
+    },
+    {
+        "question": "Loại nào sau đây lưu trữ dữ liệu?",
+        "answers": [
+            "Name node",
+            "Data node",
+            "Master node",
+            "Không có"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "55"
+    },
+    {
+        "question": "Node nào sau đây quản lý các nút khác?",
+        "answers": [
+            "Name node",
+            "Data node",
+            "Slave node",
+            "Tất cả"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "56"
+    },
+    {
+        "question": "Hadoop xử lý khối lượng lớn dữ liệu như thế nào?",
+        "answers": [
+            "Hadoop sử dụng song song rất nhiều máy. Điều này tối ưu hóa việc xử lý dữ liệu.",
+            "Hadoop được thiết kế đặc biệt để xử lý lượng lớn dữ liệu bằng cách tận dụng phần cứng MPP.",
+            "Hadoop gửi mã đến dữ liệu thay vì gửi dữ liệu đến mã.",
+            "Hadoop sử dụng các kỹ thuật bộ nhớ đệm phức tạp trên NameNode để tăng tốc độ xử lý dữ liệu."
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "57"
+    },
+    {
+        "question": "MapReduce do công ty nào phát triển ?",
+        "answers": [
+            "Apache",
+            "Google",
+            "IBM",
+            "Amazon"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "58"
+    },
+    {
+        "question": "Dịch vụ đám mây nào hỗ trợ tốt cho Big Data ?",
+        "answers": [
+            "Amazon AWS",
+            "Google Cloud",
+            "Tất cả",
+            "Microsoft Azure"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "59"
+    },
+    {
+        "question": "Nhược điểm khi triển khai Big Data trên nền tảng Cloud Computing là?",
+        "answers": [
+            "Nhiều rủi ro cho hệ thống",
+            "Không có ý đúng",
+            "Tốc độ xử lý không đảm bảo",
+            "Phân tích theo thời gian thực kém"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "60"
+    },
+    {
+        "question": "Mô hình Điện toán đám mây IaaS ?",
+        "answers": [
+            "Cơ sở hạ tầng dưới dạng dịch vụ",
+            "Nền tảng dưới dạng dịch vụ",
+            "Phần mềm dưới dạng dịch vụ",
+            "Internet dưới dạng dịch vụ"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "61"
+    },
+    {
+        "question": "Mô hình Điện toán đám mây PaaS ?",
+        "answers": [
+            "Cơ sở hạ tầng dưới dạng dịch vụ",
+            "Nền tảng dưới dạng dịch vụ",
+            "Phần mềm dưới dạng dịch vụ",
+            "Internet dưới dạng dịch vụ"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "62"
+    },
+    {
+        "question": "Mô hình Điện toán đám mây SaaS ?",
+        "answers": [
+            "Cơ sở hạ tầng dưới dạng dịch vụ",
+            "Nền tảng dưới dạng dịch vụ",
+            "Phần mềm dưới dạng dịch vụ",
+            "Internet dưới dạng dịch vụ"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "63"
+    },
+    {
+        "question": "Lợi ích của Cloud Computing với Big Data là ?",
+        "answers": [
+            "Triển khai hạ tầng nhanh chóng",
+            "Phân tích theo thời gian thực",
+            "Tối ưu chi phí duy trì hoạt động",
+            "Tất cả"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "64"
+    },
+    {
+        "question": "Lợi ích vượt trội của Cloud Computing với Big Data là ?",
+        "answers": [
+            "Hạn chế đầu tư máy móc",
+            "Phân tích theo thời gian thực",
+            "Tối ưu chi phí duy trì hoạt động",
+            "Tất cả"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "65"
+    },
+    {
+        "question": "Dịch vụ lưu trữ dữ của Amazon - AWS là?",
+        "answers": [
+            "Amazon S3",
+            "Amazon RDS",
+            "Amazon Lambda",
+            "EC2"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "66"
+    },
+    {
+        "question": "Dịch vụ lưu trữ của Microsoft Azure là ?",
+        "answers": [
+            "Virtual Machines",
+            "Azure Function",
+            "Azure Disk Storage",
+            "Azure Cosmos DB"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "67"
+    },
+    {
+        "question": "Dịch vụ lưu trữ của Google Cloud Platfom là?",
+        "answers": [
+            "Google Driver",
+            "Goolge Functions",
+            "Google Cloud Storage",
+            "Google Cloud Datastore"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "68"
+    },
+    {
+        "question": "Đám mây AWS cung cấp dịch vụ NoSQL Database",
+        "answers": [
+            "Amazon RDS",
+            "Amazon EC2",
+            "Amazon DynamoDB",
+            "Amazon Container Service"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "69"
+    },
+    {
+        "question": "Đám mây Microsoft Azure cung cấp dịch vụ NoSQL Database",
+        "answers": [
+            "Table Storage",
+            "SQL DB",
+            "Azure Functions",
+            "Cloud Service"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "70"
+    },
+    {
+        "question": "Dịch vụ tích hợp dữ liệu trên đám mây trên Google Cloud Platform",
+        "answers": [
+            "Google Cloud Dataprep",
+            "Google Cloud Data Fusion",
+            "Google Data Catalog",
+            "Google BigQuery"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "71"
+    },
+    {
+        "question": "Dịch vụ thông minh giúp khái phá, làm sạch dữ liệu trên Google Cloud Platform",
+        "answers": [
+            "Goolge Functions",
+            "Google BigQuery",
+            "Google Cloud Dataprep",
+            "Google Data Catalog"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "72"
+    },
+    {
+        "question": "Trên Google Cloud Platform dịch vụ nào quản lý CSDL NoQuery",
+        "answers": [
+            "Google Cloud Dataprep",
+            "Google Data Catalog",
+            "Google BigQuery",
+            "Cloud Bigtable"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "73"
+    },
+    {
+        "question": "Trên Google Cloud Platform dịch vụ nào quản lý danh mục dữ liệu",
+        "answers": [
+            "Google Data Catalog",
+            "Google Cloud Dataprep",
+            "Google Data Catalog",
+            "Google BigQuery"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "74"
+    },
+    {
+        "question": "Trên Google Cloud Platform dịch vụ phân tích dữ liệu được cung cấp",
+        "answers": [
+            "Google Data Catalog",
+            "Google BigQuery",
+            "Google Cloud Dataprep",
+            "Goolge Functions"
+        ],
+        "correct": "B",
+        "favorite": false,
+        "id": "75"
+    },
+    {
+        "question": "Nền tảng Cloudera hỗ trợ hệ CSDL quan hệ nào?",
+        "answers": [
+            "MySQL",
+            "Oracle",
+            "PostgreSQL",
+            "Tất cả"
+        ],
+        "correct": "D",
+        "favorite": false,
+        "id": "76"
+    },
+    {
+        "question": "Hệ CSDL NoSQL trên nền tảng Cloudera là ?",
+        "answers": [
+            "Apache Accumulo",
+            "DynamoDB",
+            "AppEngine Datastore",
+            "Table Storage"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "77"
+    },
+    {
+        "question": "Dich vụ phân tích dữ liệu lớn Cloudera cung cấp là?",
+        "answers": [
+            "Hadoop",
+            "BigQuery",
+            "Elastic MapReduce",
+            "Không có"
+        ],
+        "correct": "A",
+        "favorite": false,
+        "id": "78"
+    },
+    {
+        "question": "Cloudera Enterprise có thể được triển khai trên đám mây nào",
+        "answers": [
+            "Google Cloud",
+            "Amazon AWS",
+            "Tất cả",
+            "Microsoft Azure"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "79"
+    },
+    {
+        "question": "Công cụ trên Google Cloud Platform chuyển đổi dữ liệu hỗ trợ quyết định",
+        "answers": [
+            "Google Cloud",
+            "Google Data Catalog",
+            "Google Data Studio",
+            "Goolge Functions"
+        ],
+        "correct": "C",
+        "favorite": false,
+        "id": "80"
+    }
+]
