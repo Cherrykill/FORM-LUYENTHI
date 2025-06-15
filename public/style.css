@@ -69,6 +69,7 @@ body.dark .time-limit select {
 /* Thiết lập sidebar */
 .sidebar {
   width: 30%; /* Chiều rộng 30% */
+  height: 100vh;
   background-color: #f5f5f5; /* Màu nền mặc định */
   border-right: 1px solid var(--border); /* Viền phải */
   display: flex;
@@ -188,7 +189,7 @@ body.dark .question-boxes button.answered.active {
 /* Main content container */
 .main-content {
   width: 50%; /* Chiều rộng 50% */
-  height: auto; /* Bỏ height cố định */
+  height: 100vh; /* Bỏ height cố định */
   overflow-y: auto; /* Cho phép cuộn dọc */
   padding: 20px; /* Padding */
   box-sizing: border-box; /* Bao gồm padding trong chiều rộng */
@@ -524,15 +525,21 @@ body.dark .time-limit select {
   }
 
   .main-content {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%; /* Chiều rộng chiếm toàn màn hình */
-    height: auto; /* Bỏ giới hạn chiều cao */
+    height: 75vh; /* Bỏ giới hạn chiều cao */
     overflow-y: auto; /* Cho phép cuộn */
     padding-bottom: 50px; /* Thêm khoảng cách để tránh progress bar */
   }
 
   .right-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%; /* Chiều rộng chiếm toàn màn hình */
-    height: auto; /* Bỏ giới hạn chiều cao */
+    height: 25vh; /* Bỏ giới hạn chiều cao */
     overflow-y: auto; /* Cho phép cuộn */
   }
 
@@ -731,7 +738,11 @@ body.dark .admin-btn {
 }
 
 body.dark .admin-btn:hover {
-  background: linear-gradient(135deg, #ff0000, #c4605d); /* Gradient hover tối */
+  background: linear-gradient(
+    135deg,
+    #ff0000,
+    #c4605d
+  ); /* Gradient hover tối */
 }
 
 /* Quiz container trong chế độ tối */
