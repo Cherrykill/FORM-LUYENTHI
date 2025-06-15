@@ -239,6 +239,25 @@ body.dark .question-boxes button.answered.active {
   margin-bottom: 1rem; /* Margin dưới */
 }
 
+.question-image {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    display: block;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.question-image.zoomed {
+    max-width: 90%;
+    max-height: 90vh;
+    transform: scale(1.5);
+    z-index: 10;
+}
+
 /* Các nút đáp án */
 .options button {
   display: block; /* Hiển thị dạng khối */
@@ -831,4 +850,27 @@ body.dark .hamburger-btn:hover {
   .sidebar {
     width: 90%; /* Tăng chiều rộng sidebar trên màn hình rất nhỏ */
   }
+}
+
+/* =========================================================================
+   13. PHONG TO THU NHO ANH CAU HOI
+   ========================================================================= */
+
+.thumbnail {
+  max-width: 150px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.thumbnail.enlarged {
+  max-width: 90%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }

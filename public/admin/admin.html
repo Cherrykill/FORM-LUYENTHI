@@ -6,7 +6,6 @@
     <title>Quản lý Câu hỏi</title>
     <link rel="stylesheet" href="admin.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
   </head>
   <body>
     <!-- Thanh điều hướng trên cùng -->
@@ -57,6 +56,8 @@
           rows="3"
         ></textarea>
 
+        <input type="file" id="imageInput" accept="image/*" />
+
         <input type="text" id="answer-A" placeholder="Đáp án A" />
         <input type="text" id="answer-B" placeholder="Đáp án B" />
         <input type="text" id="answer-C" placeholder="Đáp án C" />
@@ -83,6 +84,10 @@
     <!-- Nút cuộn trang lên/xuống -->
     <button id="scroll-up" onclick="scrollToTop()">⬆</button>
     <button id="scroll-down" onclick="scrollToBottom()">⬇</button>
+
+    <!-- Phong to thu nho anh -->
+    <div class="modal-overlay" id="imgOverlay" onclick="closeImage()"></div>
+    <img id="modalImage" class="modal-img" onclick="closeImage()" />
 
     <!-- Script xử lý logic quản lý câu hỏi -->
     <script src="admin.js"></script>

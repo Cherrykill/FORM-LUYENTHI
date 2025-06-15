@@ -12,6 +12,9 @@ app.use(express.json());
 app.use(express.static('public'));
 
 const DATA_PATH = path.join(__dirname, 'data', process.env.QUESTION_FILE || 'questions.json');
+const config = {
+  IMAGE_PATH: process.env.IMAGE_PATH || "/admin/images"
+};
 
 // Đọc danh sách câu hỏi
 app.get('/questions', (req, res) => {

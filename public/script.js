@@ -68,9 +68,27 @@ function renderQuestion() {
     const question = questions[currentQuestionIndex];
     if (!question) return;
 
-    document.getElementById('question-text').innerText =
-        `${currentQuestionIndex + 1}. ${question.question}`;
+    const questionTextEl = document.getElementById('question-text');
 
+    // Xóa nội dung cũ
+    questionTextEl.innerHTML = '';
+
+    // Nếu có ảnh thì hiển thị ảnh
+    if (question.image) {
+        const img = document.createElement('img');
+        img.src = question.image;
+        img.alt = 'Question Image';
+        img.classList.add('question-image');
+        img.onclick = () => img.classList.toggle('zoomed'); // Nhấn vào để phóng to/thu nhỏ
+        questionTextEl.appendChild(img);
+    }
+
+    // Thêm nội dung câu hỏi
+    const text = document.createElement('div');
+    text.innerText = `${currentQuestionIndex + 1}. ${question.question}`;
+    questionTextEl.appendChild(text);
+
+    // Xử lý các lựa chọn
     const optionsEl = document.getElementById('options');
     optionsEl.innerHTML = '';
 
@@ -83,12 +101,11 @@ function renderQuestion() {
             btn.classList.add('selected');
         }
 
-        // Chỉ hiển thị viền xanh/đỏ nếu ở chế độ showAnswerMode và đã chọn đáp án
         if (showAnswerMode && selectedAnswers[currentQuestionIndex] !== null) {
             if (i === getCorrectIndex(question.correct)) {
-                btn.style.border = '2px solid green'; // Đáp án đúng
+                btn.style.border = '2px solid green';
             } else if (i === selectedAnswers[currentQuestionIndex] && i !== getCorrectIndex(question.correct)) {
-                btn.style.border = '2px solid red'; // Đáp án sai đã chọn
+                btn.style.border = '2px solid red';
             }
         }
 
@@ -97,6 +114,7 @@ function renderQuestion() {
 
     updateQuestionButtons();
 }
+
 
 // Tạo danh sách nút câu hỏi
 function renderQuestionButtons() {

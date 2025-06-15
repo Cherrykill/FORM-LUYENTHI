@@ -78,7 +78,9 @@ button:hover {
 /* Container chính chia làm 2 phần: slide-form và content */
 .main-container {
   display: flex;
-  height: calc(100vh - 60px); /* Chiếm toàn bộ chiều cao trừ chiều cao của navbar */
+  height: calc(
+    100vh - 60px
+  ); /* Chiếm toàn bộ chiều cao trừ chiều cao của navbar */
   overflow: hidden; /* Ẩn nội dung tràn */
 }
 
@@ -127,6 +129,15 @@ body.dark .content {
   border-radius: 6px;
   border-left: 4px solid #007bff;
   position: relative;
+}
+
+.question-image {
+  max-width: 100%;
+  max-height: 200px;
+  margin-top: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  display: block;
 }
 
 /* Chế độ tối cho question */
@@ -258,4 +269,37 @@ body.dark #theme-toggle {
 
 body.dark #theme-toggle:hover {
   background: #003d80;
+}
+
+/* Phong to thu nho anh */
+.thumbnail {
+    max-width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border-radius: 8px;
+}
+
+.modal-img {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 90%;
+    max-height: 90%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background: white;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
 }

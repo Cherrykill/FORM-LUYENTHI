@@ -104,21 +104,30 @@ function renderQuestions() {
         const realIndex = questions.indexOf(q);
         const div = document.createElement("div");
         div.className = "question";
+
+        // 👉 Nếu có ảnh thì tạo thẻ <img>, không thì chuỗi rỗng
+        const imageHtml = q.image
+            ? `<div><img class="question-image" src="${q.image}" /></div>`
+            : "";
+
+
         div.innerHTML = `
             <strong>${start + index + 1}. ${q.question}</strong><br>
+            ${q.image ? `<img src="${q.image}" class="thumbnail" onclick="enlargeImage('${q.image}')" />` : ""}
+
             ${q.answers.map((a, i) => `<div>${String.fromCharCode(65 + i)}: ${a}</div>`).join('')}
             <div>Đáp án đúng: ${q.correct}</div>
             <button onclick="editQuestion(${realIndex})">✏ Sửa</button>
             <button onclick="deleteQuestion(${realIndex})">🗑 Xóa</button>
             <button class="fav-btn" onclick="toggleFavorite(${realIndex})">${q.favorite ? "⭐" : "☆"}</button>
             ${typeof q.wrongCount === "number" ? `<div class="wrong-count">Sai: ${q.wrongCount} lần</div>` : ""}
-
         `;
         container.appendChild(div);
     });
 
     renderPagination(totalPages);
 }
+
 
 function renderSearchResults(list) {
     const container = document.getElementById("questions-container");
@@ -241,6 +250,8 @@ function editQuestion(index) {
 
 async function saveQuestion() {
     const index = document.getElementById("edit-index").value;
+    const imageInput = document.getElementById("imageInput");
+
     const newQuestion = {
         question: document.getElementById("question-text").value.trim(),
         answers: [
@@ -250,10 +261,20 @@ async function saveQuestion() {
             document.getElementById("answer-D").value.trim(),
         ],
         correct: document.getElementById("correct-answer").value.trim(),
-        favorite: false,
+        favorite: false
     };
 
+    // 👉 Nếu có chọn ảnh, thêm key image
+    if (imageInput.files.length > 0) {
+        const fileName = imageInput.files[0].name;
+        newQuestion.image = `/admin/images/${fileName}`;
+    }
+
     if (index) {
+        // Nếu sửa và có ảnh mới thì ghi đè, không thì giữ ảnh cũ
+        if (!newQuestion.image && questions[index].image) {
+            newQuestion.image = questions[index].image;
+        }
         questions[index] = { ...questions[index], ...newQuestion };
     } else {
         const duplicate = questions.find(q => q.question === newQuestion.question);
@@ -264,11 +285,12 @@ async function saveQuestion() {
         questions.push(newQuestion);
     }
 
-    await saveToFile();
-    resetForm();
+    await saveToFile();         // ghi vào file baomat.json
+    resetForm();                // reset form
     document.getElementById("slide-form").style.display = "none";
-    renderQuestions();
+    renderQuestions();          // cập nhật lại danh sách
 }
+
 
 async function deleteQuestion(index) {
     if (!confirm("Bạn có chắc muốn xóa câu hỏi này?")) return;
@@ -360,15 +382,31 @@ async function exportToPDF(includeAnswers = false) {
 
 // Chờ trang tải xong
 document.addEventListener('DOMContentLoaded', () => {
-  // Đặt chế độ tối làm mặc định khi tải trang
-  document.body.classList.add('dark');
+    // Đặt chế độ tối làm mặc định khi tải trang
+    document.body.classList.add('dark');
 
-  // Lấy nút chuyển đổi chế độ
-  const themeToggle = document.getElementById('theme-toggle');
+    // Lấy nút chuyển đổi chế độ
+    const themeToggle = document.getElementById('theme-toggle');
 
-  // Xử lý sự kiện click để chuyển đổi chế độ
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    themeToggle.textContent = document.body.classList.contains('dark') ? 'Chế độ Sáng' : 'Chế độ Tối';
-  });
+    // Xử lý sự kiện click để chuyển đổi chế độ
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        themeToggle.textContent = document.body.classList.contains('dark') ? 'Chế độ Sáng' : 'Chế độ Tối';
+    });
 });
+
+
+
+// ====== 9. PHONG TO THU NHO ANH ======
+function enlargeImage(src) {
+    const overlay = document.getElementById("imgOverlay");
+    const modalImg = document.getElementById("modalImage");
+    modalImg.src = src;
+    overlay.style.display = "block";
+    modalImg.style.display = "block";
+}
+
+function closeImage() {
+    document.getElementById("imgOverlay").style.display = "none";
+    document.getElementById("modalImage").style.display = "none";
+}
