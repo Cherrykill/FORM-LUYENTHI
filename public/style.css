@@ -502,11 +502,18 @@ body.dark .time-limit select {
 
 @media (max-width: 480px) {
   .sidebar {
-    width: 100vw; /* Chiếm toàn bộ chiều ngang */
-    height: 100vh; /* Chiều cao bằng chiều cao màn hình */
-    padding: 10px;
-    overflow-y: auto; /* 👉 Cho phép cuộn dọc nếu nội dung vượt quá */
-    box-sizing: border-box; /* Đảm bảo padding không làm to phần tử */
+    position: fixed; /* Đảm bảo nổi toàn màn hình */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 60px); /* Trừ chiều cao navbar ra */
+    overflow-y: auto; /* ✅ Cho phép cuộn */
+    box-sizing: border-box;
+    background: white;
+    z-index: 1000;
+    padding: 16px;
+    margin-top: 60px; /* Tuỳ vào chiều cao navbar, ví dụ 60px */
+    height: calc(100vh - 60px); /* Trừ chiều cao navbar ra */
   }
 
   .question-boxes button {
