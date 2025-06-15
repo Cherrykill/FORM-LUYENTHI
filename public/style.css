@@ -75,6 +75,7 @@ body.dark .time-limit select {
   flex-direction: column; /* Cột dọc */
   padding: 1rem; /* Padding */
   overflow-y: auto; /* Cho phép cuộn dọc */
+  box-sizing: border-box; /* Bao gồm padding trong kích thước */
 }
 
 /* Tiêu đề sidebar */
@@ -149,6 +150,7 @@ body.dark .question-boxes button.answered.active {
 /* Khu vực chọn Auto next */
 .sidebar-bottom {
   margin-top: 2rem; /* Khoảng cách từ trên */
+  padding-bottom: 50px; /* Thêm padding để tránh bị che bởi progress bar */
 }
 
 /* Dropdown chọn chế độ auto next */
@@ -496,21 +498,24 @@ body.dark .time-limit select {
     overflow-y: auto; /* Cho phép cuộn dọc */
   }
 
-  /* Ẩn sidebar mặc định */
+  /* Sidebar trên mobile */
   .sidebar {
     position: fixed;
     top: 0;
-    left: -100%; /* Ẩn sidebar ra khỏi màn hình */
-    width: 80%; /* Chiều rộng sidebar trên mobile */
-    height: 100vh;
-    z-index: 999;
-    transition: left 0.3s ease; /* Hiệu ứng trượt */
+    left: 0;
+    transform: translateX(-100%); /* Ẩn sidebar bằng transform */
+    width: 80%; /* Chiều rộng sidebar trên tablet */
+    height: 100vh; /* Chiều cao toàn màn hình */
+    z-index: 1000; /* Ưu tiên hiển thị */
+    transition: transform 0.3s ease; /* Hiệu ứng trượt mượt mà */
     overflow-y: auto; /* Cho phép cuộn nội dung sidebar */
+    box-sizing: border-box; /* Bao gồm padding */
+    padding-bottom: 50px; /* Tránh bị che bởi progress bar */
   }
 
   /* Hiển thị sidebar khi active */
   .sidebar.active {
-    left: 0;
+    transform: translateX(0); /* Hiển thị sidebar */
   }
 
   /* Hiển thị nút hamburger */
@@ -545,7 +550,8 @@ body.dark .time-limit select {
   .sidebar {
     width: 90%; /* Tăng chiều rộng sidebar trên màn hình rất nhỏ */
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: auto; /* Cho phép cuộn */
+    padding-bottom: 50px; /* Tránh bị che */
   }
 
   .question-boxes {
@@ -821,7 +827,7 @@ body.dark *::-webkit-scrollbar-thumb:hover {
   position: fixed;
   top: 10px;
   left: 10px;
-  z-index: 1000;
+  z-index: 1001; /* Đảm bảo cao hơn sidebar */
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
   background-color: var(--btn-bg);
