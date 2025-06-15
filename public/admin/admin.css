@@ -360,3 +360,54 @@ body.dark #theme-toggle:hover {
 
 
 /*Responsive for mobile devices*/
+@media (max-width: 768px) {
+  /* Navbar chuyển thành dạng dọc hoặc cuộn */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .left-buttons,
+  .right-search {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .main-container {
+    flex-direction: column; /* Cho phép slide-form xếp trên content */
+    height: auto;
+  }
+
+  .slide-form {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .question {
+    font-size: 15px;
+  }
+
+  .thumbnail {
+    max-width: 100px;
+  }
+
+  .modal-img {
+    max-width: 95%;
+    max-height: 80%;
+  }
+
+  #scroll-up,
+  #scroll-down {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    padding: 12px;
+  }
+}
