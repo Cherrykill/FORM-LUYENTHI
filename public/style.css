@@ -149,7 +149,7 @@ body.dark .question-boxes button.answered.active {
 
 /* Khu vực chọn Auto next */
 .sidebar-bottom {
-  margin-top: 2rem; /* Khoảng cách từ trên */
+  margin-top: 1rem; /* Giảm margin-top để đưa nút lên cao hơn */
   padding-bottom: 50px; /* Thêm padding để tránh bị che bởi progress bar */
 }
 
@@ -161,6 +161,24 @@ body.dark .question-boxes button.answered.active {
   border: 1px solid var(--border); /* Viền */
   font-size: 1rem; /* Kích thước chữ */
   margin-top: 0.5rem; /* Margin trên */
+}
+
+/* Nút nộp bài */
+.submit-btn {
+  width: 100%; /* Chiều rộng 100% */
+  padding: 0.75rem; /* Padding */
+  margin-top: 0.5rem; /* Giảm margin-top để nâng nút lên cao hơn */
+  background-color: var(--green); /* Màu nền */
+  color: white; /* Màu chữ */
+  border: none; /* Không viền */
+  border-radius: 6px; /* Bo góc */
+  font-weight: bold; /* Đậm chữ */
+  font-size: 1rem; /* Kích thước chữ */
+  cursor: pointer; /* Con trỏ tay */
+}
+
+.submit-btn:hover {
+  background-color: #218838; /* Màu khi hover */
 }
 
 /* =========================================================================
@@ -349,24 +367,6 @@ body.dark .options button.selected {
   transform: translateY(-2px); /* Nâng lên khi hover */
   background: linear-gradient(135deg, #c4605d, #ff0000); /* Gradient hover */
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3); /* Bóng đậm hơn */
-}
-
-/* Nút nộp bài */
-.submit-btn {
-  width: 100%; /* Chiều rộng 100% */
-  padding: 0.75rem; /* Padding */
-  margin-top: 1rem; /* Margin trên */
-  background-color: var(--green); /* Màu nền */
-  color: white; /* Màu chữ */
-  border: none; /* Không viền */
-  border-radius: 6px; /* Bo góc */
-  font-weight: bold; /* Đậm chữ */
-  font-size: 1rem; /* Kích thước chữ */
-  cursor: pointer; /* Con trỏ tay */
-}
-
-.submit-btn:hover {
-  background-color: #218838; /* Màu khi hover */
 }
 
 /* Toggle chế độ sáng/tối */
