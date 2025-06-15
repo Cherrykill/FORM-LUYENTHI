@@ -501,18 +501,40 @@ body.dark .time-limit select {
 }
 
 @media (max-width: 480px) {
+  .sidebar {
+    width: 100vw; /* Chiếm toàn chiều ngang (viewport width) */
+    padding: 10px;
+  }
   .question-boxes {
-    grid-template-columns: repeat(6, 1fr); /* 6 cột trên điện thoại */
+    grid-template-columns: repeat(6, 1fr); /* 5 ô trên 1 hàng */
   }
 
   .question-boxes button {
-    font-size: 10px;
-    padding: 6px;
-    border-radius: 4px;
+    font-size: 12px;
+    padding: 8px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .auto-next select{
+    position: fixed;
+    width: 30%;
+    top: 80%;
+    right: 5%;
+  }
+
+  .submit-btn {
+    position: fixed;
+    width: 90%;
+    top: 90%;
+  }
+
+  .admin-btn {
+    position: fixed;
+    width: 30%;
+    top: 65%;
+    right: 5%;
   }
 }
-
-
 
 /* =========================================================================
    9. CSS CHO FORM ĐĂNG NHẬP

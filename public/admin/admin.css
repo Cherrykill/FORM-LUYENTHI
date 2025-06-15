@@ -273,38 +273,36 @@ body.dark #theme-toggle:hover {
 
 /* Phong to thu nho anh */
 .thumbnail {
-    max-width: 200px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    border-radius: 8px;
+  max-width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 8px;
 }
 
 .modal-img {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    max-width: 90%;
-    max-height: 90%;
-    transform: translate(-50%, -50%);
-    border-radius: 8px;
-    z-index: 9999;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    background: white;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 90%;
+  max-height: 90%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  background: white;
 }
 
 .modal-overlay {
-    display: none;
-    position: fixed;
-    z-index: 9998;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.7);
+  display: none;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
-
-
 
 .image-input-group {
   display: flex;
@@ -314,7 +312,8 @@ body.dark #theme-toggle:hover {
 }
 
 .image-input-group input[type="file"] {
-  flex-grow: 1;margin-left: 0;
+  flex-grow: 1;
+  margin-left: 0;
 }
 
 .image-input-group button {
@@ -329,9 +328,6 @@ body.dark #theme-toggle:hover {
 .image-input-group button:hover {
   background-color: #c82333;
 }
-
-
-
 
 .image-container {
   display: flex;
@@ -358,56 +354,110 @@ body.dark #theme-toggle:hover {
   background: #c82333;
 }
 
-
 /*Responsive for mobile devices*/
 @media (max-width: 768px) {
-  /* Navbar chuyển thành dạng dọc hoặc cuộn */
-  .navbar {
+  .main-container {
     flex-direction: column;
-    align-items: flex-start;
+    height: 100vh; /* giữ chiều cao cố định */
+    overflow: hidden; /* không cho toàn bộ trang cuộn, chỉ cuộn phần con */
+  }
+
+  #search-input {
+    position: fixed;
+    top: 1%;
+    width: 75%;
+    left: 3%;
+    height: 40px;
+  }
+
+  .slide-form {
+    height: 50%; /* bạn có thể chỉnh lại theo UI mong muốn */
+    overflow-y: auto;
+  }
+
+  .content {
+    height: 50%;
+    overflow-y: auto;
+  }
+
+  .navbar {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
     gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 10%;
   }
 
   .left-buttons,
   .right-search {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
   }
 
-  .main-container {
-    flex-direction: column; /* Cho phép slide-form xếp trên content */
-    height: auto;
+  .left-buttons::-webkit-scrollbar,
+  .right-search::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
   }
 
-  .slide-form {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid #ccc;
+  .left-buttons button,
+  .right-search button,
+  .right-search input {
+    flex-shrink: 0; /* Ngăn nút bị thu nhỏ */
   }
 
-  .content {
+}
+
+/* Mặc định ẩn hamburger */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Responsive cho mobile */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    right: 10px;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
     padding: 10px;
+    background-color: #f5f5f5;
+    position: fixed;
+    z-index: 1000;
+    width: 80%;
   }
 
-  .question {
-    font-size: 15px;
+  .navbar.active {
+    display: flex;
   }
 
-  .thumbnail {
-    max-width: 100px;
+  .left-buttons,
+  .right-search {
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
   }
 
-  .modal-img {
-    max-width: 95%;
-    max-height: 80%;
-  }
-
-  #scroll-up,
-  #scroll-down {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-    padding: 12px;
+  .right-search input {
+    width: 100%;
   }
 }

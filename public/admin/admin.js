@@ -425,3 +425,5 @@ function removeImage(index) {
     // Nếu bạn có lưu vào file, gọi luôn:
     saveToFile();                // Hàm lưu lại file JSON
 }
+
+

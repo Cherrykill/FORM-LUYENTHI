@@ -8,6 +8,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   </head>
   <body>
+    <!-- Hamburger button - chỉ hiện trên điện thoại -->
+    <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+
     <!-- Thanh điều hướng trên cùng -->
     <div class="navbar">
       <div class="left-buttons">
@@ -88,6 +91,19 @@
     <!-- Phong to thu nho anh -->
     <div class="modal-overlay" id="imgOverlay" onclick="closeImage()"></div>
     <img id="modalImage" class="modal-img" onclick="closeImage()" />
+
+    <!-- Bat tat khi nhan nut hamburger -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".navbar");
+
+    hamburger.addEventListener("click", function () {
+      navbar.classList.toggle("active");
+    });
+  });
+</script>
+
 
     <!-- Script xử lý logic quản lý câu hỏi -->
     <script src="admin.js"></script>
