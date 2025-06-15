@@ -514,25 +514,6 @@ body.dark .time-limit select {
     padding: 8px;
     aspect-ratio: 1 / 1;
   }
-
-  /* .auto-next select{
-    position: fixed;
-    width: 30%;
-    top: 80%;
-  } */
-
-  /* .submit-btn {
-    position: fixed;
-    width: 90%;
-    top: 90%;
-  } */
-
-  .admin-btn {
-    position: fixed;
-    width: 25%;
-    top: 85%;
-    right: 5%;
-  }
 }
 
 /* =========================================================================
