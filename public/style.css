@@ -502,11 +502,11 @@ body.dark .time-limit select {
 
 @media (max-width: 480px) {
   .sidebar {
-    width: 100vw; /* Chiếm toàn chiều ngang (viewport width) */
+    width: 100vw; /* Chiếm toàn bộ chiều ngang */
+    height: 100vh; /* Chiều cao bằng chiều cao màn hình */
     padding: 10px;
-  }
-  .question-boxes {
-    grid-template-columns: repeat(6, 1fr); /* 5 ô trên 1 hàng */
+    overflow-y: auto; /* 👉 Cho phép cuộn dọc nếu nội dung vượt quá */
+    box-sizing: border-box; /* Đảm bảo padding không làm to phần tử */
   }
 
   .question-boxes button {
@@ -515,23 +515,22 @@ body.dark .time-limit select {
     aspect-ratio: 1 / 1;
   }
 
-  .auto-next select{
+  /* .auto-next select{
     position: fixed;
     width: 30%;
     top: 80%;
-    right: 5%;
-  }
+  } */
 
-  .submit-btn {
+  /* .submit-btn {
     position: fixed;
     width: 90%;
     top: 90%;
-  }
+  } */
 
   .admin-btn {
     position: fixed;
-    width: 30%;
-    top: 65%;
+    width: 25%;
+    top: 85%;
     right: 5%;
   }
 }
