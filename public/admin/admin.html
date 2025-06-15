@@ -11,6 +11,13 @@
     <!-- Hamburger button - chỉ hiện trên điện thoại -->
     <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
 
+    <!-- Nút search riêng ngoài navbar -->
+    <button id="mobile-search-toggle" class="mobile-search-toggle">🔍</button>
+    <!-- Input tìm kiếm ẩn ban đầu -->
+    <div id="mobile-search-box" class="mobile-search-box">
+      <input type="text" id="search-input" placeholder="Tìm kiếm câu hỏi..." />
+    </div>
+
     <!-- Thanh điều hướng trên cùng -->
     <div class="navbar">
       <div class="left-buttons">
@@ -93,17 +100,26 @@
     <img id="modalImage" class="modal-img" onclick="closeImage()" />
 
     <!-- Bat tat khi nhan nut hamburger -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navbar = document.querySelector(".navbar");
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navbar = document.querySelector(".navbar");
 
-    hamburger.addEventListener("click", function () {
-      navbar.classList.toggle("active");
-    });
-  });
-</script>
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+    </script>
 
+    <!-- Script xử lý tìm kiếm giong input search trong navbar nhung k nam trong navbar -->
+    <script>
+      const toggleBtn = document.getElementById("mobile-search-toggle");
+      const searchBox = document.getElementById("mobile-search-box");
+
+      toggleBtn.addEventListener("click", () => {
+        searchBox.classList.toggle("show");
+      });
+    </script>
 
     <!-- Script xử lý logic quản lý câu hỏi -->
     <script src="admin.js"></script>
