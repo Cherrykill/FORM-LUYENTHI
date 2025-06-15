@@ -321,7 +321,8 @@ function handleSubmit() {
     if (unanswered > 0) {
         document.getElementById('confirm-submit-popup').classList.remove('hidden');
     } else {
-        submitQuiz();
+        submitQuiz(false, false, false); // Nộp bài với các tùy chọn mặc định
+
     }
 }
 

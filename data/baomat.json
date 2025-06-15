@@ -9,9 +9,9 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 0,
+    "wrongCount": 7,
     "id": "q1",
-    "image": "/admin/images/c1.jpg"
+    "image": ""
   },
   {
     "question": "Kích thước đầu ra của MD4?",
@@ -64,7 +64,7 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 0,
+    "wrongCount": 1,
     "id": "q5"
   },
   {
@@ -142,7 +142,7 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q11"
   },
   {
@@ -221,7 +221,7 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q17"
   },
   {
@@ -260,7 +260,7 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q20"
   },
   {
@@ -615,7 +615,7 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q47"
   },
   {
@@ -695,7 +695,7 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q53"
   },
   {
@@ -787,7 +787,7 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q60"
   },
   {
@@ -826,7 +826,7 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q63"
   },
   {
@@ -852,7 +852,7 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q65"
   },
   {
@@ -878,7 +878,7 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q67"
   },
   {
@@ -1035,7 +1035,7 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q79"
   },
   {
@@ -1074,7 +1074,7 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q82"
   },
   {
@@ -1087,7 +1087,7 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q83"
   },
   {
@@ -1178,7 +1178,7 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 2,
+    "wrongCount": 0,
     "id": "q90"
   },
   {
@@ -1417,7 +1417,7 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q108"
   },
   {
@@ -1586,7 +1586,7 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q121"
   },
   {
@@ -1676,7 +1676,7 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q128"
   },
   {
@@ -1728,7 +1728,7 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q132"
   },
   {
@@ -1767,7 +1767,7 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q135"
   },
   {
@@ -1780,7 +1780,7 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q136"
   },
   {
@@ -1871,7 +1871,7 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q143"
   },
   {
@@ -1884,7 +1884,7 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q144"
   },
   {
@@ -1910,7 +1910,7 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q146"
   },
   {
@@ -1937,7 +1937,7 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q148"
   },
   {
@@ -2002,7 +2002,7 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q153"
   },
   {
@@ -2054,7 +2054,7 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q157"
   },
   {
@@ -2080,7 +2080,7 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q159"
   },
   {
@@ -2106,7 +2106,7 @@
     ],
     "correct": "C",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q161"
   },
   {
@@ -2158,7 +2158,7 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q165"
   },
   {
@@ -2314,7 +2314,7 @@
     ],
     "correct": "D",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q177"
   },
   {
@@ -2392,7 +2392,7 @@
     ],
     "correct": "A",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q183"
   },
   {
@@ -2471,7 +2471,7 @@
     ],
     "correct": "B",
     "favorite": false,
-    "wrongCount": 1,
+    "wrongCount": 0,
     "id": "q189"
   },
   {
@@ -2617,16 +2617,5 @@
     "favorite": false,
     "wrongCount": 0,
     "id": "q200"
-  },
-  {
-    "question": "",
-    "answers": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "correct": "A",
-    "favorite": false
   }
 ]

@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         form.style.display = form.style.display === "flex" ? "none" : "flex";
         resetForm();
         document.getElementById("form-title").innerText = "Thêm / Sửa Câu hỏi";
+        // Đóng navbar khi mở form
+        document.querySelector(".navbar").classList.remove("active");
     });
 
     document.getElementById("favorite-toggle-btn").addEventListener("click", () => {
@@ -30,6 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("close-form").addEventListener("click", () => {
         document.getElementById("slide-form").style.display = "none";
+        // Mở lại navbar khi đóng form (nếu trước đó đã mở)
+        if (document.querySelector(".menu-toggle").classList.contains("active")) {
+            document.querySelector(".navbar").classList.add("active");
+        }
     });
 
     document.getElementById("missing-answer-btn").addEventListener("click", () => {
@@ -40,9 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
         renderSearchResults(missing);
     });
 
-    document.getElementById("search-input").addEventListener("input", handleSearch);
+    document.querySelector(".search-input").addEventListener("input", handleSearch);
+    document.querySelector(".search-input2").addEventListener("input", handleSearch2);
 
-    // loc cac cau loi theo thu tu tu nhieu den it
+    // Lọc các câu lỗi theo thứ tự từ nhiều đến ít
     document.getElementById("wrongcount-btn").addEventListener("click", () => {
         const filtered = questions
             .filter(q => typeof q.wrongCount === "number")
@@ -52,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderSearchResults(filtered);
     });
 
-    // Reset du lieu cac cau sai
+    // Reset dữ liệu các câu sai
     document.getElementById("reset-wrongcount-btn").addEventListener("click", async () => {
         if (!confirm("Bạn có chắc muốn đặt lại số lần sai về 0 cho tất cả câu hỏi?")) return;
 
@@ -64,7 +71,64 @@ document.addEventListener("DOMContentLoaded", () => {
         renderQuestions();
     });
 
+    // Thêm nút menu mới để toggle navbar
+    const menuToggle = document.createElement("button");
+    menuToggle.textContent = "☰";
+    menuToggle.className = "menu-toggle";
+    document.querySelector(".hamburger").parentNode.insertBefore(menuToggle, document.querySelector(".hamburger"));
+    menuToggle.addEventListener("click", () => {
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.toggle("active");
+        // Đóng form khi mở navbar
+        if (navbar.classList.contains("active")) {
+            document.getElementById("slide-form").classList.remove("active");
+        }
+    });
 
+    // Hamburger toggle form
+    document.querySelector(".hamburger").addEventListener("click", () => {
+        const slideForm = document.getElementById("slide-form");
+        slideForm.classList.toggle("active");
+        // Đóng navbar khi mở form
+        if (slideForm.classList.contains("active")) {
+            document.querySelector(".navbar").classList.remove("active");
+        }
+    });
+
+    // Toggle search box
+    const toggleBtn = document.getElementById("mobile-search-toggle");
+    const searchBox = document.getElementById("mobile-search-box");
+    toggleBtn.addEventListener("click", () => {
+        searchBox.classList.toggle("show");
+    });
+
+    // Đóng form và navbar khi nhấp ra ngoài
+    document.addEventListener("click", (event) => {
+        const slideForm = document.getElementById("slide-form");
+        const navbar = document.querySelector(".navbar");
+        const hamburger = document.querySelector(".hamburger");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        const isClickInsideForm = slideForm.contains(event.target);
+        const isClickInsideNavbar = navbar.contains(event.target);
+        const isClickOnHamburger = hamburger.contains(event.target);
+        const isClickOnMenuToggle = menuToggle.contains(event.target);
+
+        if (!isClickInsideForm && !isClickOnHamburger && slideForm.classList.contains("active")) {
+            slideForm.classList.remove("active");
+        }
+        if (!isClickInsideNavbar && !isClickOnMenuToggle && navbar.classList.contains("active")) {
+            navbar.classList.remove("active");
+        }
+    });
+
+    // Đặt chế độ tối làm mặc định khi tải trang
+    document.body.classList.add('dark');
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        themeToggle.textContent = document.body.classList.contains('dark') ? 'Chế độ Sáng' : 'Chế độ Tối';
+    });
 });
 
 // ====== 4. DỮ LIỆU: TẢI & LƯU FILE ======
@@ -131,8 +195,6 @@ function renderQuestions() {
 
     renderPagination(totalPages);
 }
-
-
 
 function renderSearchResults(list) {
     const container = document.getElementById("questions-container");
@@ -230,7 +292,6 @@ function renderCustomPagination(totalPages, currentList) {
     if (totalPages > 1) pagination.appendChild(createButton(totalPages, totalPages));
 }
 
-
 // ====== 6. XỬ LÝ CÂU HỎI ======
 function toggleFavorite(index) {
     questions[index].favorite = !questions[index].favorite;
@@ -296,7 +357,6 @@ async function saveQuestion() {
     renderQuestions();          // cập nhật lại danh sách
 }
 
-
 async function deleteQuestion(index) {
     if (!confirm("Bạn có chắc muốn xóa câu hỏi này?")) return;
     questions.splice(index, 1);
@@ -306,7 +366,27 @@ async function deleteQuestion(index) {
 
 // ====== 7. TÌM KIẾM (Search) ======
 function handleSearch() {
-    const keyword = removeVietnameseTones(document.getElementById("search-input").value.trim().toLowerCase());
+    const keyword = removeVietnameseTones(document.querySelector(".search-input").value.trim().toLowerCase());
+
+    if (!keyword) {
+        renderQuestions(); // Nếu ô tìm kiếm rỗng -> render toàn bộ như bình thường
+        return;
+    }
+
+    const list = showFavoritesOnly ? questions.filter(q => q.favorite) : questions;
+
+    const filtered = list.filter(q => {
+        const text = removeVietnameseTones(q.question.toLowerCase());
+        const answers = q.answers.map(a => removeVietnameseTones(a.toLowerCase())).join(" ");
+        const correct = removeVietnameseTones((q.correct || "").toLowerCase());
+        return text.includes(keyword) || answers.includes(keyword) || correct.includes(keyword);
+    });
+
+    currentPage = 1;
+    renderSearchResults(filtered);
+}
+function handleSearch2() {
+    const keyword = removeVietnameseTones(document.querySelector(".search-input2").value.trim().toLowerCase());
 
     if (!keyword) {
         renderQuestions(); // Nếu ô tìm kiếm rỗng -> render toàn bộ như bình thường
@@ -345,7 +425,7 @@ function resetForm() {
     document.getElementById("correct-answer").value = "A";
 }
 
-// ====== 7. XUAT PDFPDF ======
+// ====== 9. XUẤT PDF ======
 async function exportToPDF(includeAnswers = false) {
     const container = document.createElement('div');
     container.style.padding = '20px';
@@ -384,25 +464,7 @@ async function exportToPDF(includeAnswers = false) {
     document.body.removeChild(container);
 }
 
-
-// Chờ trang tải xong
-document.addEventListener('DOMContentLoaded', () => {
-    // Đặt chế độ tối làm mặc định khi tải trang
-    document.body.classList.add('dark');
-
-    // Lấy nút chuyển đổi chế độ
-    const themeToggle = document.getElementById('theme-toggle');
-
-    // Xử lý sự kiện click để chuyển đổi chế độ
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark');
-        themeToggle.textContent = document.body.classList.contains('dark') ? 'Chế độ Sáng' : 'Chế độ Tối';
-    });
-});
-
-
-
-// ====== 9. PHONG TO THU NHO ANH ======
+// ====== 10. PHONG TO THU NHO ẢNH ======
 function enlargeImage(src) {
     const overlay = document.getElementById("imgOverlay");
     const modalImg = document.getElementById("modalImage");
@@ -416,14 +478,9 @@ function closeImage() {
     document.getElementById("modalImage").style.display = "none";
 }
 
-
-// ====== 10. XÓA ẢNH ======
+// ====== 11. XÓA ẢNH ======
 function removeImage(index) {
     questions[index].image = ""; // Reset giá trị ảnh
     renderQuestions();           // Cập nhật lại UI
-
-    // Nếu bạn có lưu vào file, gọi luôn:
-    saveToFile();                // Hàm lưu lại file JSON
+    saveToFile();                // Lưu lại file JSON
 }
-
-

@@ -213,7 +213,7 @@ body.dark .question-boxes button.answered.active {
 #quiz-progress-container {
   position: fixed; /* Sử dụng fixed để cố định */
   bottom: 20px; /* Đặt ở đáy màn hình */
-  left: 50%; /* Căn giữa */
+  left: 55%; /* Căn giữa */
   transform: translateX(-50%); /* Căn giữa chính xác */
   width: 46vw; /* Chiều rộng 46% viewport */
   max-width: 800px; /* Giới hạn tối đa */

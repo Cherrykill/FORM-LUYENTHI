@@ -4,7 +4,7 @@ body {
   margin: 0;
   background: #f4f4f4;
   height: 100%;
-  transition: background 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+  transition: background 0.3s ease;
 }
 
 /* Chế độ tối cho body */
@@ -78,10 +78,8 @@ button:hover {
 /* Container chính chia làm 2 phần: slide-form và content */
 .main-container {
   display: flex;
-  height: calc(
-    100vh - 60px
-  ); /* Chiếm toàn bộ chiều cao trừ chiều cao của navbar */
-  overflow: hidden; /* Ẩn nội dung tràn */
+  height: calc(100vh - 60px);
+  overflow: hidden;
 }
 
 /* Chế độ tối cho slide-form và content */
@@ -96,7 +94,7 @@ body.dark .content {
   padding: 20px;
   background: white;
   border-right: 1px solid #ddd;
-  display: none; /* Mặc định ẩn đi */
+  display: none;
   flex-direction: column;
   gap: 10px;
 }
@@ -113,7 +111,7 @@ body.dark .slide-form {
   background: #fff;
   overflow-y: auto;
   height: 100%;
-  padding-bottom: 80px; /* Tránh việc nút phân trang bị che khuất */
+  padding-bottom: 80px;
 }
 
 /* Chế độ tối cho content */
@@ -204,7 +202,7 @@ body.dark #scroll-down {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 40px; /* Tránh bị che khuất bởi content padding */
+  margin-bottom: 40px;
 }
 
 /* Style cho nút trong phân trang */
@@ -350,11 +348,10 @@ body.dark #theme-toggle:hover {
   border-radius: 4px;
   cursor: pointer;
 }
+
 .remove-image-btn:hover {
   background: #c82333;
 }
-
-
 
 /* ====== MẶC ĐỊNH ====== */
 .hamburger,
@@ -363,13 +360,39 @@ body.dark #theme-toggle:hover {
   display: none;
 }
 
-.hamburger {
+/* Style cho menu-toggle (ẩn mặc định trên desktop) */
+.menu-toggle {
+  display: none; /* Ẩn trên desktop */
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 30%;
+  right: 3%;
+  width: 47px;
+  height: 47px;
   font-size: 30px;
-  background: none;
+  background-color: #007bff;
+  color: white;
   border: none;
+  border-radius: 50%;
   cursor: pointer;
-  padding: 10px;
-  margin: 10px;
+  transition: background-color 0.2s ease;
+  z-index: 1000;
+}
+
+/* Chế độ tối cho menu-toggle */
+body.dark .menu-toggle {
+  background-color: #0056b3;
+}
+
+/* Hover effect cho menu-toggle */
+.menu-toggle:hover {
+  background-color: #0056b3;
+}
+
+/* Chế độ tối khi hover */
+body.dark .menu-toggle:hover {
+  background-color: #003d80;
 }
 
 /* ====== MOBILE: MAX-WIDTH 768px ====== */
@@ -380,26 +403,67 @@ body.dark #theme-toggle:hover {
     overflow: hidden;
   }
 
-  .slide-form,
-  .content {
-    height: 50%;
-    overflow-y: auto;
+  .slide-form {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-right: none;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  #search-input {
+  .slide-form.active {
+    display: flex;
+    height: 90vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    max-width: 400px;
+    min-width: 280px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: #2a2a2a;
+    border: 1px solid red;
+    z-index: 1000;
+  }
+
+  .navbar.active {
+    display: none;
+  }
+
+  .content {
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  .search-input {
     position: fixed;
     top: 1%;
     left: 3%;
     width: 75%;
     height: 40px;
+    z-index: 1001;
+    display: block;
   }
 
-  /* Navbar & Hamburger */
   .hamburger {
     display: flex;
     position: fixed;
-    right: 10px;
+    right: 3%;
+    top: 8px;
     z-index: 1000;
+    font-size: 23px;
+  }
+
+  .menu-toggle {
+    display: flex; /* Hiển thị trên mobile */
   }
 
   .navbar {
@@ -443,14 +507,13 @@ body.dark #theme-toggle:hover {
     width: 100%;
   }
 
-  /* Nút & Ô tìm kiếm riêng cho mobile */
   .mobile-search-toggle {
     display: block;
     position: fixed;
-    top: 30%;
-    right: 5%;
+    top: 15%;
+    right: 3%;
     z-index: 1000;
-    font-size: 1.5rem;
+    font-size: 23px;
     background: none;
     border: none;
     border-radius: 50%;
@@ -479,4 +542,3 @@ body.dark #theme-toggle:hover {
     font-size: 1rem;
   }
 }
-
