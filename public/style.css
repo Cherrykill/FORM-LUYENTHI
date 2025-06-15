@@ -240,22 +240,22 @@ body.dark .question-boxes button.answered.active {
 }
 
 .question-image {
-    max-width: 200px;
-    max-height: 200px;
-    object-fit: contain;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    display: block;
-    margin: 10px auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 .question-image.zoomed {
-    max-width: 90%;
-    max-height: 90vh;
-    transform: scale(1.5);
-    z-index: 10;
+  max-width: 90%;
+  max-height: 90vh;
+  transform: scale(1.5);
+  z-index: 10;
 }
 
 /* Các nút đáp án */
@@ -487,29 +487,32 @@ body.dark .time-limit select {
    8. RESPONSIVE DESIGN
    ========================================================================= */
 
+/* Tối ưu nút câu hỏi trên màn hình nhỏ */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Chuyển thành cột */
-    overflow: auto; /* Cho phép cuộn */
-  }
-
-  .sidebar,
-  .right-panel {
-    width: 100vh; /* Chiều rộng 100% viewport height */
-    height: auto; /* Chiều cao tự động */
-    box-sizing: border-box; /* Bao gồm padding */
-  }
-
   .question-boxes {
-    grid-template-columns: repeat(4, 1fr); /* 4 cột */
+    grid-template-columns: repeat(5, 1fr); /* 5 cột trên tablet */
+  }
+
+  .question-boxes button {
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 4px;
   }
 }
 
 @media (max-width: 480px) {
   .question-boxes {
-    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    grid-template-columns: repeat(6, 1fr); /* 6 cột trên điện thoại */
+  }
+
+  .question-boxes button {
+    font-size: 10px;
+    padding: 6px;
+    border-radius: 4px;
   }
 }
+
+
 
 /* =========================================================================
    9. CSS CHO FORM ĐĂNG NHẬP
