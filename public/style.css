@@ -30,8 +30,7 @@ body {
   background-color: var(--bg-light); /* Màu nền mặc định */
   color: var(--text-light); /* Màu chữ mặc định */
   transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
-  height: 100vh; /* Chiều cao toàn màn hình */
-  overflow: hidden; /* Ngăn cuộn toàn trang */
+  min-height: 100vh; /* Chiều cao tối thiểu toàn màn hình */
 }
 
 /* Chuyển sang chế độ tối */
@@ -59,8 +58,8 @@ body.dark .time-limit select {
 /* Khung chính chia 3 cột: sidebar, main-content, right-panel */
 .container {
   display: flex; /* Sử dụng flexbox */
-  height: 100vh; /* Chiều cao toàn màn hình */
-  overflow: hidden; /* Ngăn cuộn toàn container */
+  min-height: 100vh; /* Chiều cao tối thiểu */
+  height: auto; /* Cho phép mở rộng theo nội dung */
 }
 
 /* =========================================================================
@@ -169,7 +168,7 @@ body.dark .question-boxes button.answered.active {
 /* Main content container */
 .main-content {
   width: 50%; /* Chiều rộng 50% */
-  height: 100vh; /* Chiều cao toàn màn hình */
+  height: auto; /* Bỏ height cố định */
   overflow-y: auto; /* Cho phép cuộn dọc */
   padding: 20px; /* Padding */
   box-sizing: border-box; /* Bao gồm padding trong chiều rộng */
@@ -192,10 +191,10 @@ body.dark .question-boxes button.answered.active {
 
 /* Progress container */
 #quiz-progress-container {
-  position: absolute; /* Vị trí tuyệt đối */
-  top: 89%; /* Vị trí từ trên */
-  left: 56%; /* Vị trí từ trái */
-  transform: translateX(-50%); /* Căn giữa theo chiều ngang */
+  position: fixed; /* Sử dụng fixed để cố định */
+  bottom: 20px; /* Đặt ở đáy màn hình */
+  left: 50%; /* Căn giữa */
+  transform: translateX(-50%); /* Căn giữa chính xác */
   width: 46vw; /* Chiều rộng 46% viewport */
   max-width: 800px; /* Giới hạn tối đa */
   height: 30px; /* Chiều cao */
@@ -285,7 +284,8 @@ body.dark .options button {
   background-color: var(--accent); /* Màu nhấn */
   color: white; /* Màu chữ */
 }
-/* Che do toi */
+
+/* Chế độ tối */
 body.dark .options button:hover,
 body.dark .options button.selected {
   background-color: var(--accent); /* Màu nhấn (#007bff) */
@@ -325,6 +325,7 @@ body.dark .options button.selected {
   background-color: #eee; /* Màu nền mặc định */
   box-sizing: border-box; /* Bao gồm padding */
   overflow-y: auto; /* Cho phép cuộn dọc */
+  height: auto; /* Bỏ giới hạn chiều cao */
 }
 
 /* Nút truy cập admin */
@@ -489,31 +490,66 @@ body.dark .time-limit select {
 
 /* Tối ưu nút câu hỏi trên màn hình nhỏ */
 @media (max-width: 768px) {
-  .question-boxes {
-    grid-template-columns: repeat(5, 1fr); /* 5 cột trên tablet */
+  .container {
+    flex-direction: column; /* Chuyển thành cột */
+    height: auto; /* Cho phép mở rộng theo nội dung */
+    overflow-y: auto; /* Cho phép cuộn dọc */
   }
 
-  .question-boxes button {
-    font-size: 12px;
-    padding: 8px;
-    border-radius: 4px;
+  /* Ẩn sidebar mặc định */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Ẩn sidebar ra khỏi màn hình */
+    width: 80%; /* Chiều rộng sidebar trên mobile */
+    height: 100vh;
+    z-index: 999;
+    transition: left 0.3s ease; /* Hiệu ứng trượt */
+    overflow-y: auto; /* Cho phép cuộn nội dung sidebar */
+  }
+
+  /* Hiển thị sidebar khi active */
+  .sidebar.active {
+    left: 0;
+  }
+
+  /* Hiển thị nút hamburger */
+  .hamburger-btn {
+    display: block;
+  }
+
+  .main-content {
+    width: 100%; /* Chiều rộng chiếm toàn màn hình */
+    height: auto; /* Bỏ giới hạn chiều cao */
+    overflow-y: auto; /* Cho phép cuộn */
+    padding-bottom: 50px; /* Thêm khoảng cách để tránh progress bar */
+  }
+
+  .right-panel {
+    width: 100%; /* Chiều rộng chiếm toàn màn hình */
+    height: auto; /* Bỏ giới hạn chiều cao */
+    overflow-y: auto; /* Cho phép cuộn */
+  }
+
+  .question-boxes {
+    grid-template-columns: repeat(4, 1fr); /* 4 cột */
+  }
+
+  #quiz-progress-container {
+    width: 90vw; /* Giảm chiều rộng cho mobile */
+    bottom: 10px; /* Đặt gần đáy màn hình */
   }
 }
 
 @media (max-width: 480px) {
   .sidebar {
-    position: fixed; /* Đảm bảo nổi toàn màn hình */
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: calc(100vh - 60px); /* Trừ chiều cao navbar ra */
-    overflow-y: auto; /* ✅ Cho phép cuộn */
-    box-sizing: border-box;
-    background: white;
-    z-index: 1000;
-    padding: 16px;
-    margin-top: 60px; /* Tuỳ vào chiều cao navbar, ví dụ 60px */
-    height: calc(100vh - 60px); /* Trừ chiều cao navbar ra */
+    width: 90%; /* Tăng chiều rộng sidebar trên màn hình rất nhỏ */
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .question-boxes {
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
   }
 
   .question-boxes button {
@@ -689,11 +725,7 @@ body.dark .admin-btn {
 }
 
 body.dark .admin-btn:hover {
-  background: linear-gradient(
-    135deg,
-    #ff0000,
-    #c4605d
-  ); /* Gradient hover tối */
+  background: linear-gradient(135deg, #ff0000, #c4605d); /* Gradient hover tối */
 }
 
 /* Quiz container trong chế độ tối */
@@ -781,7 +813,7 @@ body.dark *::-webkit-scrollbar-thumb:hover {
 }
 
 /* =========================================================================
-   8. RESPONSIVE DESIGN
+   13. NÚT HAMBURGER
    ========================================================================= */
 
 /* Nút hamburger */
@@ -812,60 +844,8 @@ body.dark .hamburger-btn:hover {
   background-color: var(--btn-hover);
 }
 
-/* Responsive cho màn hình nhỏ */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Chuyển thành cột */
-    overflow: auto; /* Cho phép cuộn */
-  }
-
-  /* Ẩn sidebar mặc định */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -100%; /* Ẩn sidebar ra khỏi màn hình */
-    width: 80%; /* Chiều rộng sidebar trên mobile */
-    height: 100vh;
-    z-index: 999;
-    transition: left 0.3s ease; /* Hiệu ứng trượt */
-  }
-
-  /* Hiển thị sidebar khi active */
-  .sidebar.active {
-    left: 0;
-  }
-
-  /* Hiển thị nút hamburger */
-  .hamburger-btn {
-    display: block;
-  }
-
-  .main-content {
-    width: 100%; /* Chiều rộng chiếm toàn màn hình */
-  }
-
-  .right-panel {
-    width: 100%; /* Chiều rộng chiếm toàn màn hình */
-    height: auto;
-  }
-
-  .question-boxes {
-    grid-template-columns: repeat(4, 1fr); /* 4 cột */
-  }
-}
-
-@media (max-width: 480px) {
-  .question-boxes {
-    grid-template-columns: repeat(3, 1fr); /* 3 cột */
-  }
-
-  .sidebar {
-    width: 90%; /* Tăng chiều rộng sidebar trên màn hình rất nhỏ */
-  }
-}
-
 /* =========================================================================
-   13. PHONG TO THU NHO ANH CAU HOI
+   14. PHONG TO THU NHO ANH CAU HOI
    ========================================================================= */
 
 .thumbnail {
