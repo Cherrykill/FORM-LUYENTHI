@@ -24,7 +24,8 @@
     "correct": "C",
     "favorite": false,
     "wrongCount": 0,
-    "id": "q2"
+    "id": "q2",
+    "image": ""
   },
   {
     "question": "Cho bản rõ NUOC, khóa k là IT. Khi mã hóa bản rõ với khóa k theo hệ mã Vigenere ta sẽ thu được bản mã nào dưới đây?",

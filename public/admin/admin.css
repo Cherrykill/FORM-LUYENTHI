@@ -303,3 +303,57 @@ body.dark #theme-toggle:hover {
     width: 100%;
     background-color: rgba(0,0,0,0.7);
 }
+
+
+
+.image-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.image-input-group input[type="file"] {
+  flex-grow: 1;margin-left: 0;
+}
+
+.image-input-group button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.image-input-group button:hover {
+  background-color: #c82333;
+}
+
+
+
+
+.image-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.thumbnail {
+  max-width: 80px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.remove-image-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.remove-image-btn:hover {
+  background: #c82333;
+}

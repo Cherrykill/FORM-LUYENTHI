@@ -105,16 +105,19 @@ function renderQuestions() {
         const div = document.createElement("div");
         div.className = "question";
 
-        // 👉 Nếu có ảnh thì tạo thẻ <img>, không thì chuỗi rỗng
+        // Ảnh + nút xoá ảnh (nếu có ảnh)
         const imageHtml = q.image
-            ? `<div><img class="question-image" src="${q.image}" /></div>`
+            ? `
+            <div class="image-container">
+                <img src="${q.image}" class="thumbnail" onclick="enlargeImage('${q.image}')"/>
+                <button class="remove-image-btn" onclick="removeImage(${realIndex})">🗑 Xóa ảnh</button>
+            </div>
+            `
             : "";
-
 
         div.innerHTML = `
             <strong>${start + index + 1}. ${q.question}</strong><br>
-            ${q.image ? `<img src="${q.image}" class="thumbnail" onclick="enlargeImage('${q.image}')" />` : ""}
-
+            ${imageHtml}
             ${q.answers.map((a, i) => `<div>${String.fromCharCode(65 + i)}: ${a}</div>`).join('')}
             <div>Đáp án đúng: ${q.correct}</div>
             <button onclick="editQuestion(${realIndex})">✏ Sửa</button>
@@ -122,11 +125,13 @@ function renderQuestions() {
             <button class="fav-btn" onclick="toggleFavorite(${realIndex})">${q.favorite ? "⭐" : "☆"}</button>
             ${typeof q.wrongCount === "number" ? `<div class="wrong-count">Sai: ${q.wrongCount} lần</div>` : ""}
         `;
+
         container.appendChild(div);
     });
 
     renderPagination(totalPages);
 }
+
 
 
 function renderSearchResults(list) {
@@ -409,4 +414,14 @@ function enlargeImage(src) {
 function closeImage() {
     document.getElementById("imgOverlay").style.display = "none";
     document.getElementById("modalImage").style.display = "none";
+}
+
+
+// ====== 10. XÓA ẢNH ======
+function removeImage(index) {
+    questions[index].image = ""; // Reset giá trị ảnh
+    renderQuestions();           // Cập nhật lại UI
+
+    // Nếu bạn có lưu vào file, gọi luôn:
+    saveToFile();                // Hàm lưu lại file JSON
 }
