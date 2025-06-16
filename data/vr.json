@@ -1,0 +1,1318 @@
+[
+  {
+    "question": "Trong giao diện của Unity, cửa sổ nào tạo và chỉnh sửa khung cảnh cũng như các đối tượng?",
+    "answers": [
+      "A. Scene View",
+      "B. Hierarchy",
+      "C. Inspector",
+      "D. Project"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q1",
+    "image": ""
+  },
+  {
+    "question": "Trong giao diện của Unity, cửa sổ nào chứa các giao diện để chỉnh sửa thuộc tính của đối tượng được chọn?",
+    "answers": [
+      "A. Inspector",
+      "B. Hierarchy",
+      "C. Scene View",
+      "D. Project"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q2",
+    "image": ""
+  },
+  {
+    "question": "Trong giao diện của Unity, cửa sổ nào chứa tất cả các tài nguyên có thể sử dụng trong dự án?",
+    "answers": [
+      "A. Project",
+      "B. Hierarchy",
+      "C. Scene View",
+      "D. Inspector"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q3",
+    "image": ""
+  },
+  {
+    "question": "Trong giao diện của Unity, cửa sổ nào mô phỏng thông qua góc nhìn bằng Camera đã thiết lập trong cửa sổ thiết kế?",
+    "answers": [
+      "A. Game View",
+      "B. Hierarchy",
+      "C. Scene View",
+      "D. Inspector"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q4",
+    "image": ""
+  },
+  {
+    "question": "Thanh Status Bar trong giao diện của Unity có chức năng gì?",
+    "answers": [
+      "Chứa các thông tin về các hoạt động cũng như các lỗi của chương trình",
+      "Chứa các thuộc tính của đối tượng",
+      "Chứa tên của dự án",
+      "Chứa các lỗi của chương trình"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q5",
+    "image": ""
+  },
+  {
+    "question": "Trong hình 5 chức năng nào để quản lý tài khoản?",
+    "answers": [
+      "C",
+      "D",
+      "E",
+      "A"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q6",
+    "image": "/admin/images/vr6-7.png"
+  },
+  {
+    "question": "Trong hình 5 chức năng nào để lưu lại các tùy chỉnh về giao diện?",
+    "answers": [
+      "A. E",
+      "B. D",
+      "C. C",
+      "D. A"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q7",
+    "image": "/admin/images/vr6-7.png"
+  },
+  {
+    "question": "Để nhân bản đối tượng trong cửa sổ Hierarchy ta thao tác:",
+    "answers": [
+      "A. Tất cả các phương án",
+      "B. Nhấp chuột phải vào tên đối tượng trong cửa sổ Hierarchy/ Duplicate",
+      "C. Nhấp vào tên đối tượng trong cửa sổ Hierarchy ấn tổ hợp phím Ctrl+D",
+      "D. Nhấp vào tên đối tượng trong cửa sổ Hierarchy ấn tổ hợp phím Crtl+C rồi ấn Ctrl+V"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q8",
+    "image": ""
+  },
+  {
+    "question": "Chức năng của công cụ ProBuilder là gì ?",
+    "answers": [
+      "A. Tạo cấu trúc, mô hình cho đối tượng.",
+      "B. Công cụ tạo hiệu ứng cho đối tượng.",
+      "C. Tạo các thuộc tính màu sắc, âm thanh cho đối tượng.",
+      "D. Công cụ đưa sản phẩm lên kính thực tế ảo ."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q9",
+    "image": ""
+  },
+  {
+    "question": "Quan sát hình ảnh cho biết nhóm công cụ nào dùng để thay đổi hình dạng đối tượng ?",
+    "answers": [
+      "A. Geometry tools.",
+      "B. Object Tools.",
+      "C. Selection Tools.",
+      "D. Tool Panels."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q10",
+    "image": "/admin/images/vr10-13.png"
+  },
+  {
+    "question": "Quan sát hình ảnh cho biết nhóm công cụ nào dùng để tác động tới toàn bộ đối tượng ?",
+    "answers": [
+      "A. Object Tools.",
+      "B. Geometry tools.",
+      "C. Selection Tools.",
+      "D. Tool Panels."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q11",
+    "image": "/admin/images/vr10-13.png"
+  },
+  {
+    "question": "Quan sát hình ảnh cho biết nhóm công cụ nào dùng để thiết lập và thay đổi khi chọn hoặc tương tác với các đối tượng ?",
+    "answers": [
+      "A. Selection Tools.",
+      "B. Tool Panels.",
+      "C. Geometry tools.",
+      "D. Object Tools."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q12",
+    "image": "/admin/images/vr10-13.png"
+  },
+  {
+    "question": "Quan sát hình ảnh cho biết để chọn điểm góc đối tượng ta chọn công cụ số mấy ?",
+    "answers": [
+      "A. Chọn số 2.",
+      "B. Chọn số 3.",
+      "C. Chọn số 1.",
+      "D. Chọn số 4."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q13",
+    "image": "/admin/images/vr10-13.png"
+  },
+  {
+    "question": "Quan sát hình ảnh cho biết để chọn cạnh đối tượng ta chọn công cụ số mấy ?",
+    "answers": [
+      "A. Chọn số 3.",
+      "B. Chọn số 4.",
+      "C. Chọn số 2.",
+      "D. Chọn số 1."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q14",
+    "image": "/admin/images/vr14-15.png"
+  },
+  {
+    "question": "Quan sát hình ảnh cho biết để chọn mặt phẳng đối tượng ta chọn công cụ số mấy ?",
+    "answers": [
+      "A. Chọn số 4.",
+      "B. Chọn số 3.",
+      "C. Chọn số 2.",
+      "D. Chọn số 1."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q15",
+    "image": "/admin/images/vr14-15.png"
+  },
+  {
+    "question": "Thao tác để mở công cụ tạo mô hình cong ?",
+    "answers": [
+      "A. Tools\\ProBuilder\\Editors\\New Brezier Shape.",
+      "B. Tools\\ProBuilder\\Editors\\New Poly Shape.",
+      "C. Window\\ProBuilder\\Editors\\New Brezier Shape.",
+      "D. Window\\ProBuilder\\Editors\\New Poly Shape."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q16",
+    "image": ""
+  },
+  {
+    "question": "Quan sát hình ảnh cho biết để phun màu cho bề mặt đối tượng ta chọn công cụ số ?",
+    "answers": [
+      "A. Chọn số 3.",
+      "B. Chọn số 2.",
+      "C. Chọn số 4.",
+      "D. Chọn số 5."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q17",
+    "image": "/admin/images/vr17-18.png"
+  },
+  {
+    "question": "Quan sát hình ảnh cho biết để làm nhẵn bề mặt đối tượng ta chọn công cụ số ?",
+    "answers": [
+      "A. Chọn số 2.",
+      "B. Chọn số 1.",
+      "C. Chọn số 3.",
+      "D. Chọn số 4."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q18",
+    "image": "/admin/images/vr17-18.png"
+  },
+  {
+    "question": "Để giới hạn khoảng vùng phát ra âm thanh của đối tượng chúng ta chọn thuộc tính?",
+    "answers": [
+      "A. Spread",
+      "B. Reverb Zone Mix",
+      "C. Pitch",
+      "D. Max Distance"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q19",
+    "image": "/admin/images/vr19-21.png"
+  },
+  {
+    "question": "Để bỏ qua hiệu ứng khi phát âm thanh từ đối tượng ta lựa chọn?",
+    "answers": [
+      "A. Bypass Effects",
+      "B. Priority",
+      "C. Spantial Blend",
+      "D. Spread"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q20",
+    "image": "/admin/images/vr19-21.png"
+  },
+  {
+    "question": "Để âm lượng của âm thanh phát tiếng to nhất có thể khi điều chỉnh volume sẽ có giá trị là bao nhiêu?",
+    "answers": [
+      "A. 0.",
+      "B. 1",
+      "C. 0.5",
+      "D. 2"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q21",
+    "image": "/admin/images/vr19-21.png"
+  },
+  {
+    "question": "Kiểu ánh sáng sử dụng trong hình là kiểu ánh sáng gì?",
+    "answers": [
+      "A. Kiểu Area",
+      "B. Kiểu Directional",
+      "C. Kiểu Spot",
+      "D. Kiểu Point"
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q22",
+    "image": "/admin/images/vr22.png"
+  },
+  {
+    "question": "Để thay đổi cường độ sáng của nguồn sáng ta thay đổi thông số",
+    "answers": [
+      "A. Mode",
+      "B. Intensity",
+      "C. Indirect Multiplier",
+      "D. Spot Angle"
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q23",
+    "image": "/admin/images/vr23.png"
+  },
+  {
+    "question": "Trong các thuộc tính sau thuộc tính nào không phải của Animation?",
+    "answers": [
+      "A. Transform",
+      "B. Mesh",
+      "C. Collider",
+      "D. Material"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q24",
+    "image": ""
+  },
+  {
+    "question": "Cho đối tượng Cube như hình vẽ đang ở tọa độ (0,0,0) để cho đối tượng di chuyển sang trái ta thay đổi giá trị nào trong bảng Property?",
+    "answers": [
+      "A. Position.x",
+      "B. Postion.y",
+      "C. Postion.z",
+      "D. Cả 3 giá trị Position.x. Position.y, Position.z"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q25",
+    "image": "/admin/images/vr25.png"
+  },
+  {
+    "question": "Để nguồn sáng không bị thay trong suốt quá trình chạy chương trình và không tác động đến các đối tượng động ta chọn thuộc tính của chế độ Mode là?",
+    "answers": [
+      "A. Realtime",
+      "B. Mixed",
+      "C. Baked",
+      "D. Shadow"
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q26",
+    "image": "/admin/images/vr26.png"
+  },
+  {
+    "question": "Trong Unity, công cụ nào có chức năng thiết kế mô hình 3D cũng như kết cấu, hoa văn của đối tượng?",
+    "answers": [
+      "A. ProBuilder.",
+      "B. Polybrush.",
+      "C. Shader Graph.",
+      "D. Không có đáp án nào đúng."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q27",
+    "image": ""
+  },
+  {
+    "question": "Trong Unity, công cụ nào có chức năng pha trộn màu sắc/vật liệu, tạo độ lồi/lõm trên các mô hình 3D và rải trực tiếp các đối tượng?",
+    "answers": [
+      "A. ProBuilder.",
+      "B. Polybrush.",
+      "C. Shader Graph.",
+      "D. Không có đáp án nào đúng."
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q28",
+    "image": ""
+  },
+  {
+    "question": "Trong Unity, công cụ nào có chức năng xây dựng hiệu ứng hình ảnh dựa trên các thuật toán và tính toán toán học để tính toán màu sắc mỗi điểm ảnh?",
+    "answers": [
+      "A. ProBuilder.",
+      "B. Polybrush.",
+      "C. Shader Graph.",
+      "D. Không có đáp án nào đúng."
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q29",
+    "image": ""
+  },
+  {
+    "question": "Trong Unity, công cụ nào có chức năng thiết kế hiệu ứng bầu trời?",
+    "answers": [
+      "A. ProBuilder.",
+      "B. Polybrush.",
+      "C. Shader Graph.",
+      "D. Không có đáp án nào đúng."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q30",
+    "image": ""
+  },
+  {
+    "question": "Phầm mềm Unity xây dựng ứng dụng cho các nền tảng nào sau đây?",
+    "answers": [
+      "A. Kính thực tế ảo Oculus.",
+      "B. Điện thoại di động chạy hệ điều hành Android.",
+      "C. Điện thoại di động chạy hệ điều hành IOS.",
+      "D. Tất cả đáp án trên đều đúng."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q31",
+    "image": ""
+  },
+  {
+    "question": "Shader trong Unity có chức năng gì?",
+    "answers": [
+      "A. Chức năng tạo chuyển động.",
+      "B. Chứa các thuật toán để tính toán màu sắc cho mỗi điểm ảnh dựa trên ánh sáng và vật liệu.",
+      "C. Chức năng tạo âm thanh.",
+      "D. Cả 3 đáp án trên đều sai."
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q32",
+    "image": ""
+  },
+  {
+    "question": "Để thay đổi giao diện của phần mềm Unity Editor thì vào mục nào?",
+    "answers": [
+      "A. Edit\\Preference\\General\\Editor Theme.",
+      "B. Windows\\Preference\\General\\Editor Theme.",
+      "C. Edit\\Package Magager.",
+      "D. Windows\\Package Manager."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q33",
+    "image": ""
+  },
+  {
+    "question": "Để cài đặt các công cụ, tệp tin và plug-in thì vào mục nào?",
+    "answers": [
+      "A. Edit\\Preference\\General\\Editor Theme.",
+      "B. Windows\\Preference\\General\\Editor Theme.",
+      "C. Edit\\Package Magager.",
+      "D. Windows\\Package Manager."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q34",
+    "image": ""
+  },
+  {
+    "question": "Khi thiết kế sản phẩm VR, ta thực hiện theo các bước nào sau đây?\n1-Thiết kế vật liệu và hiệu ứng hình ảnh cho các đối tượng\n2-Xây dựng chương trình\n3-Thiết kế mô hình các đối tượng\n4-Chọn template VR và nền tảng phát triển sản phẩm\n5-Sắp đặt các đối tượng trong thế giới 3D\n6-Thêm các hiệu ứng ánh sáng, âm thanh, chuyển động, bầu trời, khung cảnh",
+    "answers": [
+      "A. 1-2-3-4-5-6.",
+      "B. 4-3-1-5-6-2.",
+      "C. 4-3-5-1-6-2.",
+      "D. 1-2-3-6-5-4."
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q35",
+    "image": ""
+  },
+  {
+    "question": "Quan sát hình ảnh hãy cho biết để tách một cạnh thành hai cạnh song song ta chọn số ?",
+    "answers": [
+      "A. Chọn số 7.",
+      "B. Chọn số 6.",
+      "C. Chọn số 7.",
+      "D. Chọn số 9."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q36",
+    "image": "/admin/images/vr36.png"
+  },
+  {
+    "question": "Hãy cho biết thao tác đúng khi tạo một Material cho đối tượng ?",
+    "answers": [
+      "A. Project\\click dấu +\\Material, kéo thả Material vào đối tượng.",
+      "B. File\\Material, kéo thả Material vào đối tượng.",
+      "C. Hierarchy\\click dấu +\\Material, kéo thả Material vào đối tượng.",
+      "D. Tools\\Material, kéo thả Material vào đối tượng."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q37",
+    "image": ""
+  },
+  {
+    "question": "Quan sát hình ảnh hãy cho biết muốn lưu đối tượng thành Model 3D ta chọn số ?",
+    "answers": [
+      "A. Chọn số 8.",
+      "B. Chọn số 7.",
+      "C. Chọn số 6.",
+      "D. Chọn số 5."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q38",
+    "image": "/admin/images/vr38.png"
+  },
+  {
+    "question": "Khi sử dụng các công cụ trong chế độ Vertex, ta muốn nối tất cả các điểm về điểm chính giữa hoặc điểm đầu tiên thì ta chọn chức năng nào ?",
+    "answers": [
+      "A. Collapse Vertices.",
+      "B. Weld Vertices.",
+      "C. Connect Vertices.",
+      "D. Split Vertices."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q39",
+    "image": ""
+  },
+  {
+    "question": "Khi sử dụng các công cụ trong chế độ Edge, ta muốn chia một cạnh thành nhiều cạnh thì ta chọn chức năng nào ?",
+    "answers": [
+      "A. Subdivide Edge.",
+      "B. Extrude Edge.",
+      "C. Connect Edge.",
+      "D. Insert Edge Loop."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q40",
+    "image": ""
+  },
+  {
+    "question": "Khi sử dụng các công cụ trong chế độ Face, ta muốn chia các mặt phẳng được chọn thành các hình tam giác thì ta chọn chức năng nào ?",
+    "answers": [
+      "A. Trianqulate Faces.",
+      "B. Subdivide Faces.",
+      "C. Merge Faces.",
+      "D. Flip Face Edge."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q41",
+    "image": ""
+  },
+  {
+    "question": "Muốn lưu đối tượng thành hình khối có sẵn của ProBuilder ta chọn chức năng nào ?",
+    "answers": [
+      "A. ProBuilderize Object.",
+      "B. Subdivide Object.",
+      "C. Flip Object Normals.",
+      "D. Move Pivot to Center of Object."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q42",
+    "image": ""
+  },
+  {
+    "question": "Hãy cho biết đối tượng nào trong hình là Prefab?",
+    "answers": [
+      "A. Plane",
+      "B. Cube",
+      "C. Spot Light",
+      "D. Quad"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q43",
+    "image": "/admin/images/vr43-44.png"
+  },
+  {
+    "question": "Dựa vào hình hãy cho biết đối tượng nào được tạo từ nhóm 3D Object?",
+    "answers": [
+      "A. Plane, Camera, Cube",
+      "B. Camera, Spot Light, Quad",
+      "C. Plane, Cube, Quad",
+      "D. Plane, Cube"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q44",
+    "image": "/admin/images/vr43-44.png"
+  },
+  {
+    "question": "Để tạo hiệu ứng như trong hình ta có thể thêm thuộc tính trong các hiệu ứng Effects?",
+    "answers": [
+      "A. Halo",
+      "B. Lens Flare",
+      "C. Visual Effect",
+      "D. Projector"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q45",
+    "image": "/admin/images/vr45.png"
+  },
+  {
+    "question": "Để thiết lập biến dạng cho đối tượng khi có va chạm xảy ra ta có thể thiết lập trong ?",
+    "answers": [
+      "A. Transform",
+      "B. Mesh Filter",
+      "C. Mesh Renderer",
+      "D. Collider"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q46",
+    "image": "/admin/images/vr46.png"
+  },
+  {
+    "question": "Định dạng âm thanh nào không được Unity hỗ trợ ?",
+    "answers": [
+      "A. MP3",
+      "B. AIFF",
+      "C. OGG",
+      "D. MIDI"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q47",
+    "image": ""
+  },
+  {
+    "question": "Để có hiệu ứng âm thanh vọng lại ta có thể điều chỉnh ở thuộc tính nào?",
+    "answers": [
+      "A. Priority",
+      "B. Pitch",
+      "C. Spatial Blend",
+      "D. Reverb Zone Mix"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q48",
+    "image": "/admin/images/vr48.png"
+  },
+  {
+    "question": "Để có hiệu ứng ánh sáng như hình ta có thể chọn ánh sánh kiểu?",
+    "answers": [
+      "A. Spot",
+      "B. Directional",
+      "C. Point",
+      "D. Area"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q49",
+    "image": "/admin/images/vr49.png"
+  },
+  {
+    "question": "Để khung timeline của Animation hiển thị như hình ta chọn chế độ hiển thị nào?",
+    "answers": [
+      "A. Dopesheet",
+      "B. Curves",
+      "C. Point",
+      "D. Area"
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q50",
+    "image": "/admin/images/vr50-52.png"
+  },
+  {
+    "question": "Để chuyển động của đối tượng mượt mà trong khung timeline tại các điểm ta có thể chọn thuộc tính nào?",
+    "answers": [
+      "A. Clamped Auto",
+      "B. Free Smooth",
+      "C. Flat",
+      "D. Broken"
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q51",
+    "image": "/admin/images/vr50-52.png"
+  },
+  {
+    "question": "Để tạo chuyển động rơi của đối tượng theo chiều thẳng đứng và không bị tác động bên ngoài trong khung timeline tại các điểm ta có thể chọn thuộc tính nào?",
+    "answers": [
+      "A. Clamped Auto",
+      "B. Free Smooth",
+      "C. Flat",
+      "D. Broken"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q52",
+    "image": "/admin/images/vr50-52.png"
+  },
+  {
+    "question": "Để tạo chuyển động vật rơi sang phải ta cần thay đổi những thuộc tính nào?",
+    "answers": [
+      "A. Position.x; Position.y",
+      "B. Position.x; Position.z",
+      "C. Position.y; Position.z",
+      "D. Position.z"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q53",
+    "image": "/admin/images/vr53.png"
+  },
+  {
+    "question": "Để bỏ bóng đổ của xe trong khung hình ta lựa chọn thay đổi thuộc tính nào trong Mesh Renderer?",
+    "answers": [
+      "A. Cast Shadows",
+      "B. Receive Shadows",
+      "C. Light Probes",
+      "D. Anchor Override"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q54",
+    "image": "/admin/images/vr54-55.png"
+  },
+  {
+    "question": "Khi xe di chuyển đến vị trí 1 muốn xe quay trái và di chuyển ta cần thay đổi những thuộc tính trong bảng ?",
+    "answers": [
+      "A. Position.x; Rotation.z",
+      "B. Position.z; Rotation.y",
+      "C. Position.y; Rotation.x",
+      "D. Position.z; Rotation.x"
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q55",
+    "image": "/admin/images/vr54-55.png"
+  },
+  {
+    "question": "Để chỉnh sửa đối tượng đang là Prefab muốn đối tượng trở lại thành đối tượng thông thường (Game Object) ta lựa chọn thuộc tính?",
+    "answers": [
+      "A. Open Asset in Context",
+      "B. Open Asset in Isolation",
+      "C. Unpack",
+      "D. Unpack Compeletly"
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q56",
+    "image": "/admin/images/vr56.png"
+  },
+  {
+    "question": "Khi build 1 ứng dụng bằng Unity để chạy trên hệ điều hành Android ta được file có đuôi?",
+    "answers": [
+      "A. *.APK",
+      "B. *.UNI",
+      "C. *.ANDROID",
+      "D. .*VR"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q57",
+    "image": ""
+  },
+  {
+    "question": "Để thiết lập chế độ nén các Texture hình ảnh phù hợp thiết bị Oculus, ta chọn?",
+    "answers": [
+      "A. ETC(Default).",
+      "B. ETC2.",
+      "C. ASTC.",
+      "D. DXT."
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q58",
+    "image": ""
+  },
+  {
+    "question": "Để quản lý các Plugin cho VR ta cần download gói nào?",
+    "answers": [
+      "A. XR Interaction Toolkit.",
+      "B. XR Plugin Management.",
+      "C. Oculus XR Plugin.",
+      "D. Cả 3 gói trên."
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q59",
+    "image": ""
+  },
+  {
+    "question": "SDK là gì?",
+    "answers": [
+      "A. Là giao diện lập trình ứng dụng, để xây dựng các chương trình ứng dụng .",
+      "B. Là môi trường dùng soạn thảo viết mã lập trình để phát triển ứng dụng .",
+      "C. Là công cụ cốt lõi dùng để biên dịch mã nguồn thành các mã nhị phân để máy tính hiểu được.",
+      "D. Là công cụ cung cấp các thư viện, tài liệu, mẫu template, sample code, tiện ích gỡ rối (debugging), các ghi chú hỗ trợ (documentation) hoặc các tài liệu bổ sung,… để nhà phát triển có thể tích hợp thêm vào phần mềm."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q60",
+    "image": ""
+  },
+  {
+    "question": "Unity3d có thể build được các nền tảng nào sau đây?",
+    "answers": [
+      "A. Ios, Android, Linux, tvOS.",
+      "B. Ios, Android, Linux, HarmonyOS .",
+      "C. Ios, Android, tvOS, HarmonyOS.",
+      "D. Ios, Android, FirefoxOS, ChromeOS."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q61",
+    "image": ""
+  },
+  {
+    "question": "Để build 1 chương trình chạy trực tiếp trên điện thoại , ta chọn?",
+    "answers": [
+      "A. File/Build and run.",
+      "B. File/Build setting/Build and run.",
+      "C. File/build setting/Build.",
+      "D. Đáp án 1,2 đúng."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q62",
+    "image": ""
+  },
+  {
+    "question": "Người dùng phải trả phí cho những bản Unity nào sau đây?",
+    "answers": [
+      "A. Personal, Plus, Pro, Enterprise.",
+      "B. Personal, Plus, Pro.",
+      "C. Personal, Pro, Enterprise..",
+      "D. Plus, Pro, Enterprise."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q63",
+    "image": ""
+  },
+  {
+    "question": "Kích hoạt quyền phát triển để tuỳ chỉnh trên Android ta gõ vào màn hình điện thoại mấy lần ?",
+    "answers": [
+      "A. 1",
+      "B. 2",
+      "C. 6",
+      "D. 8"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q64",
+    "image": ""
+  },
+  {
+    "question": "Unity hỗ trợ kính VR từ phiên bản bao nhiêu trở lên?",
+    "answers": [
+      "A. 2016",
+      "B. 2017",
+      "C. 2018",
+      "D. 2019"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q65",
+    "image": ""
+  },
+  {
+    "question": "Trong phần: Scenes in Build ta có thể Add được bao nhiêu scenes?",
+    "answers": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. Không giới hạn."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q66",
+    "image": ""
+  },
+  {
+    "question": "Minimum API Level trong Project Settings dùng để thiết lập?",
+    "answers": [
+      "A. Các loại kính VR.",
+      "B. Các loại hệ điều hành.",
+      "C. Phiên bản hệ điều hành Android.",
+      "D. Không có đáp án đúng."
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q67",
+    "image": ""
+  },
+  {
+    "question": "APK(Android Package Kit) là gì?",
+    "answers": [
+      "A. Là tên 1 chương trình ứng dụng.",
+      "B. Là tên 1 công ty phát triển hệ điều hành.",
+      "C. Là một chương trình soạn thảo để lập trình trên điện thoại di động.",
+      "D. Định dạng tệp được sử dụng bởi hệ điều hành Android để phân phối và cài đặt các ứng dụng di động."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q68",
+    "image": ""
+  },
+  {
+    "question": "Xcode là gì?",
+    "answers": [
+      "A. Là một hệ điều hành.",
+      "B. Là 1 package trên Asset Store Unity.",
+      "C. Là bộ phát triển phần mềm tích hợp được Apple phát triển chạy trên hệ điều hành Mac.",
+      "D. Là 1 plugin trong Unity."
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q69",
+    "image": ""
+  },
+  {
+    "question": "Oculus là thương hiệu của công ty nào?",
+    "answers": [
+      "A. Apple.",
+      "B. FaceBook.",
+      "C. Unity.",
+      "D. SpaceX."
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q70",
+    "image": ""
+  },
+  {
+    "question": "Phần mềm Unity có thể sử dụng những ngôn ngữ nào để viết mã lệnh?",
+    "answers": [
+      "A. Java, C#.",
+      "B. C, C#.",
+      "C. C, C++.",
+      "D. C#, JavaScript."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q71",
+    "image": ""
+  },
+  {
+    "question": "Để di chuyển 1 đối tượng đến vị trí khác ta sử dụng lệnh nào sau đây?",
+    "answers": [
+      "A. this.transform",
+      "B. this.transform.position",
+      "C. this.transform.rotation",
+      "D. this.transform.scale"
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q72",
+    "image": ""
+  },
+  {
+    "question": "Để xoay 1 đối tượng ta sử dụng lệnh nào sau đây?",
+    "answers": [
+      "A. this.transform",
+      "B. this.transform.position.",
+      "C. this.transform.rotation.",
+      "D. this.transform.rotation.up"
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q73",
+    "image": ""
+  },
+  {
+    "question": "Để chỉnh kích thước của 1 đối tượng ta sử dụng lệnh nào?",
+    "answers": [
+      "A. this.transform.size",
+      "B. this.transform.scale.",
+      "C. this.transform.position.",
+      "D. this.transform.rotation."
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q74",
+    "image": ""
+  },
+  {
+    "question": "Khi 1 trong 2 đối tượng để IS Trigger = true(hộp checkbox được đánh dấu) sẽ xảy ra sự kiện gì sau va chạm?",
+    "answers": [
+      "A. 2 đối tượng đi xuyên qua nhau.",
+      "B. 2 đối tượng va cHBm vật lý với nhau.",
+      "C. Đối tượng mất tương tác vật lý.",
+      "D. Không có đáp án đúng."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q75",
+    "image": ""
+  },
+  {
+    "question": "Khi cả 2 đối tượng để IS Trigger = false(hộp checkbox không đánh dấu) sẽ xảy ra sự kiện gì sau va chạm?",
+    "answers": [
+      "A. 2 đối tượng đi xuyên qua nhau.",
+      "B. 2 đối tượng va cHBm vật lý với nhau.",
+      "C. Đối tượng mất tương tác vật lý.",
+      "D. Không có đáp án đúng."
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q76",
+    "image": ""
+  },
+  {
+    "question": "Hàm Start được gọi mấy lần trong Unity?",
+    "answers": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. Vô số lần"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q77",
+    "image": ""
+  },
+  {
+    "question": "Hàm UpDate được gọi mấy lần trong Unity?",
+    "answers": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. Vô số lần."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q78",
+    "image": ""
+  },
+  {
+    "question": "Muốn đưa một tài nguyên (ảnh, âm thanh, mô hình…) tạo ra bởi các phần mềm khác vào Unity ta làm thế nào?",
+    "answers": [
+      "A. Copy vào thư mục Assets của dự án.",
+      "B. Kéo thả trực tiếp vào cửa sổ Project của Unity.",
+      "C. Cả hai cách trên đều đúng.",
+      "D. Không có đáp án đúng."
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q79",
+    "image": ""
+  },
+  {
+    "question": "Một Audio Source có thể tạo được bao nhiêu Audio Clip?",
+    "answers": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. Vô số."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q80",
+    "image": ""
+  },
+  {
+    "question": "Nếu bạn sử dụng mã lệnh(Script) để khai báo Audio Source thì 1 đối tượng có thể tạo được bao nhiêu Audio Clip ?",
+    "answers": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. Vô số."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q81",
+    "image": ""
+  },
+  {
+    "question": "Chương trình tạo ra bởi Unity cho nền tảng iOS có phần mở rộng là gì?",
+    "answers": [
+      "A. *.xcodeproj.",
+      "B. *.exe.",
+      "C. *.apk.",
+      "D. *.jpg."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q82",
+    "image": ""
+  },
+  {
+    "question": "Chương trình tạo ra bởi Unity cho nền tảng Android có phần mở rộng là gì?",
+    "answers": [
+      "A. *.xcodeproj.",
+      "B. *.exe.",
+      "C. *.apk.",
+      "D. *.jpg."
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q83",
+    "image": ""
+  },
+  {
+    "question": "Khi thiết kế Material cho một đối tượng, giữa việc thiết kế 1 material duy nhất cho tất cả mặt đối tượng (công cụ UV) với việc thiết kế mỗi mặt một Material, phương pháp nào tối ưu hiệu năng thiết bị hơn?",
+    "answers": [
+      "A. 1 Material duy nhất.",
+      "B. Mỗi mặt một Material.",
+      "C. Cả hai cách trên như nhau.",
+      "D. "
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q84",
+    "image": ""
+  },
+  {
+    "question": "Công cụ Terrain trong Unity dùng để làm gì?",
+    "answers": [
+      "A. Thiết kế địa hình.",
+      "B. Thiết kế mô hình.",
+      "C. Thiết kế vật liệu.",
+      "D. Thiết kế chuyển động."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q85",
+    "image": ""
+  },
+  {
+    "question": "Có mấy loại liên kết(Constraint) trong Unity?",
+    "answers": [
+      "A. 3",
+      "B. 4",
+      "C. 5",
+      "D. 6"
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q86",
+    "image": ""
+  },
+  {
+    "question": "Để thiết lập tùy chỉnh cho thiết bị đầu ra của sản phẩm, ta chọn mục nào trong hình sau?",
+    "answers": [
+      "A. Adaptive Performance.",
+      "B. Player.",
+      "C. Preset Manager.",
+      "D. XR-Plug-in Management."
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q87",
+    "image": "/admin/images/vr87-89.png"
+  },
+  {
+    "question": "Để thiết lập hiển thị các thông số về hiệu năng của thiết bị đâu ra của sản phẩm, ta chọn mục nào trong hình sau?",
+    "answers": [
+      "A. Adaptive Performance.",
+      "B. Player.",
+      "C. Preset Manager.",
+      "D. XR-Plug-in Management."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q88",
+    "image": "/admin/images/vr87-89.png"
+  },
+  {
+    "question": "Để xem và quản lý các Plug-in, ta chọmục nào trong hình sau?",
+    "answers": [
+      "A. Adaptive Performance.",
+      "B. Player.",
+      "C. Preset Manager.",
+      "D. XR Plug-in Management."
+    ],
+    "correct": "D",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q89",
+    "image": "/admin/images/vr87-89.png"
+  },
+  {
+    "question": "Kiểu ánh sáng trong hình sau là ánh sáng gì trong Unity?",
+    "answers": [
+      "A. Directional Light.",
+      "B. Point Light.",
+      "C. Spot Light.",
+      "D. Area Light."
+    ],
+    "correct": "B",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q90",
+    "image": "/admin/images/vr90.png"
+  },
+  {
+    "question": "Hình ảnh sau hiển thị chức năng nào?",
+    "answers": [
+      "A. Hiệu ứng ánh sáng.",
+      "B. Hiệu ứng âm thanh.",
+      "C. Hiệu ứng bầu trời.",
+      "D. Không có đáp án đúng."
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q91",
+    "image": "/admin/images/vr91.png"
+  },
+  {
+    "question": "Để xem và quản lý các thông số đã được lưu trong chương trình, ta chọn mục nào trong hình sau?",
+    "answers": [
+      "A. Adaptive Performance.",
+      "B. Player.",
+      "C. Preset Manager.",
+      "D. XR-Plug-in Management."
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q92",
+    "image": "/admin/images/vr92.png"
+  },
+  {
+    "question": "Để kết nối Unity với các phần mềm hỗ trợ lập trình ta vào đâu?",
+    "answers": [
+      "A. Edit\\Preference\\Colors.",
+      "B. Windows\\Preference\\Colors.",
+      "C. Edit\\Preference\\External Tools.",
+      "D. Windows\\Preference\\External Tools."
+    ],
+    "correct": "C",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q93",
+    "image": ""
+  },
+  {
+    "question": "Để thay đổi màu hiển thị các công cụ hỗ trợ trong Unity ta vào đâu?",
+    "answers": [
+      "A. Edit\\Preference\\Colors.",
+      "B. Windows\\Preference\\Colors.",
+      "C. Edit\\Preference\\External Tools.",
+      "D. Windows\\Preference\\External Tools."
+    ],
+    "correct": "A",
+    "favorite": false,
+    "wrongCount": 0,
+    "id": "q94",
+    "image": ""
+  }
+]

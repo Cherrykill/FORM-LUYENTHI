@@ -11,7 +11,7 @@
     "favorite": false,
     "wrongCount": 7,
     "id": "q1",
-    "image": "/admin/images/c1.jpg"
+    "image": ""
   },
   {
     "question": "Kích thước đầu ra của MD4?",
@@ -40,7 +40,7 @@
     "correct": "C",
     "wrongCount": 0,
     "id": "q3",
-    "image": "/admin/images/c1.jpg"
+    "image": ""
   },
   {
     "id": 104,
@@ -67,7 +67,7 @@
     "favorite": false,
     "wrongCount": 1,
     "id": "q5",
-    "image": "/admin/images/c1.jpg"
+    "image": ""
   },
   {
     "question": "Hãy cho biết kết quả của 7^2010 mod 13",
