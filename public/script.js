@@ -384,7 +384,8 @@ function submitQuiz() {
 
     const feedbackEl = document.getElementById("score-feedback");
     const total = questions.length;
-    const percent = (correct / total) * 100;
+    const percent = ((correct / total) * 100).toFixed(2);
+
 
     let feedback = "";
     if (percent === 100) feedback = "Xuất sắc! Bạn đã trả lời đúng tất cả các câu.";
@@ -425,6 +426,40 @@ function submitQuiz() {
             console.error('❌ Lỗi khi gửi dữ liệu:', err);
             alert('Không thể cập nhật dữ liệu câu hỏi. Vui lòng thử lại.');
         });
+
+    // Gửi thống kê kết quả về MongoDB
+    const username = sessionStorage.getItem('username');
+    if (!username) {
+        console.warn("Không có username trong sessionStorage.");
+        alert("Bạn cần đăng nhập trước khi làm bài.");
+        return;
+    }
+
+    fetch("/submit-stats", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            username,
+            correct,
+            wrong,
+            unanswered,
+            percent,
+            total: questions.length,
+            timestamp: new Date().toISOString()
+        })
+    })
+        .then(res => {
+            if (!res.ok) throw new Error('Gửi thống kê thất bại');
+            return res.json();
+        })
+        .then(data => {
+            console.log('✅ Đã lưu thống kê vào MongoDB:', data.message);
+        })
+        .catch(err => {
+            console.error('❌ Lỗi khi gửi thống kê:', err);
+        });
+
+
 
     // Reset trạng thái sau khi nộp
     selectedAnswers = new Array(questions.length).fill(null);
@@ -508,13 +543,15 @@ function toggleTheme() {
 // =========================================================================
 
 
-// Hiện/ Đóng popup đăng nhập
+// Đăng nhập tài khoản
 function handleLogin() {
     const API_BASE = '/api';
     const usernameInput = document.getElementById('admin-username') || document.getElementById('username');
     const passwordInput = document.getElementById('admin-password') || document.getElementById('password');
     const showUsername = document.querySelector('#user-name');
     const loginError = document.getElementById('login-error');
+    const logoutBtn = document.querySelector('.logout-btn');
+    const loginBtn = document.querySelector('.login-btn');
 
     const username = usernameInput?.value.trim();
     const password = passwordInput?.value.trim();
@@ -532,6 +569,9 @@ function handleLogin() {
 
                 if (showUsername) {
                     showUsername.innerText = `Xin chào, ${username}!`;
+                    logoutBtn.classList.remove('hidden');
+                    loginBtn.classList.add('hidden');
+
                 }
 
                 // Chuyển hướng nếu là admin
@@ -547,6 +587,7 @@ function handleLogin() {
                 } else {
                     alert('Sai tên đăng nhập hoặc mật khẩu!');
                 }
+
             }
         })
         .catch(() => {
@@ -558,18 +599,17 @@ function handleLogin() {
         });
 }
 
-
-
-
+// Dăng ký tài khoản mới
 function handleRegister() {
     const username = document.getElementById('register-username').value;
     const email = document.getElementById('register-email').value;
     const password = document.getElementById('register-password').value;
+    const timestamp = new Date().toISOString();
 
     fetch(`${API_BASE}/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({ username, email, password, timestamp }),
     })
         .then((res) => res.json())
         .then((data) => {
@@ -585,18 +625,25 @@ function handleRegister() {
         });
 }
 
+// Hiển thị form đăng ký
 function showRegisterForm() {
-    document.getElementById('admin-login-form').style.display = 'none';
+    document.getElementById('login-form').style.display = 'none';
     document.getElementById('register-form').style.display = 'block';
 }
 
+// Hiển thị form đăng nhập
 function showLoginForm() {
     document.getElementById('register-form').style.display = 'none';
-    document.getElementById('admin-login-form').style.display = 'block';
+    document.getElementById('login-form').style.display = 'block';
+    document.getElementById('login-popup').classList.remove('hidden');
+
 }
 
+// Đóng popup đăng nhập
 function closeLoginPopup() {
     document.getElementById('login-popup').classList.add('hidden');
+    const logoutBtn = document.querySelector('.logout-btn');
+    // logoutBtn.classList.add('hidden');
 }
 
 

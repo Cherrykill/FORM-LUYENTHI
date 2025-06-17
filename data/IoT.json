@@ -9,7 +9,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "1"
+    "id": "1",
+    "wrongCount": 7
   },
   {
     "question": "IoT phải có 2 thuộc tính nào sau đây?",
@@ -21,7 +22,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "2"
+    "id": "2",
+    "wrongCount": 8
   },
   {
     "question": "Người được gọi là chả đẻ của IoT là ai?",
@@ -33,7 +35,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "3"
+    "id": "3",
+    "wrongCount": 4
   },
   {
     "question": "Các công nghệ nào được sử dụng trong Iot",
@@ -45,7 +48,8 @@
     ],
     "correct": "D",
     "favorite": false,
-    "id": "4"
+    "id": "4",
+    "wrongCount": 3
   },
   {
     "question": "Các thiết bị IoT trong nhà giúp ích trong việc nào sau đây?",
@@ -81,7 +85,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "7"
+    "id": "7",
+    "wrongCount": 1
   },
   {
     "question": "Trong ý tưởng về thiết bị di động, điểm hấp dẫn chính của máy tính xách tay khiến nó trở thành thiết bị phổ biến là gì?",
@@ -921,8 +926,7 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "77",
-    "wrongCount": 1
+    "id": "77"
   },
   {
     "question": "Thuật ngữ LPWAN là viết tắt của những chữ nào?",
@@ -934,8 +938,7 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "78",
-    "wrongCount": 1
+    "id": "78"
   },
   {
     "question": "Mô hình mạng sử dụng cho ZigBee Smart Energy?",

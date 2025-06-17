@@ -686,8 +686,9 @@ body.dark .popup {
   display: flex;
   align-items: center; /* Căn giữa dọc */
   justify-content: center; /* Căn giữa ngang */
+  color: var(--popup-text-light); /* Màu chữ */
 }
-#login-popup #admin-login-form,
+#login-popup #login-form,
 #login-popup #register-form {
   text-align: center;
   display: flex;
@@ -699,20 +700,20 @@ body.dark .popup {
   padding: 0; /* Loại bỏ padding để không chồng lấp với .popup */
 }
 
-#admin-login-form h2,
+#login-form h2,
 #register-form h2 {
-  margin: 0 0 10px 0;
-  font-size: 24px;
+  margin: 10px 0 30px 0;
+  font-size: 40px;
   color: rgb(255, 0, 0);
   font-weight: bold;
 }
 
-body.dark #admin-login-form h2,
+body.dark #login-form h2,
 body.dark #register-form h2 {
   color: #fff;
 }
 
-#admin-login-form input,
+#login-form input,
 #register-form input {
   width: 100%;
   padding: 10px 12px;
@@ -725,21 +726,22 @@ body.dark #register-form h2 {
   transition: border-color 0.2s ease;
 }
 
-body.dark #admin-login-form input,
+body.dark #login-form input,
 body.dark #register-form input {
   background: #444;
   color: #fff;
   border-color: #555;
 }
 
-#admin-login-form input:focus,
+#login-form input:focus,
 #register-form input:focus {
   border-color: #007bff;
 }
 
-#admin-login-form button,
+#login-form button,
 #register-form button {
   width: 100%;
+  height: 50px;
   padding: 10px 14px;
   margin: 10px 0;
   border: none;
@@ -749,29 +751,29 @@ body.dark #register-form input {
   transition: background 0.2s ease;
 }
 
-#admin-login-form button:first-of-type,
+#login-form button:first-of-type,
 #register-form button:first-of-type {
   background-color: #007bff;
   color: white;
 }
 
-#admin-login-form button:last-of-type,
+#login-form button:last-of-type,
 #register-form button:last-of-type {
   background-color: #eee;
   color: #333;
 }
 
-#admin-login-form button:first-of-type:hover,
+#login-form button:first-of-type:hover,
 #register-form button:first-of-type:hover {
   background-color: #0056b3;
 }
 
-#admin-login-form button:last-of-type:hover,
+#login-form button:last-of-type:hover,
 #register-form button:last-of-type:hover {
   background-color: #ddd;
 }
 
-#admin-login-form .toggle-link,
+#login-form .toggle-link,
 #register-form .toggle-link {
   display: block;
   color: #007bff;
@@ -781,12 +783,12 @@ body.dark #register-form input {
   text-align: center;
 }
 
-#admin-login-form .toggle-link:hover,
+#login-form .toggle-link:hover,
 #register-form .toggle-link:hover {
   text-decoration: underline;
 }
 
-#admin-login-form #login-error,
+#login-form #login-error,
 #register-form #register-error {
   color: red;
   font-size: 14px;
@@ -917,9 +919,23 @@ body.dark .right-panel p {
   font-weight: bold;
   transition: background-color 0.2s ease;
 }
+.login-btn {
+  width: 100%; /* Chiều rộng 100% */
+  padding: 8px 16px;
+  background-color: #2dce05;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
 
 .logout-btn:hover {
   background-color: #d9363e;
+}
+.login-btn:hover {
+  background-color: #015f05;
 }
 
 body.dark #countdown {
