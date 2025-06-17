@@ -8,11 +8,48 @@ const mongoose = require('mongoose');
 
 const app = express();
 const PORT = process.env.PORT || 3002;
-const DATA_PATH = path.join(__dirname, 'data', process.env.QUESTION_FILE || 'questions.json');
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
+
+// ✅ Luôn lấy đường dẫn mới nhất từ biến môi trường
+const getDataPath = () => {
+  return path.join(__dirname, 'data', process.env.QUESTION_FILE || 'questions.json');
+};
+
+// ✅ API thay đổi tên file JSON bằng cách cập nhật biến môi trường
+app.post('/set-question-file', (req, res) => {
+  const { filename } = req.body;
+
+  if (!filename || !filename.endsWith('.json')) {
+    return res.status(400).json({ error: 'Tên file không hợp lệ' });
+  }
+
+  const newPath = path.join(__dirname, 'data', filename);
+  if (!fs.existsSync(newPath)) {
+    return res.status(404).json({ error: 'File không tồn tại' });
+  }
+
+  process.env.QUESTION_FILE = filename;
+  console.log(`[SET FILE] QUESTION_FILE = ${process.env.QUESTION_FILE}`);
+  res.json({ message: 'Đã cập nhật QUESTION_FILE', current: process.env.QUESTION_FILE });
+});
+
+
+// API: lay danh sach file json
+app.get('/list-question-files', (req, res) => {
+  const dataFolder = path.join(__dirname, 'data');
+  fs.readdir(dataFolder, (err, files) => {
+    if (err) {
+      return res.status(500).json({ error: 'Không đọc được thư mục data' });
+    }
+
+    const jsonFiles = files.filter(file => file.endsWith('.json'));
+    res.json(jsonFiles);
+  });
+});
+
 
 // ===== 1. MongoDB setup ===== //
 mongoose.connect(process.env.MONGO_URI, {
@@ -45,8 +82,12 @@ const Stats = mongoose.model('Stats', statsSchema);
 
 // API: Danh sách câu hỏi
 app.get('/questions', (req, res) => {
+  const DATA_PATH = getDataPath();
   fs.readFile(DATA_PATH, 'utf-8', (err, data) => {
-    if (err) return res.status(500).send('Lỗi đọc file');
+    if (err) {
+      return res.status(500).json({ error: 'Không thể đọc file' });
+    }
+
     try {
       const questions = JSON.parse(data);
       res.json(questions);
@@ -58,6 +99,7 @@ app.get('/questions', (req, res) => {
 
 // API: Ghi lại danh sách câu hỏi
 app.post('/save-questions', (req, res) => {
+    const DATA_PATH = getDataPath();
   const questions = req.body;
   if (!Array.isArray(questions)) return res.status(400).send('Dữ liệu không hợp lệ');
 
@@ -89,7 +131,7 @@ app.post('/api/register', async (req, res) => {
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = new User({ username, password: hashedPassword, email, timestamp: timestamp ? new Date(timestamp) : new Date(), });
+    const newUser = new User({ username, password: hashedPassword, email, timestamp: new Date() });
     await newUser.save();
 
     res.json({ success: true });
