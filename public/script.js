@@ -26,6 +26,14 @@ window.onload = async () => {
 
     // 🌙 Đặt chế độ tối làm mặc định khi tải trang
     document.body.classList.add('dark');
+
+    // Auto check xem có đăng nhập không
+    const username = sessionStorage.getItem("username");
+    if (username) {
+        renderApp(); // Đã login → hiển thị giao diện chính
+    } else {
+        renderLoginForm(); // Chưa login → hiển thị form đăng nhập
+    }
 };
 
 // =========================================================================
@@ -568,7 +576,8 @@ function handleLogin() {
                 sessionStorage.setItem('isAdmin', data.isAdmin); // true hoặc false từ server
 
                 if (showUsername) {
-                    showUsername.innerText = `Xin chào, ${username}!`;
+                    const sessionUsername = sessionStorage.getItem('username');
+                    showUsername.innerText = `Xin chào, ${sessionUsername}!`;
                     logoutBtn.classList.remove('hidden');
                     loginBtn.classList.add('hidden');
 
@@ -624,6 +633,21 @@ function handleRegister() {
             document.getElementById('register-error').innerText = 'Lỗi kết nối tới server!';
         });
 }
+
+// Xử lý đăng xuất
+function handleLogout() {
+    sessionStorage.clear(); // Xoá toàn bộ session client-side
+    const showUsername = document.querySelector('#user-name');
+    const logoutBtn = document.querySelector('.logout-btn');
+    const loginBtn = document.querySelector('.login-btn');
+    
+    showUsername.innerText = ''; // Xoá tên người dùng hiển thị
+    logoutBtn.classList.add('hidden'); // Ẩn nút đăng xuất
+    loginBtn.classList.remove('hidden'); // Hiển thị lại nút đăng nhập
+    showLoginForm(); // Gọi lại hàm hiển thị form đăng nhập
+}
+
+// 
 
 // Hiển thị form đăng ký
 function showRegisterForm() {
