@@ -467,9 +467,17 @@ function drawChart(correct, wrong, skipped) {
 // =========================================================================
 
 // Cài đặt tự động chuyển câu hỏi
+// Cài đặt tự động chuyển câu hỏi
 function setupAutoNext() {
     const sidebarSelect = document.getElementById('sidebar-auto-next');
     const popupSelect = document.getElementById('popup-auto-next');
+
+    // Đặt giá trị mặc định cho các select elements là 1000ms
+    sidebarSelect.value = '1000';
+    popupSelect.value = '1000';
+
+    // Khởi tạo autoNextDelay với giá trị mặc định là 1000ms
+    autoNextDelay = 1000;
 
     const updateDelay = () => {
         autoNextDelay = parseInt(sidebarSelect.value);
@@ -481,8 +489,6 @@ function setupAutoNext() {
         sidebarSelect.value = popupSelect.value;
         updateDelay();
     };
-
-    updateDelay();
 }
 
 // =========================================================================

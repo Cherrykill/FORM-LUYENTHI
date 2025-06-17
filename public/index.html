@@ -21,19 +21,18 @@
     <div class="container">
       <!-- Sidebar bên trái: danh sách câu hỏi + Auto Next + Nộp bài -->
       <div class="sidebar" id="sidebar">
+        <div class="auto-next">
+          <label for="sidebar-auto-next">Auto Next:</label>
+          <select id="sidebar-auto-next">
+            <option value="0">Tắt</option>
+            <option value="1000">1 giây</option>
+            <option value="2000">2 giây</option>
+            <option value="3000">3 giây</option>
+          </select>
+        </div>
         <h3>Questions</h3>
         <div class="question-boxes" id="question-list"></div>
-        <div class="sidebar-bottom">
-          <div class="auto-next">
-            <label for="sidebar-auto-next">Auto Next:</label>
-            <select id="sidebar-auto-next">
-              <option value="0">Off</option>
-              <option value="1000">1s</option>
-              <option value="2000">2s</option>
-              <option value="5000">5s</option>
-            </select>
-          </div>
-        </div>
+        <div class="sidebar-bottom"></div>
 
         <button onclick="handleSubmit()" class="submit-btn">Nộp bài</button>
       </div>
@@ -99,10 +98,10 @@
         <div class="auto-next">
           <label for="popup-auto-next">🕒Auto Next:</label>
           <select id="popup-auto-next">
-            <option value="1000">1s</option>
-            <option value="2000">2s</option>
-            <option value="5000">5s</option>
-            <option value="0">Off</option>
+            <option value="0">Tắt</option>
+            <option value="1000">1 giây</option>
+            <option value="2000">2 giây</option>
+            <option value="3000">3 giây</option>
           </select>
         </div>
 
