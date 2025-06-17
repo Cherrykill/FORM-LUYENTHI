@@ -67,7 +67,6 @@
         <h3>Thông tin</h3>
         <p>Chế độ: <span id="mode-label">Chưa chọn</span></p>
         <p>Thời gian: <span id="time-info">Không giới hạn</span></p>
-
       </div>
     </div>
 
@@ -144,7 +143,7 @@
       </div>
     </div>
     <!-- Popup: Đăng nhập và đăng ký -->
-    <div id="login-popup" class="popup-overlay ">
+    <div id="login-popup" class="popup-overlay">
       <div class="popup">
         <!-- Form đăng nhập admin -->
         <div id="admin-login-form">
@@ -189,42 +188,41 @@
       </div>
     </div>
 
-    <script>
-  const loginForm = document.querySelector('#login-form');
-  loginForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
 
-    const username = document.querySelector('#username').value;
-    const password = document.querySelector('#password').value;
+      const loginForm = document.querySelector("#login-form");
+      loginForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-    try {
-      const res = await fetch('/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      });
+        const username = document.querySelector("#username").value;
+        const password = document.querySelector("#password").value;
 
-      const data = await res.json();
+        try {
+          const res = await fetch("/api/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ username, password }),
+          });
 
-      if (data.success) {
-        if (data.isAdmin) {
-          window.location.href = '/admin/admin.html';
-        } else {
-          alert('Đăng nhập người dùng thành công!');
-          // Chuyển tới trang user nếu có
+          const data = await res.json();
+
+          if (data.success) {
+            if (data.isAdmin) {
+              window.location.href = "/admin/admin.html";
+            } else {
+              alert("Đăng nhập người dùng thành công!");
+              // Chuyển tới trang user nếu có
+            }
+          } else {
+            alert("Sai tên đăng nhập hoặc mật khẩu");
+          }
+        } catch (err) {
+          console.error("Lỗi:", err);
+          alert("Lỗi server");
         }
-      } else {
-        alert('Sai tên đăng nhập hoặc mật khẩu');
-      }
-    } catch (err) {
-      console.error('Lỗi:', err);
-      alert('Lỗi server');
-    }
-  });
-</script>
-
+      });
+    </script> -->
 
     <!-- Google Charts để vẽ biểu đồ kết quả -->
     <script

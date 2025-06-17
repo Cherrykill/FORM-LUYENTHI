@@ -527,22 +527,19 @@ function handleLogin() {
         .then(res => res.json())
         .then(data => {
             if (data.success) {
-                // ✅ Lưu thông tin vào sessionStorage
                 sessionStorage.setItem('username', username);
-                // Lấy username từ sessionStorage
-                const sessionUsername = sessionStorage.getItem('username');
-                sessionStorage.setItem('isAdmin', username === 'admin' && password === '123456');
+                sessionStorage.setItem('isAdmin', data.isAdmin); // true hoặc false từ server
 
-                if (username === 'admin' && password === '123456') {
+                if (showUsername) {
+                    showUsername.innerText = `Xin chào, ${username}!`;
+                }
+
+                // Chuyển hướng nếu là admin
+                if (data.isAdmin) {
                     window.location.href = '/admin/admin.html';
                 } else {
-                    if (showUsername) {
-                        showUsername.innerText = `Xin chào, ${sessionUsername}!`;
-                    }
                     closeLoginPopup?.();
                     console.log('Đăng nhập thành công!');
-                    // Chuyển đến trang người dùng nếu muốn:
-                    // window.location.href = '/user.html';
                 }
             } else {
                 if (loginError) {
@@ -560,6 +557,9 @@ function handleLogin() {
             }
         });
 }
+
+
+
 
 function handleRegister() {
     const username = document.getElementById('register-username').value;

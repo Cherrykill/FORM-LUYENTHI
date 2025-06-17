@@ -921,7 +921,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "77"
+    "id": "77",
+    "wrongCount": 1
   },
   {
     "question": "Thuật ngữ LPWAN là viết tắt của những chữ nào?",
@@ -933,7 +934,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "78"
+    "id": "78",
+    "wrongCount": 1
   },
   {
     "question": "Mô hình mạng sử dụng cho ZigBee Smart Energy?",

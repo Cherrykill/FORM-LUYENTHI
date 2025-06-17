@@ -85,14 +85,7 @@ app.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
 
   try {
-    // Nếu là admin cứng
-    if (username === `${process.env.ADMIN_USERNAME}` && password === `${process.env.ADMIN_PASSWORD}`) {
-      return res.json({ success: true, isAdmin: true });
-    }
-
-    // Kiểm tra tài khoản trong MongoDB
     const user = await User.findOne({ username });
-
     if (!user) {
       return res.json({ success: false });
     }
@@ -102,12 +95,20 @@ app.post('/api/login', async (req, res) => {
       return res.json({ success: false });
     }
 
+    // Nếu là admin, trả về thông tin chuyển hướng
+    if (username === 'admin') {
+      return res.json({ success: true, isAdmin: true, redirect: '/admin/admin.html' });
+    }
+
+    // Người dùng thường
     res.json({ success: true, isAdmin: false });
+
   } catch (error) {
     console.error('Lỗi khi xử lý đăng nhập:', error);
     res.status(500).json({ success: false, message: 'Lỗi server' });
   }
 });
+
 
 
 
