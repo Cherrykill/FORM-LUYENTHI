@@ -484,7 +484,7 @@ body.dark .time-limit select {
 
 /* Ẩn phần tử */
 .hidden {
-  display: none; /* Ẩn hoàn toàn */
+  display: none !important; /* Ẩn hoàn toàn */
 }
 
 /* =========================================================================
@@ -597,20 +597,24 @@ body.dark .time-limit select {
 
 /* Popup chính */
 .popup {
-  background: #ffffff; /* Màu nền */
-  color: #333; /* Màu chữ */
-  padding: 30px 25px; /* Padding */
-  border-radius: 16px; /* Bo góc */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bóng */
-  max-width: 400px; /* Giới hạn tối đa */
-  width: 90%; /* Chiều rộng */
-  animation: slideUp 0.3s ease; /* Hiệu ứng slide up */
+  background-color: var(--popup-bg-light); /* #fff */
+  color: var(--popup-text-light); /* #000 */
+  padding: 20px 15px; /* Giảm padding để tăng không gian cho form */
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
   display: flex;
-  flex-direction: column; /* Cột dọc */
-  gap: 16px; /* Khoảng cách giữa các phần tử */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Font */
+  flex-direction: column;
+  gap: 16px;
 }
 
+body.dark .popup {
+  background-color: var(--popup-bg-dark); /* #2a2a2a */
+  color: var(--popup-text-dark); /* #fff */
+}
 /* Tiêu đề popup */
 .popup h2 {
   margin-bottom: 10px; /* Margin dưới */
@@ -668,6 +672,126 @@ body.dark .time-limit select {
   font-size: 14px; /* Kích thước chữ */
   text-align: center; /* Căn giữa */
   min-height: 20px; /* Chiều cao tối thiểu */
+}
+
+/* Form đăng nhập và đăng ký */
+#login-popup {
+  position: fixed; /* Vị trí cố định */
+  top: 0; /* Căn trên */
+  left: 0; /* Căn trái */
+  z-index: 1000; /* Ưu tiên hiển thị */
+  width: 100vw; /* Chiều rộng 100% viewport */
+  height: 100vh; /* Chiều cao 100% viewport */
+  background: rgba(0, 0, 0, 0.6); /* Nền mờ */
+  display: flex;
+  align-items: center; /* Căn giữa dọc */
+  justify-content: center; /* Căn giữa ngang */
+}
+#login-popup #admin-login-form,
+#login-popup #register-form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  padding: 0; /* Loại bỏ padding để không chồng lấp với .popup */
+}
+
+#admin-login-form h2,
+#register-form h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+}
+
+body.dark #admin-login-form h2,
+body.dark #register-form h2 {
+  color: #fff;
+}
+
+#admin-login-form input,
+#register-form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+body.dark #admin-login-form input,
+body.dark #register-form input {
+  background: #444;
+  color: #fff;
+  border-color: #555;
+}
+
+#admin-login-form input:focus,
+#register-form input:focus {
+  border-color: #007bff;
+}
+
+#admin-login-form button,
+#register-form button {
+  width: 100%;
+  padding: 10px 14px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#admin-login-form button:first-of-type,
+#register-form button:first-of-type {
+  background-color: #007bff;
+  color: white;
+}
+
+#admin-login-form button:last-of-type,
+#register-form button:last-of-type {
+  background-color: #eee;
+  color: #333;
+}
+
+#admin-login-form button:first-of-type:hover,
+#register-form button:first-of-type:hover {
+  background-color: #0056b3;
+}
+
+#admin-login-form button:last-of-type:hover,
+#register-form button:last-of-type:hover {
+  background-color: #ddd;
+}
+
+#admin-login-form .toggle-link,
+#register-form .toggle-link {
+  display: block;
+  color: #007bff;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+#admin-login-form .toggle-link:hover,
+#register-form .toggle-link:hover {
+  text-decoration: underline;
+}
+
+#admin-login-form #login-error,
+#register-form #register-error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  min-height: 20px;
 }
 
 /* =========================================================================
@@ -764,6 +888,38 @@ body.dark .right-panel {
 body.dark .right-panel h3,
 body.dark .right-panel p {
   color: #f1f1f1; /* Màu chữ trắng */
+}
+
+#user-info {
+  margin-top: 30px; /* Khoảng cách trên */
+  width: 100%; /* Chiều rộng 100% */
+  background-color: #2a2a2a; /* Màu nền tối */
+  border-radius: 8px; /* Bo góc */
+  color: #f1f1f1; /* Màu chữ trắng */
+  text-align: center; /* Căn giữa */
+}
+
+#user-info p {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+  width: 100%; /* Chiều rộng 100% */
+}
+
+.logout-btn {
+  width: 100%; /* Chiều rộng 100% */
+  padding: 8px 16px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.logout-btn:hover {
+  background-color: #d9363e;
 }
 
 body.dark #countdown {

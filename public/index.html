@@ -57,6 +57,10 @@
 
       <!-- Bảng bên phải: thông tin thời gian + điều hướng đến admin -->
       <div class="right-panel">
+        <div id="user-info" style="display: block">
+          <p><span id="user-name"></span>!</p>
+          <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
         <h3>Thời gian còn lại:</h3>
         <p id="countdown">--:--</p>
         <br />
@@ -64,14 +68,6 @@
         <p>Chế độ: <span id="mode-label">Chưa chọn</span></p>
         <p>Thời gian: <span id="time-info">Không giới hạn</span></p>
 
-        <!-- Nút mở form đăng nhập thay vì chuyển trang -->
-        <button
-          class="admin-btn"
-          onclick="showLoginPopup()"
-          title="Chuyển đến trang Quản lý"
-        >
-          ⚙️ ADMIN
-        </button>
       </div>
     </div>
 
@@ -147,18 +143,88 @@
         <button onclick="closeScorePopup()">Đóng || Thoát</button>
       </div>
     </div>
-
-    <!-- Popup: Đăng nhập quản ly câu hỏi -->
-    <div id="login-popup" class="popup-overlay hidden">
+    <!-- Popup: Đăng nhập và đăng ký -->
+    <div id="login-popup" class="popup-overlay ">
       <div class="popup">
-        <h2 style="color: rgb(255, 0, 0); font-weight: bold">LOGIN ADMIN</h2>
-        <input type="text" id="admin-username" placeholder="Tên đăng nhập" />
-        <input type="password" id="admin-password" placeholder="Mật khẩu" />
-        <button onclick="handleAdminLogin()">Đăng nhập</button>
-        <button onclick="closeLoginPopup()">Hủy</button>
-        <div id="login-error" style="color: red; margin-top: 10px"></div>
+        <!-- Form đăng nhập admin -->
+        <div id="admin-login-form">
+          <h2 style="color: rgb(255, 0, 0); font-weight: bold">LOGIN</h2>
+          <input type="text" id="admin-username" placeholder="Tên đăng nhập" />
+          <input type="password" id="admin-password" placeholder="Mật khẩu" />
+          <button onclick="handleLogin()">Đăng nhập</button>
+          <button onclick="closeLoginPopup()">Hủy</button>
+          <div id="login-error" style="color: red; margin-top: 10px"></div>
+          <span class="toggle-link" onclick="showRegisterForm()"
+            >Chưa có tài khoản? Đăng ký</span
+          >
+        </div>
+        <!-- Form đăng ký -->
+        <div id="register-form" style="display: none">
+          <h2 style="color: rgb(255, 0, 0); font-weight: bold">ĐĂNG KÝ</h2>
+          <input
+            type="text"
+            id="register-username"
+            placeholder="Tên đăng nhập"
+            required
+          />
+          <input
+            type="email"
+            id="register-email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            id="register-password"
+            placeholder="Mật khẩu"
+            required
+          />
+          <button onclick="handleRegister()">Đăng Ký</button>
+          <button onclick="closeLoginPopup()">Hủy</button>
+          <div id="register-error" style="color: red; margin-top: 10px"></div>
+          <span class="toggle-link" onclick="showLoginForm()"
+            >Đã có tài khoản? Đăng nhập</span
+          >
+        </div>
       </div>
     </div>
+
+    <script>
+  const loginForm = document.querySelector('#login-form');
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const username = document.querySelector('#username').value;
+    const password = document.querySelector('#password').value;
+
+    try {
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        if (data.isAdmin) {
+          window.location.href = '/admin/admin.html';
+        } else {
+          alert('Đăng nhập người dùng thành công!');
+          // Chuyển tới trang user nếu có
+        }
+      } else {
+        alert('Sai tên đăng nhập hoặc mật khẩu');
+      }
+    } catch (err) {
+      console.error('Lỗi:', err);
+      alert('Lỗi server');
+    }
+  });
+</script>
+
 
     <!-- Google Charts để vẽ biểu đồ kết quả -->
     <script

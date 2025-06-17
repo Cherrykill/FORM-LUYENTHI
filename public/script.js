@@ -12,6 +12,7 @@ let countdownInterval;
 let timeLeftInSeconds = 0;
 let originalQuestions = []; // Lưu danh sách câu hỏi gốc
 let isWrongQuestionsMode = false; // Cờ để xác định chế độ làm lại câu sai
+const API_BASE = 'http://localhost:3001/api';
 
 // Hàm khởi tạo khi tải trang
 window.onload = async () => {
@@ -506,39 +507,98 @@ function toggleTheme() {
 // 10. 🔑 FORM ĐĂNG NHẬP VÀ XÁC THỰC
 // =========================================================================
 
-// Hiển thị popup đăng nhập
-function showLoginPopup() {
-    document.getElementById('login-popup').classList.remove('hidden');
+
+// Hiện/ Đóng popup đăng nhập
+function handleLogin() {
+    const API_BASE = '/api';
+    const usernameInput = document.getElementById('admin-username') || document.getElementById('username');
+    const passwordInput = document.getElementById('admin-password') || document.getElementById('password');
+    const showUsername = document.querySelector('#user-name');
+    const loginError = document.getElementById('login-error');
+
+    const username = usernameInput?.value.trim();
+    const password = passwordInput?.value.trim();
+
+    fetch(`${API_BASE}/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+    })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                // ✅ Lưu thông tin vào sessionStorage
+                sessionStorage.setItem('username', username);
+                // Lấy username từ sessionStorage
+                const sessionUsername = sessionStorage.getItem('username');
+                sessionStorage.setItem('isAdmin', username === 'admin' && password === '123456');
+
+                if (username === 'admin' && password === '123456') {
+                    window.location.href = '/admin/admin.html';
+                } else {
+                    if (showUsername) {
+                        showUsername.innerText = `Xin chào, ${sessionUsername}!`;
+                    }
+                    closeLoginPopup?.();
+                    console.log('Đăng nhập thành công!');
+                    // Chuyển đến trang người dùng nếu muốn:
+                    // window.location.href = '/user.html';
+                }
+            } else {
+                if (loginError) {
+                    loginError.innerText = 'Sai tên đăng nhập hoặc mật khẩu!';
+                } else {
+                    alert('Sai tên đăng nhập hoặc mật khẩu!');
+                }
+            }
+        })
+        .catch(() => {
+            if (loginError) {
+                loginError.innerText = 'Lỗi kết nối tới server!';
+            } else {
+                alert('Lỗi kết nối tới server!');
+            }
+        });
 }
 
-// Đóng popup đăng nhập
+function handleRegister() {
+    const username = document.getElementById('register-username').value;
+    const email = document.getElementById('register-email').value;
+    const password = document.getElementById('register-password').value;
+
+    fetch(`${API_BASE}/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, email, password }),
+    })
+        .then((res) => res.json())
+        .then((data) => {
+            if (data.success) {
+                alert('Đăng ký thành công! Hãy đăng nhập.');
+                showLoginForm();
+            } else {
+                document.getElementById('register-error').innerText = data.message;
+            }
+        })
+        .catch(() => {
+            document.getElementById('register-error').innerText = 'Lỗi kết nối tới server!';
+        });
+}
+
+function showRegisterForm() {
+    document.getElementById('admin-login-form').style.display = 'none';
+    document.getElementById('register-form').style.display = 'block';
+}
+
+function showLoginForm() {
+    document.getElementById('register-form').style.display = 'none';
+    document.getElementById('admin-login-form').style.display = 'block';
+}
+
 function closeLoginPopup() {
     document.getElementById('login-popup').classList.add('hidden');
-    document.getElementById('login-error').textContent = '';
 }
 
-// Xử lý đăng nhập admin
-async function handleAdminLogin() {
-    const username = document.getElementById('admin-username').value;
-    const password = document.getElementById('admin-password').value;
-
-    try {
-        const response = await fetch('/api/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password }),
-        });
-
-        const result = await response.json();
-        if (result.success) {
-            window.location.href = './admin/admin.html';
-        } else {
-            document.getElementById('login-error').textContent = 'Sai tên đăng nhập hoặc mật khẩu.';
-        }
-    } catch (error) {
-        document.getElementById('login-error').textContent = 'Lỗi khi kết nối server.';
-    }
-}
 
 // =========================================================================
 // 11. 📏 CẬP NHẬT THANH TIẾN TRÌNH
