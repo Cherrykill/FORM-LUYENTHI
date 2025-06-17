@@ -37,7 +37,7 @@ app.post('/set-question-file', (req, res) => {
 });
 
 
-// API: lay danh sach file json
+// API: ✅ lay danh sach file json
 app.get('/list-question-files', (req, res) => {
   const dataFolder = path.join(__dirname, 'data');
   fs.readdir(dataFolder, (err, files) => {
@@ -111,6 +111,7 @@ app.post('/save-questions', (req, res) => {
 
 // API: Cập nhật câu hỏi
 app.post('/update-questions', (req, res) => {
+const DATA_PATH = getDataPath();
   const updatedQuestions = req.body;
   if (!Array.isArray(updatedQuestions)) return res.status(400).json({ message: 'Dữ liệu không hợp lệ' });
 
@@ -122,6 +123,7 @@ app.post('/update-questions', (req, res) => {
 
 // API: Đăng ký người dùng
 app.post('/api/register', async (req, res) => {
+  const DATA_PATH = getDataPath();
   const { username, password, email, timestamp } = req.body;
 
   try {
@@ -143,6 +145,7 @@ app.post('/api/register', async (req, res) => {
 
 // API: Đăng nhập người dùng
 app.post('/api/login', async (req, res) => {
+  const DATA_PATH = getDataPath();
   const { username, password } = req.body;
 
   try {
@@ -165,6 +168,7 @@ app.post('/api/login', async (req, res) => {
 
 // API: Lưu kết quả làm bài
 app.post('/submit-stats', async (req, res) => {
+  const DATA_PATH = getDataPath();
   const { username, correct, wrong, unanswered, percent, total, timestamp } = req.body;
 
   if (!username || typeof correct !== 'number') {
