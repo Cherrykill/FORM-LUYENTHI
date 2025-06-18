@@ -407,7 +407,7 @@ function handleSearch2() {
 }
 
 
-// ====== 8. CUỘN TRANG & RESET FORM ======
+// ====== 8. CUỘN TRANG & QUAY TRO LAI & RESET FORM ======
 function scrollToTop() {
     const content = document.getElementById("content-area");
     content.scrollTo({ top: 0, behavior: "smooth" });
@@ -417,6 +417,23 @@ function scrollToBottom() {
     const content = document.getElementById("content-area");
     content.scrollTo({ top: content.scrollHeight, behavior: "smooth" });
 }
+
+function goBack() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const from = urlParams.get('from');
+
+    // Nếu có from thì quay lại đúng đường dẫn gốc
+    if (from) {
+        window.location.href = from;
+    } else {
+        // Nếu không có from, fallback về trang chủ mặc định
+        window.location.href = '/';
+    }
+}
+
+
+
+
 
 function resetForm() {
     document.getElementById("edit-index").value = "";

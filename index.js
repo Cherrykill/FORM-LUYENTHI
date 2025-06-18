@@ -7,18 +7,17 @@ const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 50001;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-// ✅ Luôn lấy đường dẫn mới nhất từ biến môi trường
 const getDataPath = () => {
   return path.join(__dirname, 'data', process.env.QUESTION_FILE || 'questions.json');
 };
 
-// ✅ API thay đổi tên file JSON bằng cách cập nhật biến môi trường
+// Đổi file dữ liệu câu hỏi
 app.post('/set-question-file', (req, res) => {
   const { filename } = req.body;
 
@@ -36,8 +35,7 @@ app.post('/set-question-file', (req, res) => {
   res.json({ message: 'Đã cập nhật QUESTION_FILE', current: process.env.QUESTION_FILE });
 });
 
-
-// API: ✅ lay danh sach file json
+// Lấy danh sách file .json
 app.get('/list-question-files', (req, res) => {
   const dataFolder = path.join(__dirname, 'data');
   fs.readdir(dataFolder, (err, files) => {
@@ -50,8 +48,7 @@ app.get('/list-question-files', (req, res) => {
   });
 });
 
-
-// ===== 1. MongoDB setup ===== //
+// ===== MongoDB setup ===== //
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -78,9 +75,9 @@ const statsSchema = new mongoose.Schema({
 });
 const Stats = mongoose.model('Stats', statsSchema);
 
-// ===== 2. Routes ===== //
+// ===== Routes ===== //
 
-// API: Danh sách câu hỏi
+// Danh sách câu hỏi
 app.get('/questions', (req, res) => {
   const DATA_PATH = getDataPath();
   fs.readFile(DATA_PATH, 'utf-8', (err, data) => {
@@ -97,9 +94,9 @@ app.get('/questions', (req, res) => {
   });
 });
 
-// API: Ghi lại danh sách câu hỏi
+// Ghi lại danh sách câu hỏi
 app.post('/save-questions', (req, res) => {
-    const DATA_PATH = getDataPath();
+  const DATA_PATH = getDataPath();
   const questions = req.body;
   if (!Array.isArray(questions)) return res.status(400).send('Dữ liệu không hợp lệ');
 
@@ -109,9 +106,9 @@ app.post('/save-questions', (req, res) => {
   });
 });
 
-// API: Cập nhật câu hỏi
+// Cập nhật câu hỏi
 app.post('/update-questions', (req, res) => {
-const DATA_PATH = getDataPath();
+  const DATA_PATH = getDataPath();
   const updatedQuestions = req.body;
   if (!Array.isArray(updatedQuestions)) return res.status(400).json({ message: 'Dữ liệu không hợp lệ' });
 
@@ -121,9 +118,8 @@ const DATA_PATH = getDataPath();
   });
 });
 
-// API: Đăng ký người dùng
+// Đăng ký người dùng
 app.post('/api/register', async (req, res) => {
-  const DATA_PATH = getDataPath();
   const { username, password, email, timestamp } = req.body;
 
   try {
@@ -143,9 +139,8 @@ app.post('/api/register', async (req, res) => {
   }
 });
 
-// API: Đăng nhập người dùng
+// Đăng nhập người dùng
 app.post('/api/login', async (req, res) => {
-  const DATA_PATH = getDataPath();
   const { username, password } = req.body;
 
   try {
@@ -166,9 +161,8 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
-// API: Lưu kết quả làm bài
+// Lưu kết quả làm bài
 app.post('/submit-stats', async (req, res) => {
-  const DATA_PATH = getDataPath();
   const { username, correct, wrong, unanswered, percent, total, timestamp } = req.body;
 
   if (!username || typeof correct !== 'number') {
@@ -193,7 +187,7 @@ app.post('/submit-stats', async (req, res) => {
   }
 });
 
-// API: Khởi động Server 
+// Khởi động Server 
 app.listen(PORT, () => {
   console.log(`✅ Server đang chạy tại http://localhost:${PORT}`);
 });

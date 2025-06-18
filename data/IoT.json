@@ -10,7 +10,7 @@
     "correct": "A",
     "favorite": false,
     "id": "1",
-    "wrongCount": 7
+    "wrongCount": 0
   },
   {
     "question": "IoT phải có 2 thuộc tính nào sau đây?",
@@ -23,7 +23,7 @@
     "correct": "A",
     "favorite": false,
     "id": "2",
-    "wrongCount": 8
+    "wrongCount": 0
   },
   {
     "question": "Người được gọi là chả đẻ của IoT là ai?",
@@ -36,7 +36,7 @@
     "correct": "A",
     "favorite": false,
     "id": "3",
-    "wrongCount": 4
+    "wrongCount": 0
   },
   {
     "question": "Các công nghệ nào được sử dụng trong Iot",
@@ -49,7 +49,7 @@
     "correct": "D",
     "favorite": false,
     "id": "4",
-    "wrongCount": 4
+    "wrongCount": 0
   },
   {
     "question": "Các thiết bị IoT trong nhà giúp ích trong việc nào sau đây?",
@@ -86,7 +86,7 @@
     "correct": "A",
     "favorite": false,
     "id": "7",
-    "wrongCount": 1
+    "wrongCount": 0
   },
   {
     "question": "Trong ý tưởng về thiết bị di động, điểm hấp dẫn chính của máy tính xách tay khiến nó trở thành thiết bị phổ biến là gì?",

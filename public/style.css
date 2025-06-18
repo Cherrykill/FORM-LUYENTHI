@@ -908,6 +908,11 @@ body.dark .right-panel p {
   width: 100%; /* Chiều rộng 100% */
 }
 
+#user-name {
+  color: #fffdfd;
+}
+
+
 .logout-btn {
   width: 100%; /* Chiều rộng 100% */
   padding: 8px 16px;

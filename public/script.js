@@ -564,6 +564,13 @@ function handleLogin() {
     const username = usernameInput?.value.trim();
     const password = passwordInput?.value.trim();
 
+    // ✅ Hardcode tạm thời cho tài khoản admin
+    if (username === 'admin' && password === '123') {
+        const from = window.location.pathname || '/';
+        window.location.href = `/admin/admin.html?from=${encodeURIComponent(from)}`;
+        return; // dừng luôn, không gọi API nữa
+    }
+
     fetch(`${API_BASE}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -572,41 +579,34 @@ function handleLogin() {
         .then(res => res.json())
         .then(data => {
             if (data.success) {
-                sessionStorage.setItem('username', username);
-                sessionStorage.setItem('isAdmin', data.isAdmin); // true hoặc false từ server
-
                 if (showUsername) {
-                    const sessionUsername = sessionStorage.getItem('username');
-                    showUsername.innerText = `Xin chào, ${sessionUsername}!`;
-                    logoutBtn.classList.remove('hidden');
-                    loginBtn.classList.add('hidden');
-
+                    showUsername.innerText = `Xin chào, ${username}!`;
+                    logoutBtn?.classList.remove('hidden');
+                    loginBtn?.classList.add('hidden');
                 }
 
-                // Chuyển hướng nếu là admin
                 if (data.isAdmin) {
-                    window.location.href = '/admin/admin.html';
+                    const from = window.location.pathname || '/';
+                    window.location.href = `/admin/admin.html?from=${encodeURIComponent(from)}`;
                 } else {
                     closeLoginPopup?.();
                     console.log('Đăng nhập thành công!');
                 }
             } else {
-                if (loginError) {
-                    loginError.innerText = 'Sai tên đăng nhập hoặc mật khẩu!';
-                } else {
-                    alert('Sai tên đăng nhập hoặc mật khẩu!');
-                }
-
+                loginError
+                    ? loginError.innerText = 'Sai tên đăng nhập hoặc mật khẩu!'
+                    : alert('Sai tên đăng nhập hoặc mật khẩu!');
             }
         })
         .catch(() => {
-            if (loginError) {
-                loginError.innerText = 'Lỗi kết nối tới server!';
-            } else {
-                alert('Lỗi kết nối tới server!');
-            }
+            loginError
+                ? loginError.innerText = 'Lỗi kết nối tới server!'
+                : alert('Lỗi kết nối tới server!');
         });
 }
+
+
+
 
 // Dăng ký tài khoản mới
 function handleRegister() {
@@ -640,7 +640,7 @@ function handleLogout() {
     const showUsername = document.querySelector('#user-name');
     const logoutBtn = document.querySelector('.logout-btn');
     const loginBtn = document.querySelector('.login-btn');
-    
+
     showUsername.innerText = ''; // Xoá tên người dùng hiển thị
     logoutBtn.classList.add('hidden'); // Ẩn nút đăng xuất
     loginBtn.classList.remove('hidden'); // Hiển thị lại nút đăng nhập
