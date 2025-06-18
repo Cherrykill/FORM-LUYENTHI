@@ -1,3 +1,13 @@
+<script>
+  const reloadChannel = new BroadcastChannel("reload-channel");
+  reloadChannel.onmessage = (event) => {
+    if (event.data === "reload") {
+      console.log("🔁 Nhận tín hiệu reload từ selectfile.html");
+      location.reload();
+    }
+  };
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,7 +70,9 @@
         <div id="user-info" style="display: block">
           <p><span id="user-name"></span></p>
           <button onclick="showLoginForm()" class="login-btn">Login</button>
-          <button onclick="handleLogout()" class="logout-btn hidden">Logout</button>
+          <button onclick="handleLogout()" class="logout-btn hidden">
+            Logout
+          </button>
         </div>
         <h3>Thời gian còn lại:</h3>
         <p id="countdown">--:--</p>

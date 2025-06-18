@@ -32,7 +32,7 @@ window.onload = async () => {
     if (username) {
         renderApp(); // Đã login → hiển thị giao diện chính
     } else {
-        renderLoginForm(); // Chưa login → hiển thị form đăng nhập
+        showLoginForm(); // Chưa login → hiển thị form đăng nhập
     }
 };
 
@@ -552,7 +552,7 @@ function toggleTheme() {
 
 
 // Đăng nhập tài khoản
-function handleLogin() {
+function handleLogin(defaultRedirect = "admin") {
     const API_BASE = '/api';
     const usernameInput = document.getElementById('admin-username') || document.getElementById('username');
     const passwordInput = document.getElementById('admin-password') || document.getElementById('password');
@@ -560,15 +560,24 @@ function handleLogin() {
     const loginError = document.getElementById('login-error');
     const logoutBtn = document.querySelector('.logout-btn');
     const loginBtn = document.querySelector('.login-btn');
+    const fromPage = window.location.pathname || '/';
 
-    const username = usernameInput?.value.trim();
-    const password = passwordInput?.value.trim();
+    if (!usernameInput || !passwordInput) {
+        alert("Không tìm thấy ô nhập tài khoản hoặc mật khẩu.");
+        return;
+    }
 
-    // ✅ Hardcode tạm thời cho tài khoản admin
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value.trim();
+    const redirectTo = redirectAfterLogin || defaultRedirect; // 🔑 đây là nơi quyết định trang đích
+
+    if (loginError) loginError.innerText = '';
+
+    // ✅ Hardcode tạm thời
     if (username === 'admin' && password === '123') {
-        const from = window.location.pathname || '/';
-        window.location.href = `/admin/admin.html?from=${encodeURIComponent(from)}`;
-        return; // dừng luôn, không gọi API nữa
+        window.location.href = `/admin/${redirectTo}.html?from=${encodeURIComponent(fromPage)}`;
+        redirectAfterLogin = null;
+        return;
     }
 
     fetch(`${API_BASE}/login`, {
@@ -579,15 +588,13 @@ function handleLogin() {
         .then(res => res.json())
         .then(data => {
             if (data.success) {
-                if (showUsername) {
-                    showUsername.innerText = `Xin chào, ${username}!`;
-                    logoutBtn?.classList.remove('hidden');
-                    loginBtn?.classList.add('hidden');
-                }
+                showUsername && (showUsername.innerText = `Xin chào, ${username}!`);
+                logoutBtn?.classList.remove('hidden');
+                loginBtn?.classList.add('hidden');
 
                 if (data.isAdmin) {
-                    const from = window.location.pathname || '/';
-                    window.location.href = `/admin/admin.html?from=${encodeURIComponent(from)}`;
+                    window.location.href = `/admin/${redirectTo}.html?from=${encodeURIComponent(fromPage)}`;
+                    redirectAfterLogin = null;
                 } else {
                     closeLoginPopup?.();
                     console.log('Đăng nhập thành công!');
@@ -668,6 +675,15 @@ function closeLoginPopup() {
     document.getElementById('login-popup').classList.add('hidden');
     const logoutBtn = document.querySelector('.logout-btn');
     // logoutBtn.classList.add('hidden');
+}
+
+
+let redirectAfterLogin = null;
+
+function loginDashboard() {
+    console.log('loginDashboard called');
+    redirectAfterLogin = "admin-dashboard"; // ✅ trang sau khi đăng nhập thành công
+    showLoginForm(); // ✅ chỉ hiển thị form
 }
 
 

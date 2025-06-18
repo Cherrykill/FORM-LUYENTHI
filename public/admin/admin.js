@@ -432,9 +432,6 @@ function goBack() {
 }
 
 
-
-
-
 function resetForm() {
     document.getElementById("edit-index").value = "";
     document.getElementById("question-text").value = "";

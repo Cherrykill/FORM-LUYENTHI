@@ -187,6 +187,47 @@ app.post('/submit-stats', async (req, res) => {
   }
 });
 
+// API: Lay danh sach nguoi dung
+app.get('/api/users', async (req, res) => {
+  try {
+    const users = await User.find().sort({ timestamp: -1 });
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ message: 'Lỗi khi lấy danh sách người dùng' });
+  }
+});
+
+// API: Lay thong ke theo user
+app.get('/api/stats', async (req, res) => {
+  try {
+    const stats = await Stats.find();
+    res.json(stats);
+  } catch (err) {
+    res.status(500).json({ message: 'Lỗi khi lấy thống kê' });
+  }
+});
+
+app.get('/get-stats', async (req, res) => {
+  try {
+    const stats = await Stats.find();
+    const users = await User.find();
+
+    const combined = stats.map(stat => {
+      const user = users.find(u => u.username === stat.username) || {};
+      return {
+        ...stat._doc,
+        email: user.email || '',
+      };
+    });
+
+    res.json(combined);
+  } catch (e) {
+    res.status(500).json({ error: 'Không lấy được dữ liệu' });
+  }
+});
+
+
+
 // Khởi động Server 
 app.listen(PORT, () => {
   console.log(`✅ Server đang chạy tại http://localhost:${PORT}`);

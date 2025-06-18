@@ -120,6 +120,9 @@
               2
             );
             document.getElementById("error-message").innerText = "";
+            // ✅ Gửi tín hiệu reload đến các trang khác
+            const reloadChannel = new BroadcastChannel("reload-channel");
+            reloadChannel.postMessage("reload");
           })
           .catch((err) => {
             console.error(err);

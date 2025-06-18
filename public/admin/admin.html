@@ -1,3 +1,13 @@
+<script>
+  const reloadChannel = new BroadcastChannel("reload-channel");
+  reloadChannel.onmessage = (event) => {
+    if (event.data === "reload") {
+      console.log("🔁 Nhận tín hiệu reload từ selectfile.html");
+      location.reload();
+    }
+  };
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +25,11 @@
     <button id="mobile-search-toggle" class="mobile-search-toggle">🔍</button>
     <!-- Input tìm kiếm ẩn ban đầu -->
     <div id="mobile-search-box" class="mobile-search-box">
-      <input type="text" class="search-input" placeholder="Tìm kiếm câu hỏi..." />
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Tìm kiếm câu hỏi..."
+      />
     </div>
 
     <!-- Thanh điều hướng trên cùng -->
@@ -27,7 +41,11 @@
         <button onclick="exportToPDF(false)">
           📄 Xuất PDF (không có đáp án)
         </button>
-        <button><a href="selectfile.html" style="color: white;text-decoration: none;">Chọn file câu hỏi</a></button>
+        <button>
+          <a href="selectfile.html" style="color: white; text-decoration: none"
+            >Chọn file câu hỏi</a
+          >
+        </button>
       </div>
       <div class="right-search">
         <input
@@ -96,12 +114,11 @@
     <button id="scroll-up" onclick="scrollToTop()">⬆</button>
     <button id="scroll-down" onclick="scrollToBottom()">⬇</button>
     <button id="back-btn" onclick="goBack()">←</button>
-
+    <button id="admin-dashboard-btn"><a href="admin-dashboard.htm">🏆</a></button>
 
     <!-- Phong to thu nho anh -->
     <div class="modal-overlay" id="imgOverlay" onclick="closeImage()"></div>
     <img id="modalImage" class="modal-img" onclick="closeImage()" />
-
 
     <!-- Script xử lý logic quản lý câu hỏi -->
     <script src="admin.js"></script>

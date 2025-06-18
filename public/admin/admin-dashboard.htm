@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard Quản lý</title>
+    <link rel="stylesheet" href="admin-dashboard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>📊 Quản lý người dùng & Xếp hạng</h2>
+
+      <div class="controls">
+        <input
+          type="text"
+          id="search-user"
+          placeholder="🔍 Tìm kiếm người dùng..."
+        />
+
+        <div class="filters">
+          <label>Sắp xếp:</label>
+          <select id="sort-option">
+            <option value="percent-desc">Phần trăm giảm dần</option>
+            <option value="percent-asc">Phần trăm tăng dần</option>
+          </select>
+
+          <label>Lọc theo:</label>
+          <select id="filter-time">
+            <option value="all">Tất cả</option>
+            <option value="today">Hôm nay</option>
+            <option value="week">Tuần này</option>
+          </select>
+
+          <button onclick="exportToCSV()">⬇️ Xuất CSV</button>
+          <button id="toggle-chart">🎯 Xem biểu đồ</button>
+        </div>
+      </div>
+
+      <table id="user-table">
+        <thead>
+          <tr>
+            <th>Tên</th>
+            <th>Email</th>
+            <th>Ngày tạo</th>
+            <th>Phần trăm đúng</th>
+            <th>Số câu</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="user-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>📄 Thống kê chi tiết</h3>
+        <div id="user-details"></div>
+      </div>
+    </div>
+
+    <!-- Thêm Google Charts -->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+
+    <!-- Biểu đồ -->
+    <div
+      id="chart_div"
+      style="width: 100%; height: 400px; margin-top: 30px"
+    ></div>
+
+    <script src="admin-dashboard.js"></script>
+  </body>
+</html>

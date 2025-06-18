@@ -912,7 +912,6 @@ body.dark .right-panel p {
   color: #fffdfd;
 }
 
-
 .logout-btn {
   width: 100%; /* Chiều rộng 100% */
   padding: 8px 16px;
@@ -935,12 +934,30 @@ body.dark .right-panel p {
   font-weight: bold;
   transition: background-color 0.2s ease;
 }
+.rating-btn {
+  width: 100%; /* Chiều rộng 100% */
+  padding: 8px 16px;
+  background-color: #a16023;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+.rating-btn a{
+  text-decoration: none;
+  color: white;
+}
 
 .logout-btn:hover {
   background-color: #d9363e;
 }
 .login-btn:hover {
   background-color: #015f05;
+}
+.rating-btn:hover {
+  background-color: #a75509;
 }
 
 body.dark #countdown {

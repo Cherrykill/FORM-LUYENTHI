@@ -163,7 +163,8 @@ body.dark .question .fav-btn {
 /* Nút cuộn lên và xuống cố định ở phía phải màn hình */
 #scroll-up,
 #scroll-down,
-#back-btn {
+#back-btn,
+#admin-dashboard-btn {
   position: fixed;
   right: 20px;
   background: #007bff;
@@ -200,9 +201,13 @@ body.dark #back-btn {
 }
 
 #back-btn {
-
   top: 60%;
 }
+
+#admin-dashboard-btn{
+  top: 70%;
+}
+
 #back-btn:hover {
   background-color: #ddd;
 }
