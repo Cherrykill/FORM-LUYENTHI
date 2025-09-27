@@ -1,0 +1,722 @@
+[
+  {
+    "question": "Mô hình dịch vụ Service accessing and using của loại IaaS gồm có những gì?",
+    "answers": [
+      "remote console, web services",
+      "online development and debugging, integration of offline development tools and cloud",
+      "web 2.0 access technology",
+      "web services and web 2.0 access technology"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_1"
+  },
+  {
+    "question": "Mô hình dịch vụ Service accessing and using của loại PaaS gồm có những gì?",
+    "answers": [
+      "online development and debugging, integration of offline development tools and cloud",
+      "remote console, web services",
+      "web 2.0 access technology",
+      "web services and  web 2.0 access technology"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_2"
+  },
+  {
+    "question": "Mô hình dịch vụ Service accessing and using của loại SaaS gồm có những gì?",
+    "answers": [
+      " web 2.0 access technology",
+      "remote console, web services",
+      "online development and debugging, integration of offline development tools and cloud",
+      "web services and  web 2.0 access technology"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_3"
+  },
+  {
+    "question": "Kiểu dịch vụ Service monitoring của loại IaaS gồm có những gì?",
+    "answers": [
+      "physical resource monitoring",
+      "logic resource monitoring",
+      "application monitoring",
+      "application monitoring, logic resource monitoring"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_4"
+  },
+  {
+    "question": "Kiểu dịch vụ Service monitoring của loại PaaS gồm có những gì?",
+    "answers": [
+      "logic resource monitoring",
+      "physical resource monitoring",
+      "application monitoring",
+      "application monitoring, logic resource monitoring"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_5"
+  },
+  {
+    "question": "Kiến trúc SOA viết tắt của từ gì?",
+    "answers": [
+      "service oriented architecture",
+      "service of architecture",
+      "single oriented architecture",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_6"
+  },
+  {
+    "question": "Kiến trúc SOA là kiến trúc gì?",
+    "answers": [
+      "Kiến trúc hướng dịch vụ",
+      "Kiến trúc hướng theo định hướng duy nhất",
+      "Kiến trúc đa tác vụ",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_7"
+  },
+  {
+    "question": "Dịch vụ IT truyền thống phải tự xây dựng bao nhiêu phần?",
+    "answers": [
+      "nền tảng, thực thi, ứng dụng, dữ liệu",
+      "thực thi, ứng dụng, dữ liệu",
+      "ứng dụng, dữ liệu",
+      "nền tảng, thực thi"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_8"
+  },
+  {
+    "question": "Dịch vụ IaaS là viết tắt của từ gì?",
+    "answers": [
+      "Infrasture as a Service",
+      "Infrasture as a Server",
+      "Infra as a Service",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_9"
+  },
+  {
+    "question": "Với mô hình dịch vụ IaaS, người sử dụng phải tự xây dựng cái gì?",
+    "answers": [
+      "thực thi, ứng dụng, dữ liệu",
+      "nền tảng, thực thi, ứng dụng, dữ liệu",
+      "ứng dụng, dữ liệu",
+      "dữ liệu"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_10"
+  },
+  {
+    "question": "Dịch vụ PaaS là viết tắt của từ gì?",
+    "answers": [
+      "Platform as a Service",
+      "Platform as a Server",
+      "Plat as a Service",
+      "Platform and a Service"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_11"
+  },
+  {
+    "question": "Với mô hình dịch vụ PaaS, người sử dụng phải tự xây dựng cái gì?",
+    "answers": [
+      "ứng dụng, dữ liệu",
+      "dữ liệu",
+      "thực thi, ứng dụng, dữ liệu",
+      "nền tảng, thực thi, ứng dụng, dữ liệu"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_12"
+  },
+  {
+    "question": "Với mô hình dịch vụ SaaS, người sử dụng phải tự xây dựng cái gì?",
+    "answers": [
+      "dữ liệu",
+      "ứng dụng, dữ liệu",
+      "thực thi, ứng dụng, dữ liệu",
+      "nền tảng, thực thi, ứng dụng, dữ liệu"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_13"
+  },
+  {
+    "question": "Dịch vụ SaaS là viết tắt của từ gì?",
+    "answers": [
+      "Software as a Service",
+      "Software as a Server",
+      "Soft as a Service",
+      "Software and a Service"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_14"
+  },
+  {
+    "question": "Facebook thuộc loại dịch vụ điện toán đám mây nào?",
+    "answers": [
+      "Saas",
+      "Paas",
+      "Iaas",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_15"
+  },
+  {
+    "question": "Loại dịch vụ nào mà người sử dụng chỉ cần thuê và đưa dữ liệu vào ứng dụng luôn?",
+    "answers": [
+      "Saas",
+      "Paas",
+      "Iaas",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_16"
+  },
+  {
+    "question": "Loại dịch nào mà người sử dụng sau khi thuê xong còn phải xây dựng thêm các thành phần nhiều nhất?",
+    "answers": [
+      "Không có đáp án đúng",
+      "Paas",
+      "Saas",
+      "Iaas"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_17"
+  },
+  {
+    "question": "Loại dịch vụ nào mà người sử dụng có được môi trường để lập trình chương trình ứng dụng?",
+    "answers": [
+      "Paas",
+      "Iaas",
+      "Saas",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_18"
+  },
+  {
+    "question": "Có bao nhiêu lớp thành phần trong điện toán đám mây?",
+    "answers": [
+      "5",
+      "4",
+      "3",
+      "2"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_19"
+  },
+  {
+    "question": "Những loại dịch vụ nào khi thuê có Networking",
+    "answers": [
+      "Iaas, Paas, Saas",
+      "Iaas, Paas, Saas, Standalone Server",
+      "Paas",
+      "Saas"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_20"
+  },
+  {
+    "question": "Những loại dịch vụ nào khi thuê có Storage?",
+    "answers": [
+      "Iaas, Paas, Saas",
+      "Iaas, Paas, Saas, Standalone Server",
+      "Paas, Saas",
+      "Iaas, Paas"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_21"
+  },
+  {
+    "question": "Những loại dịch vụ nào khi thuê có Virtualization?",
+    "answers": [
+      "Iaas, Paas, Saas",
+      "Iaas, Paas, Saas, Standalone Server",
+      "Iaas, Paas",
+      "Paas, Saas"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_22"
+  },
+  {
+    "question": "Những loại dịch vụ nào khi thuê có Server?",
+    "answers": [
+      "Iaas, Paas, Saas",
+      "Iaas, Paas, Saas, Standalone Server",
+      "Iaas, Paas",
+      "Paas, Saas"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_23"
+  },
+  {
+    "question": "Những loại dịch vụ nào khi thuê có Operating System?",
+    "answers": [
+      "PaaS, SaaS",
+      "IaaS, PaaS",
+      "SaaS",
+      "PaaS"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_24"
+  },
+  {
+    "question": "Những loại dịch vụ nào khi thuê có Database?",
+    "answers": [
+      "PaaS",
+      "IaaS, PaaS",
+      "SaaS",
+      "PaaS, SaaS"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_25"
+  },
+  {
+    "question": "Những loại dịch vụ nào khi thuê có Runtimes?",
+    "answers": [
+      "PaaS, SaaS",
+      "IaaS, PaaS",
+      "SaaS",
+      "PaaS"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_26"
+  },
+  {
+    "question": "Những loại dịch vụ nào khi thuê có Application?",
+    "answers": [
+      "SaaS",
+      "PaaS",
+      "PaaS, SaaS",
+      "IaaS, PaaS, SaaS"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_27"
+  },
+  {
+    "question": "Trong hoạt động của điện toán đám mây lớp Front – End để làm gì?",
+    "answers": [
+      "Là lớp chứa giao diện người dùng của ứng dụng",
+      "Là lớp chứa hạ tầng thiết bị",
+      "Là lớp chứa toàn bộ các thành phần hoạt động",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_28"
+  },
+  {
+    "question": "Trong hoạt động của điện toán đám mây lớp Back – End để làm gì?",
+    "answers": [
+      "Là lớp chứa hạ tầng thiết bị",
+      "Là lớp chứa giao diện người dùng của ứng dụng",
+      "Là lớp chứa toàn bộ các thành phần hoạt động",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_29"
+  },
+  {
+    "question": "Google App Engine là dịch vụ thuộc loại gì?",
+    "answers": [
+      "PaaS",
+      "SaaS",
+      "IaaS",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_30"
+  },
+  {
+    "question": "Google Computer Engine là dịch vụ thuộc loại gì?",
+    "answers": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_31"
+  },
+  {
+    "question": "Đâu là nhược điểm của điện toán đám mây, chọn đáp án đúng nhất?",
+    "answers": [
+      "Tính riêng tư, tính sẵn dùng, tính di động dữ liệu, mất dữ liệu, khả năng bảo mật, quyền sở hữu",
+      "Tính riêng tư, tính di động dữ liệu, mất dữ liệu, khả năng bảo mật, quyền sở hữu",
+      "Tính riêng tư, tính sẵn dùng, mất dữ liệu, khả năng bảo mật, quyền sở hữu",
+      "Tính riêng tư, tính sẵn dùng, tính di động dữ liệu, mất dữ liệu, khả năng bảo mật"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_32"
+  },
+  {
+    "question": "Có bao nhiêu mô hình điện toán đám mây được triển khai trong thực tế?",
+    "answers": [
+      "4",
+      "3",
+      "2",
+      "5"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_33"
+  },
+  {
+    "question": "Gmail là ứng dụng thuộc loại dịch vụ gì?",
+    "answers": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_34"
+  },
+  {
+    "question": "Mô hình dịch vụ Service category của loại IaaS gồm có những gì?",
+    "answers": [
+      "Không có đáp án đúng",
+      "Online operating environment, online database, online message queues",
+      "Application and software rental",
+      "VM rental, online storage"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_35"
+  },
+  {
+    "question": "Mô hình dịch vụ Service category của loại PaaS gồm có những gì?",
+    "answers": [
+      "Online operating environment, online database, online message queues",
+      "VM rental, online storage",
+      "Application and software rental",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_36"
+  },
+  {
+    "question": "Kiểu dịch vụ Service monitoring của loại SaaS gồm có những gì?",
+    "answers": [
+      "application monitoring",
+      "logic resource monitoring",
+      "physical resource monitoring",
+      "application monitoring, logic resource monitoring"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_1"
+  },
+  {
+    "question": "Kiểu dịch vụ Service level management của loại IaaS gồm có những gì?",
+    "answers": [
+      "dynamic orchestration of physical resources",
+      "dynamic orchestration of logic resources",
+      "dynamic orchestration of applications",
+      "multi-tenancy,  network, storage"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_2"
+  },
+  {
+    "question": "Kiểu dịch vụ Service level management của loại SaaS gồm có những gì?",
+    "answers": [
+      "dynamic orchestration of applications",
+      "dynamic orchestration of physical resources",
+      "dynamic orchestration of logic resources",
+      "multi-tenancy,  network, storage"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_3"
+  },
+  {
+    "question": "Kiểu dịch vụ Service level management của loại PaaS gồm có những gì?",
+    "answers": [
+      "dynamic orchestration of logic resources",
+      "dynamic orchestration of applications",
+      "dynamic orchestration of physical resources",
+      "application usage metering"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_4"
+  },
+  {
+    "question": "Kiểu dịch vụ Service optimization của loại IaaS gồm có những gì?",
+    "answers": [
+      "network, storage, and server virtualization",
+      "large-scale distributed file system, database, middleware",
+      "multi-tenancy",
+      "multi-tenancy,  network, storage"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_5"
+  },
+  {
+    "question": "Kiểu dịch vụ Service optimization của loại PaaS gồm có những gì?",
+    "answers": [
+      "large-scale distributed file system, database, middleware",
+      "network, storage, and server virtualization",
+      "multi-tenancy",
+      "multi-tenancy,  network, storage"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_6"
+  },
+  {
+    "question": "Kiểu dịch vụ Service optimization của loại SaaS gồm có những gì?",
+    "answers": [
+      "multi-tenancy",
+      "large-scale distributed file system, database, middleware",
+      "network, storage, and server virtualization",
+      "application usage metering"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_7"
+  },
+  {
+    "question": "Kiểu dịch vụ Service measurement của loại IaaS gồm có những gì?",
+    "answers": [
+      "physical resource metering",
+      "logic resource usage metering",
+      "application usage metering",
+      "network, storage, and server virtualization"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_8"
+  },
+  {
+    "question": "Kiểu dịch vụ Service measurement của loại PaaS gồm có những gì?",
+    "answers": [
+      "logic resource usage metering",
+      "physical resource metering",
+      "application usage metering",
+      "network, storage, and server virtualization"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_9"
+  },
+  {
+    "question": "Kiểu dịch vụ Service measurement của loại SaaS gồm có những gì?",
+    "answers": [
+      "application usage metering",
+      "physical resource metering",
+      "logic resource usage metering",
+      "network, storage, and server virtualization"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_10"
+  },
+  {
+    "question": "Kiểu dịch vụ Service integration and combination của loại IaaS gồm có những gì?",
+    "answers": [
+      "load balance",
+      "SOA",
+      "SOA, mashup",
+      "usage metering"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_11"
+  },
+  {
+    "question": "Kiểu dịch vụ Service integration and combination của loại PaaS gồm có những gì?",
+    "answers": [
+      "SOA",
+      "load balance",
+      "SOA, mashup",
+      "usage metering"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_12"
+  },
+  {
+    "question": "Kiểu dịch vụ Service integration and combination của loại SaaS gồm có những gì?",
+    "answers": [
+      "SOA, mashup",
+      "load balance",
+      "SOA",
+      "usage metering"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_13"
+  },
+  {
+    "question": "Kiểu dịch vụ security của loại IaaS gồm có những gì?",
+    "answers": [
+      "storage encryption and isolation, VM isolation, VLAN, SSL/SSH",
+      "data isolation, operating environment isolation, SSL",
+      "data isolation, operating environment isolation, SSI, Web authentication and authorization",
+      "load balance"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_14"
+  },
+  {
+    "question": "Kiểu dịch vụ security của loại PaaS gồm có những gì?",
+    "answers": [
+      "data isolation, operating environment isolation, SSL",
+      "storage encryption and isolation, VM isolation, VLAN, SSL/SSH",
+      "data isolation, operating environment isolation, SSI, Web authentication and authorization",
+      "load balance"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_15"
+  },
+  {
+    "question": "Kiểu dịch vụ security của loại SaaS gồm có những gì?",
+    "answers": [
+      "data isolation, operating environment isolation, SSI, Web authentication and authorization",
+      "data isolation, operating environment isolation, SSL",
+      "storage encryption and isolation, VM isolation, VLAN, SSL/SSH",
+      "storage encryption and isolation, VM isolation"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_16"
+  },
+  {
+    "question": "Hãng Viettel IDC nhà cung cấp các dịch vụ điện toán đám mây được thành lập vào năm nào?",
+    "answers": [
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_17"
+  },
+  {
+    "question": "Hãng IBM mở trung tâm điện toán đám mây tại thị trường Việt Nam vào năm nào?",
+    "answers": [
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_18"
+  },
+  {
+    "question": "Hội thảo “hành trình tới công nghệ điện toán đám mây” do Microsoft tổ chức ngày 2/3/2011 ở đâu?",
+    "answers": [
+      "Hà Nội",
+      "Thành phố Hồ Chí Minh",
+      "Đà Nẵng",
+      "Huế"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_19"
+  },
+  {
+    "question": "Doanh nghiệp công nghệ Việt Nam nào duy nhất tham gia sự kiện tại Nhật, ngày 26/2/2014, do tập đoàn Nikkei tổ chức",
+    "answers": [
+      "FPT",
+      "Viettel IDC",
+      "VNPT",
+      "VNTT"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_20"
+  },
+  {
+    "question": "Năm 2008, Hãng IBM đã có khách hàng đầu tiên tại việt nam là Công ty nào?",
+    "answers": [
+      "VNTT",
+      "VNPT",
+      "FPT",
+      "Viettel IDC"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_21"
+  },
+  {
+    "question": "Cách gọi khác về điện toán đám mây?",
+    "answers": [
+      "Không có đáp án đúng",
+      "Điện toán tự trị",
+      "Điện toán máy chủ thật",
+      "Điện toán lưới"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_22"
+  },
+  {
+    "question": "Điện toán đám mây có thể được xem như là giai đoạn tự nhiên tiếp theo từ mô hình điện toán nào?",
+    "answers": [
+      "Không có đáp án đúng",
+      "Mô hình điện toán tự trị",
+      "Mô hình điện toán theo nhu cầu",
+      "Mô hình điện toán máy chủ thật"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_23"
+  },
+  {
+    "question": "SOA là kiểu kiến trúc, viết tắt của từ gì?",
+    "answers": [
+      "Không có đáp án đúng",
+      "service oriented a line",
+      "service of architecture",
+      "single oriented architecture"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "B_24"
+  }
+]
