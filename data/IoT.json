@@ -1,1724 +1,745 @@
 [
   {
-    "question": "Mô hình nào trong mô hình dưới đây không phải là mô hình máy tính song song?",
+    "question": "Mô hình dịch vụ Service accessing and using của loại IaaS gồm có những gì?",
     "answers": [
-      "SISD",
-      "SIMD",
-      "MISD",
-      "MIMD"
+      "remote console, web services",
+      "online development and debugging, integration of offline development tools and cloud",
+      "web 2.0 access technology",
+      "web services and web 2.0 access technology"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "1"
+    "id": "A_1",
+    "wrongCount": 2
   },
   {
-    "question": "Mô hình nào trong mô hình dưới đây là mô hình mô hình máy tính song song?",
+    "question": "Mô hình dịch vụ Service accessing and using của loại PaaS gồm có những gì?",
     "answers": [
-      "SISD",
-      "SIMD",
-      "MISD",
-      "MIMD"
-    ],
-    "correct": "D",
-    "favorite": false,
-    "id": "2"
-  },
-  {
-    "question": "Mô hình Multiple Instruction, Single Data là gì?",
-    "answers": [
-      "Là mô hình giống như máy tính tuần tự",
-      "Là mô hình song song thực sự",
-      "Là mô hình chia sẻ bộ nhớ",
-      "Là mô hình song song hoá về mặt dữ liệu"
-    ],
-    "correct": "D",
-    "favorite": false,
-    "id": "3"
-  },
-  {
-    "question": "Phát biểu nào sau đây sai?",
-    "answers": [
-      "Mô hình SISD thực hiện theo 1 thứ tự nhất định",
-      "Mô hình SISD thực hiện không theo thứ tự nào được",
-      "Mô hình SISD có một bộ xử lý",
-      "Mô hình SISD thực hiện một lệnh tại một thời điểm"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "4"
-  },
-  {
-    "question": "Mô hình máy tính song song MIMD viết tắt của từ gì?",
-    "answers": [
-      "Memory Input Memory Data",
-      "Multiple Instruction, Multiple Data",
-      "Memory Instruction, Memory Data",
-      "Memory Instruction, Memory Diagram"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "5"
-  },
-  {
-    "question": "Mô hình máy tính song song SIMD viết tắt của từ gì?",
-    "answers": [
-      "System Input Memory Data",
-      "System Instruction, Multiple Data",
-      "Single Instruction, Memory Data",
-      "Single Instruction, Multiple Data"
-    ],
-    "correct": "D",
-    "favorite": false,
-    "id": "6"
-  },
-  {
-    "question": "Mô hình Single Instruction, Multiple Data nghĩa là gì?",
-    "answers": [
-      "Đơn luồng lệnh, đơn luồng dữ liệu.",
-      "Đa luồng lệnh, đơn luồng dữ liệu.",
-      "Đa luồng lệnh, đa luồng dữ liệu.",
-      "Đơn luồng lệnh, đa luồng dữ liệu."
-    ],
-    "correct": "D",
-    "favorite": false,
-    "id": "7"
-  },
-  {
-    "question": "Mô hình Multiple Instruction, Multiple Data nghĩa là gì?",
-    "answers": [
-      "Đơn luồng lệnh, đơn luồng dữ liệu.",
-      "Đa luồng lệnh, đơn luồng dữ liệu.",
-      "Đa luồng lệnh, đa luồng dữ liệu.",
-      "Đơn luồng lệnh, đa luồng dữ liệu."
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "8"
-  },
-  {
-    "question": "Multiple Instruction, Single Data nghĩa là gì?",
-    "answers": [
-      "Đơn luồng lệnh, đơn luồng dữ liệu.",
-      "Đa luồng lệnh, đơn luồng dữ liệu.",
-      "Đa luồng lệnh, đa luồng dữ liệu.",
-      "Đơn luồng lệnh, đa luồng dữ liệu."
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "9"
-  },
-  {
-    "question": "Bài toán nào không thể thực hiện được giải thuật song song hoá?",
-    "answers": [
-      "Nhân ma trận với ma trận",
-      "Nhân ma trận với vecto",
-      "Fibonaci",
-      "Tìm số nguyên tố nhỏ hơn N"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "10"
-  },
-  {
-    "question": "Trình tự bài toán song song hoá là gì?",
-    "answers": [
-      "Xác định rõ vấn đề, phân hoạch, truyền thông, gom kết, ánh xạ",
-      "Phân hoạch, xác định rõ vấn đề, truyền thông, gom kết, ánh xạ",
-      "Ánh xạ, gom kết, xác định rõ vấn đề, phân hoach, truyền thông",
-      "Xác định rõ vấn đề, truyền thông, gom kết, ánh xạ"
+      "online development and debugging, integration of offline development tools and cloud",
+      "remote console, web services",
+      "web 2.0 access technology",
+      "web services and  web 2.0 access technology"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "11"
+    "id": "A_2"
   },
   {
-    "question": "Mô hình SISD (Single Instruction, Single Data) nghĩa là gì?",
+    "question": "Mô hình dịch vụ Service accessing and using của loại SaaS gồm có những gì?",
     "answers": [
-      "Đơn luồng lệnh, đơn luồng dữ liệu.",
-      "Đa luồng lệnh, đơn luồng dữ liệu.",
-      "Đa luồng lệnh, đa luồng dữ liệu.",
-      "Đơn luồng lệnh, đa luồng dữ liệu."
+      " web 2.0 access technology",
+      "remote console, web services",
+      "online development and debugging, integration of offline development tools and cloud",
+      "web services and  web 2.0 access technology"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "12"
+    "id": "A_3"
   },
   {
-    "question": "Xử lý song song là gì?",
+    "question": "Kiểu dịch vụ Service monitoring của loại IaaS gồm có những gì?",
     "answers": [
-      "Xử lý song song là quá trình xử lý gồm nhiều tiến trình được kích hoạt đồng thời và cùng tham gia giải quyét nhiều vấn đề.",
-      "Xử lý song song là quá trình xử lý gồm nhiều tiến trình được kịch hoạt đồng thời và cùng tham gia giải quyết nhiều vấn đề.",
-      "Xử lý song song là quá trình xử lý gồm 1 tiến trình được kích hoạt giải quyết một vấn đề",
-      "Đơn luồng lệnh, đơn luồng dữ liệu"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "13"
-  },
-  {
-    "question": "Vì sao phải xử lý song song?",
-    "answers": [
-      "Do một xử lý làm nhiều dễ bị hỏng",
-      "Cần thực hiện khối lượng lớn công việc, không quan trọng về thời gian",
-      "Cần thực hiện khối lượng lớn công việc, thời gian xử lý phải nhanh.",
-      "Do đĩa cứng không chứa đủ dữ liệu"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "14"
-  },
-  {
-    "question": "Tiêu chí nào không phỉ là tiêu chí đánh giá thuật giải tuần tự?",
-    "answers": [
-      "Thời gian thực hiện thuật toán",
-      "Không gian bộ nhớ",
-      "Khả năng lập trình",
-      "Khả năng truyền thông điệp giữa các bộ xử lý"
-    ],
-    "correct": "D",
-    "favorite": false,
-    "id": "15"
-  },
-  {
-    "question": "Mô hình nào là mô hình đơn luồng lệnh, đơn luồng dữ liệu?",
-    "answers": [
-      "Single Instruction, Single Data",
-      "Multiple Instruction, Single Data",
-      "Single Instruction, Multiple Data",
-      "Multiple Instruction, Multiple Data"
+      "physical resource monitoring",
+      "logic resource monitoring",
+      "application monitoring",
+      "application monitoring, logic resource monitoring"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "16"
+    "id": "A_4"
   },
   {
-    "question": "Mô hình nào là mô hình đa luồng lệnh, đơn luồng dữ liệu?",
+    "question": "Kiểu dịch vụ Service monitoring của loại PaaS gồm có những gì?",
     "answers": [
-      "Single Instruction, Single Data",
-      "Multiple Instruction, Single Data",
-      "Single Instruction, Multiple Data",
-      "Multiple Instruction, Multiple Data"
+      "logic resource monitoring",
+      "physical resource monitoring",
+      "application monitoring",
+      "application monitoring, logic resource monitoring"
     ],
-    "correct": "B",
+    "correct": "A",
     "favorite": false,
-    "id": "17"
+    "id": "A_5"
   },
   {
-    "question": "Mô hình là mô hình đơn luồng lệnh, đa luồng dữ liệu?",
+    "question": "Kiến trúc SOA viết tắt của từ gì?",
     "answers": [
-      "Single Instruction, Single Data",
-      "Multiple Instruction, Single Data",
-      "Single Instruction, Multiple Data",
-      "Multiple Instruction, Multiple Data"
+      "service oriented architecture",
+      "service of architecture",
+      "single oriented architecture",
+      "Không có đáp án đúng"
     ],
-    "correct": "C",
+    "correct": "A",
     "favorite": false,
-    "id": "18"
+    "id": "A_6"
   },
   {
-    "question": "Mô hình nào là mô hình đa luồng lệnh, đa luồng dữ liệu?",
+    "question": "Kiến trúc SOA là kiến trúc gì?",
     "answers": [
-      "Single Instruction, Single Data",
-      "Multiple Instruction, Single Data",
-      "Single Instruction, Multiple Data",
-      "Multiple Instruction, Multiple Data"
+      "Kiến trúc hướng dịch vụ",
+      "Kiến trúc hướng theo định hướng duy nhất",
+      "Kiến trúc đa tác vụ",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_7"
+  },
+  {
+    "question": "Dịch vụ IT truyền thống phải tự xây dựng bao nhiêu phần?",
+    "answers": [
+      "nền tảng, thực thi, ứng dụng, dữ liệu",
+      "thực thi, ứng dụng, dữ liệu",
+      "ứng dụng, dữ liệu",
+      "nền tảng, thực thi"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_8"
+  },
+  {
+    "question": "Dịch vụ IaaS là viết tắt của từ gì?",
+    "answers": [
+      "Infrasture as a Service",
+      "Infrasture as a Server",
+      "Infra as a Service",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_9"
+  },
+  {
+    "question": "Với mô hình dịch vụ IaaS, người sử dụng phải tự xây dựng cái gì?",
+    "answers": [
+      "thực thi, ứng dụng, dữ liệu",
+      "nền tảng, thực thi, ứng dụng, dữ liệu",
+      "ứng dụng, dữ liệu",
+      "dữ liệu"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_10",
+    "wrongCount": 2
+  },
+  {
+    "question": "Dịch vụ PaaS là viết tắt của từ gì?",
+    "answers": [
+      "Platform as a Service",
+      "Platform as a Server",
+      "Plat as a Service",
+      "Platform and a Service"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_11"
+  },
+  {
+    "question": "Với mô hình dịch vụ PaaS, người sử dụng phải tự xây dựng cái gì?",
+    "answers": [
+      "ứng dụng, dữ liệu",
+      "dữ liệu",
+      "thực thi, ứng dụng, dữ liệu",
+      "nền tảng, thực thi, ứng dụng, dữ liệu"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_12"
+  },
+  {
+    "question": "Với mô hình dịch vụ SaaS, người sử dụng phải tự xây dựng cái gì?",
+    "answers": [
+      "dữ liệu",
+      "ứng dụng, dữ liệu",
+      "thực thi, ứng dụng, dữ liệu",
+      "nền tảng, thực thi, ứng dụng, dữ liệu"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_13"
+  },
+  {
+    "question": "Dịch vụ SaaS là viết tắt của từ gì?",
+    "answers": [
+      "Software as a Service",
+      "Software as a Server",
+      "Soft as a Service",
+      "Software and a Service"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_14"
+  },
+  {
+    "question": "Facebook thuộc loại dịch vụ điện toán đám mây nào?",
+    "answers": [
+      "Saas",
+      "Paas",
+      "Iaas",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_15"
+  },
+  {
+    "question": "Loại dịch vụ nào mà người sử dụng chỉ cần thuê và đưa dữ liệu vào ứng dụng luôn?",
+    "answers": [
+      "Saas",
+      "Paas",
+      "Iaas",
+      "Không có đáp án đúng"
+    ],
+    "correct": "A",
+    "favorite": false,
+    "id": "A_16"
+  },
+  {
+    "question": "Loại dịch nào mà người sử dụng sau khi thuê xong còn phải xây dựng thêm các thành phần nhiều nhất?",
+    "answers": [
+      "Không có đáp án đúng",
+      "Paas",
+      "Saas",
+      "Iaas"
     ],
     "correct": "D",
     "favorite": false,
-    "id": "19"
+    "id": "A_17"
   },
   {
-    "question": "Cách thực hiện nào tối ưu khi thực hiện tính n! trên đồng thời hai máy?",
+    "question": "Loại dịch vụ nào mà người sử dụng có được môi trường để lập trình chương trình ứng dụng?",
     "answers": [
-      "Mỗi máy tính nhân n/2 số",
-      "Mỗi máy tính nhân n/3 số",
-      "Mỗi máy tính nhân n/4 số",
-      "Mỗi máy tính nhân n/5 số"
+      "Paas",
+      "Iaas",
+      "Saas",
+      "Không có đáp án đúng"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "20"
+    "id": "A_18"
   },
   {
-    "question": "Mỗi máy tính sẽ thực hiện nhân n/4 (với n chia hết cho 4) số trong trường hợp nào?",
+    "question": "Có bao nhiêu lớp thành phần trong điện toán đám mây?",
     "answers": [
-      "Tính giai thừa (n!) với 3 máy tính thực hiện đồng thời",
-      "Tính giai thừa (n!) với 4 máy tính thực hiện đồng thời",
-      "Tính giai thừa (n!) với 5 máy tính thực hiện đồng thời",
-      "Tính giai thừa (n!) với 6 máy tính thực hiện đồng thời"
+      "5",
+      "4",
+      "3",
+      "2"
     ],
-    "correct": "B",
-    "favorite": false,
-    "id": "21"
-  },
-  {
-    "question": "Sau khi mỗi máy thực hiện n/2 phép tính nhân của bài toán tính giai thừa trên hai máy sẽ làm gì?",
-    "answers": [
-      "Máy 2 gửi kết quả về máy 1",
-      "Máy 2 thực hiện phép tính nhân tiếp n/2 số",
-      "Máy 1 thực hiện phép tính nhân n/2 số",
-      "Các máy tính không gửi dữ liệu cho nhau"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "22"
-  },
-  {
-    "question": "Tìm phần tử X trên mảng A gồm n phần tử, đâu là phương pháp xử lý song song?",
-    "answers": [
-      "Tìm lần lượt từ đầu đến cuối mảng",
-      "Tìm lần lượt từ cuối đến đầu mảng",
-      "Tìm từ giữa đến cuối mảng",
-      "Giả sử có m bộ xử lý tìm kiếm trên n/m phần tử"
-    ],
-    "correct": "D",
-    "favorite": false,
-    "id": "23"
-  },
-  {
-    "question": "Giả sử có 5 BXL tìm phần tử X trên mảng A gồm n phần tử, phương pháp nào tối ưu?",
-    "answers": [
-      "Chia mảng A làm 1 đoạn",
-      "Chia mảng A làm 5 đoạn",
-      "Chia mảng A thành 11 đoạn",
-      "Chia A thành 8 đoạn"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "24"
-  },
-  {
-    "question": "Song song hoá bái toán tuần tự sẽ làm gì?",
-    "answers": [
-      "Chia bài toán thành bài toán nhỏ hơn, gán mỗi bài toán nhỏ cho mỗi BXL khác nhau thực hiện.",
-      "Không chia nhỏ bài toán",
-      "Chia bài toán thành bài toán nhỏ hơn, gán mỗi bài thoán nhỏ cho một BXL thực hiện",
-      "Mỗi BXL sẽ thực hiện cả bài toán"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "25"
-  },
-  {
-    "question": "Bài toán Fibonaci sẽ thực hiện theo giải thuật song song như thế nào?",
-    "answers": [
-      "Chia bài toán thành bài toán nhỏ hơn, gán mỗi bài toán nhỏ cho mỗi BXL khác nhau thực hiện.",
-      "Không xử lý theo giải thuật song song được",
-      "Chia bài toán thành bài toán nhỏ hơn, gán mỗi bài toán nhỏ cho chỉ một BXL thực hiện",
-      "Thực hiện được theo thuật giải song song"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "26"
-  },
-  {
-    "question": "Bài toán tính tổng N phần tử trong mảng một chiều?",
-    "answers": [
-      "Có thể thực hiện theo thuật giải song song?",
-      "Không thực hiện theo thuật giải song song được",
-      "Chỉ có thể thực hiện theo giải thuật tuần tự",
-      "Bài toán không lập trình được"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "27"
-  },
-  {
-    "question": "Chương trình song song theo mô hình bộ nhớ chia sẻ?",
-    "answers": [
-      "Nhiều BXL dùng chung 1 bộ nhớ",
-      "Mỗi BXL có một vùng nhớ riêng",
-      "Mỗi BXL có nhiệu bộ nhớ",
-      "Mỗi BXL không có bộ nhớ nào cả"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "28"
-  },
-  {
-    "question": "Nhiều BXL dùng chung 1 bộ nhớ là đặc trưng của mô hình nào?",
-    "answers": [
-      "Mô hình bộ nhớ chia sẻ",
-      "Mô hình truyền thông điệp",
-      "Không theo mô hình nào cả",
-      "Chương trình xử lý tuần tự"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "29"
-  },
-  {
-    "question": "Chương trình song song theo mô hình truyền thông điệp?",
-    "answers": [
-      "Các BXL không truyền dữ liệu cho nhau",
-      "Các BXL truyền dữ liệu không cần mạng",
-      "Các BXL truyền dữ liệu truyền dữ liệu thông qua mạng",
-      "Tất cả đều sai"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "30"
-  },
-  {
-    "question": "Hình vẽ trên khi thiết kế chương trình song song theo mô hình gì? (Giả định hình là mô hình truyền thông điệp)",
-    "answers": [
-      "Mô hình truyền thông điệp",
-      "Mô hình chia sẻ bộ nhớ",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "31",
-    "image": "/admin/images/gtss31-36.png"
-  },
-  {
-    "question": "Hình vẽ trên từ proc2 có nghĩa là gì?",
-    "answers": [
-      "Ổ đĩa 2",
-      "Bộ nhớ 2",
-      "Bộ xử lý 2",
-      "Tất cả đều sai"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "32",
-    "image": "/admin/images/gtss31-36.png"
-  },
-  {
-    "question": "Hình vẽ trên từ mem2 viết tắt của từ nào?",
-    "answers": [
-      "Memory 2",
-      "Memo 2",
-      "Member 2",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "33",
-    "image": "/admin/images/gtss31-36.png"
-  },
-  {
-    "question": "Hình vẽ trên từ proc2 có nghĩa là gì?",
-    "answers": [
-      "processor 2",
-      "procedure 2",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "34",
-    "image": "/admin/images/gtss31-36.png"
-  },
-  {
-    "question": "Hình trên phát biểu nào đúng? (Giả định hình là mô hình Truyền thông điệp)",
-    "answers": [
-      "Proc1 có thể truy cập vào dữ liệu của mem1, mem2, mem3",
-      "Proc1 có thể truy cập vào dữ liệu của mem2, mem3",
-      "Proc1 có thể truy cập vào dữ liệu của mem2",
-      "Proc1 có thể truy cập vào dữ liệu của mem1"
-    ],
-    "correct": "D",
-    "favorite": false,
-    "id": "35",
-    "image": "/admin/images/gtss31-36.png"
-  },
-  {
-    "question": "Hình vẽ trên phát biểu nào sai? (Giả định hình là mô hình Truyền thông điệp)",
-    "answers": [
-      "Proc1 có thể truy cập vào dữ liệu của mem1",
-      "Mỗi BXL chỉ có thể truy cập vào một vùng bộ nhớ riêng của BXL đó",
-      "Mỗi BXL đều có thể truy cập vào tất cả các bộ nhớ của BXL khác",
-      "Mỗi BXL không thể truy cập vào bộ nhớ của BXL khác"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "36",
-    "image": "/admin/images/gtss31-36.png"
-  },
-  {
-    "question": "Hình vẽ trên là theo mô hình song song nào? (Giả định hình là mô hình Bộ nhớ chia sẻ)",
-    "answers": [
-      "Mô hình chia sẻ bộ nhớ",
-      "Mô hình truyền thông điệp",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "37",
-    "image": "/admin/images/gtss37.png"
-  },
-  {
-    "question": "Hình vẽ trên là theo mô hình song song nào? (Giả định hình là mô hình Bộ nhớ chia sẻ)",
-    "answers": [
-      "Mô hình chia sẻ bộ nhớ",
-      "Mô hình truyền thông điệp",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "38",
-    "image": "/admin/images/gtss38-40.png"
-  },
-  {
-    "question": "Hình vẽ trên phát biểu nào đúng? (Giả định hình là mô hình Bộ nhớ chia sẻ)",
-    "answers": [
-      "Chỉ có BXL1 được phép truy cập vào bộ nhớ",
-      "Chỉ có BXL2 được phép truy cập vào bộ nhớ",
-      "Chỉ có BXL3 được phép truy cập vào bộ nhớ",
-      "Tất cả BXL đều được phép truy cập vào bộ nhớ"
-    ],
-    "correct": "D",
-    "favorite": false,
-    "id": "39",
-    "image": "/admin/images/gtss38-40.png"
-  },
-  {
-    "question": "Hình vẽ trên phát biểu nào sai? (Giả định hình là mô hình Bộ nhớ chia sẻ)",
-    "answers": [
-      "Các BXL không có không gian nhớ riêng",
-      "Các BXL đều có quyền truy cập vào bộ nhớ như nhau",
-      "Các BXL có không gian nhớ riêng",
-      "Tất cả BXL đều được phép truy cập vào bộ nhớ"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "40",
-    "image": "/admin/images/gtss38-40.png"
-  },
-  {
-    "question": "Tiêu chí nào không dùng để đánh giá thuật giải song song?",
-    "answers": [
-      "Các tham số về số BXL",
-      "Sơ đồ truyền thông",
-      "Thao tác I/O",
-      "Cấu trúc ổ đĩa cứng"
-    ],
-    "correct": "D",
-    "favorite": false,
-    "id": "41",
-    "image": ""
-  },
-  {
-    "question": "Ưu điểm nổi bật của xử lý song song là gì?",
-    "answers": [
-      "Thời gian xử lý công việc nhanh hơn, khối lượng công việc lớn hơn",
-      "Thời gian xử lý công việc chậm, khối lượng công việc nhỏ",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "42"
-  },
-  {
-    "question": "Một thời điểm có thể thực hiện được nhiều phép toán là đặc điểm của loại xử lý nào?",
-    "answers": [
-      "Xử lý tuần tự",
-      "Xử lý song song",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "43",
-    "image": ""
-  },
-  {
-    "question": "Mô hình SISD?",
-    "answers": [
-      "Có 1 CPU",
-      "Có 2 CPU",
-      "Có 3 CPU",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "44",
-    "image": ""
-  },
-  {
-    "question": "Mô hình SISD thứ tự thực hiện câu lệnh như thế nào?",
-    "answers": [
-      "Theo thứ tự nhất định",
-      "Không theo thứ tự nào cả",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "45"
-  },
-  {
-    "question": "Phát biểu nào sai?",
-    "answers": [
-      "Mô hình SISD thực hiện theo 1 thứ tự nhất định",
-      "Mô hình SISD thực hiện không theo thứ tự nào cả",
-      "Mô hình SISD có một BXL",
-      "Mô hình SISD thực hiện một lệnh tại một thời điểm"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "46"
-  },
-  {
-    "question": "Mô hình trên thuộc loại mô hình nào? (Giả định hình là SIMD)",
-    "answers": [
-      "Mô hình SISD",
-      "Mô hình SIMD",
-      "Mô hình MISD",
-      "Mô hình MIMD"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "47",
-    "image": "/admin/images/gtss47-56.png"
-  },
-  {
-    "question": "Mô hình trên từ nào là kí hiệu của luồng lệnh?",
-    "answers": [
-      "Từ IS",
-      "Từ DS",
-      "Từ LM",
-      "Từ P1"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "48",
-    "image": "/admin/images/gtss47-56.png"
-  },
-  {
-    "question": "Mô hình trên từ nào là kí hiệu của luồng dữ liệu?",
-    "answers": [
-      "Từ IS",
-      "Từ DS",
-      "Từ LM",
-      "Từ P1"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "49",
-    "image": "/admin/images/gtss47-56.png"
-  },
-  {
-    "question": "Mô hình trên từ nào là kí hiệu của bộ nhớ cục bộ?",
-    "answers": [
-      "Từ IS",
-      "Từ DS",
-      "Từ LM",
-      "Từ P1"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "50",
-    "image": "/admin/images/gtss47-56.png"
-  },
-  {
-    "question": "Mô hình trên từ nào là kí hiệu của BXL?",
-    "answers": [
-      "Từ IS",
-      "Từ DS",
-      "Từ LM",
-      "Từ P1"
-    ],
-    "correct": "D",
-    "favorite": false,
-    "id": "51",
-    "image": "/admin/images/gtss47-56.png"
-  },
-  {
-    "question": "Mô hình trên từ IS là viết tắt của từ nào?",
-    "answers": [
-      "Instruction Stream",
-      "Input System",
-      "Input Stream",
-      "Instruction System"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "52",
-    "image": "/admin/images/gtss47-56.png"
-  },
-  {
-    "question": "Mô hình trên từ DS là viết tắt của từ nào?",
-    "answers": [
-      "Data Stream",
-      "Data System",
-      "Diagram Stream",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "53",
-    "image": "/admin/images/gtss47-56.png"
-  },
-  {
-    "question": "Mô hình trên từ LM là viết tắt của từ nào?",
-    "answers": [
-      "Local Memory",
-      "Look Multiple",
-      "Local Multiple",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "54",
-    "image": "/admin/images/gtss47-56.png"
-  },
-  {
-    "question": "Mô hình trên từ P1, P2, ..., Pn là viết tắt của từ nào?",
-    "answers": [
-      "Processor",
-      "Procedure",
-      "Product",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "55",
-    "image": "/admin/images/gtss47-56.png"
-  },
-  {
-    "question": "Căn cứ vào yếu tố nào trong mô hình trên khẳng định đây là mô hình SIMD? (Giả định IS là Single Instruction, DS1..DSn là Multiple Data)",
-    "answers": [
-      "Ký hiệu IS, DS1, DS2, …, DSn",
-      "Ký hiệu CU, IS",
-      "Out put, Memory",
-      "Memory IS"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "56",
-    "image": "/admin/images/gtss47-56.png"
-  },
-  {
-    "question": "Mô hình trên thể hiện điều gì? (Giả định hình là SIMD)",
-    "answers": [
-      "Đơn luồng lệnh, đa luồng dữ liệu",
-      "Đơn luồng dữ liệu, đơn luồng dữ liệu",
-      "Đa luồng lệnh, đơn luồng dữ liệu",
-      "Đa luồng lệnh, đa luồng dữ liệu"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "57",
-    "image": "/admin/images/gtss57-58.png"
-  },
-  {
-    "question": "Mô hình trên là mô hình gì? (Giả định hình là SIMD)",
-    "answers": [
-      "Single Instruction, Multiple Data",
-      "Multiple Instruction, Single Data",
-      "Single Instruction, Single Data",
-      "Multiple Instruction, Multiple Data"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "58",
-    "image": "/admin/images/gtss57-58.png"
-  },
-  {
-    "question": "Mô hình trên thuộc loại mô hình nào? (Giả định hình là MISD)",
-    "answers": [
-      "Single Instruction, Multiple Data",
-      "Multiple Instruction, Single Data",
-      "Single Instruction, Single Data",
-      "Multiple Instruction, Multiple Data"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "59",
-    "image": "/admin/images/gtss59-64.png"
-  },
-  {
-    "question": "Mô hình trên có tên gọi là gì? (Giả định hình là MISD)",
-    "answers": [
-      "MISD",
-      "SISD",
-      "SIMD",
-      "MIMD"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "60",
-    "image": "/admin/images/gtss59-64.png"
-  },
-  {
-    "question": "Mô hình trên có nghĩa là gì? (Giả định hình là MISD)",
-    "answers": [
-      "Đa luồng lệnh, đơn luồng dữ liệu",
-      "Đơn luồng lệnh, đơn luồng dữ liệu",
-      "Đa luồng lệnh, đa luồng dữ liệu",
-      "Đơn luồng lệnh, đơn luồng dữ liệu"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "61",
-    "image": "/admin/images/gtss59-64.png"
-  },
-  {
-    "question": "Căn cứ vào yếu tố nào để xác định đây là mô hình đa luồng lệnh? (Giả định IS có nhiều luồng lệnh, CU là đơn vị điều khiển)",
-    "answers": [
-      "IS",
-      "CU",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "62",
-    "image": "/admin/images/gtss59-64.png"
-  },
-  {
-    "question": "Căn cứ vào yếu tố nào để xác định đây là mô hình đơn luồng dữ liệu? (Giả định DS là một luồng dữ liệu)",
-    "answers": [
-      "IS",
-      "CU",
-      "DS",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "63"
-  },
-  {
-    "question": "Từ CU trong mô hình viết tắt của từ gì?",
-    "answers": [
-      "Control Unit",
-      "Control University",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "64"
-  },
-  {
-    "question": "Hình trên thuộc mô hình gì? (Giả định hình là MIMD)",
-    "answers": [
-      "MISD",
-      "SISD",
-      "SIMD",
-      "MIMD"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "65",
-    "image": "/admin/images/gtss65-67.png"
-  },
-  {
-    "question": "Hình ảnh trên diễn tả điều gì? (Giả định hình là MIMD)",
-    "answers": [
-      "Đa luồng lệnh, đơn luồng dữ liệu",
-      "Đơn luồng lệnh, đơn luồng dữ liệu",
-      "Đa luồng lệnh, đa luồng dữ liệu",
-      "Đơn luồng lệnh, đơn luồng dữ liệu"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "66",
-    "image": "/admin/images/gtss65-67.png"
-  },
-  {
-    "question": "Hình ảnh trên viết tên gọi đầy đủ là gì? (Giả định hình là MIMD)",
-    "answers": [
-      "Multiple Instruction, Multiple Data",
-      "Multiple Instruction, Single Data",
-      "Single Instruction, Multiple Data",
-      "Single Instruction, Single Data"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "67",
-    "image": "/admin/images/gtss65-67.png"
-  },
-  {
-    "question": "Mô hình MISD thực hiện theo nguyên lý gì?",
-    "answers": [
-      "Nguyên lý Pipeline",
-      "Nguyên lý thứ tự",
-      "Nguyên lý vét cạn thông minh",
-      "Nguyên lý tham lam"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "68"
-  },
-  {
-    "question": "Nguyên lý Pipeline là nguyên lý gì?",
-    "answers": [
-      "Là nguyên lý hình ống, dây chuyền",
-      "Là nguyên lý giới hạn lại không gian tìm kiếm",
-      "Là nguyên lý chọn một thứ tự hợp lý",
-      "Là nguyên lý ứng dụng tiêu chuẩn toàn cục theo tiêu chuẩn cục bộ"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "69"
-  },
-  {
-    "question": "Nguyên lý nào chia quá trình tính toán thành một số công đoạn nhỏ, giao cho nhiều BXL thực hiện trong các pha liên tiếp.",
-    "answers": [
-      "Nguyên lý pipeline",
-      "Nguyên lý vét cạn thông minh",
-      "Nguyên lý Greedy",
-      "Nguyên lý thứ tự"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "70"
-  },
-  {
-    "question": "Mô hình nào phức tạp nhất và phổ biến nhất?",
-    "answers": [
-      "Mô hình MIMD",
-      "Mô hình MISD",
-      "Mô hình SIMD",
-      "Mô hình SISD"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "71"
-  },
-  {
-    "question": "Mô hình MIMD thực hiện theo đặc điểm gì?",
-    "answers": [
-      "Mỗi BXL thực hiện một lệnh riêng trên một mục dữ liệu độc lập với các BXL khác",
-      "Mỗi BXL thực hiện một lệnh chung trên một mục dữ liệu độc lập với các BXL khác",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "72"
-  },
-  {
-    "question": "Mô hình nào? (Giả định hình là MIMD)",
-    "answers": [
-      "Mô hình MIMD",
-      "Mô hình MISD",
-      "Mô hình SIMD",
-      "Mô hình SISD"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "73",
-    "image": "/admin/images/gtss73-80.png"
-  },
-  {
-    "question": "Hình trên thực hiện như thế nào? (Giả định hình là MIMD)",
-    "answers": [
-      "Multiple Instruction, Multiple Data",
-      "Single Instruction, Multiple Data",
-      "Multiple Instruction, Single Data",
-      "Single Instruction, Single Data"
-    ],
-    "correct": "A",
-    "favorite": false,
-    "id": "31",
-    "image": "/admin/images/gtss73-80.png"
-  },
-  {
-    "question": "Hình trên thực hiện như thế nào? (Giả định hình là MIMD)",
-    "answers": [
-      "Đa luồng lệnh, đơn luồng dữ liệu",
-      "Đơn luồng lệnh, đơn luồng dữ liệu",
-      "Đa luồng lệnh, đa luồng dữ liệu",
-      "Đơn luồng lệnh, đơn luồng dữ liệu"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "32",
-    "image": "/admin/images/gtss73-80.png"
-  },
-  {
-    "question": "Cụm từ Data Input stream A nghĩa là gì?",
-    "answers": [
-      "Luồng dữ liệu vào A",
-      "Luồng dữ liệu ra A",
-      "Luồng lệnh vào A",
-      "Luồng lệnh ra A"
-    ],
     "correct": "A",
-    "favorite": false,
-    "id": "33",
-    "image": "/admin/images/gtss73-80.png"
-  },
-  {
-    "question": "Cụm từ Data Output stream A nghĩa là gì?",
-    "answers": [
-      "Luồng dữ liệu vào A",
-      "Luồng dữ liệu ra A",
-      "Luồng lệnh vào A",
-      "Luồng lệnh ra A"
-    ],
-    "correct": "B",
     "favorite": false,
-    "id": "34",
-    "image": "/admin/images/gtss73-80.png"
+    "id": "A_19"
   },
   {
-    "question": "Cụm từ Instruction Stream A nghĩa là gì?",
+    "question": "Những loại dịch vụ nào khi thuê có Networking",
     "answers": [
-      "Luồng lệnh A",
-      "Luồng dữ liệu A",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "Iaas, Paas, Saas",
+      "Iaas, Paas, Saas, Standalone Server",
+      "Paas",
+      "Saas"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "35",
-    "image": "/admin/images/gtss73-80.png"
+    "id": "A_20"
   },
   {
-    "question": "Trong hình trên căn cứ vào đâu để xác định đa luồng lệnh? (Giả định hình có nhiều Instruction Stream: A, B, C...)",
+    "question": "Những loại dịch vụ nào khi thuê có Storage?",
     "answers": [
-      "Instruction Stream A, Instruction Stream B, Instruction Stream C",
-      "Data Input Stream A, Data Input Stream B, Data Input Stream C",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "Iaas, Paas, Saas",
+      "Iaas, Paas, Saas, Standalone Server",
+      "Paas, Saas",
+      "Iaas, Paas"
     ],
     "correct": "A",
-    "favorite": false,
-    "id": "36",
-    "image": "/admin/images/gtss73-80.png"
-  },
-  {
-    "question": "Trong hình trên căn cứ vào đâu để xác định đa luồng lệnh? (Giả định hình có nhiều Instruction Stream: A, B, C...)",
-    "answers": [
-      "Instruction Stream A, Instruction Stream B, Instruction Stream C",
-      "Data Input Stream A, Data Input Stream B, Data Input Stream C",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "B",
     "favorite": false,
-    "id": "37",
-    "image": "/admin/images/gtss73-80.png"
+    "id": "A_21"
   },
   {
-    "question": "Hình trên thuộc mô hình gì? (Giả định hình là SIMD)",
+    "question": "Những loại dịch vụ nào khi thuê có Virtualization?",
     "answers": [
-      "Mô hình MIMD",
-      "Mô hình MISD",
-      "Mô hình SIMD",
-      "Mô hình SISD"
+      "Iaas, Paas, Saas",
+      "Iaas, Paas, Saas, Standalone Server",
+      "Iaas, Paas",
+      "Paas, Saas"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "38",
-    "image": "/admin/images/gtss81-86.png"
+    "id": "A_22"
   },
   {
-    "question": "Hình trên tên gọi là gì? (Giả định hình là SIMD)",
+    "question": "Những loại dịch vụ nào khi thuê có Server?",
     "answers": [
-      "Multiple Instruction, Multiple Data",
-      "Multiple Instruction, Single Data",
-      "Single Instruction, Multiple Data",
-      "Single Instruction, Single Data"
+      "Iaas, Paas, Saas",
+      "Iaas, Paas, Saas, Standalone Server",
+      "Iaas, Paas",
+      "Paas, Saas"
     ],
     "correct": "A",
-    "favorite": false,
-    "id": "39",
-    "image": "/admin/images/gtss81-86.png"
-  },
-  {
-    "question": "Hình trên có thực hiện theo cách thức nào gì? (Giả định hình là SIMD)",
-    "answers": [
-      "Đa luồng lệnh, đơn luồng dữ liệu",
-      "Đơn luồng lệnh, đơn luồng dữ liệu",
-      "Đa luồng lệnh, đa luồng dữ liệu",
-      "Đơn luồng lệnh, đơn luồng dữ liệu"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "40",
-    "image": "/admin/images/gtss81-86.png"
-  },
-  {
-    "question": "Hình trên tại một thời điểm thực hiện lệnh như thế nào? (Giả định hình là SIMD)",
-    "answers": [
-      "Một mục dữ liệu được xử lý",
-      "Hai mục dữ liệu được xử lý",
-      "Tất cả đều sai",
-      "Nhiều mục dữ liệu được xử lý"
-    ],
-    "correct": "D",
-    "favorite": false,
-    "id": "41",
-    "image": "/admin/images/gtss81-86.png"
-  },
-  {
-    "question": "Hình trên, một thời điểm thực hiện bao nhiêu lệnh? (Giả định hình là SIMD)",
-    "answers": [
-      "Một lệnh",
-      "Nhiều lệnh",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "42",
-    "image": "/admin/images/gtss81-86.png"
-  },
-  {
-    "question": "Hình trên phát biểu nào sai? (Giả định hình là SIMD)",
-    "answers": [
-      "Một thời điểm các BXL nhiều mục dữ liệu",
-      "Một thời điểm các BXL một mục dữ liệu",
-      "Các BXL thực hiện các lệnh khác nhau",
-      "Mỗi BXL thực hiện xử lý các dữ liệu khác với BXL khác"
-    ],
-    "correct": "B",
     "favorite": false,
-    "id": "43",
-    "image": "/admin/images/gtss81-86.png"
+    "id": "A_23"
   },
   {
-    "question": "Máy P-RAM là gì?",
+    "question": "Những loại dịch vụ nào khi thuê có Operating System?",
     "answers": [
-      "Máy tính tuần tự",
-      "Máy server",
-      "Máy tính truy cập ngẫu nhiên song song",
-      "Tất cả đều sai"
+      "PaaS, SaaS",
+      "IaaS, PaaS",
+      "SaaS",
+      "PaaS"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "44"
+    "id": "A_24"
   },
   {
-    "question": "Máy P-RAM viết tắt của từ gì?",
+    "question": "Những loại dịch vụ nào khi thuê có Database?",
     "answers": [
-      "Parallel Read Access Machine",
-      "Processor Random Access Machine",
-      "Tất cả đều sai",
-      "Parallel Random Access Machine"
+      "PaaS",
+      "IaaS, PaaS",
+      "SaaS",
+      "PaaS, SaaS"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "45"
+    "id": "A_25",
+    "wrongCount": 2
   },
   {
-    "question": "Thuật ngữ nào là tên gọi của máy tính ngẫu nhiên song song?",
+    "question": "Những loại dịch vụ nào khi thuê có Runtimes?",
     "answers": [
-      "Parallel Read Access Machine",
-      "Parallel Random Access Machine",
-      "Processor Random Access Machine",
-      "Tất cả đều sai"
+      "PaaS, SaaS",
+      "IaaS, PaaS",
+      "SaaS",
+      "PaaS"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "46"
+    "id": "A_26"
   },
   {
-    "question": "Cụm từ Parallel Random Access Machine là tên gọi của?",
+    "question": "Những loại dịch vụ nào khi thuê có Application?",
     "answers": [
-      "Máy chủ",
-      "Máy khách",
-      "Tất cả đều sai",
-      "Máy tính ngẫu nhiên song song"
+      "SaaS",
+      "PaaS",
+      "PaaS, SaaS",
+      "IaaS, PaaS, SaaS"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "47"
+    "id": "A_27"
   },
   {
-    "question": "Đầu ra của giai đoạn này có thể là đầu vào của giai đoạn tiếp theo là đặc điểm của nguyên lý nào?",
+    "question": "Trong hoạt động của điện toán đám mây lớp Front – End để làm gì?",
     "answers": [
-      "Nguyên lý thứ tự",
-      "Nguyên lý tham lam",
-      "Nguyên lý đường ống, dây chuyền",
-      "Nguyên lý vét cạn thông minh"
+      "Là lớp chứa giao diện người dùng của ứng dụng",
+      "Là lớp chứa hạ tầng thiết bị",
+      "Là lớp chứa toàn bộ các thành phần hoạt động",
+      "Không có đáp án đúng"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "48"
+    "id": "A_28"
   },
   {
-    "question": "Các giai đoạn thực hiện khác nhau của mỗi lệnh có thể thực hiện gối đầu nhau?",
+    "question": "Trong hoạt động của điện toán đám mây lớp Back – End để làm gì?",
     "answers": [
-      "Nguyên lý thứ tự",
-      "Nguyên lý tham lam",
-      "Nguyên lý vét cạn thông minh",
-      "Nguyên lý đường ống, dây chuyền"
+      "Là lớp chứa hạ tầng thiết bị",
+      "Là lớp chứa giao diện người dùng của ứng dụng",
+      "Là lớp chứa toàn bộ các thành phần hoạt động",
+      "Không có đáp án đúng"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "49"
+    "id": "A_29"
   },
   {
-    "question": "Hệ điều hành đa nhiệm thường giải quyết như thế nào?",
+    "question": "Google App Engine là dịch vụ thuộc loại gì?",
     "answers": [
-      "Trong cùng một khoảng thời gian, có một tiến trình cùng truy cập vào dữ liệu từ thiết bị vào/ra chung",
-      "Nguyên lý tham lam",
-      "Trong cùng một khoảng thời gian, có nhiều tiến trình cùng truy cập vào dữ liệu từ thiết bị vào/ra chung",
-      "Nguyên lý vét cạn thông minh"
+      "PaaS",
+      "SaaS",
+      "IaaS",
+      "Không có đáp án đúng"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "50"
+    "id": "A_30"
   },
   {
-    "question": "Điều cần lưu ý khi phát triển những thuật toán cho các máy tính song song tổng quát?",
+    "question": "Google Computer Engine là dịch vụ thuộc loại gì?",
     "answers": [
-      "Bị giới hạn bởi số lượng BXL",
-      "Không bị giới hạn về số lượng BXL",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "Không có đáp án đúng"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "51"
+    "id": "A_31",
+    "wrongCount": 0
   },
   {
-    "question": "Điều gì cần lưu ý khi phát triển những thuật toán cho các máy tính song song tổng quát?",
+    "question": "Đâu là nhược điểm của điện toán đám mây, chọn đáp án đúng nhất?",
     "answers": [
-      "Không quan tâm đến thuật giải tuần tự",
-      "Tất cả đều đúng",
-      "Tất cả đều sai",
-      "Thực hiện một thuật giải tuần tự tối ưu"
+      "Tính riêng tư, tính sẵn dùng, tính di động dữ liệu, mất dữ liệu, khả năng bảo mật, quyền sở hữu",
+      "Tính riêng tư, tính di động dữ liệu, mất dữ liệu, khả năng bảo mật, quyền sở hữu",
+      "Tính riêng tư, tính sẵn dùng, mất dữ liệu, khả năng bảo mật, quyền sở hữu",
+      "Tính riêng tư, tính sẵn dùng, tính di động dữ liệu, mất dữ liệu, khả năng bảo mật"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "52"
+    "id": "A_32"
   },
   {
-    "question": "Điều gì cần lưu ý khi phát triển những thuật toán cho các máy tính song song tổng quát?",
+    "question": "Có bao nhiêu mô hình điện toán đám mây được triển khai trong thực tế?",
     "answers": [
-      "Mọi ví trí của bộ nhớ đều truy cập được bởi một BXL",
-      "Mọi vị trí của bộ nhớ đều truy cập được bởi bất kỳ BXL nào",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "4",
+      "3",
+      "2",
+      "5"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "53"
+    "id": "A_33"
   },
   {
-    "question": "Điều gì cần lưu ý khi phát triển những thuật toán cho các máy tính song song tổng quát?",
+    "question": "Gmail là ứng dụng thuộc loại dịch vụ gì?",
     "answers": [
-      "Các BXL có thể đọc một vị trí của bộ nhớ",
-      "Tất cả đều đúng",
-      "Các BXL có thể đọc bất kỳ một vị trí nào của bộ nhớ",
-      "Tất cả đều sai"
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "Không có đáp án đúng"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "54"
+    "id": "A_34"
   },
   {
-    "question": "Hình trên thuộc loại nào? (Giả định hình là Pipelining theo đơn vị số học)",
+    "question": "Mô hình dịch vụ Service category của loại IaaS gồm có những gì?",
     "answers": [
-      "Hình ống theo đơn vị số học",
-      "Hình ống theo đơn vị câu lệnh",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "Không có đáp án đúng",
+      "Online operating environment, online database, online message queues",
+      "Application and software rental",
+      "VM rental, online storage"
     ],
     "correct": "A",
-    "favorite": false,
-    "id": "55",
-    "image": "/admin/images/gtss98.png"
-  },
-  {
-    "question": "Hình trên thuộc loại nào? (Giả định hình là Pipelining theo đơn vị câu lệnh)",
-    "answers": [
-      "Hình ống theo đơn vị số học",
-      "Hình ống theo đơn vị câu lệnh",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "B",
     "favorite": false,
-    "id": "56",
-    "image": "/admin/images/gtss99.png"
+    "id": "A_35",
+    "wrongCount": 2
   },
   {
-    "question": "Hình trên thực hiện theo nguyên lý nào? (Giả định hình là Pipelining)",
+    "question": "Mô hình dịch vụ Service category của loại PaaS gồm có những gì?",
     "answers": [
-      "Nguyên lý hình ống",
-      "Nguyên lý Greedy",
-      "Nguyên lý thứ tự",
-      "Nguyên lý vét cạn thông minh"
+      "Online operating environment, online database, online message queues",
+      "VM rental, online storage",
+      "Application and software rental",
+      "Không có đáp án đúng"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "57",
-    "image": "/admin/images/gtss59-64.png"
+    "id": "A_36"
   },
   {
-    "question": "Hình trên xây dựng theo công thức nào? (Giả định hình là bộ cộng dồn Pipelining)",
+    "question": "Kiểu dịch vụ Service monitoring của loại SaaS gồm có những gì?",
     "answers": [
-      "S = S + a[i]",
-      "S(in)=S(out) + a[i]",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "application monitoring",
+      "logic resource monitoring",
+      "physical resource monitoring",
+      "application monitoring, logic resource monitoring"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "58",
-    "image": "/admin/images/gtss59-64.png"
+    "id": "B_1",
+    "wrongCount": 0
   },
   {
-    "question": "Hình trên xây dựng theo cách thức nào? (Giả định hình là Pipelining)",
+    "question": "Kiểu dịch vụ Service level management của loại IaaS gồm có những gì?",
     "answers": [
-      "Đầu ra của BXL này không là đầu vào của BXL kia",
-      "Tất cả đều sai",
-      "Tất cả đều đúng",
-      "Đầu ra của BXL này là đầu vào của BXL kia"
+      "dynamic orchestration of physical resources",
+      "dynamic orchestration of logic resources",
+      "dynamic orchestration of applications",
+      "multi-tenancy,  network, storage"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "59"
+    "id": "B_2",
+    "wrongCount": 2
   },
   {
-    "question": "Hình trên là bộ nhớ song song nào? (Giả định hình là mô hình Bộ nhớ chia sẻ)",
+    "question": "Kiểu dịch vụ Service level management của loại SaaS gồm có những gì?",
     "answers": [
-      "Bộ nhớ kết hợp",
-      "Bộ nhớ truy cập ngẫu nhiên song song",
-      "Bộ nhớ chia sẻ",
-      "Bộ nhớ phân tán"
+      "dynamic orchestration of applications",
+      "dynamic orchestration of physical resources",
+      "dynamic orchestration of logic resources",
+      "multi-tenancy,  network, storage"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "60",
-    "image": "/admin/images/gtss59-64.png"
+    "id": "B_3",
+    "wrongCount": 2
   },
   {
-    "question": "Mỗi ô nhớ của bộ nhớ kết hợp gồm mấy tín hiệu đầu vào?",
+    "question": "Kiểu dịch vụ Service level management của loại PaaS gồm có những gì?",
     "answers": [
-      "3 tín hiệu",
-      "2 tín hiệu",
-      "4 tín hiệu",
-      "1 tín hiệu"
+      "dynamic orchestration of logic resources",
+      "dynamic orchestration of applications",
+      "dynamic orchestration of physical resources",
+      "application usage metering"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "61",
-    "image": "/admin/images/gtss103-105.png"
+    "id": "B_4"
   },
   {
-    "question": "Mỗi ô nhớ của bộ nhớ kết hợp gồm mấy tín hiệu đầu ra?",
+    "question": "Kiểu dịch vụ Service optimization của loại IaaS gồm có những gì?",
     "answers": [
-      "3 tín hiệu",
-      "2 tín hiệu",
-      "4 tín hiệu",
-      "1 tín hiệu"
+      "network, storage, and server virtualization",
+      "large-scale distributed file system, database, middleware",
+      "multi-tenancy",
+      "multi-tenancy,  network, storage"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "62"
+    "id": "B_5",
+    "wrongCount": 2
   },
   {
-    "question": "Hình trên là loại bộ nhớ nào của máy tính song song? (Giả định hình là Bộ nhớ kết hợp)",
+    "question": "Kiểu dịch vụ Service optimization của loại PaaS gồm có những gì?",
     "answers": [
-      "Bộ nhớ kết hợp",
-      "Bộ nhớ chia sẻ",
-      "Bộ nhớ truy cập ngẫu nhiên song song",
-      "Bộ nhớ phân tán"
+      "large-scale distributed file system, database, middleware",
+      "network, storage, and server virtualization",
+      "multi-tenancy",
+      "multi-tenancy,  network, storage"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "63"
+    "id": "B_6",
+    "wrongCount": 2
   },
   {
-    "question": "Đặc điểm của bộ nhớ chia sẻ của máy tính song song?",
+    "question": "Kiểu dịch vụ Service optimization của loại SaaS gồm có những gì?",
     "answers": [
-      "Dung lượng lớn",
-      "Dung lượng nhỏ",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "multi-tenancy",
+      "large-scale distributed file system, database, middleware",
+      "network, storage, and server virtualization",
+      "application usage metering"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "64"
+    "id": "B_7",
+    "wrongCount": 0
   },
   {
-    "question": "Đặc điểm của bộ nhớ chia sẻ của máy tính song song?",
+    "question": "Kiểu dịch vụ Service measurement của loại IaaS gồm có những gì?",
     "answers": [
-      "Những thay đổi nội dung ô nhớ được thực hiện bởi một BXL nào đó sẽ không được nhìn thấy bởi các BXL khác",
-      "Tất cả đều đúng",
-      "Những thay đổi nội dung ô nhớ được thực hiện bởi một BXL nào đó sẽ được nhìn thấy bởi các BXL khác",
-      "Tất cả đều sai"
+      "physical resource metering",
+      "logic resource usage metering",
+      "application usage metering",
+      "network, storage, and server virtualization"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "65"
+    "id": "B_8",
+    "wrongCount": 0
   },
   {
-    "question": "Đặc điểm của bộ nhớ chia sẻ của máy tính song song?",
+    "question": "Kiểu dịch vụ Service measurement của loại PaaS gồm có những gì?",
     "answers": [
-      "Các BXL đều có thể truy cập vào bộ nhớ (Share memory)",
-      "Chỉ một BXL được truy cập cào bộ nhớ (Share memory)",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "logic resource usage metering",
+      "physical resource metering",
+      "application usage metering",
+      "network, storage, and server virtualization"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "66"
+    "id": "B_9",
+    "wrongCount": 2
   },
   {
-    "question": "Hình trên là loại bộ nhớ nào của máy tính song song? (Giả định hình là Bộ nhớ phân tán)",
+    "question": "Kiểu dịch vụ Service measurement của loại SaaS gồm có những gì?",
     "answers": [
-      "Bộ nhớ kết hợp",
-      "Bộ nhớ chia sẻ",
-      "Bộ nhớ phân tán",
-      "Tất cả đều sai"
+      "application usage metering",
+      "physical resource metering",
+      "logic resource usage metering",
+      "network, storage, and server virtualization"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "67"
+    "id": "B_10",
+    "wrongCount": 2
   },
   {
-    "question": "Đặc điểm của bộ nhớ phân tán?",
+    "question": "Kiểu dịch vụ Service integration and combination của loại IaaS gồm có những gì?",
     "answers": [
-      "Các BXL đều có bộ nhớ riêng",
-      "Các BXL đều có bộ nhớ chung",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "load balance",
+      "SOA",
+      "SOA, mashup",
+      "usage metering"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "68"
+    "id": "B_11",
+    "wrongCount": 2
   },
   {
-    "question": "Đặc điểm của bộ nhớ phân tán?",
+    "question": "Kiểu dịch vụ Service integration and combination của loại PaaS gồm có những gì?",
     "answers": [
-      "Địa chỉ bộ nhớ của một BXL nào đó được biết bởi BXL khác",
-      "Tất cả đều đúng",
-      "Tất cả đều sai",
-      "Địa chỉ bộ nhớ của một BXL nào đó không được biết bởi BXL khác"
+      "SOA",
+      "load balance",
+      "SOA, mashup",
+      "usage metering"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "69"
+    "id": "B_12",
+    "wrongCount": 2
   },
   {
-    "question": "Hình trên thuộc loại bộ nhớ nào của máy tính song song? (Giả định hình là Bộ nhớ lai/Hybrid)",
+    "question": "Kiểu dịch vụ Service integration and combination của loại SaaS gồm có những gì?",
     "answers": [
-      "Bộ nhớ lai",
-      "Bộ nhớ phân tán",
-      "Bộ nhớ chia sẻ",
-      "Tất cả đều sai"
+      "SOA, mashup",
+      "load balance",
+      "SOA",
+      "usage metering"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "70"
+    "id": "B_13",
+    "wrongCount": 2
   },
   {
-    "question": "Trong bộ nhớ lai của máy tính dong song?",
+    "question": "Kiểu dịch vụ security của loại IaaS gồm có những gì?",
     "answers": [
-      "Mỗi BXL có một vùng nhớ riêng",
-      "Tất cả đều đúng",
-      "Các BXL có một vùng nhớ chung",
-      "Tất cả đều sai"
+      "storage encryption and isolation, VM isolation, VLAN, SSL/SSH",
+      "data isolation, operating environment isolation, SSL",
+      "data isolation, operating environment isolation, SSI, Web authentication and authorization",
+      "load balance"
     ],
     "correct": "A",
-    "favorite": false,
-    "id": "71"
-  },
-  {
-    "question": "Trong bộ nhớ lai của máy tính song song?",
-    "answers": [
-      "Không có đường mạng kết nối giữa các BXL",
-      "Tất cả đều đúng",
-      "Có đường liên kết giữa các BXL",
-      "Tất cả đầu sai"
-    ],
-    "correct": "C",
     "favorite": false,
-    "id": "72",
-    "image": ""
+    "id": "B_14",
+    "wrongCount": 2
   },
   {
-    "question": "Trong bộ nhớ lai của máy tính song song?",
+    "question": "Kiểu dịch vụ security của loại PaaS gồm có những gì?",
     "answers": [
-      "Kết hợp giữa kiến trúc chia sẻ bộ nhớ chung và bộ nhớ phân tán",
-      "Không kết hợp giữa kiến trúc chia sẻ bộ nhớ chung và bộ nhớ phân tán",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "data isolation, operating environment isolation, SSL",
+      "storage encryption and isolation, VM isolation, VLAN, SSL/SSH",
+      "data isolation, operating environment isolation, SSI, Web authentication and authorization",
+      "load balance"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "73"
+    "id": "B_15"
   },
   {
-    "question": "Mạng liên kết tĩnh là gì?",
+    "question": "Kiểu dịch vụ security của loại SaaS gồm có những gì?",
     "answers": [
-      "Là mạng các thành phần của hệ thống máy tính, trong đó các BXL, bộ nhớ được liên kết với nhau một cách cố định, không thay đổi được.",
-      "Là mạng các thành phần của hệ thống máy tính, trong đó các BXL, bộ nhớ được liên kết với nhau một cách cố định, có thể thay đổi được.",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "data isolation, operating environment isolation, SSI, Web authentication and authorization",
+      "data isolation, operating environment isolation, SSL",
+      "storage encryption and isolation, VM isolation, VLAN, SSL/SSH",
+      "storage encryption and isolation, VM isolation"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "74"
+    "id": "B_16",
+    "wrongCount": 2
   },
   {
-    "question": "Mạng liên kết động là gì?",
+    "question": "Hãng Viettel IDC nhà cung cấp các dịch vụ điện toán đám mây được thành lập vào năm nào?",
     "answers": [
-      "Là mạng các thành phần của hệ thống máy tính, trong đó các BXL, bộ nhớ được liên kết với nhau một cách cố định, không thay đổi được.",
-      "Là mạng các thành phần của hệ thống máy tính, trong đó các BXL, bộ nhớ được liên kết với nhau một cách cố định, có thể thay đổi được.",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "2008",
+      "2009",
+      "2010",
+      "2011"
     ],
-    "correct": "B",
-    "favorite": false,
-    "id": "75",
-    "image": "/admin/images/gtss113-114.png"
-  },
-  {
-    "question": "Mạng các thành phần của hệ thống máy tính, trong đó các BXL, bộ nhớ được liên kết với nhau một cách cố định, không thay đổi được.",
-    "answers": [
-      "Mạng liên kết động",
-      "Mạng liên kết tĩnh",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "76",
-    "image": ""
-  },
-  {
-    "question": "Hình trên là mô hình nào? (Giả định hình là mô hình mạng liên kết tuyến tính)",
-    "answers": [
-      "Mô hình mạng liên kết tuyến tính",
-      "Mô hình mạng kết vòng",
-      "Mô hình mạng liên kết lưới 2 chiều",
-      "Tất cả đều sai"
-    ],
     "correct": "A",
-    "favorite": false,
-    "id": "77",
-    "image": "/admin/images/gtss120.png"
-  },
-  {
-    "question": "Mỗi BXL Pi (0<i<n) có hai láng giềng là Pi-1 và Pi+1, các BXL đầu và cuối chỉ có 1 láng giềng là đặc điểm của mô hình nào?",
-    "answers": [
-      "Mô hình mạng kết vòng",
-      "Mô hình mạng liên kết lưới 2 chiều",
-      "Tất cả đều sai",
-      "Mô hình mạng liên kết tuyến tính"
-    ],
-    "correct": "D",
     "favorite": false,
-    "id": "78",
-    "image": ""
+    "id": "B_17"
   },
   {
-    "question": "Mô hình mạng liên kết tuyến tính có đặc điểm gì?",
+    "question": "Hãng IBM mở trung tâm điện toán đám mây tại thị trường Việt Nam vào năm nào?",
     "answers": [
-      "Mỗi BXL Pi (0<i<n) có hai láng giềng là Pi-1 và Pi+1, các BXL đầu và cuối chỉ có 1 láng giềng",
-      "Mỗi BXL Pi (0<=i<n) có một láng giềng",
-      "Mỗi BXL Pi (0<i<=n) có hai láng giềng",
-      "Mỗi BXL Pi (0<=i<=n) có hai láng giềng là Pi-1 và Pi+1, các BXL đầu và cuối chỉ có 1 láng giềng"
+      "2008",
+      "2009",
+      "2010",
+      "2011"
     ],
     "correct": "A",
-    "favorite": false,
-    "id": "79"
-  },
-  {
-    "question": "Mô hình mạng liên kết tuyến tính có đặc điểm gì?",
-    "answers": [
-      "Không có đường truyền lần lượt chạy qua các BXL",
-      "Một đường truyền lần lượt chạy qua các BXL",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "B",
     "favorite": false,
-    "id": "80"
+    "id": "B_18",
+    "wrongCount": 0
   },
   {
-    "question": "Mô hình mạng liên kết tuyến tính có đặc điểm gì?",
+    "question": "Hội thảo “hành trình tới công nghệ điện toán đám mây” do Microsoft tổ chức ngày 2/3/2011 ở đâu?",
     "answers": [
-      "Dữ liệu gửi từ BXL này tới BXL kia phải lần lượt đi qua các BXL trung gian",
-      "Dữ liệu gửi từ BXL này tới BXL kia không phải lần lượt đi qua các BXL trung gian",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "Hà Nội",
+      "Thành phố Hồ Chí Minh",
+      "Đà Nẵng",
+      "Huế"
     ],
     "correct": "A",
-    "favorite": false,
-    "id": "81"
-  },
-  {
-    "question": "Mô hình mạng liên kết tuyến tính mạng đơn có đặc điểm gì?",
-    "answers": [
-      "Thông tin có thể chạy trên đường truyền theo hai chiều",
-      "Tất cả đều đúng",
-      "Thông tin có thể chạy trên đường truyền theo một chiều",
-      "Tất cả đều sai"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "82"
-  },
-  {
-    "question": "Mô hình mạng liên kết tuyến tính mạng kép có đặc điểm gì?",
-    "answers": [
-      "Thông tin có thể chạy trên đường truyền theo hai chiều",
-      "Tất cả đều đúng",
-      "Thông tin có thể chạy trên đường truyền theo một chiều",
-      "Tất cả đều sai"
-    ],
-    "correct": "C",
-    "favorite": false,
-    "id": "83"
-  },
-  {
-    "question": "Mô hình trên là mô hình nào? (Giả định hình là mô hình mạng liên kết vòng)",
-    "answers": [
-      "Mô hình mạng liên kết tuyến tính",
-      "Mô hình mạng liên kết vòng",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "B",
-    "favorite": false,
-    "id": "84",
-    "image": "/admin/images/gtss127.png"
-  },
-  {
-    "question": "Mô hình mạng liên kết vòng có đặc điểm gì?",
-    "answers": [
-      "Không có đường truyền lần lượt chạy qua các BXL",
-      "Một đường truyền lần lượt chạy qua các BXL",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
-    ],
-    "correct": "B",
     "favorite": false,
-    "id": "85"
+    "id": "B_19"
   },
   {
-    "question": "Mạng liên kết vòng có đặc điểm gì?",
+    "question": "Doanh nghiệp công nghệ Việt Nam nào duy nhất tham gia sự kiện tại Nhật, ngày 26/2/2014, do tập đoàn Nikkei tổ chức",
     "answers": [
-      "Mỗi BXL Pi (0<i<n) có hai láng giềng",
-      "Mỗi BXL Pi (0<i<n) có một láng giềng",
-      "Tất cả đều đúng",
-      "Tất cả đều sai"
+      "FPT",
+      "Viettel IDC",
+      "VNPT",
+      "VNTT"
     ],
     "correct": "A",
-    "favorite": false,
-    "id": "86"
-  },
-  {
-    "question": "Mô hình mạng liên kết vòng có đặc điểm gì?",
-    "answers": [
-      "Sự truyền thông trong mạng liên kết vòng, nhất là giữa những BXL ở xa nhau không bị trễ",
-      "Tất cả đều sai",
-      "Sự truyền thông trong mạng liên kết vòng, nhất là giữa những BXL ở xa nhau thì vẫn bị trễ",
-      "Tất cả đều đúng"
-    ],
-    "correct": "C",
     "favorite": false,
-    "id": "87"
+    "id": "B_20"
   },
   {
-    "question": "Hình sau thuộc mô hình mạng liên kết gì? (Giả định hình là Mạng liên kết lưới 2 chiều)",
+    "question": "Năm 2008, Hãng IBM đã có khách hàng đầu tiên tại việt nam là Công ty nào?",
     "answers": [
-      "Mạng liên kết lưới 2 chiều",
-      "Mạng liên kết vòng",
-      "Mạng liên kết tuyến tính",
-      "Mạng liên kết nhị phân"
+      "VNTT",
+      "VNPT",
+      "FPT",
+      "Viettel IDC"
     ],
     "correct": "A",
     "favorite": false,
-    "id": "88",
-    "image": "/admin/images/gtss131-134.png"
+    "id": "B_21",
+    "wrongCount": 0
   },
   {
-    "question": "Hình 1 thuộc mô hình mạng liên kết gì? (Giả định hình 1 là Mạng liên kết lưới quay vòng)",
+    "question": "Cách gọi khác về điện toán đám mây?",
     "answers": [
-      "Mạng liên kết lưới quay vòng",
-      "Mạng liên kết tuyến tính",
-      "Mạng liên kết nhị phân",
-      "Mạng liên kết lưới không quay vòng"
+      "Không có đáp án đúng",
+      "Điện toán tự trị",
+      "Điện toán máy chủ thật",
+      "Điện toán lưới"
     ],
-    "correct": "D",
-    "favorite": false,
-    "id": "89",
-    "image": "/admin/images/gtss131-134.png"
-  },
-  {
-    "question": "Hình 2 thuộc mô hình mạng liên kết gì? (Giả định hình 2 là Mạng liên kết lưới không quay vòng)",
-    "answers": [
-      "Mạng liên kết lưới quay vòng",
-      "Mạng liên kết tuyến tính",
-      "Mạng liên kết nhị phân",
-      "Mạng liên kết lưới không quay vòng"
-    ],
     "correct": "A",
-    "favorite": false,
-    "id": "90",
-    "image": "/admin/images/gtss131-134.png"
-  },
-  {
-    "question": "Hình 3 thuộc mô hình mạng liên kết gì? (Giả định hình 3 là Mạng liên kết lưới quay vòng)",
-    "answers": [
-      "Mạng liên kết tuyến tính",
-      "Mạng liên kết lưới không quay vòng",
-      "Mạng liên kết nhị phân",
-      "Mạng liên kết lưới quay vòng"
-    ],
-    "correct": "D",
     "favorite": false,
-    "id": "91",
-    "image": "/admin/images/gtss131-134.png"
+    "id": "B_22",
+    "wrongCount": 0
   },
   {
-    "question": "Hình sau thuộc mô hình mạng liên kết gì? (Giả định hình là Mạng liên kết xáo trộn hoàn hảo quay vòng)",
+    "question": "Điện toán đám mây có thể được xem như là giai đoạn tự nhiên tiếp theo từ mô hình điện toán nào?",
     "answers": [
-      "Mạng liên kết xáo trộn hoàn hảo quay vòng",
-      "Mạng liên kết hình hộp",
-      "Mạng liên kết tuyến tính",
-      "Mạng liên kết nhị phân"
+      "Không có đáp án đúng",
+      "Mô hình điện toán tự trị",
+      "Mô hình điện toán theo nhu cầu",
+      "Mô hình điện toán máy chủ thật"
     ],
     "correct": "A",
-    "favorite": false,
-    "id": "92",
-    "image": "/admin/images/gtss135.png"
-  },
-  {
-    "question": "Hình sau thuộc mô hình mạng liên kết gì? (Giả định hình là Mạng liên kết hình hộp)",
-    "answers": [
-      "Mạng liên kết xáo trộn hoàn hảo quay vòng",
-      "Mạng liên kết hình hộp",
-      "Mạng liên kết tuyến tính",
-      "Mạng liên kết nhị phân"
-    ],
-    "correct": "D",
     "favorite": false,
-    "id": "93",
-    "image": "/admin/images/gtss136-137.png"
+    "id": "B_23"
   },
   {
-    "question": "Đặc điểm của mạng liên kết nhị phân là gì?",
+    "question": "SOA là kiểu kiến trúc, viết tắt của từ gì?",
     "answers": [
-      "Mỗi BXL là một node của cây, có N = 2k-1 node",
-      "Hai BXL là một node của cây, có N = 2k-1 node",
-      "Ba BXL là một node của cây, có N = 2k-1 node",
-      "Bốn BXL là một node của cây, có N = 2k-1 node"
+      "Không có đáp án đúng",
+      "service oriented a line",
+      "service of architecture",
+      "single oriented architecture"
     ],
     "correct": "A",
-    "favorite": false,
-    "id": "94",
-    "image": "/admin/images/gtss136-137.png"
-  },
-  {
-    "question": "Hình sau thuộc mô hình mạng liên kết gì? (Giả định hình là Mạng liên kết hình hộp)",
-    "answers": [
-      "Mạng liên kết xáo trộn hoàn hảo quay vòng",
-      "Mạng liên kết hình hộp",
-      "Mạng liên kết tuyến tính",
-      "Mạng liên kết nhị phân"
-    ],
-    "correct": "B",
     "favorite": false,
-    "id": "95",
-    "image": "/admin/images/gtss138.png"
+    "id": "B_24",
+    "wrongCount": 0
   }
 ]
