@@ -1,3 +1,8 @@
+<script>
+  // Tên file mặc định bạn muốn đặt
+  const DEFAULT_FILENAME = "dtdm.json";
+</script>
+
 <!DOCTYPE html>
 <html lang="vi">
   <head>
@@ -84,21 +89,82 @@
     >
       🔙 Quay lại
     </button>
+
     <p id="error-message"></p>
     <textarea id="question-content" rows="20" readonly></textarea>
 
     <script>
+      // Hàm tải và hiển thị nội dung câu hỏi
+      function loadAndDisplayQuestions(filename) {
+        return fetch("/questions")
+          .then((res) => {
+            if (!res.ok) throw new Error("Lỗi tải câu hỏi");
+            return res.json();
+          })
+          .then((data) => {
+            document.getElementById("question-content").value = JSON.stringify(
+              data,
+              null,
+              2
+            );
+            document.getElementById(
+              "error-message"
+            ).innerText = `✅ Đã chọn file: ${filename}`;
+
+            // ✅ Gửi tín hiệu reload đến các trang khác (nếu cần)
+            const reloadChannel = new BroadcastChannel("reload-channel");
+            reloadChannel.postMessage("reload");
+          });
+      }
+
       // Lấy danh sách file .json
       fetch("/list-question-files")
         .then((res) => res.json())
         .then((files) => {
           const select = document.getElementById("file-selector");
+          let isDefaultFileAvailable = false;
+
+          // 1. Thêm tất cả các file vào dropdown
           files.forEach((file) => {
             const option = document.createElement("option");
             option.value = file;
             option.textContent = file;
             select.appendChild(option);
+            if (file === DEFAULT_FILENAME) {
+              isDefaultFileAvailable = true;
+            }
           });
+
+          // 2. Đặt file mặc định và tải nội dung
+          if (isDefaultFileAvailable) {
+            select.value = DEFAULT_FILENAME;
+
+            // Gửi yêu cầu đặt file mặc định lên server
+            return fetch("/set-question-file", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ filename: DEFAULT_FILENAME }),
+            }).then(() => loadAndDisplayQuestions(DEFAULT_FILENAME));
+          } else if (files.length > 0) {
+            // Nếu file mặc định không tồn tại, nhưng có file khác, thì tải file đầu tiên trong danh sách
+            const firstFile = files[0];
+            select.value = firstFile;
+            return fetch("/set-question-file", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ filename: firstFile }),
+            }).then(() => loadAndDisplayQuestions(firstFile));
+          } else {
+            document.getElementById("error-message").innerText =
+              "❌ Không tìm thấy file JSON nào.";
+          }
+
+          return Promise.resolve(); // Trả về Promise để kết thúc chuỗi .then
+        })
+        .catch((err) => {
+          console.error(err);
+          document.getElementById("error-message").innerText =
+            "Lỗi khi tải danh sách file hoặc đặt file mặc định.";
         });
 
       // Khi nhấn Đổi file
@@ -110,20 +176,11 @@
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ filename }),
         })
-          .then((res) => res.json())
-          .then(() => fetch("/questions"))
-          .then((res) => res.json())
-          .then((data) => {
-            document.getElementById("question-content").value = JSON.stringify(
-              data,
-              null,
-              2
-            );
-            document.getElementById("error-message").innerText = "";
-            // ✅ Gửi tín hiệu reload đến các trang khác
-            const reloadChannel = new BroadcastChannel("reload-channel");
-            reloadChannel.postMessage("reload");
+          .then((res) => {
+            if (!res.ok) throw new Error("Lỗi đặt file trên server");
+            return res.json();
           })
+          .then(() => loadAndDisplayQuestions(filename))
           .catch((err) => {
             console.error(err);
             document.getElementById("error-message").innerText =

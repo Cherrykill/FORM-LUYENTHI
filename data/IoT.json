@@ -10,7 +10,7 @@
     "correct": "A",
     "favorite": false,
     "id": "A_1",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Mô hình dịch vụ Service accessing and using của loại PaaS gồm có những gì?",
@@ -23,7 +23,7 @@
     "correct": "A",
     "favorite": false,
     "id": "A_2",
-    "wrongCount": 1
+    "wrongCount": 0
   },
   {
     "question": "Mô hình dịch vụ Service accessing and using của loại SaaS gồm có những gì?",
@@ -120,7 +120,7 @@
     "correct": "A",
     "favorite": false,
     "id": "A_10",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Dịch vụ PaaS là viết tắt của từ gì?",
@@ -301,7 +301,7 @@
     "correct": "A",
     "favorite": false,
     "id": "A_25",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Những loại dịch vụ nào khi thuê có Runtimes?",
@@ -423,7 +423,7 @@
     "correct": "A",
     "favorite": false,
     "id": "A_35",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Mô hình dịch vụ Service category của loại PaaS gồm có những gì?",
@@ -461,7 +461,7 @@
     "correct": "A",
     "favorite": false,
     "id": "B_2",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ Service level management của loại SaaS gồm có những gì?",
@@ -474,7 +474,7 @@
     "correct": "A",
     "favorite": false,
     "id": "B_3",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ Service level management của loại PaaS gồm có những gì?",
@@ -499,7 +499,7 @@
     "correct": "A",
     "favorite": false,
     "id": "B_5",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ Service optimization của loại PaaS gồm có những gì?",
@@ -512,7 +512,7 @@
     "correct": "A",
     "favorite": false,
     "id": "B_6",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ Service optimization của loại SaaS gồm có những gì?",
@@ -551,7 +551,7 @@
     "correct": "A",
     "favorite": false,
     "id": "B_9",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ Service measurement của loại SaaS gồm có những gì?",
@@ -564,7 +564,7 @@
     "correct": "A",
     "favorite": false,
     "id": "B_10",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ Service integration and combination của loại IaaS gồm có những gì?",
@@ -577,7 +577,7 @@
     "correct": "A",
     "favorite": false,
     "id": "B_11",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ Service integration and combination của loại PaaS gồm có những gì?",
@@ -590,7 +590,7 @@
     "correct": "A",
     "favorite": false,
     "id": "B_12",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ Service integration and combination của loại SaaS gồm có những gì?",
@@ -603,7 +603,7 @@
     "correct": "A",
     "favorite": false,
     "id": "B_13",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ security của loại IaaS gồm có những gì?",
@@ -616,7 +616,7 @@
     "correct": "A",
     "favorite": false,
     "id": "B_14",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ security của loại PaaS gồm có những gì?",
@@ -641,7 +641,7 @@
     "correct": "A",
     "favorite": false,
     "id": "B_16",
-    "wrongCount": 2
+    "wrongCount": 0
   },
   {
     "question": "Hãng Viettel IDC nhà cung cấp các dịch vụ điện toán đám mây được thành lập vào năm nào?",
