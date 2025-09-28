@@ -225,6 +225,10 @@ body.dark .question-boxes button.answered.active {
   border-radius: 10px;
 }
 
+.quiz-container .options button{
+  text-align: left;
+}
+
 body.dark .quiz-container {
   background-color: #2a2a2a;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
