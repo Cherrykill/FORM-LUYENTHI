@@ -12,7 +12,7 @@ let countdownInterval;
 let timeLeftInSeconds = 0;
 let originalQuestions = []; // Lưu danh sách câu hỏi gốc
 let isWrongQuestionsMode = false; // Cờ để xác định chế độ làm lại câu sai
-const API_BASE = 'http://localhost:3001/api';
+const API_BASE = 'http://localhost:5000/api';
 
 // Hàm khởi tạo khi tải trang
 window.onload = async () => {

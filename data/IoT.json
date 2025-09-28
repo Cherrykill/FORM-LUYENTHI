@@ -22,7 +22,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "A_2"
+    "id": "A_2",
+    "wrongCount": 1
   },
   {
     "question": "Mô hình dịch vụ Service accessing and using của loại SaaS gồm có những gì?",
