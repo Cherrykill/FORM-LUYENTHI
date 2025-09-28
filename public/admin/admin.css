@@ -382,7 +382,7 @@ body.dark #theme-toggle:hover {
   justify-content: center;
   position: fixed;
   top: 30%;
-  right: 3%;
+  right: 4%;
   width: 47px;
   height: 47px;
   font-size: 30px;
@@ -471,10 +471,11 @@ body.dark .menu-toggle:hover {
   .hamburger {
     display: flex;
     position: fixed;
-    right: 3%;
-    top: 8px;
+    right: 4%;
+    top: 21%;
     z-index: 1000;
     font-size: 23px;
+    border-radius: 50%;
   }
 
   .menu-toggle {
@@ -525,14 +526,15 @@ body.dark .menu-toggle:hover {
   .mobile-search-toggle {
     display: block;
     position: fixed;
-    top: 15%;
-    right: 3%;
+    top: 1%;
+    right: 4%;
     z-index: 1000;
     font-size: 23px;
     background: none;
     border: none;
     border-radius: 50%;
     cursor: pointer;
+    opacity: 0.5;
   }
 
   .mobile-search-box {
