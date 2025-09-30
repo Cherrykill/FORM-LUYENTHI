@@ -1939,7 +1939,6 @@
       "Float"
     ],
     "correct": "A",
-    "note": "Cần thêm 2 tham số là InetAddress host, int port cho constructor gửi gói, hoặc không có thêm tham số nào cho constructor nhận gói đã chỉ định độ dài (như ID 161). Trong trường hợp này, vì không thể xác định đáp án 'correct' là 'A, B, C, D' từ input, tôi giữ nguyên giá trị 'correct': '{}' cho câu 162.",
     "favorite": false
   },
   {
