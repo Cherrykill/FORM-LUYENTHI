@@ -57,10 +57,7 @@ const connectMongoDB = async () => {
     if (!process.env.MONGO_URI) {
       throw new Error('MONGO_URI không được định nghĩa trong .env');
     }
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(process.env.MONGO_URI);
     console.log('✅ Đã kết nối MongoDB Atlas');
   } catch (err) {
     console.error('❌ Lỗi kết nối MongoDB:', err.message);
