@@ -17,13 +17,11 @@
     <link rel="stylesheet" href="admin.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   </head>
-  <body>
-    <!-- Hamburger button - chỉ hiện trên điện thoại -->
-    <button class="hamburger" onclick="toggleMobileMenu()">➕</button>
 
-    <!-- Nút search riêng ngoài navbar -->
+  <body>
+    <button class="hamburger" onclick="toggleMobileMenu()">➕</button>
     <button id="mobile-search-toggle" class="mobile-search-toggle">🔍</button>
-    <!-- Input tìm kiếm ẩn ban đầu -->
+
     <div id="mobile-search-box" class="mobile-search-box">
       <input
         type="text"
@@ -32,26 +30,24 @@
       />
     </div>
 
-    <!-- Thanh điều hướng trên cùng -->
     <div class="navbar">
       <div class="left-buttons">
         <button id="toggle-form-btn">➕ Thêm Câu hỏi</button>
         <button id="favorite-toggle-btn">⭐ Câu hỏi yêu thích</button>
-        <button onclick="exportToPDF(true)">📄 Export (1)</button>
-        <button onclick="exportToPDF(false)">
-          📄 Export (2)
-        </button>
+        <button onclick="exportToPDF(true)">📄 Export (có đáp án)</button>
+        <button onclick="exportToPDF(false)">📄 Export (không đáp án)</button>
         <button>
-          <a href="selectfile.html" style="color: white; text-decoration: none"
-            >Chọn file câu hỏi</a
-          >
+          <a href="selectfile.html" style="color: white; text-decoration: none">
+            Chọn file câu hỏi
+          </a>
         </button>
       </div>
+
       <div class="right-search">
         <input
           type="text"
           class="search-input2"
-          placeholder="Tìm kiếm câu hỏi..." 
+          placeholder="Tìm kiếm câu hỏi..."
         />
         <button id="theme-toggle">Chế độ Tối</button>
         <button id="missing-answer-btn">Câu chưa có đáp án</button>
@@ -70,12 +66,9 @@
       </div>
     </div>
 
-    <!-- Giao diện chính gồm form + danh sách -->
     <div class="main-container">
-      <!-- Form thêm/sửa câu hỏi (slide in/out) -->
       <div class="slide-form" id="slide-form">
         <button id="close-form" class="close-btn">✖</button>
-
         <h3 id="form-title">Thêm / Sửa Câu hỏi</h3>
         <input type="hidden" id="edit-index" />
 
@@ -102,7 +95,6 @@
         <button onclick="saveQuestion()">💾 Lưu</button>
       </div>
 
-      <!-- Danh sách câu hỏi và phân trang -->
       <div class="content" id="content-area">
         <h3>Danh sách Câu hỏi</h3>
         <div id="questions-container"></div>
@@ -110,17 +102,16 @@
       </div>
     </div>
 
-    <!-- Nút cuộn trang lên/xuống -->
     <button id="scroll-up" onclick="scrollToTop()">⬆</button>
     <button id="scroll-down" onclick="scrollToBottom()">⬇</button>
     <button id="back-btn" onclick="goBack()">←</button>
-    <button id="admin-dashboard-btn"><a href="admin-dashboard.htm">🏆</a></button>
+    <button id="admin-dashboard-btn">
+      <a href="admin-dashboard.htm">🏆</a>
+    </button>
 
-    <!-- Phong to thu nho anh -->
     <div class="modal-overlay" id="imgOverlay" onclick="closeImage()"></div>
     <img id="modalImage" class="modal-img" onclick="closeImage()" />
 
-    <!-- Script xử lý logic quản lý câu hỏi -->
     <script src="admin.js"></script>
   </body>
 </html>

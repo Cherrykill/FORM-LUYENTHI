@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("close-form").addEventListener("click", () => {
         document.getElementById("slide-form").style.display = "none";
         // Mở lại navbar khi đóng form (nếu trước đó đã mở)
-        if (document.querySelector(".menu-toggle").classList.contains("active")) {
+        if (document.querySelector(".menu-toggle") && document.querySelector(".menu-toggle").classList.contains("active")) {
             document.querySelector(".navbar").classList.add("active");
         }
     });
@@ -75,25 +75,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.createElement("button");
     menuToggle.textContent = "☰";
     menuToggle.className = "menu-toggle";
-    document.querySelector(".hamburger").parentNode.insertBefore(menuToggle, document.querySelector(".hamburger"));
-    menuToggle.addEventListener("click", () => {
-        const navbar = document.querySelector(".navbar");
-        navbar.classList.toggle("active");
-        // Đóng form khi mở navbar
-        if (navbar.classList.contains("active")) {
-            document.getElementById("slide-form").classList.remove("active");
-        }
-    });
+    // Kiểm tra xem .hamburger có tồn tại trước khi chèn
+    const hamburgerBtn = document.querySelector(".hamburger");
+    if (hamburgerBtn) {
+        hamburgerBtn.parentNode.insertBefore(menuToggle, hamburgerBtn);
+        menuToggle.addEventListener("click", () => {
+            const navbar = document.querySelector(".navbar");
+            navbar.classList.toggle("active");
+            // Đóng form khi mở navbar
+            if (navbar.classList.contains("active")) {
+                document.getElementById("slide-form").classList.remove("active");
+            }
+        });
+    }
+
 
     // Hamburger toggle form
-    document.querySelector(".hamburger").addEventListener("click", () => {
-        const slideForm = document.getElementById("slide-form");
-        slideForm.classList.toggle("active");
-        // Đóng navbar khi mở form
-        if (slideForm.classList.contains("active")) {
-            document.querySelector(".navbar").classList.remove("active");
-        }
-    });
+    if (hamburgerBtn) { // Kiểm tra lần nữa
+        hamburgerBtn.addEventListener("click", () => {
+            const slideForm = document.getElementById("slide-form");
+            slideForm.classList.toggle("active");
+            // Đóng navbar khi mở form
+            if (slideForm.classList.contains("active")) {
+                document.querySelector(".navbar").classList.remove("active");
+            }
+        });
+    }
 
     // Toggle search box
     const toggleBtn = document.getElementById("mobile-search-toggle");
@@ -111,8 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const isClickInsideForm = slideForm.contains(event.target);
         const isClickInsideNavbar = navbar.contains(event.target);
-        const isClickOnHamburger = hamburger.contains(event.target);
-        const isClickOnMenuToggle = menuToggle.contains(event.target);
+        const isClickOnHamburger = hamburger ? hamburger.contains(event.target) : false;
+        const isClickOnMenuToggle = menuToggle ? menuToggle.contains(event.target) : false;
+
 
         if (!isClickInsideForm && !isClickOnHamburger && slideForm.classList.contains("active")) {
             slideForm.classList.remove("active");
@@ -133,23 +141,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ====== 4. DỮ LIỆU: TẢI & LƯU FILE ======
 async function loadQuestions() {
-    const res = await fetch('/questions');
-    questions = await res.json();
+    try {
+        const res = await fetch('/questions');
+        if (!res.ok) {
+            if (res.status === 404) {
+                console.warn("Không tìm thấy file questions.json. Khởi tạo danh sách câu hỏi rỗng.");
+                questions = [];
+            } else {
+                throw new Error(`Lỗi tải câu hỏi: ${res.statusText}`);
+            }
+        } else {
+            questions = await res.json();
+        }
 
-    // Đảm bảo mỗi câu hỏi đều có thuộc tính favorite
+    } catch (error) {
+        console.error("Lỗi khi tải câu hỏi:", error);
+        questions = []; // Đảm bảo questions là một mảng rỗng nếu có lỗi
+    }
+
+
+    // Đảm bảo mỗi câu hỏi đều có thuộc tính favorite và chuẩn hóa xuống dòng
     questions.forEach(q => {
         if (typeof q.favorite === "undefined") q.favorite = false;
+        // Chuẩn hóa: Đảm bảo tất cả câu hỏi trong bộ nhớ dùng \n thay vì <br>
+        // Điều này xử lý các câu hỏi cũ đã được lưu với <br>
+        q.question = q.question.replace(/<br>/g, '\n');
     });
 
     renderQuestions();
 }
 
 async function saveToFile() {
-    await fetch('/save-questions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(questions),
-    });
+    try {
+        const res = await fetch('/save-questions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(questions),
+        });
+        if (!res.ok) {
+            throw new Error(`Lỗi lưu câu hỏi: ${res.statusText}`);
+        }
+    } catch (error) {
+        console.error("Lỗi khi lưu câu hỏi:", error);
+        alert("Lỗi khi lưu câu hỏi. Vui lòng kiểm tra server.");
+    }
 }
 
 // ====== 5. HIỂN THỊ GIAO DIỆN (Render) ======
@@ -160,14 +195,26 @@ function renderQuestions() {
     let list = showFavoritesOnly ? questions.filter(q => q.favorite) : questions;
     const totalPages = Math.ceil(list.length / pageSize);
     if (currentPage > totalPages) currentPage = totalPages || 1;
+    if (currentPage < 1 && totalPages > 0) currentPage = 1; // Khắc phục trường hợp currentPage = 0 khi không có câu hỏi
 
     const start = (currentPage - 1) * pageSize;
     const pageItems = list.slice(start, start + pageSize);
+
+    if (pageItems.length === 0 && list.length > 0 && currentPage > 1) {
+        // Nếu không có item nào trên trang hiện tại nhưng vẫn có list (do xoá item cuối của trang)
+        currentPage--;
+        renderQuestions(); // Render lại trang trước đó
+        return;
+    }
+
 
     pageItems.forEach((q, index) => {
         const realIndex = questions.indexOf(q);
         const div = document.createElement("div");
         div.className = "question";
+
+        // CHỈ CHUYỂN \n SANG <br> KHI HIỂN THỊ RA HTML
+        const formattedQuestion = q.question.replace(/\n/g, '<br>');
 
         // Ảnh + nút xoá ảnh (nếu có ảnh)
         const imageHtml = q.image
@@ -179,11 +226,12 @@ function renderQuestions() {
             `
             : "";
 
+        // SỬ DỤNG THẺ <strong> BÌNH THƯỜNG VỚI NỘI DUNG ĐÃ FORMAT
         div.innerHTML = `
-            <strong>${start + index + 1}. ${q.question}</strong><br>
+            <strong>${start + index + 1}. ${formattedQuestion}</strong><br>
             ${imageHtml}
             ${q.answers.map((a, i) => `<div>${String.fromCharCode(65 + i)}: ${a}</div>`).join('')}
-            <div>Đáp án đúng: ${q.correct}</div>
+            <div>Đáp án đúng: ${q.correct || ''}</div>
             <button onclick="editQuestion(${realIndex})">✏ Sửa</button>
             <button onclick="deleteQuestion(${realIndex})">🗑 Xóa</button>
             <button class="fav-btn" onclick="toggleFavorite(${realIndex})">${q.favorite ? "⭐" : "☆"}</button>
@@ -202,18 +250,42 @@ function renderSearchResults(list) {
 
     const totalPages = Math.ceil(list.length / pageSize);
     if (currentPage > totalPages) currentPage = totalPages || 1;
+    if (currentPage < 1 && totalPages > 0) currentPage = 1; // Khắc phục trường hợp currentPage = 0 khi không có câu hỏi
 
     const start = (currentPage - 1) * pageSize;
     const pageItems = list.slice(start, start + pageSize);
+
+    if (pageItems.length === 0 && list.length > 0 && currentPage > 1) {
+        currentPage--;
+        renderSearchResults(list); // Render lại trang trước đó
+        return;
+    }
+
 
     pageItems.forEach((q, index) => {
         const realIndex = questions.indexOf(q);
         const div = document.createElement("div");
         div.className = "question";
+
+        // CHỈ CHUYỂN \n SANG <br> KHI HIỂN THỊ RA HTML
+        const formattedQuestion = q.question.replace(/\n/g, '<br>');
+
+        // Ảnh + nút xoá ảnh (nếu có ảnh) - Cần thêm cả vào search results nếu muốn hiển thị
+        const imageHtml = q.image
+            ? `
+            <div class="image-container">
+                <img src="${q.image}" class="thumbnail" onclick="enlargeImage('${q.image}')"/>
+                <button class="remove-image-btn" onclick="removeImage(${realIndex})">🗑 Xóa ảnh</button>
+            </div>
+            `
+            : "";
+
+        // SỬ DỤNG THẺ <strong> BÌNH THƯỜNG VỚI NỘI DUNG ĐÃ FORMAT
         div.innerHTML = `
-            <strong>${start + index + 1}. ${q.question}</strong><br>
+            <strong>${start + index + 1}. ${formattedQuestion}</strong><br>
+            ${imageHtml}
             ${q.answers.map((a, i) => `<div>${String.fromCharCode(65 + i)}: ${a}</div>`).join('')}
-            <div>Đáp án đúng: ${q.correct}</div>
+            <div>Đáp án đúng: ${q.correct || ''}</div>
             <button onclick="editQuestion(${realIndex})">✏ Sửa</button>
             <button onclick="deleteQuestion(${realIndex})">🗑 Xóa</button>
             <button class="fav-btn" onclick="toggleFavorite(${realIndex})">${q.favorite ? "⭐" : "☆"}</button>
@@ -246,17 +318,42 @@ function renderPagination(totalPages) {
     };
 
     if (totalPages <= 1) return;
-    pagination.appendChild(createButton("1", 1));
 
-    const start = Math.max(2, currentPage - maxVisible);
-    const end = Math.min(totalPages - 1, currentPage + maxVisible);
+    // Nút Trang đầu
+    pagination.appendChild(createButton("«", 1, currentPage === 1));
 
-    if (start > 2) pagination.appendChild(createButton("...", null, true));
-    for (let i = start; i <= end; i++) {
+    // Nút Trang trước
+    pagination.appendChild(createButton("<", currentPage - 1, currentPage === 1));
+
+
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+    let endPage = Math.min(totalPages, currentPage + Math.floor(maxVisible / 2));
+
+    if (endPage - startPage + 1 < maxVisible) {
+        if (startPage === 1) {
+            endPage = Math.min(totalPages, startPage + maxVisible - 1);
+        } else if (endPage === totalPages) {
+            startPage = Math.max(1, endPage - maxVisible + 1);
+        }
+    }
+
+    if (startPage > 1) {
+        pagination.appendChild(createButton("...", null, true));
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
         pagination.appendChild(createButton(i, i));
     }
-    if (end < totalPages - 1) pagination.appendChild(createButton("...", null, true));
-    if (totalPages > 1) pagination.appendChild(createButton(totalPages, totalPages));
+
+    if (endPage < totalPages) {
+        pagination.appendChild(createButton("...", null, true));
+    }
+
+    // Nút Trang sau
+    pagination.appendChild(createButton(">", currentPage + 1, currentPage === totalPages));
+
+    // Nút Trang cuối
+    pagination.appendChild(createButton("»", totalPages, currentPage === totalPages));
 }
 
 function renderCustomPagination(totalPages, currentList) {
@@ -280,16 +377,40 @@ function renderCustomPagination(totalPages, currentList) {
         return btn;
     };
 
-    pagination.appendChild(createButton("1", 1));
-    const start = Math.max(2, currentPage - maxVisible);
-    const end = Math.min(totalPages - 1, currentPage + maxVisible);
+    // Nút Trang đầu
+    pagination.appendChild(createButton("«", 1, currentPage === 1));
 
-    if (start > 2) pagination.appendChild(createButton("...", null, true));
-    for (let i = start; i <= end; i++) {
+    // Nút Trang trước
+    pagination.appendChild(createButton("<", currentPage - 1, currentPage === 1));
+
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+    let endPage = Math.min(totalPages, currentPage + Math.floor(maxVisible / 2));
+
+    if (endPage - startPage + 1 < maxVisible) {
+        if (startPage === 1) {
+            endPage = Math.min(totalPages, startPage + maxVisible - 1);
+        } else if (endPage === totalPages) {
+            startPage = Math.max(1, endPage - maxVisible + 1);
+        }
+    }
+
+    if (startPage > 1) {
+        pagination.appendChild(createButton("...", null, true));
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
         pagination.appendChild(createButton(i, i));
     }
-    if (end < totalPages - 1) pagination.appendChild(createButton("...", null, true));
-    if (totalPages > 1) pagination.appendChild(createButton(totalPages, totalPages));
+
+    if (endPage < totalPages) {
+        pagination.appendChild(createButton("...", null, true));
+    }
+
+    // Nút Trang sau
+    pagination.appendChild(createButton(">", currentPage + 1, currentPage === totalPages));
+
+    // Nút Trang cuối
+    pagination.appendChild(createButton("»", totalPages, currentPage === totalPages));
 }
 
 // ====== 6. XỬ LÝ CÂU HỎI ======
@@ -305,6 +426,7 @@ function editQuestion(index) {
     form.style.display = "flex";
 
     document.getElementById("edit-index").value = index;
+    // q.question đã chứa \n sau khi loadQuestions() chuẩn hóa
     document.getElementById("question-text").value = q.question;
     document.getElementById("answer-A").value = q.answers[0];
     document.getElementById("answer-B").value = q.answers[1];
@@ -318,8 +440,13 @@ async function saveQuestion() {
     const index = document.getElementById("edit-index").value;
     const imageInput = document.getElementById("imageInput");
 
+    // Lấy nội dung từ textarea, nó đã chứa \n nếu người dùng nhập
+    const rawQuestion = document.getElementById("question-text").value.trim();
+    // KHÔNG CẦN CHUYỂN \n SANG <br> KHI LƯU VÀO JSON NỮA
+    // Dữ liệu trong JSON sẽ dùng \n, chỉ chuyển sang <br> khi hiển thị ra HTML
+
     const newQuestion = {
-        question: document.getElementById("question-text").value.trim(),
+        question: rawQuestion, // LƯU TRỰC TIẾP rawQuestion (có \n)
         answers: [
             document.getElementById("answer-A").value.trim(),
             document.getElementById("answer-B").value.trim(),
@@ -333,7 +460,10 @@ async function saveQuestion() {
     // 👉 Nếu có chọn ảnh, thêm key image
     if (imageInput.files.length > 0) {
         const fileName = imageInput.files[0].name;
-        newQuestion.image = `/admin/images/${fileName}`;
+        // Bạn cần một endpoint server để tải lên ảnh và trả về đường dẫn
+        // Ví dụ đơn giản: newQuestion.image = `/admin/images/${fileName}`;
+        // Nếu không có logic tải lên, nó sẽ chỉ lưu tên file
+        newQuestion.image = `/admin/images/${fileName}`; // Giả định ảnh được lưu ở đây
     }
 
     if (index) {
@@ -341,6 +471,7 @@ async function saveQuestion() {
         if (!newQuestion.image && questions[index].image) {
             newQuestion.image = questions[index].image;
         }
+        // Đảm bảo các thuộc tính khác (wrongCount) được giữ lại khi chỉnh sửa
         questions[index] = { ...questions[index], ...newQuestion };
     } else {
         const duplicate = questions.find(q => q.question === newQuestion.question);
@@ -351,10 +482,10 @@ async function saveQuestion() {
         questions.push(newQuestion);
     }
 
-    await saveToFile();         // ghi vào file baomat.json
-    resetForm();                // reset form
+    await saveToFile();         // ghi vào file baomat.json
+    resetForm();                // reset form
     document.getElementById("slide-form").style.display = "none";
-    renderQuestions();          // cập nhật lại danh sách
+    renderQuestions();          // cập nhật lại danh sách
 }
 
 async function deleteQuestion(index) {
@@ -376,6 +507,7 @@ function handleSearch() {
     const list = showFavoritesOnly ? questions.filter(q => q.favorite) : questions;
 
     const filtered = list.filter(q => {
+        // q.question đã chứa \n
         const text = removeVietnameseTones(q.question.toLowerCase());
         const answers = q.answers.map(a => removeVietnameseTones(a.toLowerCase())).join(" ");
         const correct = removeVietnameseTones((q.correct || "").toLowerCase());
@@ -396,6 +528,7 @@ function handleSearch2() {
     const list = showFavoritesOnly ? questions.filter(q => q.favorite) : questions;
 
     const filtered = list.filter(q => {
+        // q.question đã chứa \n
         const text = removeVietnameseTones(q.question.toLowerCase());
         const answers = q.answers.map(a => removeVietnameseTones(a.toLowerCase())).join(" ");
         const correct = removeVietnameseTones((q.correct || "").toLowerCase());
@@ -437,6 +570,8 @@ function resetForm() {
     document.getElementById("question-text").value = "";
     ["A", "B", "C", "D"].forEach(l => document.getElementById("answer-" + l).value = "");
     document.getElementById("correct-answer").value = "A";
+    document.getElementById("imageInput").value = ""; // Xóa file đã chọn
+    document.getElementById("form-title").innerText = "Thêm / Sửa Câu hỏi";
 }
 
 // ====== 9. XUẤT PDF ======
@@ -452,7 +587,15 @@ async function exportToPDF(includeAnswers = false) {
     questions.forEach((q, index) => {
         const div = document.createElement('div');
         div.style.marginBottom = '15px';
-        let html = `<b>${index + 1}. ${q.question}</b><br>`;
+
+        // q.question đã chứa \n, white-space: pre-wrap sẽ xử lý đúng
+        let html = `<div style="white-space: pre-wrap;"><b>${index + 1}. ${q.question}</b></div>`; // Dùng div với white-space: pre-wrap
+
+        // Thêm ảnh nếu có
+        if (q.image) {
+            html += `<img src="${q.image}" style="max-width: 100%; height: auto; margin-top: 5px; margin-bottom: 10px;"/><br>`;
+        }
+
         q.answers.forEach((ans, i) => {
             const letter = String.fromCharCode(65 + i);
             html += `${letter}. ${ans}<br>`;
@@ -464,6 +607,7 @@ async function exportToPDF(includeAnswers = false) {
         container.appendChild(div);
     });
 
+    // Thêm vào body để html2pdf có thể xử lý, sau đó loại bỏ
     document.body.appendChild(container);
 
     const opt = {
@@ -495,6 +639,6 @@ function closeImage() {
 // ====== 11. XÓA ẢNH ======
 function removeImage(index) {
     questions[index].image = ""; // Reset giá trị ảnh
-    renderQuestions();           // Cập nhật lại UI
-    saveToFile();                // Lưu lại file JSON
+    renderQuestions();           // Cập nhật lại UI
+    saveToFile();                // Lưu lại file JSON
 }

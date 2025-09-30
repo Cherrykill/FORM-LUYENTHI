@@ -15,14 +15,13 @@ let isWrongQuestionsMode = false; // Cờ để xác định chế độ làm l�
 const API_BASE = 'http://localhost:5000/api';
 
 // 🔊 KHAI BÁO CÁC ĐỐI TƯỢNG ÂM THANH MỚI
-// Thay đổi đường dẫn này nếu file âm thanh của bạn ở vị trí khác.
 const correctSound = new Audio('./sounds/correct.mp3'); 
 const incorrectSound = new Audio('./sounds/incorrect.mp3'); 
 
 // Hàm khởi tạo khi tải trang
 window.onload = async () => {
-    await loadQuestions();          // Tải câu hỏi
-    setupAutoNext();                // Cài đặt tự động chuyển câu
+    await loadQuestions(); // Tải câu hỏi
+    setupAutoNext(); // Cài đặt tự động chuyển câu
 
     // Kích hoạt nút chọn chế độ sau khi tải xong
     document.querySelectorAll('button[id^="btn-mode"]').forEach(btn => {
@@ -44,7 +43,7 @@ window.onload = async () => {
         logoutBtn?.classList.remove('hidden');
         loginBtn?.classList.add('hidden');
 
-        renderApp(); // Giả định hàm này hiển thị giao diện quiz
+        renderApp(); // Hiển thị giao diện quiz
     } else {
         showLoginForm(); // Chưa login → hiển thị form đăng nhập
     }
@@ -59,12 +58,33 @@ async function loadQuestions() {
     try {
         const res = await fetch('/questions');
         questions = await res.json();
-        originalQuestions = JSON.parse(JSON.stringify(questions)); // Sao lưu câu hỏi gốc
+        // Validate and filter questions
+        const invalidQuestions = [];
+        questions = questions.filter((q, index) => {
+            if (!q.correct || typeof q.correct !== 'string' || getCorrectIndex(q.correct) >= q.answers.length) {
+                invalidQuestions.push({ index, question: q.question, reason: getInvalidReason(q) });
+                return false;
+            }
+            return true;
+        });
+        if (invalidQuestions.length > 0) {
+            console.error("Invalid questions found:", invalidQuestions);
+            alert(`⚠️ Có ${invalidQuestions.length} câu hỏi không hợp lệ:\n${invalidQuestions.map(q => `Câu ${q.index + 1}: ${q.question}\nLý do: ${q.reason}`).join('\n\n')}\nChỉ hiển thị các câu hỏi hợp lệ.`);
+        }
+        originalQuestions = JSON.parse(JSON.stringify(questions)); // Sao lưu câu hỏi hợp lệ
         selectedAnswers = new Array(questions.length).fill(null);
     } catch (err) {
         alert('Không thể tải câu hỏi!');
         console.error(err);
     }
+}
+
+// Lấy lý do câu hỏi không hợp lệ
+function getInvalidReason(q) {
+    if (!q.correct) return "Đáp án đúng bị thiếu hoặc rỗng";
+    if (typeof q.correct !== 'string') return `Đáp án đúng không phải chuỗi (loại: ${typeof q.correct})`;
+    if (getCorrectIndex(q.correct) >= q.answers.length) return `Đáp án đúng '${q.correct}' vượt quá số lượng đáp án (${q.answers.length})`;
+    return "Lý do không xác định";
 }
 
 // Lấy chỉ số đúng từ ký tự (A=0, B=1, ...)
@@ -75,8 +95,15 @@ function getCorrectIndex(letter) {
 
 // Kiểm tra xem có đáp án đúng nào không hợp lệ
 function hasInvalidCorrectAnswers() {
-    for (const q of questions) {
+    for (let i = 0; i < questions.length; i++) {
+        const q = questions[i];
         if (!q.correct || typeof q.correct !== 'string' || getCorrectIndex(q.correct) >= q.answers.length) {
+            console.error(`Câu hỏi không hợp lệ tại vị trí ${i + 1}:`, {
+                question: q.question,
+                correct: q.correct,
+                answers: q.answers,
+                reason: getInvalidReason(q)
+            });
             return true;
         }
     }
@@ -89,19 +116,11 @@ function hasInvalidCorrectAnswers() {
 
 // Hàm hiển thị giao diện chính (quiz) và ẩn form đăng nhập
 function renderApp() {
-    // Ẩn popup đăng nhập
     document.getElementById('login-popup').classList.add('hidden');
-
-    // Đảm bảo hiển thị nội dung chính của Quiz (nếu bạn có một container cho nội dung chính)
-    // Ví dụ: const quizContainer = document.getElementById('quiz-container');
-    // quizContainer?.classList.remove('hidden'); 
-
-    // Bắt đầu hiển thị quiz
     renderQuestionButtons();
     renderQuestion();
     updateQuizProgress();
 }
-
 
 // Hiển thị câu hỏi hiện tại
 function renderQuestion() {
@@ -109,51 +128,42 @@ function renderQuestion() {
     if (!question) return;
 
     const questionTextEl = document.getElementById('question-text');
-
-    // Xóa nội dung cũ
     questionTextEl.innerHTML = '';
 
-    // Nếu có ảnh thì hiển thị ảnh
     if (question.image) {
         const img = document.createElement('img');
         img.src = question.image;
         img.alt = 'Question Image';
         img.classList.add('question-image');
-        img.onclick = () => img.classList.toggle('zoomed'); // Nhấn vào để phóng to/thu nhỏ
+        img.onclick = () => img.classList.toggle('zoomed');
         questionTextEl.appendChild(img);
     }
 
-    // Thêm nội dung câu hỏi
     const text = document.createElement('div');
-    text.innerText = `${currentQuestionIndex + 1}. ${question.question}`;
+    const formattedQuestion = question.question.replace(/\n/g, '<br>');
+    text.innerHTML = `<strong>${currentQuestionIndex + 1}. ${formattedQuestion}</strong>`;
     questionTextEl.appendChild(text);
 
-    // Xử lý các lựa chọn
     const optionsEl = document.getElementById('options');
     optionsEl.innerHTML = '';
 
     question.answers.forEach((answer, i) => {
         const btn = document.createElement('button');
         btn.innerText = answer;
-        btn.onclick = () => selectAnswer(i); // Vẫn cho phép chọn ngay cả khi showAnswerMode = true (nếu muốn thay đổi đáp án khi đang xem)
+        btn.onclick = () => selectAnswer(i);
 
         if (selectedAnswers[currentQuestionIndex] === i) {
             btn.classList.add('selected');
         }
 
-        // TÔ MÀU ĐÁP ÁN TRONG KHUNG CHÍNH (nếu đã trả lời VÀ đang ở chế độ xem đáp án)
         if (showAnswerMode && selectedAnswers[currentQuestionIndex] !== null) {
             const correctIndex = getCorrectIndex(question.correct);
-            
-            // Nếu là chế độ xem kết quả sau khi nộp (showAnswerMode = true)
             if (i === correctIndex) {
-                // Đáp án Đúng
-                btn.style.border = '5px solid #28a745'; // Tăng độ dày viền xanh
-                btn.style.boxShadow = '0 0 5px rgba(40, 167, 69, 0.5)'; // Thêm bóng nhẹ
+                btn.style.border = '5px solid #28a745';
+                btn.style.boxShadow = '0 0 5px rgba(40, 167, 69, 0.5)';
             } else if (i === selectedAnswers[currentQuestionIndex] && i !== correctIndex) {
-                // Đáp án Sai (người dùng chọn)
-                btn.style.border = '5px solid #dc3545'; // Tăng độ dày viền đỏ
-                btn.style.boxShadow = '0 0 5px rgba(220, 53, 69, 0.5)'; // Thêm bóng nhẹ
+                btn.style.border = '5px solid #dc3545';
+                btn.style.boxShadow = '0 0 5px rgba(220, 53, 69, 0.5)';
             }
         }
 
@@ -162,7 +172,6 @@ function renderQuestion() {
 
     updateQuestionButtons();
 }
-
 
 // Tạo danh sách nút câu hỏi
 function renderQuestionButtons() {
@@ -189,14 +198,13 @@ function updateQuestionButtons() {
         }
         if (selectedAnswers[i] !== null) {
             btn.classList.add('answered');
-            // LOGIC QUAN TRỌNG: TÔ MÀU ĐÚNG/SAI CHO NÚT CÂU HỎI KHI CHẾ ĐỘ XEM ĐÁP ÁN BẬT
             if (showAnswerMode) {
                 const question = questions[i];
                 const correctIndex = getCorrectIndex(question.correct);
                 if (selectedAnswers[i] === correctIndex) {
-                    btn.classList.add('correct'); // Đáp án đúng (XANH LÁ)
+                    btn.classList.add('correct');
                 } else {
-                    btn.classList.add('incorrect'); // Đáp án sai (ĐỎ)
+                    btn.classList.add('incorrect');
                 }
             }
         }
@@ -207,42 +215,31 @@ function updateQuestionButtons() {
 // 4. ✍️ XỬ LÝ CHỌN ĐÁP ÁN & ĐIỀU HƯỚNG
 // =========================================================================
 
-// Chọn đáp án
 function selectAnswer(index) {
-    // 1. Lưu đáp án
     selectedAnswers[currentQuestionIndex] = index;
     
-    // 2. LẤY KẾT QUẢ VÀ PHÁT ÂM THANH (ĐÃ THÊM)
     const question = questions[currentQuestionIndex];
     if (question && question.correct) {
         const correctIndex = getCorrectIndex(question.correct);
-        
-        // Dừng và reset âm thanh trước khi phát lại
         correctSound.pause();
         correctSound.currentTime = 0;
         incorrectSound.pause();
         incorrectSound.currentTime = 0;
 
         if (index === correctIndex) {
-            correctSound.play(); // ✅ Đáp án Đúng
+            correctSound.play();
         } else {
-            incorrectSound.play(); // ❌ Đáp án Sai
+            incorrectSound.play();
         }
     }
     
-    // 3. Cập nhật giao diện
-    renderQuestion(); // Cập nhật lại giao diện (gồm cả updateQuestionButtons)
-    
-    // 4. Tự động chuyển câu (nếu có)
+    renderQuestion();
     if (autoNextDelay > 0) {
         setTimeout(() => nextQuestion(), autoNextDelay);
     }
-    
-    // 5. Cập nhật tiến trình
     updateQuizProgress();
 }
 
-// Chuyển đến câu hỏi trước
 function prevQuestion() {
     if (currentQuestionIndex > 0) {
         currentQuestionIndex--;
@@ -250,7 +247,6 @@ function prevQuestion() {
     }
 }
 
-// Chuyển đến câu hỏi tiếp theo
 function nextQuestion() {
     if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
@@ -262,17 +258,15 @@ function nextQuestion() {
 // 5. 🎯 BẮT ĐẦU QUIZ VỚI TÙY CHỌN CHẾ ĐỘ
 // =========================================================================
 
-// Xử lý bắt đầu quiz
 function handleStartQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
-    if (hasInvalidCorrectAnswers()) {
-        alert("⚠️ Có câu hỏi chưa được định nghĩa đáp án. Vui lòng sửa trước khi bắt đầu.");
+    if (questions.length === 0) {
+        alert("Không có câu hỏi hợp lệ nào để bắt đầu quiz!");
         return;
     }
-    isWrongQuestionsMode = false; // Tắt chế độ câu sai
+    isWrongQuestionsMode = false;
     startQuiz(shuffleQuestions, shuffleAnswers, showAnswers);
 }
 
-// Khởi tạo quiz
 function startQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
     if (!questions || questions.length === 0) {
         alert("Câu hỏi chưa được tải xong.");
@@ -335,7 +329,6 @@ function startQuiz(shuffleQuestions, shuffleAnswers, showAnswers) {
 // 5.1 🎯 CHẾ ĐỘ LÀM LẠI CÂU SAI
 // =========================================================================
 
-// Bắt đầu quiz với các câu hỏi sai
 function startWrongQuestionsQuiz() {
     const wrongQuestions = originalQuestions.filter(q => q.wrongCount && q.wrongCount > 0);
     if (wrongQuestions.length === 0) {
@@ -377,7 +370,6 @@ function startWrongQuestionsQuiz() {
 // 6. ⏳ ĐẾM NGƯỢC THỜI GIAN LÀM BÀI
 // =========================================================================
 
-// Bắt đầu đếm ngược
 function startCountdown() {
     const countdownDisplay = document.getElementById("countdown");
     clearInterval(countdownInterval);
@@ -402,9 +394,7 @@ function startCountdown() {
 // 7. 📊 NỘP BÀI & XỬ LÝ KẾT QUẢ
 // =========================================================================
 
-// Xử lý nộp bài
 function handleSubmit() {
-    // Dừng đếm ngược khi nộp bài
     clearInterval(countdownInterval);
     timeLeftInSeconds = 0;
     
@@ -416,23 +406,19 @@ function handleSubmit() {
     }
 }
 
-// Xác nhận nộp bài
 function confirmSubmit() {
     document.getElementById('confirm-submit-popup').classList.add('hidden');
     submitQuiz();
 }
 
-// Đóng popup xác nhận
 function closeConfirmPopup() {
     document.getElementById('confirm-submit-popup').classList.add('hidden');
 }
 
-// Xử lý nộp bài và tính điểm
 function submitQuiz() {
     let correct = 0;
     let unanswered = 0;
 
-    // Tạo bản đồ ánh xạ câu hỏi hiện tại sang câu hỏi gốc
     const questionMap = new Map();
     questions.forEach((q, i) => {
         const originalIndex = originalQuestions.findIndex(oq => oq.question === q.question);
@@ -441,7 +427,6 @@ function submitQuiz() {
         }
     });
 
-    // Đánh giá câu trả lời và cập nhật wrongCount
     questions.forEach((q, i) => {
         if (!q.correct) return;
         const userAnswer = selectedAnswers[i];
@@ -451,12 +436,10 @@ function submitQuiz() {
             unanswered++;
         } else if (userAnswer === getCorrectIndex(q.correct)) {
             correct++;
-            // Nếu ở chế độ làm lại câu sai và trả lời đúng, reset wrongCount
             if (isWrongQuestionsMode && originalIndex !== -1) {
-                originalQuestions[originalIndex].wrongCount = 0; 
+                originalQuestions[originalIndex].wrongCount = 0;
             }
         } else {
-            // Cập nhật wrongCount cho câu hỏi gốc
             if (originalIndex !== -1) {
                 const originalQ = originalQuestions[originalIndex];
                 originalQ.wrongCount = (originalQ.wrongCount || 0) + 1;
@@ -465,12 +448,9 @@ function submitQuiz() {
     });
 
     const wrong = questions.length - correct - unanswered;
-    
-    // 🔥 BẬT CHẾ ĐỘ HIỂN THỊ ĐÁP ÁN VÀ VÔ HIỆU HÓA CHẾ ĐỘ LÀM LẠI CÂU SAI
     showAnswerMode = true;
     isWrongQuestionsMode = false;
 
-    // Hiển thị kết quả
     document.getElementById('score-detail').innerText =
         `Đúng: ${correct}, Sai: ${wrong}, Bỏ qua: ${unanswered}`;
     drawChart(correct, wrong, unanswered);
@@ -478,7 +458,6 @@ function submitQuiz() {
     const feedbackEl = document.getElementById("score-feedback");
     const total = questions.length;
     const percent = ((correct / total) * 100).toFixed(2);
-
 
     let feedback = "";
     if (percent === 100) feedback = "Xuất sắc! Bạn đã trả lời đúng tất cả các câu.";
@@ -489,11 +468,10 @@ function submitQuiz() {
     feedbackEl.textContent = feedback;
     document.getElementById('score-popup').classList.remove('hidden');
 
-    // Gửi dữ liệu cập nhật về server
     fetch('/update-questions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(originalQuestions) // Gửi danh sách gốc đã cập nhật
+        body: JSON.stringify(originalQuestions)
     })
         .then(res => {
             if (!res.ok) throw new Error('Lỗi khi gửi yêu cầu');
@@ -501,7 +479,6 @@ function submitQuiz() {
         })
         .then(data => {
             console.log('✅ Đã cập nhật file:', data.message);
-            // Cập nhật questions từ originalQuestions để đồng bộ
             questions = JSON.parse(JSON.stringify(originalQuestions));
         })
         .catch(err => {
@@ -509,7 +486,6 @@ function submitQuiz() {
             alert('Không thể cập nhật dữ liệu câu hỏi. Vui lòng thử lại.');
         });
 
-    // Gửi thống kê kết quả về MongoDB
     const username = sessionStorage.getItem('username');
     if (!username) {
         console.warn("Không có username trong sessionStorage.");
@@ -540,28 +516,20 @@ function submitQuiz() {
             console.error('❌ Lỗi khi gửi thống kê:', err);
         });
 
-    // 🔥 Cập nhật giao diện để hiển thị màu Đúng/Sai trên các nút câu hỏi
     renderQuestionButtons();
     renderQuestion();
-    // 🔥 KHÔNG reset selectedAnswers hay currentQuestionIndex ở đây!
 }
 
-// Đóng popup điểm
 function closeScorePopup() {
     document.getElementById('score-popup').classList.add('hidden');
-    
-    // 🔥 RESET TRẠNG THÁI CHO BÀI MỚI SAU KHI XEM KẾT QUẢ
     showAnswerMode = false;
     isWrongQuestionsMode = false;
-    // Đảm bảo bắt đầu bài mới với danh sách câu hỏi gốc
-    questions = JSON.parse(JSON.stringify(originalQuestions)); 
+    questions = JSON.parse(JSON.stringify(originalQuestions));
     selectedAnswers = new Array(questions.length).fill(null);
     currentQuestionIndex = 0;
-
-    startQuiz(false, false, false); // Bắt đầu lại quiz với chế độ bình thường
+    startQuiz(false, false, false);
 }
 
-// Vẽ biểu đồ kết quả
 function drawChart(correct, wrong, skipped) {
     google.charts.load('current', { packages: ['corechart'] });
     google.charts.setOnLoadCallback(() => {
@@ -589,17 +557,12 @@ function drawChart(correct, wrong, skipped) {
 // 8. ⚙️ CÀI ĐẶT TỰ ĐỘNG CHUYỂN CÂU HỎI
 // =========================================================================
 
-// Cài đặt tự động chuyển câu hỏi
-// Cài đặt tự động chuyển câu hỏi
 function setupAutoNext() {
     const sidebarSelect = document.getElementById('sidebar-auto-next');
     const popupSelect = document.getElementById('popup-auto-next');
 
-    // Đặt giá trị mặc định cho các select elements là 1000ms
     sidebarSelect.value = '1000';
     popupSelect.value = '1000';
-
-    // Khởi tạo autoNextDelay với giá trị mặc định là 1000ms
     autoNextDelay = 1000;
 
     const updateDelay = () => {
@@ -618,19 +581,16 @@ function setupAutoNext() {
 // 9. 🌙 CHUYỂN CHẾ ĐỘ SÁNG / TỐI
 // =========================================================================
 
-// Chuyển đổi chế độ sáng/tối
 function toggleTheme() {
     document.body.classList.toggle('dark');
-    renderQuestion(); // Cập nhật lại câu hỏi và đáp án
-    updateQuizProgress(); // Cập nhật thanh tiến trình
+    renderQuestion();
+    updateQuizProgress();
 }
 
 // =========================================================================
 // 10. 🔑 FORM ĐĂNG NHẬP VÀ XÁC THỰC
 // =========================================================================
 
-
-// Đăng nhập tài khoản
 function handleLogin(defaultRedirect = "admin") {
     const API_BASE = '/api';
     const usernameInput = document.getElementById('admin-username') || document.getElementById('username');
@@ -648,13 +608,12 @@ function handleLogin(defaultRedirect = "admin") {
 
     const username = usernameInput.value.trim();
     const password = passwordInput.value.trim();
-    const redirectTo = redirectAfterLogin || defaultRedirect; // 🔑 đây là nơi quyết định trang đích
+    const redirectTo = redirectAfterLogin || defaultRedirect;
 
     if (loginError) loginError.innerText = '';
 
-    // ✅ Hardcode tạm thời
     if (username === 'admin' && password === '123') {
-        sessionStorage.setItem("username", username); // Cần lưu cả hardcode user
+        sessionStorage.setItem("username", username);
         sessionStorage.setItem("isAdmin", "true");
         window.location.href = `/admin/${redirectTo}.html?from=${encodeURIComponent(fromPage)}`;
         redirectAfterLogin = null;
@@ -669,7 +628,6 @@ function handleLogin(defaultRedirect = "admin") {
         .then(res => res.json())
         .then(data => {
             if (data.success) {
-                // 🔑 BỔ SUNG: LƯU TÊN NGƯỜI DÙNG VÀO SESSION STORAGE
                 sessionStorage.setItem("username", username);
                 showUsername && (showUsername.innerText = `Xin chào, ${username}!`);
                 logoutBtn?.classList.remove('hidden');
@@ -680,7 +638,7 @@ function handleLogin(defaultRedirect = "admin") {
                     redirectAfterLogin = null;
                 } else {
                     closeLoginPopup?.();
-                    renderApp(); // ✅ Hiển thị giao diện quiz sau khi đăng nhập thành công
+                    renderApp();
                     console.log('Đăng nhập thành công!');
                 }
             } else {
@@ -696,10 +654,6 @@ function handleLogin(defaultRedirect = "admin") {
         });
 }
 
-
-
-
-// Dăng ký tài khoản mới
 function handleRegister() {
     const username = document.getElementById('register-username').value;
     const email = document.getElementById('register-email').value;
@@ -725,57 +679,45 @@ function handleRegister() {
         });
 }
 
-// Xử lý đăng xuất
 function handleLogout() {
-    sessionStorage.clear(); // Xoá toàn bộ session client-side
+    sessionStorage.clear();
     const showUsername = document.querySelector('#user-name');
     const logoutBtn = document.querySelector('.logout-btn');
     const loginBtn = document.querySelector('.login-btn');
 
-    showUsername.innerText = ''; // Xoá tên người dùng hiển thị
-    logoutBtn.classList.add('hidden'); // Ẩn nút đăng xuất
-    loginBtn.classList.remove('hidden'); // Hiển thị lại nút đăng nhập
-    showLoginForm(); // Gọi lại hàm hiển thị form đăng nhập
+    showUsername.innerText = '';
+    logoutBtn.classList.add('hidden');
+    loginBtn.classList.remove('hidden');
+    showLoginForm();
 }
 
-// 
-
-// Hiển thị form đăng ký
 function showRegisterForm() {
     document.getElementById('login-form').style.display = 'none';
     document.getElementById('register-form').style.display = 'block';
 }
 
-// Hiển thị form đăng nhập
 function showLoginForm() {
     document.getElementById('register-form').style.display = 'none';
     document.getElementById('login-form').style.display = 'block';
     document.getElementById('login-popup').classList.remove('hidden');
-
 }
 
-// Đóng popup đăng nhập
 function closeLoginPopup() {
     document.getElementById('login-popup').classList.add('hidden');
-    const logoutBtn = document.querySelector('.logout-btn');
-    // logoutBtn.classList.add('hidden');
 }
-
 
 let redirectAfterLogin = null;
 
 function loginDashboard() {
     console.log('loginDashboard called');
-    redirectAfterLogin = "admin-dashboard"; // ✅ trang sau khi đăng nhập thành công
-    showLoginForm(); // ✅ chỉ hiển thị form
+    redirectAfterLogin = "admin-dashboard";
+    showLoginForm();
 }
-
 
 // =========================================================================
 // 11. 📏 CẬP NHẬT THANH TIẾN TRÌNH
 // =========================================================================
 
-// Cập nhật thanh tiến trình
 function updateQuizProgress() {
     const total = questions.length;
     const answered = selectedAnswers.filter(a => a !== null).length;
@@ -786,16 +728,14 @@ function updateQuizProgress() {
 
     bar.style.width = `${percent}%`;
 
-    // Đổi màu theo % tiến độ
     if (percent < 30) {
-        bar.style.background = 'linear-gradient(90deg, #dc3545, #ff6b6b)'; // đỏ
+        bar.style.background = 'linear-gradient(90deg, #dc3545, #ff6b6b)';
     } else if (percent < 70) {
-        bar.style.background = 'linear-gradient(90deg, #ffc107, #ffe066)'; // vàng
+        bar.style.background = 'linear-gradient(90deg, #ffc107, #ffe066)';
     } else {
-        bar.style.background = 'linear-gradient(90deg, #28a745, #85e085)'; // xanh
+        bar.style.background = 'linear-gradient(90deg, #28a745, #85e085)';
     }
 
-    // Nội dung động
     let message = '';
     if (percent === 0) message = '🚀Bắt đầu nhé!';
     else if (percent < 30) message = '🐢Mới khởi động thôi...';
@@ -818,7 +758,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.toggle('active');
     });
 
-    // Tùy chọn: Đóng sidebar khi nhấp ra ngoài
     document.addEventListener('click', (e) => {
         if (!sidebar.contains(e.target) && !hamburgerBtn.contains(e.target)) {
             sidebar.classList.remove('active');

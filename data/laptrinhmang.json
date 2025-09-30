@@ -280,8 +280,7 @@
     "answers": [
       "Là giao thức điều khiển truyền vận là một trong các giao thức cốt lõi của bộ giao thức TCP/IP",
       "Là giao thức điều khiển truyền vận là một trong các giao thức cốt lõi của bộ giao thức UDP",
-      "Là giao thức điều khiển truyền vận là một trong các giao thức cốt lõi của bộ giao thức Client/Server",
-      "..."
+      "Là giao thức điều khiển truyền vận là một trong các giao thức cốt lõi của bộ giao thức Client/Server"
     ],
     "correct": "A",
     "favorite": false,
@@ -1939,7 +1938,7 @@
       "String",
       "Float"
     ],
-    "correct": "{}",
+    "correct": "A",
     "note": "Cần thêm 2 tham số là InetAddress host, int port cho constructor gửi gói, hoặc không có thêm tham số nào cho constructor nhận gói đã chỉ định độ dài (như ID 161). Trong trường hợp này, vì không thể xác định đáp án 'correct' là 'A, B, C, D' từ input, tôi giữ nguyên giá trị 'correct': '{}' cho câu 162.",
     "favorite": false
   },
