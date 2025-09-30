@@ -132,7 +132,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "A_11"
+    "id": "A_11",
+    "wrongCount": 0
   },
   {
     "question": "Với mô hình dịch vụ PaaS, người sử dụng phải tự xây dựng cái gì?",
@@ -313,7 +314,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "A_26"
+    "id": "A_26",
+    "wrongCount": 0
   },
   {
     "question": "Những loại dịch vụ nào khi thuê có Application?",
@@ -325,7 +327,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "A_27"
+    "id": "A_27",
+    "wrongCount": 0
   },
   {
     "question": "Trong hoạt động của điện toán đám mây lớp Front – End để làm gì?",
@@ -361,7 +364,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "A_30"
+    "id": "A_30",
+    "wrongCount": 0
   },
   {
     "question": "Google Computer Engine là dịch vụ thuộc loại gì?",
@@ -386,7 +390,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "A_32"
+    "id": "A_32",
+    "wrongCount": 0
   },
   {
     "question": "Có bao nhiêu mô hình điện toán đám mây được triển khai trong thực tế?",
@@ -435,7 +440,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "A_36"
+    "id": "A_36",
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ Service monitoring của loại SaaS gồm có những gì?",
@@ -486,7 +492,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "B_4"
+    "id": "B_4",
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ Service optimization của loại IaaS gồm có những gì?",
@@ -628,7 +635,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "B_15"
+    "id": "B_15",
+    "wrongCount": 0
   },
   {
     "question": "Kiểu dịch vụ security của loại SaaS gồm có những gì?",
@@ -690,7 +698,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "B_20"
+    "id": "B_20",
+    "wrongCount": 0
   },
   {
     "question": "Năm 2008, Hãng IBM đã có khách hàng đầu tiên tại việt nam là Công ty nào?",
