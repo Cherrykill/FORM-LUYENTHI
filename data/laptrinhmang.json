@@ -2059,7 +2059,6 @@
       "Không phải các ý trên"
     ],
     "correct": "D",
-    "note": "Đáp án gốc là 'Biên dịch có lỗi và đưa ra thông báo lỗi \"Duplicate main() method declaration\"'. Vì đáp án này không nằm trong A, B, C, D, nên tôi giữ nguyên logic lỗi biên dịch nhưng chọn phương án D (Không phải các ý trên) để phù hợp với định dạng.",
     "favorite": false
   },
   {

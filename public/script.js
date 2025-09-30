@@ -68,9 +68,27 @@ async function loadQuestions() {
             return true;
         });
         if (invalidQuestions.length > 0) {
-            console.error("Invalid questions found:", invalidQuestions);
-            alert(`⚠️ Có ${invalidQuestions.length} câu hỏi không hợp lệ:\n${invalidQuestions.map(q => `Câu ${q.index + 1}: ${q.question}\nLý do: ${q.reason}`).join('\n\n')}\nChỉ hiển thị các câu hỏi hợp lệ.`);
-        }
+    // In chi tiết từng câu hỏi lỗi ra console
+    console.error("❌ Danh sách câu hỏi không hợp lệ:");
+    invalidQuestions.forEach(q => {
+        console.error(`Câu ${q.index + 1}:`);
+        console.error(`  Question: ${q.question || "(không có)"}`);
+        console.error(`  Lý do: ${q.reason || "Không rõ"}`);
+        console.error("-----------------------------");
+    });
+
+    // Thông báo alert gọn hơn cho người dùng
+    alert(
+        `⚠️ Có ${invalidQuestions.length} câu hỏi không hợp lệ:\n\n` +
+        invalidQuestions
+            .map(q =>
+                `Câu ${q.index + 1}: ${q.question || "(không có)"}\n👉 Lý do: ${q.reason || "Không rõ"}`
+            )
+            .join("\n\n") +
+        `\n\n➡️ Chỉ hiển thị các câu hỏi hợp lệ.`
+    );
+}
+
         originalQuestions = JSON.parse(JSON.stringify(questions)); // Sao lưu câu hỏi hợp lệ
         selectedAnswers = new Array(questions.length).fill(null);
     } catch (err) {
