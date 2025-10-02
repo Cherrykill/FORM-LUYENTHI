@@ -31,7 +31,7 @@
       "Là mô hình chia sẻ bộ nhớ",
       "Là mô hình song song hoá về mặt dữ liệu"
     ],
-    "correct": "D",
+    "correct": "C",
     "favorite": false,
     "id": "3"
   },
@@ -380,7 +380,7 @@
       "Bộ xử lý 2",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "32",
     "image": "/admin/images/gtss31-36.png"
@@ -419,7 +419,7 @@
       "Proc1 có thể truy cập vào dữ liệu của mem2",
       "Proc1 có thể truy cập vào dữ liệu của mem1"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "35",
     "image": "/admin/images/gtss31-36.png"
@@ -432,7 +432,7 @@
       "Mỗi BXL đều có thể truy cập vào tất cả các bộ nhớ của BXL khác",
       "Mỗi BXL không thể truy cập vào bộ nhớ của BXL khác"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "36",
     "image": "/admin/images/gtss31-36.png"
@@ -445,7 +445,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "37",
     "image": "/admin/images/gtss37.png"
@@ -471,7 +471,7 @@
       "Chỉ có BXL3 được phép truy cập vào bộ nhớ",
       "Tất cả BXL đều được phép truy cập vào bộ nhớ"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "39",
     "image": "/admin/images/gtss38-40.png"
@@ -484,7 +484,7 @@
       "Các BXL có không gian nhớ riêng",
       "Tất cả BXL đều được phép truy cập vào bộ nhớ"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "40",
     "image": "/admin/images/gtss38-40.png"
@@ -497,7 +497,7 @@
       "Thao tác I/O",
       "Cấu trúc ổ đĩa cứng"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "41"
   },
@@ -521,7 +521,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "43"
   },
@@ -595,7 +595,7 @@
       "Từ LM",
       "Từ P1"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "49",
     "image": "/admin/images/gtss47-56.png"
@@ -608,7 +608,7 @@
       "Từ LM",
       "Từ P1"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "50",
     "image": "/admin/images/gtss47-56.png"
@@ -621,7 +621,7 @@
       "Từ LM",
       "Từ P1"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "51",
     "image": "/admin/images/gtss47-56.png"
@@ -725,7 +725,7 @@
       "Single Instruction, Single Data",
       "Multiple Instruction, Multiple Data"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "59",
     "image": "/admin/images/gtss59-64.png"
@@ -777,7 +777,7 @@
       "DS",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "63",
     "image": "/admin/images/gtss59-64.png"
@@ -829,7 +829,7 @@
       "Single Instruction, Multiple Data",
       "Single Instruction, Single Data"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "67",
     "image": "/admin/images/gtss65-67.png"
@@ -928,7 +928,7 @@
       "Đa luồng lệnh, đa luồng dữ liệu",
       "Đơn luồng lệnh, đơn luồng dữ liệu"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "32",
     "image": "/admin/images/gtss73-80.png"
@@ -954,7 +954,7 @@
       "Luồng lệnh vào A",
       "Luồng lệnh ra A"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "34",
     "image": "/admin/images/gtss73-80.png"
@@ -1032,7 +1032,7 @@
       "Đa luồng lệnh, đa luồng dữ liệu",
       "Đơn luồng lệnh, đơn luồng dữ liệu"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "40",
     "image": "/admin/images/gtss81-86.png"
@@ -1045,7 +1045,7 @@
       "Tất cả đều sai",
       "Nhiều mục dữ liệu được xử lý"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "41",
     "image": "/admin/images/gtss81-86.png"
@@ -1058,7 +1058,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "42",
     "image": "/admin/images/gtss81-86.png"
@@ -1071,7 +1071,7 @@
       "Các BXL thực hiện các lệnh khác nhau",
       "Mỗi BXL thực hiện xử lý các dữ liệu khác với BXL khác"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "43",
     "image": "/admin/images/gtss81-86.png"
@@ -1084,7 +1084,7 @@
       "Máy tính truy cập ngẫu nhiên song song",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "44"
   },
@@ -1096,7 +1096,7 @@
       "Tất cả đều sai",
       "Parallel Random Access Machine"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "45"
   },
@@ -1108,7 +1108,7 @@
       "Processor Random Access Machine",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "46"
   },
@@ -1120,7 +1120,7 @@
       "Tất cả đều sai",
       "Máy tính ngẫu nhiên song song"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "47"
   },
@@ -1132,7 +1132,7 @@
       "Nguyên lý đường ống, dây chuyền",
       "Nguyên lý vét cạn thông minh"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "48"
   },
@@ -1144,7 +1144,7 @@
       "Nguyên lý vét cạn thông minh",
       "Nguyên lý đường ống, dây chuyền"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "49"
   },
@@ -1156,7 +1156,7 @@
       "Trong cùng một khoảng thời gian, có nhiều tiến trình cùng truy cập vào dữ liệu từ thiết bị vào/ra chung",
       "Nguyên lý vét cạn thông minh"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "50"
   },
@@ -1168,7 +1168,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "51"
   },
@@ -1180,7 +1180,7 @@
       "Tất cả đều sai",
       "Thực hiện một thuật giải tuần tự tối ưu"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "52"
   },
@@ -1192,7 +1192,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "53"
   },
@@ -1204,7 +1204,7 @@
       "Các BXL có thể đọc bất kỳ một vị trí nào của bộ nhớ",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "54"
   },
@@ -1229,7 +1229,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "56",
     "image": "/admin/images/gtss99.png"
@@ -1255,7 +1255,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "58",
     "image": "/admin/images/gtss100-102.png"
@@ -1268,7 +1268,7 @@
       "Tất cả đều đúng",
       "Đầu ra của BXL này là đầu vào của BXL kia"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "59",
     "image": "/admin/images/gtss100-102.png"
@@ -1294,7 +1294,7 @@
       "4 tín hiệu",
       "1 tín hiệu"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "61",
     "image": "/admin/images/gtss103-105.png"
@@ -1307,7 +1307,7 @@
       "4 tín hiệu",
       "1 tín hiệu"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "62",
     "image": "/admin/images/gtss103-105.png"
@@ -1320,7 +1320,7 @@
       "Bộ nhớ truy cập ngẫu nhiên song song",
       "Bộ nhớ phân tán"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "63",
     "image": "/admin/images/gtss106.png"
@@ -1345,7 +1345,7 @@
       "Những thay đổi nội dung ô nhớ được thực hiện bởi một BXL nào đó sẽ được nhìn thấy bởi các BXL khác",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "65"
   },
@@ -1369,7 +1369,7 @@
       "Bộ nhớ phân tán",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "67",
     "image": "/admin/images/gtss110.png"
@@ -1394,7 +1394,7 @@
       "Tất cả đều sai",
       "Địa chỉ bộ nhớ của một BXL nào đó không được biết bởi BXL khác"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "69"
   },
@@ -1419,7 +1419,7 @@
       "Các BXL có một vùng nhớ chung",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "71",
     "image": "/admin/images/gtss113-114.png"
@@ -1469,7 +1469,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "75"
   },
@@ -1481,7 +1481,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "76"
   },
@@ -1506,7 +1506,7 @@
       "Tất cả đều sai",
       "Mô hình mạng liên kết tuyến tính"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "78"
   },
@@ -1530,7 +1530,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "80"
   },
@@ -1554,7 +1554,7 @@
       "Thông tin có thể chạy trên đường truyền theo một chiều",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "82"
   },
@@ -1566,7 +1566,7 @@
       "Thông tin có thể chạy trên đường truyền theo một chiều",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "83"
   },
@@ -1578,7 +1578,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "84",
     "image": "/admin/images/gtss127.png"
@@ -1591,7 +1591,7 @@
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "85"
   },
@@ -1615,7 +1615,7 @@
       "Sự truyền thông trong mạng liên kết vòng, nhất là giữa những BXL ở xa nhau thì vẫn bị trễ",
       "Tất cả đều đúng"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "87"
   },
@@ -1640,7 +1640,7 @@
       "Mạng liên kết nhị phân",
       "Mạng liên kết lưới không quay vòng"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "89",
     "image": "/admin/images/gtss131-134.png"
@@ -1666,7 +1666,7 @@
       "Mạng liên kết nhị phân",
       "Mạng liên kết lưới quay vòng"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "91",
     "image": "/admin/images/gtss131-134.png"
@@ -1692,7 +1692,7 @@
       "Mạng liên kết tuyến tính",
       "Mạng liên kết nhị phân"
     ],
-    "correct": "A",
+    "correct": "D",
     "favorite": false,
     "id": "93",
     "image": "/admin/images/gtss136-137.png"
@@ -1718,7 +1718,7 @@
       "Mạng liên kết tuyến tính",
       "Mạng liên kết nhị phân"
     ],
-    "correct": "A",
+    "correct": "B",
     "favorite": false,
     "id": "95",
     "image": "/admin/images/gtss138.png"
@@ -2487,7 +2487,7 @@
       "Địa chỉ của chương trình con mà chúng ta cần chạy trong Thread mới",
       "Tham số của chương trình con"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "159"
   },
@@ -2499,7 +2499,7 @@
       "Địa chỉ của chương trình con mà chúng ta cần chạy trong Thread mới",
       "Tham số của chương trình con"
     ],
-    "correct": "C",
+    "correct": "D",
     "favorite": false,
     "id": "160"
   },
@@ -2564,7 +2564,7 @@
     "id": "165"
   },
   {
-    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: Biến nào chạy từ tiến trình đầu đến tiến trình cuối?",
+    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N:\n nrow=0;      \n while (nrow < P)      \n  { int oldrow;         \n   for (oldrow = nrow*N/P; oldrow <(nrow+1)* N/P; oldrow++)     \n  \t{   \n  \t  int j;  int t=0;    \n  \t  for (j=0;j<N ; j++)     \n  \t         t += A[oldrow * N + j] * B[j];     \n  \t  C[oldrow] = t;     \n  \t}     \n    nrow++;    \n     }     \n\nBiến nào chạy từ tiến trình đầu đến tiến trình cuối?",
     "answers": [
       "oldrow",
       "j",
@@ -2576,7 +2576,7 @@
     "id": "166"
   },
   {
-    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: Biến nào chạy từ phần tử đầu đến phần tử cuối trong mỗi tiến trình?",
+    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: \nnrow=0;      \n while (nrow < P)      \n  { int oldrow;         \n   for (oldrow = nrow*N/P; oldrow <(nrow+1)* N/P; oldrow++)     \n  \t{   \n  \t  int j;  int t=0;    \n  \t  for (j=0;j<N ; j++)     \n  \t         t += A[oldrow * N + j] * B[j];     \n  \t  C[oldrow] = t;     \n  \t}     \n    nrow++;    \n     }     \n\nBiến nào chạy từ phần tử đầu đến phần tử cuối trong mỗi tiến trình?",
     "answers": [
       "nrow",
       "oldrow",
@@ -2588,19 +2588,19 @@
     "id": "167"
   },
   {
-    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: Đoạn lệnh trên thực hiện song song hoá như thế nào?",
+    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: \n nrow=0;      \n while (nrow < P)      \n  { int oldrow;         \n   for (oldrow = nrow*N/P; oldrow <(nrow+1)* N/P; oldrow++)     \n  \t{   \n  \t  int j;  int t=0;    \n  \t  for (j=0;j<N ; j++)     \n  \t         t += A[oldrow * N + j] * B[j];     \n  \t  C[oldrow] = t;     \n  \t}     \n    nrow++;    \n     }     \n\nĐoạn lệnh trên thực hiện song song hoá như thế nào?",
     "answers": [
       "Đồng thời từng dòng của ma trận với vecto",
       "Đồng thời từng đoạn của dòng ma trận nhân với các toạ độ của vecto",
       "Tất cả đều đúng",
       "Tất cả đều sai"
     ],
-    "correct": "C",
+    "correct": "B",
     "favorite": false,
     "id": "168"
   },
   {
-    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: Biến nào dùng để lưu toạ độ vecto kết quả?",
+    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: \n nrow=0;      \n while (nrow < P)      \n  { int oldrow;         \n   for (oldrow = nrow*N/P; oldrow <(nrow+1)* N/P; oldrow++)     \n  \t{   \n  \t  int j;  int t=0;    \n  \t  for (j=0;j<N ; j++)     \n  \t         t += A[oldrow * N + j] * B[j];     \n  \t  C[oldrow] = t;     \n  \t}     \n    nrow++;    \n     }\n\nBiến nào dùng để lưu toạ độ vecto kết quả?",
     "answers": [
       "Biến t",
       "Biến j",
@@ -2619,7 +2619,7 @@
       "Đổi chỗ 2 phần tử kế cận",
       "Đếm số phần tử sau đó đổi chỗ giữa phần tử đầu và phần tử cuối"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "170"
   },
@@ -2631,12 +2631,12 @@
       "Mỗi BXL làm nhiệm vụ đi tìm các phần tử nhỏ hơn và đổi chỗ",
       "Đếm số phần tử sau đó đổi chỗ giữa phần tử đầu và phần tử cuối"
     ],
-    "correct": "A",
+    "correct": "C",
     "favorite": false,
     "id": "171"
   },
   {
-    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: Muốn sửa đoạn lệnh trên thành cộng hai ma trận thì sửa dòng lệnh nào?",
+    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: \n1.  nrow=0;      \n 2. while (nrow < P)      \n 3. { int oldrow;         \n 4.  for (oldrow = nrow*N/P; oldrow <(nrow+1)* N/P; oldrow++)     \n 5.\t{   \n 6.\t  int j;  int t=0;    \n 7.\t  for (j=0;j<N ; j++)     \n 8.\t         t += A[oldrow * N + j] * B[j];     \n 9.\t  C[oldrow] = t;     \n 10.\t}     \n 11.    nrow++;    \n 12.     }\n\nMuốn sửa đoạn lệnh trên thành cộng hai ma trận thì sửa dòng lệnh nào?",
     "answers": [
       "Dòng 4",
       "Dòng 8",
@@ -2648,7 +2648,7 @@
     "id": "172"
   },
   {
-    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: Muốn tìm phần tử lớn nhất trên ma trận A thì thêm dòng lệnh ở vị trí nào?",
+    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: \n 1.  nrow=0;      \n 2. while (nrow < P)      \n 3. { int oldrow;         \n 4.  for (oldrow = nrow*N/P; oldrow <(nrow+1)* N/P; oldrow++)     \n 5.\t{   \n 6.\t  int j;  int t=0;    \n 7.\t  for (j=0;j<N ; j++)     \n 8.\t         t += A[oldrow * N + j] * B[j];     \n 9.\t  C[oldrow] = t;     \n 10.\t}     \n 11.    nrow++;    \n 12.     }     \n\nMuốn tìm phần tử lớn nhất trên ma trận A thì thêm dòng lệnh ở vị trí nào?",
     "answers": [
       "Trước dòng 4",
       "Sau dòng 10",
@@ -2660,7 +2660,7 @@
     "id": "173"
   },
   {
-    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: Muốn tìm phần tử lớn nhất trên ma trận A thì thêm dòng lệnh nào?",
+    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: \n1.  nrow=0;      \n 2. while (nrow < P)      \n 3. { int oldrow;         \n 4.  for (oldrow = nrow*N/P; oldrow <(nrow+1)* N/P; oldrow++)     \n 5.\t{   \n 6.\t  int j;  int t=0;    \n 7.\t  for (j=0;j<N ; j++)     \n 8.\t         t += A[oldrow * N + j] * B[j];     \n 9.\t  C[oldrow] = t;     \n 10.\t}     \n 11.    nrow++;    \n 12.     }\n\nMuốn tìm phần tử lớn nhất trên ma trận A thì thêm dòng lệnh nào?",
     "answers": [
       "if (Max< A[oldrow * N + j]) Max= A[oldrow * N + j]",
       "if (Max> A[oldrow * N + j]) Max= A[oldrow * N + j]",
@@ -2672,14 +2672,14 @@
     "id": "174"
   },
   {
-    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: Muốn tìm toạ độ lớn nhất của vecto kết quả thì thêm 1 dòng lệnh ở vị trí nào?",
+    "question": "Cho đoạn lệnh nhân Vecto với Ma trận cấp N: \n 1.  nrow=0;      \n 2. while (nrow < P)      \n 3. { int oldrow;         \n 4.  for (oldrow = nrow*N/P; oldrow <(nrow+1)* N/P; oldrow++)     \n 5.\t{   \n 6.\t  int j;  int t=0;    \n 7.\t  for (j=0;j<N ; j++)     \n 8.\t         t += A[oldrow * N + j] * B[j];   \n 9.\t  C[oldrow] = t;   \n 10.\t}     \n 11.    nrow++;    \n 12.     }\n\nMuốn tìm toạ độ lớn nhất của vecto kết quả thì thêm 1 dòng lệnh ở vị trí nào?",
     "answers": [
       "Trước dòng 4",
       "Trước dòng 7",
       "Sau dòng 8",
       "Sau dòng 10"
     ],
-    "correct": "D",
+    "correct": "C",
     "favorite": false,
     "id": "175"
   }

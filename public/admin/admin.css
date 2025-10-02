@@ -233,14 +233,14 @@ body.dark #pagination-controls button {
 
 /* Nút phân trang đang được chọn */
 .active-page {
-  background-color: #0056b3;
+  background-color: #b33300;
   color: white;
   font-weight: bold;
 }
 
 /* Chế độ tối cho active-page */
 body.dark .active-page {
-  background-color: #004085;
+  background-color: #850000 !important;
 }
 
 .wrong-count {

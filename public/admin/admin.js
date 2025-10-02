@@ -46,6 +46,22 @@ document.addEventListener("DOMContentLoaded", () => {
         renderSearchResults(missing);
     });
 
+    // Thêm sự kiện cho nút tìm câu giống nhau
+    const findSimilarBtn = document.getElementById("find-similar-btn");
+    if (findSimilarBtn) {
+        findSimilarBtn.addEventListener("click", () => {
+            const input = prompt("Nhập ngưỡng tỷ lệ giống nhau tối thiểu (0.0 đến 1.0, mặc định 0.8):", "0.8");
+            if (input === null) return; 
+
+            const threshold = parseFloat(input.trim()) || 0.8;
+            if (threshold < 0 || threshold > 1) {
+                alert("Ngưỡng không hợp lệ. Vui lòng nhập giá trị từ 0.0 đến 1.0.");
+                return;
+            }
+            findSimilarQuestions(threshold); // Gọi hàm tìm kiếm
+        });
+    }
+
     document.querySelector(".search-input").addEventListener("input", handleSearch);
     document.querySelector(".search-input2").addEventListener("input", handleSearch2);
 
@@ -164,7 +180,6 @@ async function loadQuestions() {
     questions.forEach(q => {
         if (typeof q.favorite === "undefined") q.favorite = false;
         // Chuẩn hóa: Đảm bảo tất cả câu hỏi trong bộ nhớ dùng \n thay vì <br>
-        // Điều này xử lý các câu hỏi cũ đã được lưu với <br>
         q.question = q.question.replace(/<br>/g, '\n');
     });
 
@@ -191,6 +206,10 @@ async function saveToFile() {
 function renderQuestions() {
     const container = document.getElementById("questions-container");
     container.innerHTML = "";
+
+    // Xóa thông báo tìm kiếm giống nhau khi trở về chế độ xem thường
+    const infoArea = document.getElementById("info-area");
+    if (infoArea) infoArea.innerHTML = ""; 
 
     let list = showFavoritesOnly ? questions.filter(q => q.favorite) : questions;
     const totalPages = Math.ceil(list.length / pageSize);
@@ -247,6 +266,10 @@ function renderQuestions() {
 function renderSearchResults(list) {
     const container = document.getElementById("questions-container");
     container.innerHTML = "";
+    
+    // Xóa thông báo tìm kiếm giống nhau khi ở chế độ xem kết quả tìm kiếm thường
+    const infoArea = document.getElementById("info-area");
+    if (infoArea) infoArea.innerHTML = "";
 
     const totalPages = Math.ceil(list.length / pageSize);
     if (currentPage > totalPages) currentPage = totalPages || 1;
@@ -369,7 +392,13 @@ function renderCustomPagination(totalPages, currentList) {
         if (page !== null) {
             btn.onclick = () => {
                 currentPage = page;
-                renderSearchResults(currentList);  // sử dụng lại danh sách hiện tại
+                
+                // Kiểm tra xem có đang ở chế độ xem kết quả tìm kiếm giống nhau không
+                if (currentList && currentList.length > 0 && currentList[0].similarity !== undefined) {
+                    renderSimilarResults(currentList);
+                } else {
+                    renderSearchResults(currentList);  // sử dụng lại danh sách hiện tại cho tìm kiếm thường
+                }
             };
         }
         if (disabled) btn.disabled = true;
@@ -442,8 +471,6 @@ async function saveQuestion() {
 
     // Lấy nội dung từ textarea, nó đã chứa \n nếu người dùng nhập
     const rawQuestion = document.getElementById("question-text").value.trim();
-    // KHÔNG CẦN CHUYỂN \n SANG <br> KHI LƯU VÀO JSON NỮA
-    // Dữ liệu trong JSON sẽ dùng \n, chỉ chuyển sang <br> khi hiển thị ra HTML
 
     const newQuestion = {
         question: rawQuestion, // LƯU TRỰC TIẾP rawQuestion (có \n)
@@ -460,10 +487,8 @@ async function saveQuestion() {
     // 👉 Nếu có chọn ảnh, thêm key image
     if (imageInput.files.length > 0) {
         const fileName = imageInput.files[0].name;
-        // Bạn cần một endpoint server để tải lên ảnh và trả về đường dẫn
-        // Ví dụ đơn giản: newQuestion.image = `/admin/images/${fileName}`;
-        // Nếu không có logic tải lên, nó sẽ chỉ lưu tên file
-        newQuestion.image = `/admin/images/${fileName}`; // Giả định ảnh được lưu ở đây
+        // Giả định ảnh được lưu ở đây
+        newQuestion.image = `/admin/images/${fileName}`; 
     }
 
     if (index) {
@@ -641,4 +666,146 @@ function removeImage(index) {
     questions[index].image = ""; // Reset giá trị ảnh
     renderQuestions();           // Cập nhật lại UI
     saveToFile();                // Lưu lại file JSON
+}
+
+// ====== 12. TÌM CÁC CÂU GIỐNG NHAU ======
+
+/**
+ * Tính Sorensen-Dice Coefficient để đo độ giống nhau giữa hai chuỗi.
+ * @param {string} s1 Chuỗi thứ nhất.
+ * @param {string} s2 Chuỗi thứ hai.
+ * @returns {number} Tỷ lệ giống nhau (0 đến 1).
+ */
+function diceCoefficient(s1, s2) {
+    s1 = removeVietnameseTones(s1).toLowerCase().trim();
+    s2 = removeVietnameseTones(s2).toLowerCase().trim();
+
+    // Xử lý chuỗi rỗng
+    if (!s1 || !s2) return s1 === s2 ? 1 : 0;
+
+    // Tạo tập hợp các bigram (cặp ký tự)
+    const bigrams1 = new Set();
+    for (let i = 0; i < s1.length - 1; i++) {
+        bigrams1.add(s1.substring(i, i + 2));
+    }
+    const bigrams2 = new Set();
+    for (let i = 0; i < s2.length - 1; i++) {
+        bigrams2.add(s2.substring(i, i + 2));
+    }
+
+    if (bigrams1.size === 0 && bigrams2.size === 0) return 1;
+    if (bigrams1.size === 0 || bigrams2.size === 0) return 0;
+
+    // Tính toán số lượng bigram chung (Intersection)
+    let intersectionSize = 0;
+    bigrams1.forEach(bigram => {
+        if (bigrams2.has(bigram)) {
+            intersectionSize++;
+        }
+    });
+
+    // Công thức Dice: 2 * |Intersection| / (|A| + |B|)
+    const coefficient = (2 * intersectionSize) / (bigrams1.size + bigrams2.size);
+    return coefficient;
+}
+
+/**
+ * Lọc và xếp hạng các cặp câu hỏi có nội dung giống nhau.
+ * @param {number} threshold Ngưỡng tỷ lệ giống nhau tối thiểu (ví dụ: 0.8 cho 80%).
+ */
+function findSimilarQuestions(threshold = 0.8) {
+    const similarPairs = [];
+    const n = questions.length;
+
+    // Duyệt qua tất cả các cặp (i, j) với i < j
+    for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+            const q1 = questions[i];
+            const q2 = questions[j];
+
+            // Chỉ so sánh câu hỏi (q.question)
+            const similarity = diceCoefficient(q1.question, q2.question);
+
+            if (similarity >= threshold) {
+                similarPairs.push({
+                    q1: q1,
+                    q2: q2,
+                    similarity: similarity,
+                    index1: i, // Lưu trữ chỉ mục thực tế trong mảng questions
+                    index2: j
+                });
+            }
+        }
+    }
+
+    // Sắp xếp theo tỷ lệ giống nhau giảm dần
+    similarPairs.sort((a, b) => b.similarity - a.similarity);
+
+    currentPage = 1;
+    renderSimilarResults(similarPairs);
+}
+
+/**
+ * Hiển thị các cặp câu hỏi giống nhau.
+ * @param {Array<Object>} similarPairs Danh sách các cặp câu hỏi giống nhau.
+ */
+function renderSimilarResults(similarPairs) {
+    const container = document.getElementById("questions-container");
+    container.innerHTML = "";
+
+    const list = similarPairs;
+    const totalPages = Math.ceil(list.length / pageSize);
+    if (currentPage > totalPages) currentPage = totalPages || 1;
+    if (currentPage < 1 && totalPages > 0) currentPage = 1;
+
+    const start = (currentPage - 1) * pageSize;
+    const pageItems = list.slice(start, start + pageSize);
+
+    // Cập nhật tiêu đề hiển thị
+    const infoArea = document.getElementById("info-area");
+    if (infoArea) {
+        infoArea.innerHTML = `Đã tìm thấy <strong>${similarPairs.length} cặp</strong> câu hỏi có độ giống nhau từ ${(similarPairs[0]?.similarity * 100).toFixed(2) || 0}% trở lên.`;
+    }
+
+    pageItems.forEach((pair, index) => {
+        const div = document.createElement("div");
+        div.className = "similar-pair";
+        // Thay vì chỉ mục trang, hiển thị vị trí trong danh sách cặp giống nhau
+        const displayIndex = start + index + 1; 
+
+        // Hàm hỗ trợ render một câu hỏi đơn lẻ
+        const renderQuestionBlock = (q, realIndex, tag) => {
+            const formattedQuestion = q.question.replace(/\n/g, '<br>');
+            const imageHtml = q.image ? `<img src="${q.image}" class="thumbnail" onclick="enlargeImage('${q.image}')"/>` : "";
+            
+            return `
+                <div class="similar-question-item">
+                    <div class="question-header">
+                        <strong>[${tag}] Câu #${realIndex + 1}: ${formattedQuestion}</strong>
+                    </div>
+                    ${imageHtml}
+                    ${q.answers.map((a, i) => `<div>${String.fromCharCode(65 + i)}: ${a}</div>`).join('')}
+                    <div>Đáp án đúng: ${q.correct || ''}</div>
+                    <div class="question-actions">
+                        <button onclick="editQuestion(${realIndex})">✏ Sửa</button>
+                        <button onclick="deleteQuestion(${realIndex})">🗑 Xóa</button>
+                    </div>
+                </div>
+            `;
+        };
+
+        div.innerHTML = `
+            <div class="similarity-info">
+                <strong>Cặp ${displayIndex}</strong>: Độ giống nhau: 
+                <span class="similarity-score">${(pair.similarity * 100).toFixed(2)}%</span>
+            </div>
+            <div class="pair-content">
+                ${renderQuestionBlock(pair.q1, pair.index1, 'A')}
+                ${renderQuestionBlock(pair.q2, pair.index2, 'B')}
+            </div>
+        `;
+        container.appendChild(div);
+    });
+
+    renderCustomPagination(totalPages, list); // Sử dụng lại hàm phân trang tùy chỉnh
 }
