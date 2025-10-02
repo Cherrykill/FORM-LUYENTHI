@@ -225,7 +225,7 @@ body.dark .question-boxes button.answered.active {
   border-radius: 10px;
 }
 
-.quiz-container .options button{
+.quiz-container .options button {
   text-align: left;
 }
 
@@ -452,7 +452,7 @@ body.dark .admin-btn:hover {
 
 .toggle-theme {
   position: fixed;
-  top: 10px;
+  top: 80%;
   right: 10px;
 }
 
@@ -1070,4 +1070,116 @@ body.dark .hamburger-btn:hover {
 
 body.dark #countdown {
   color: #f1f1f1;
+}
+
+/* =========================================================================
+   15. POPUP DANH SÁCH CÂU HỎI VÀ NÚT MỞ
+   ========================================================================= */
+
+.question-list-btn {
+  position: fixed;
+  top: 80%;
+  left: 0px; /* Đặt bên phải nút hamburger */
+  z-index: 1001;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  background-color: var(--btn-bg);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: none; /* Ẩn mặc định trên màn hình lớn */
+}
+
+.question-list-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+body.dark .question-list-btn {
+  background-color: var(--btn-bg);
+}
+
+body.dark .question-list-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+.question-list-popup {
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: center;
+  animation: slideUp 0.3s ease;
+}
+
+.question-list-popup .question-boxes {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Hiển thị 6 ô trên một hàng */
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.question-list-popup .question-boxes button {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background-color: #f0f0f0;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px; /* Đảm bảo chữ không quá nhỏ */
+}
+
+body.dark .question-list-popup .question-boxes button {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+}
+
+/* Responsive: Điều chỉnh số ô trên mobile */
+@media (max-width: 768px) {
+  .question-list-btn {
+    display: block !important; /* Buộc hiển thị ở mobile */
+  }
+
+  .question-list-popup .question-boxes {
+    grid-template-columns: repeat(4, 1fr); /* 4 ô trên một hàng ở mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .question-list-popup .question-boxes {
+    grid-template-columns: repeat(3, 1fr); /* 3 ô trên một hàng ở màn hình nhỏ */
+  }
+
+  .question-list-btn {
+    left: 70px; /* Điều chỉnh vị trí để tránh chồng lấn */
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Tùy chỉnh thanh cuộn cho popup */
+.question-list-popup::-webkit-scrollbar {
+  width: 10px;
+}
+
+.question-list-popup::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+.question-list-popup::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+body.dark .question-list-popup::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+body.dark .question-list-popup::-webkit-scrollbar-thumb {
+  background: #666;
 }

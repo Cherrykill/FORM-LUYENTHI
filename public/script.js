@@ -172,7 +172,7 @@ function renderQuestion() {
             if (i === correctIndex) {
                 btn.style.border = '5px solid #28a745';
                 btn.style.boxShadow = '0 0 5px rgba(40, 167, 69, 0.5)';
-            } else if (i === selectedAnswers[currentQuestionIndex] && i !== correctIndex) {
+            } else if (ibius == selectedAnswers[currentQuestionIndex] && i !== correctIndex) {
                 btn.style.border = '5px solid #dc3545';
                 btn.style.boxShadow = '0 0 5px rgba(220, 53, 69, 0.5)';
             }
@@ -191,10 +191,7 @@ function renderQuestionButtons() {
     questions.forEach((_, i) => {
         const btn = document.createElement('button');
         btn.innerText = i + 1;
-        btn.onclick = () => {
-            currentQuestionIndex = i;
-            renderQuestion();
-        };
+        btn.onclick = () => goToQuestion(i); // Sử dụng goToQuestion thay vì set trực tiếp
         list.appendChild(btn);
     });
 }
@@ -220,6 +217,15 @@ function updateQuestionButtons() {
             }
         }
     });
+}
+
+// Hàm chuyển đến câu hỏi cụ thể
+function goToQuestion(index) {
+    if (index >= 0 && index < questions.length) {
+        currentQuestionIndex = index;
+        renderQuestion();
+        updateQuestionButtons();
+    }
 }
 
 // =========================================================================
@@ -759,8 +765,9 @@ function updateQuizProgress() {
 }
 
 // =========================================================================
-// 12. 📏 RESPONSIVE
+// 12. 📏 RESPONSIVE & POPUP DANH SÁCH CÂU HỎI
 // =========================================================================
+
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const sidebar = document.getElementById('sidebar');
@@ -774,4 +781,58 @@ document.addEventListener('DOMContentLoaded', () => {
             sidebar.classList.remove('active');
         }
     });
+});
+
+// Hiển thị/ẩn nút dựa trên kích thước màn hình
+function toggleQuestionListBtn() {
+    const btn = document.getElementById('question-list-btn');
+    if (window.innerWidth <= 768) {
+        btn.style.display = 'block';
+    } else {
+        btn.style.display = 'none';
+    }
+}
+
+// Gọi khi load và resize
+window.addEventListener('load', toggleQuestionListBtn);
+window.addEventListener('resize', toggleQuestionListBtn);
+
+// Hàm đóng popup
+function closeQuestionListPopup() {
+    const popup = document.getElementById('question-list-popup');
+    popup.classList.add('hidden');
+}
+
+// Sự kiện mở popup
+document.getElementById('question-list-btn').addEventListener('click', () => {
+    const popup = document.getElementById('question-list-popup');
+    const popupContent = document.getElementById('question-list-popup-content');
+    const questionList = document.getElementById('question-list');
+
+    // Sao chép nội dung từ #question-list
+    popupContent.innerHTML = questionList.innerHTML || '<p>Chưa có câu hỏi nào.</p>';
+
+    // Gán lại sự kiện cho các nút trong popup
+    const popupButtons = popupContent.querySelectorAll('button');
+    popupButtons.forEach((btn, index) => {
+        // Xóa sự kiện cũ để tránh trùng lặp
+        btn.removeEventListener('click', btn.onclick);
+        btn.onclick = null;
+
+        // Gán sự kiện mới
+        btn.addEventListener('click', () => {
+            goToQuestion(index); // Chuyển đến câu hỏi tương ứng
+            closeQuestionListPopup(); // Đóng popup
+        });
+    });
+
+    // Hiển thị popup
+    popup.classList.remove('hidden');
+});
+
+// Đóng popup khi nhấn ra ngoài vùng popup
+document.getElementById('question-list-popup').addEventListener('click', (event) => {
+    if (event.target.classList.contains('popup-overlay')) {
+        closeQuestionListPopup();
+    }
 });

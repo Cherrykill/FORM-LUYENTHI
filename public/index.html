@@ -67,6 +67,8 @@
 
       <!-- Bảng bên phải: thông tin thời gian + điều hướng đến admin -->
       <div class="right-panel">
+        <!-- Nút để mở popup danh sách câu hỏi -->
+        <button class="question-list-btn" id="question-list-btn">📋</button>
         <div id="user-info" style="display: block">
           <p><span id="user-name"></span></p>
           <button onclick="showLoginForm()" class="login-btn">Login</button>
@@ -80,10 +82,18 @@
         <h3>Thông tin</h3>
         <p>Chế độ: <span id="mode-label">Chưa chọn</span></p>
         <p>Thời gian: <span id="time-info">Không giới hạn</span></p>
-        <button style="background-color: aqua; width: 100%; margin-top: 10px; border-radius: 10px; height: 50px;">
+        <button
+          style="
+            background-color: aqua;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 10px;
+            height: 50px;
+          "
+        >
           <a
             href="/admin/selectfile.html"
-            style="color: white; text-decoration: none; font-weight: bold;"
+            style="color: white; text-decoration: none; font-weight: bold"
           >
             Chọn file câu hỏi
           </a>
@@ -93,7 +103,7 @@
 
     <!-- Nút đổi giao diện Light/Dark -->
     <div class="toggle-theme">
-      <button onclick="toggleTheme()">Toggle Dark/Light</button>
+      <button onclick="toggleTheme()">💡</button>
     </div>
 
     <!-- Popup: Chọn chế độ làm bài -->
@@ -206,6 +216,15 @@
             >Đã có tài khoản? Đăng nhập</span
           >
         </div>
+      </div>
+    </div>
+
+    <!-- Popup: Danh sách câu hỏi -->
+    <div id="question-list-popup" class="popup-overlay hidden">
+      <div class="popup question-list-popup">
+        <h2 style="color: silver">📋 Danh sách câu hỏi</h2>
+        <div class="question-boxes" id="question-list-popup-content"></div>
+        <button onclick="closeQuestionListPopup()">Đóng</button>
       </div>
     </div>
 
