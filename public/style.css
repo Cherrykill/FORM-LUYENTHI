@@ -1156,7 +1156,7 @@ body.dark .question-list-popup .question-boxes button {
   }
 
   .question-list-btn {
-    left: 70px; /* Điều chỉnh vị trí để tránh chồng lấn */
+    left: 0px; /* Điều chỉnh vị trí để tránh chồng lấn */
     font-size: 1rem;
     padding: 0.4rem 0.8rem;
   }
