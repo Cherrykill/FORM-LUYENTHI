@@ -753,7 +753,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "61"
+    "id": "61",
+    "image": "/admin/images/gtss59-64.png"
   },
   {
     "question": "Căn cứ vào yếu tố nào để xác định đây là mô hình đa luồng lệnh? (Giả định IS có nhiều luồng lệnh, CU là đơn vị điều khiển)",
@@ -765,7 +766,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "62"
+    "id": "62",
+    "image": "/admin/images/gtss59-64.png"
   },
   {
     "question": "Căn cứ vào yếu tố nào để xác định đây là mô hình đơn luồng dữ liệu? (Giả định DS là một luồng dữ liệu)",
@@ -777,7 +779,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "63"
+    "id": "63",
+    "image": "/admin/images/gtss59-64.png"
   },
   {
     "question": "Từ CU trong mô hình viết tắt của từ gì?",
@@ -789,7 +792,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "64"
+    "id": "64",
+    "image": "/admin/images/gtss59-64.png"
   },
   {
     "question": "Hình trên thuộc mô hình gì? (Giả định hình là MIMD)",
@@ -801,7 +805,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "65"
+    "id": "65",
+    "image": "/admin/images/gtss65-67.png"
   },
   {
     "question": "Hình ảnh trên diễn tả điều gì? (Giả định hình là MIMD)",
@@ -813,7 +818,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "66"
+    "id": "66",
+    "image": "/admin/images/gtss65-67.png"
   },
   {
     "question": "Hình ảnh trên viết tên gọi đầy đủ là gì? (Giả định hình là MIMD)",
@@ -825,7 +831,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "67"
+    "id": "67",
+    "image": "/admin/images/gtss65-67.png"
   },
   {
     "question": "Mô hình MISD thực hiện theo nguyên lý gì?",
@@ -897,7 +904,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "73"
+    "id": "73",
+    "image": "/admin/images/gtss73-80.png"
   },
   {
     "question": "Hình trên thực hiện như thế nào? (Giả định hình là MIMD)",
@@ -922,7 +930,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "32"
+    "id": "32",
+    "image": "/admin/images/gtss73-80.png"
   },
   {
     "question": "Cụm từ Data Input stream A nghĩa là gì?",
@@ -934,7 +943,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "33"
+    "id": "33",
+    "image": "/admin/images/gtss73-80.png"
   },
   {
     "question": "Cụm từ Data Output stream A nghĩa là gì?",
@@ -946,7 +956,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "34"
+    "id": "34",
+    "image": "/admin/images/gtss73-80.png"
   },
   {
     "question": "Cụm từ Instruction Stream A nghĩa là gì?",
@@ -958,7 +969,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "35"
+    "id": "35",
+    "image": "/admin/images/gtss73-80.png"
   },
   {
     "question": "Trong hình trên căn cứ vào đâu để xác định đa luồng lệnh? (Giả định hình có nhiều Instruction Stream: A, B, C...)",
@@ -970,7 +982,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "36"
+    "id": "36",
+    "image": "/admin/images/gtss73-80.png"
   },
   {
     "question": "Trong hình trên căn cứ vào đâu để xác định đa luồng lệnh? (Giả định hình có nhiều Instruction Stream: A, B, C...)",
@@ -982,7 +995,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "37"
+    "id": "37",
+    "image": "/admin/images/gtss73-80.png"
   },
   {
     "question": "Hình trên thuộc mô hình gì? (Giả định hình là SIMD)",
@@ -994,7 +1008,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "38"
+    "id": "38",
+    "image": "/admin/images/gtss81-86.png"
   },
   {
     "question": "Hình trên tên gọi là gì? (Giả định hình là SIMD)",
@@ -1006,7 +1021,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "39"
+    "id": "39",
+    "image": "/admin/images/gtss81-86.png"
   },
   {
     "question": "Hình trên có thực hiện theo cách thức nào gì? (Giả định hình là SIMD)",
@@ -1018,7 +1034,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "40"
+    "id": "40",
+    "image": "/admin/images/gtss81-86.png"
   },
   {
     "question": "Hình trên tại một thời điểm thực hiện lệnh như thế nào? (Giả định hình là SIMD)",
@@ -1030,7 +1047,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "41"
+    "id": "41",
+    "image": "/admin/images/gtss81-86.png"
   },
   {
     "question": "Hình trên, một thời điểm thực hiện bao nhiêu lệnh? (Giả định hình là SIMD)",
@@ -1042,7 +1060,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "42"
+    "id": "42",
+    "image": "/admin/images/gtss81-86.png"
   },
   {
     "question": "Hình trên phát biểu nào sai? (Giả định hình là SIMD)",
@@ -1054,7 +1073,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "43"
+    "id": "43",
+    "image": "/admin/images/gtss81-86.png"
   },
   {
     "question": "Máy P-RAM là gì?",
@@ -1198,7 +1218,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "55"
+    "id": "55",
+    "image": "/admin/images/gtss98.png"
   },
   {
     "question": "Hình trên thuộc loại nào? (Giả định hình là Pipelining theo đơn vị câu lệnh)",
@@ -1210,7 +1231,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "56"
+    "id": "56",
+    "image": "/admin/images/gtss99.png"
   },
   {
     "question": "Hình trên thực hiện theo nguyên lý nào? (Giả định hình là Pipelining)",
@@ -1222,7 +1244,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "57"
+    "id": "57",
+    "image": "/admin/images/gtss100-102.png"
   },
   {
     "question": "Hình trên xây dựng theo công thức nào? (Giả định hình là bộ cộng dồn Pipelining)",
@@ -1234,7 +1257,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "58"
+    "id": "58",
+    "image": "/admin/images/gtss100-102.png"
   },
   {
     "question": "Hình trên xây dựng theo cách thức nào? (Giả định hình là Pipelining)",
@@ -1246,7 +1270,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "59"
+    "id": "59",
+    "image": "/admin/images/gtss100-102.png"
   },
   {
     "question": "Hình trên là bộ nhớ song song nào? (Giả định hình là mô hình Bộ nhớ chia sẻ)",
@@ -1258,7 +1283,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "60"
+    "id": "60",
+    "image": "/admin/images/gtss103-105.png"
   },
   {
     "question": "Mỗi ô nhớ của bộ nhớ kết hợp gồm mấy tín hiệu đầu vào?",
@@ -1283,7 +1309,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "62"
+    "id": "62",
+    "image": "/admin/images/gtss103-105.png"
   },
   {
     "question": "Hình trên là loại bộ nhớ nào của máy tính song song? (Giả định hình là Bộ nhớ kết hợp)",
@@ -1295,7 +1322,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "63"
+    "id": "63",
+    "image": "/admin/images/gtss106.png"
   },
   {
     "question": "Đặc điểm của bộ nhớ chia sẻ của máy tính song song?",
@@ -1343,7 +1371,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "67"
+    "id": "67",
+    "image": "/admin/images/gtss110.png"
   },
   {
     "question": "Đặc điểm của bộ nhớ phân tán?",
@@ -1379,7 +1408,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "70"
+    "id": "70",
+    "image": "/admin/images/gtss113-114.png"
   },
   {
     "question": "Trong bộ nhớ lai của máy tính dong song?",
@@ -1391,7 +1421,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "71"
+    "id": "71",
+    "image": "/admin/images/gtss113-114.png"
   },
   {
     "question": "Trong bộ nhớ lai của máy tính song song?",
@@ -1404,7 +1435,7 @@
     "correct": "C",
     "favorite": false,
     "id": "72",
-    "image": "/admin/images/gtss113-114.png"
+    "image": ""
   },
   {
     "question": "Trong bộ nhớ lai của máy tính song song?",
@@ -1464,7 +1495,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "77"
+    "id": "77",
+    "image": "/admin/images/gtss120.png"
   },
   {
     "question": "Mỗi BXL Pi (0<i<n) có hai láng giềng là Pi-1 và Pi+1, các BXL đầu và cuối chỉ có 1 láng giềng là đặc điểm của mô hình nào?",
@@ -1548,7 +1580,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "84"
+    "id": "84",
+    "image": "/admin/images/gtss127.png"
   },
   {
     "question": "Mô hình mạng liên kết vòng có đặc điểm gì?",
@@ -1596,7 +1629,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "88"
+    "id": "88",
+    "image": "/admin/images/gtss131-134.png"
   },
   {
     "question": "Hình 1 thuộc mô hình mạng liên kết gì? (Giả định hình 1 là Mạng liên kết lưới quay vòng)",
@@ -1608,7 +1642,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "89"
+    "id": "89",
+    "image": "/admin/images/gtss131-134.png"
   },
   {
     "question": "Hình 2 thuộc mô hình mạng liên kết gì? (Giả định hình 2 là Mạng liên kết lưới không quay vòng)",
@@ -1620,7 +1655,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "90"
+    "id": "90",
+    "image": "/admin/images/gtss131-134.png"
   },
   {
     "question": "Hình 3 thuộc mô hình mạng liên kết gì? (Giả định hình 3 là Mạng liên kết lưới quay vòng)",
@@ -1632,7 +1668,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "91"
+    "id": "91",
+    "image": "/admin/images/gtss131-134.png"
   },
   {
     "question": "Hình sau thuộc mô hình mạng liên kết gì? (Giả định hình là Mạng liên kết xáo trộn hoàn hảo quay vòng)",
@@ -1644,7 +1681,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "92"
+    "id": "92",
+    "image": "/admin/images/gtss135.png"
   },
   {
     "question": "Hình sau thuộc mô hình mạng liên kết gì? (Giả định hình là Mạng liên kết hình hộp)",
@@ -1656,7 +1694,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "93"
+    "id": "93",
+    "image": "/admin/images/gtss136-137.png"
   },
   {
     "question": "Đặc điểm của mạng liên kết nhị phân là gì?",
@@ -1668,7 +1707,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "94"
+    "id": "94",
+    "image": "/admin/images/gtss136-137.png"
   },
   {
     "question": "Hình sau thuộc mô hình mạng liên kết gì? (Giả định hình là Mạng liên kết hình hộp)",
@@ -1680,7 +1720,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "95"
+    "id": "95",
+    "image": "/admin/images/gtss138.png"
   },
   {
     "question": "Trong giải thuật song song thuật ngữ Speedup là gì?",
