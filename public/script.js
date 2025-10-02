@@ -156,28 +156,34 @@ function renderQuestion() {
     questionTextEl.appendChild(text);
 
     const optionsEl = document.getElementById('options');
-    optionsEl.innerHTML = '';
+    optionsEl.innerHTML = ''; // Xóa các đáp án cũ
 
     question.answers.forEach((answer, i) => {
         const btn = document.createElement('button');
         btn.innerText = answer;
         btn.onclick = () => selectAnswer(i);
 
+        // Đánh dấu trạng thái "selected" nếu đáp án đã được chọn
         if (selectedAnswers[currentQuestionIndex] === i) {
             btn.classList.add('selected');
         }
 
+        // Nếu ở chế độ hiển thị đáp án, áp dụng style đúng/sai
         if (showAnswerMode && selectedAnswers[currentQuestionIndex] !== null) {
             const correctIndex = getCorrectIndex(question.correct);
             if (i === correctIndex) {
+                btn.classList.add('correct');
                 btn.style.border = '5px solid #28a745';
                 btn.style.boxShadow = '0 0 5px rgba(40, 167, 69, 0.5)';
-            } else if (ibius == selectedAnswers[currentQuestionIndex] && i !== correctIndex) {
+            } else if (i === selectedAnswers[currentQuestionIndex] && i !== correctIndex) {
+                btn.classList.add('incorrect');
                 btn.style.border = '5px solid #dc3545';
                 btn.style.boxShadow = '0 0 5px rgba(220, 53, 69, 0.5)';
             }
         }
 
+        // Đảm bảo nút luôn hiển thị, không bị ẩn
+        btn.style.display = 'block'; // Force hiển thị
         optionsEl.appendChild(btn);
     });
 
@@ -191,7 +197,10 @@ function renderQuestionButtons() {
     questions.forEach((_, i) => {
         const btn = document.createElement('button');
         btn.innerText = i + 1;
-        btn.onclick = () => goToQuestion(i); // Sử dụng goToQuestion thay vì set trực tiếp
+        btn.onclick = () => {
+            currentQuestionIndex = i;
+            renderQuestion();
+        };
         list.appendChild(btn);
     });
 }
@@ -219,15 +228,6 @@ function updateQuestionButtons() {
     });
 }
 
-// Hàm chuyển đến câu hỏi cụ thể
-function goToQuestion(index) {
-    if (index >= 0 && index < questions.length) {
-        currentQuestionIndex = index;
-        renderQuestion();
-        updateQuestionButtons();
-    }
-}
-
 // =========================================================================
 // 4. ✍️ XỬ LÝ CHỌN ĐÁP ÁN & ĐIỀU HƯỚNG
 // =========================================================================
@@ -250,10 +250,14 @@ function selectAnswer(index) {
         }
     }
     
+    // Cập nhật giao diện câu hỏi, giữ các đáp án hiển thị
     renderQuestion();
-    if (autoNextDelay > 0) {
+    
+    // Chỉ tự động chuyển câu nếu không ở chế độ hiển thị đáp án
+    if (autoNextDelay > 0 && !showAnswerMode) {
         setTimeout(() => nextQuestion(), autoNextDelay);
     }
+    
     updateQuizProgress();
 }
 
@@ -821,8 +825,9 @@ document.getElementById('question-list-btn').addEventListener('click', () => {
 
         // Gán sự kiện mới
         btn.addEventListener('click', () => {
-            goToQuestion(index); // Chuyển đến câu hỏi tương ứng
-            closeQuestionListPopup(); // Đóng popup
+            currentQuestionIndex = index;
+            renderQuestion();
+            closeQuestionListPopup();
         });
     });
 
