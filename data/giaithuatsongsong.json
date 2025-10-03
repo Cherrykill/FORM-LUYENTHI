@@ -9,7 +9,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "1"
+    "id": "1",
+    "image": ""
   },
   {
     "question": "Mô hình nào trong mô hình dưới đây là mô hình mô hình máy tính song song?",
@@ -1168,7 +1169,7 @@
     "id": "54"
   },
   {
-    "question": "Hình trên thuộc loại nào? ",
+    "question": "Hình trên thuộc loại nào?",
     "answers": [
       "Hình ống theo đơn vị số học",
       "Hình ống theo đơn vị câu lệnh",
@@ -1177,10 +1178,11 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "55"
+    "id": "55",
+    "image": "/admin/images/gtss98.png"
   },
   {
-    "question": "Hình trên thuộc loại nào? ",
+    "question": "Hình trên thuộc loại nào?",
     "answers": [
       "Hình ống theo đơn vị số học",
       "Hình ống theo đơn vị câu lệnh",
@@ -1189,10 +1191,11 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "56"
+    "id": "56",
+    "image": "/admin/images/gtss99.png"
   },
   {
-    "question": "Hình trên thực hiện theo nguyên lý nào? ",
+    "question": "Hình trên thực hiện theo nguyên lý nào?",
     "answers": [
       "Nguyên lý hình ống",
       "Nguyên lý Greedy",
@@ -1201,10 +1204,11 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "57"
+    "id": "57",
+    "image": "/admin/images/gtss100-102.png"
   },
   {
-    "question": "Hình trên xây dựng theo công thức nào? ",
+    "question": "Hình trên xây dựng theo công thức nào?",
     "answers": [
       "S = S + a[i]",
       "S(in)=S(out) + a[i]",
@@ -1213,10 +1217,11 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "58"
+    "id": "58",
+    "image": "/admin/images/gtss100-102.png"
   },
   {
-    "question": "Hình trên xây dựng theo cách thức nào? ",
+    "question": "Hình trên xây dựng theo cách thức nào?",
     "answers": [
       "Đầu ra của BXL này không là đầu vào của BXL kia",
       "Tất cả đều sai",
@@ -1225,10 +1230,11 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "59"
+    "id": "59",
+    "image": "/admin/images/gtss100-102.png"
   },
   {
-    "question": "Hình trên là bộ nhớ song song nào? ",
+    "question": "Hình trên là bộ nhớ song song nào?",
     "answers": [
       "Bộ nhớ kết hợp",
       "Bộ nhớ truy cập ngẫu nhiên song song",
@@ -1237,7 +1243,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "60"
+    "id": "60",
+    "image": "/admin/images/gtss103-105.png"
   },
   {
     "question": "Mỗi ô nhớ của bộ nhớ kết hợp gồm mấy tín hiệu đầu vào?",
@@ -1262,7 +1269,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "62"
+    "id": "62",
+    "image": "/admin/images/gtss103-105.png"
   },
   {
     "question": "Hình trên là loại bộ nhớ nào của máy tính song song? ",

@@ -484,21 +484,32 @@ async function saveQuestion() {
         favorite: false
     };
 
-    // 👉 Nếu có chọn ảnh, thêm key image
-    if (imageInput.files.length > 0) {
-        const fileName = imageInput.files[0].name;
-        // Giả định ảnh được lưu ở đây
-        newQuestion.image = `/admin/images/${fileName}`;
-    }
-
     if (index) {
-        // Nếu sửa và có ảnh mới thì ghi đè, không thì giữ ảnh cũ
-        if (!newQuestion.image && questions[index].image) {
-            newQuestion.image = questions[index].image;
+        // Chế độ SỬA câu hỏi
+        const oldQuestion = questions[index];
+
+        // 👉 Nếu có chọn ảnh MỚI, cập nhật đường dẫn ảnh mới
+        if (imageInput.files.length > 0) {
+            const fileName = imageInput.files[0].name;
+            newQuestion.image = `/admin/images/${fileName}`;
+        } else {
+            // 👉 Nếu KHÔNG chọn ảnh mới, GIỮ NGUYÊN đường dẫn ảnh cũ
+            newQuestion.image = oldQuestion.image || "";
         }
-        // Đảm bảo các thuộc tính khác (wrongCount) được giữ lại khi chỉnh sửa
-        questions[index] = { ...questions[index], ...newQuestion };
+
+        // Đảm bảo các thuộc tính khác (wrongCount, favorite) được giữ lại
+        questions[index] = {
+            ...oldQuestion,  // Giữ lại tất cả thuộc tính cũ
+            ...newQuestion   // Ghi đè các thuộc tính mới
+        };
     } else {
+        // Chế độ THÊM MỚI câu hỏi
+        // 👉 Nếu có chọn ảnh, thêm đường dẫn ảnh
+        if (imageInput.files.length > 0) {
+            const fileName = imageInput.files[0].name;
+            newQuestion.image = `/admin/images/${fileName}`;
+        }
+
         const duplicate = questions.find(q => q.question === newQuestion.question);
         if (duplicate) {
             const confirmAdd = confirm("Câu hỏi đã tồn tại. Bạn có muốn thêm bản sao?");
@@ -507,10 +518,10 @@ async function saveQuestion() {
         questions.push(newQuestion);
     }
 
-    await saveToFile();         // ghi vào file baomat.json
-    resetForm();                // reset form
+    await saveToFile();         // ghi vào file baomat.json
+    resetForm();                // reset form
     document.getElementById("slide-form").style.display = "none";
-    renderQuestions();          // cập nhật lại danh sách
+    renderQuestions();          // cập nhật lại danh sách
 }
 
 async function deleteQuestion(index) {
