@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (findSimilarBtn) {
         findSimilarBtn.addEventListener("click", () => {
             const input = prompt("Nhập ngưỡng tỷ lệ giống nhau tối thiểu (0.0 đến 1.0, mặc định 0.8):", "0.8");
-            if (input === null) return; 
+            if (input === null) return;
 
             const threshold = parseFloat(input.trim()) || 0.8;
             if (threshold < 0 || threshold > 1) {
@@ -209,7 +209,7 @@ function renderQuestions() {
 
     // Xóa thông báo tìm kiếm giống nhau khi trở về chế độ xem thường
     const infoArea = document.getElementById("info-area");
-    if (infoArea) infoArea.innerHTML = ""; 
+    if (infoArea) infoArea.innerHTML = "";
 
     let list = showFavoritesOnly ? questions.filter(q => q.favorite) : questions;
     const totalPages = Math.ceil(list.length / pageSize);
@@ -266,7 +266,7 @@ function renderQuestions() {
 function renderSearchResults(list) {
     const container = document.getElementById("questions-container");
     container.innerHTML = "";
-    
+
     // Xóa thông báo tìm kiếm giống nhau khi ở chế độ xem kết quả tìm kiếm thường
     const infoArea = document.getElementById("info-area");
     if (infoArea) infoArea.innerHTML = "";
@@ -392,7 +392,7 @@ function renderCustomPagination(totalPages, currentList) {
         if (page !== null) {
             btn.onclick = () => {
                 currentPage = page;
-                
+
                 // Kiểm tra xem có đang ở chế độ xem kết quả tìm kiếm giống nhau không
                 if (currentList && currentList.length > 0 && currentList[0].similarity !== undefined) {
                     renderSimilarResults(currentList);
@@ -488,7 +488,7 @@ async function saveQuestion() {
     if (imageInput.files.length > 0) {
         const fileName = imageInput.files[0].name;
         // Giả định ảnh được lưu ở đây
-        newQuestion.image = `/admin/images/${fileName}`; 
+        newQuestion.image = `/admin/images/${fileName}`;
     }
 
     if (index) {
@@ -771,13 +771,13 @@ function renderSimilarResults(similarPairs) {
         const div = document.createElement("div");
         div.className = "similar-pair";
         // Thay vì chỉ mục trang, hiển thị vị trí trong danh sách cặp giống nhau
-        const displayIndex = start + index + 1; 
+        const displayIndex = start + index + 1;
 
         // Hàm hỗ trợ render một câu hỏi đơn lẻ
         const renderQuestionBlock = (q, realIndex, tag) => {
             const formattedQuestion = q.question.replace(/\n/g, '<br>');
             const imageHtml = q.image ? `<img src="${q.image}" class="thumbnail" onclick="enlargeImage('${q.image}')"/>` : "";
-            
+
             return `
                 <div class="similar-question-item">
                     <div class="question-header">
@@ -808,4 +808,53 @@ function renderSimilarResults(similarPairs) {
     });
 
     renderCustomPagination(totalPages, list); // Sử dụng lại hàm phân trang tùy chỉnh
+}
+
+
+// ====== 13. NHẬN DIỆN GIỌNG NÓI (Speech Recognition) ======
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+if (SpeechRecognition) {
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'vi-VN'; // Ngôn ngữ tiếng Việt
+    recognition.interimResults = false; // Chỉ lấy kết quả cuối cùng
+    recognition.maxAlternatives = 1;
+
+    // Hàm xử lý nhận diện giọng nói và điền vào input
+    function startSpeechRecognition(inputElement) {
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            inputElement.value = transcript; // Điền kết quả vào ô input
+            // Kích hoạt sự kiện tìm kiếm sau khi điền
+            const inputEvent = new Event('input', { bubbles: true });
+            inputElement.dispatchEvent(inputEvent);
+        };
+
+        recognition.onerror = (event) => {
+            console.error("Lỗi nhận diện giọng nói:", event.error);
+            alert("Lỗi nhận diện giọng nói: " + event.error);
+        };
+
+        recognition.onend = () => {
+            console.log("Kết thúc nhận diện giọng nói");
+        };
+
+        recognition.start();
+    }
+
+    // Gán sự kiện cho nút micro
+    document.getElementById("voice-search-btn").addEventListener("click", () => {
+        const searchInput = document.querySelector(".search-input2");
+        startSpeechRecognition(searchInput);
+    });
+
+    document.getElementById("voice-search-btn2").addEventListener("click", () => {
+        const searchInput = document.querySelector(".search-input");
+        startSpeechRecognition(searchInput);
+    });
+} else {
+    console.warn("Trình duyệt không hỗ trợ SpeechRecognition API.");
+    document.getElementById("voice-search-btn").disabled = true;
+    document.getElementById("voice-search-btn2").disabled = true;
+    alert("Trình duyệt không hỗ trợ nhận diện giọng nói. Vui lòng sử dụng trình duyệt khác (như Chrome).");
 }

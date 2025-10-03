@@ -1,120 +1,122 @@
 <script>
-    // BroadcastChannel để tải lại trang khi có thay đổi file câu hỏi
-    const reloadChannel = new BroadcastChannel("reload-channel");
-    reloadChannel.onmessage = (event) => {
-        if (event.data === "reload") {
-            console.log("🔁 Nhận tín hiệu reload từ selectfile.html");
-            location.reload();
-        }
-    };
+  // BroadcastChannel để tải lại trang khi có thay đổi file câu hỏi
+  const reloadChannel = new BroadcastChannel("reload-channel");
+  reloadChannel.onmessage = (event) => {
+    if (event.data === "reload") {
+      console.log("🔁 Nhận tín hiệu reload từ selectfile.html");
+      location.reload();
+    }
+  };
 </script>
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Quản lý Câu hỏi</title>
-        <link rel="stylesheet" href="admin.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý Câu hỏi</title>
+    <link rel="stylesheet" href="admin.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  </head>
 
-    <body>
-        <button class="hamburger" onclick="toggleMobileMenu()">➕</button>
-        <button id="mobile-search-toggle" class="mobile-search-toggle">🔍</button>
+  <body>
+    <button class="hamburger" onclick="toggleMobileMenu()">➕</button>
+    <button id="mobile-search-toggle" class="mobile-search-toggle">🔍</button>
 
-        <div id="mobile-search-box" class="mobile-search-box">
-            <input
-                type="text"
-                class="search-input"
-                placeholder="Tìm kiếm câu hỏi..."
-            />
-        </div>
+    <div id="mobile-search-box" class="mobile-search-box">
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Tìm kiếm câu hỏi..."
+      />
+      <button id="voice-search-btn2" class="voice-btn">🎤</button>
+    </div>
 
-        <div class="navbar">
-            <div class="left-buttons">
-                <button id="toggle-form-btn">➕ Thêm Câu hỏi</button>
-                <button id="favorite-toggle-btn">⭐ Câu hỏi yêu thích</button>
-                <button id="find-similar-btn" onclick="">🧐 Tìm Câu Giống Nhau</button>
-                <button onclick="exportToPDF(true)">📄 Export (có đáp án)</button>
-                <button onclick="exportToPDF(false)">📄 Export (không đáp án)</button>
-                <button>
-                    <a href="selectfile.html" style="color: white; text-decoration: none">
-                        Chọn file câu hỏi
-                    </a>
-                </button>
-            </div>
-
-            <div class="right-search">
-                <input
-                    type="text"
-                    class="search-input2"
-                    placeholder="Tìm kiếm câu hỏi..."
-                />
-                <button id="theme-toggle">Chế độ Tối</button>
-                <button id="missing-answer-btn">Câu chưa có đáp án</button>
-                <button
-                    id="wrongcount-btn"
-                    style="background-color: rgb(207, 207, 104); color: white"
-                >
-                    List Error
-                </button>
-                <button
-                    id="reset-wrongcount-btn"
-                    style="background-color: red; color: white"
-                >
-                    🔄 Reset câu sai
-                </button>
-            </div>
-        </div>
-
-        <div class="main-container">
-            <div class="slide-form" id="slide-form">
-                <button id="close-form" class="close-btn">✖</button>
-                <h3 id="form-title">Thêm / Sửa Câu hỏi</h3>
-                <input type="hidden" id="edit-index" />
-
-                <textarea
-                    id="question-text"
-                    placeholder="Nội dung câu hỏi"
-                    rows="3"
-                ></textarea>
-
-                <input type="file" id="imageInput" accept="image/*" />
-
-                <input type="text" id="answer-A" placeholder="Đáp án A" />
-                <input type="text" id="answer-B" placeholder="Đáp án B" />
-                <input type="text" id="answer-C" placeholder="Đáp án C" />
-                <input type="text" id="answer-D" placeholder="Đáp án D" />
-
-                <select id="correct-answer">
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="D">D</option>
-                </select>
-
-                <button onclick="saveQuestion()">💾 Lưu</button>
-            </div>
-
-            <div class="content" id="content-area">
-                <h3>Danh sách Câu hỏi</h3>
-                <div id="info-area"></div>
-                <div id="questions-container"></div>
-                <div id="pagination-controls"></div>
-            </div>
-        </div>
-
-        <button id="scroll-up" onclick="scrollToTop()">⬆</button>
-        <button id="scroll-down" onclick="scrollToBottom()">⬇</button>
-        <button id="back-btn" onclick="goBack()">←</button>
-        <button id="admin-dashboard-btn">
-            <a href="admin-dashboard.htm">🏆</a>
+    <div class="navbar">
+      <div class="left-buttons">
+        <button id="toggle-form-btn">➕ Thêm Câu hỏi</button>
+        <button id="favorite-toggle-btn">⭐ Câu hỏi yêu thích</button>
+        <button id="find-similar-btn" onclick="">🧐 Tìm Câu Giống Nhau</button>
+        <button onclick="exportToPDF(true)">📄 Export (có đáp án)</button>
+        <button onclick="exportToPDF(false)">📄 Export (không đáp án)</button>
+        <button>
+          <a href="selectfile.html" style="color: white; text-decoration: none">
+            Chọn file câu hỏi
+          </a>
         </button>
+      </div>
 
-        <div class="modal-overlay" id="imgOverlay" onclick="closeImage()"></div>
-        <img id="modalImage" class="modal-img" onclick="closeImage()" />
+      <div class="right-search">
+        <input
+          type="text"
+          class="search-input2"
+          placeholder="Tìm kiếm câu hỏi..."
+        />
+        <button id="voice-search-btn" class="voice-btn">🎤</button> 
+        <button id="theme-toggle">Chế độ Tối</button>
+        <button id="missing-answer-btn">Câu chưa có đáp án</button>
+        <button
+          id="wrongcount-btn"
+          style="background-color: rgb(207, 207, 104); color: white"
+        >
+          List Error
+        </button>
+        <button
+          id="reset-wrongcount-btn"
+          style="background-color: red; color: white"
+        >
+          🔄 Reset câu sai
+        </button>
+      </div>
+    </div>
 
-        <script src="admin.js"></script>
-    </body>
+    <div class="main-container">
+      <div class="slide-form" id="slide-form">
+        <button id="close-form" class="close-btn">✖</button>
+        <h3 id="form-title">Thêm / Sửa Câu hỏi</h3>
+        <input type="hidden" id="edit-index" />
+
+        <textarea
+          id="question-text"
+          placeholder="Nội dung câu hỏi"
+          rows="3"
+        ></textarea>
+
+        <input type="file" id="imageInput" accept="image/*" />
+
+        <input type="text" id="answer-A" placeholder="Đáp án A" />
+        <input type="text" id="answer-B" placeholder="Đáp án B" />
+        <input type="text" id="answer-C" placeholder="Đáp án C" />
+        <input type="text" id="answer-D" placeholder="Đáp án D" />
+
+        <select id="correct-answer">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select>
+
+        <button onclick="saveQuestion()">💾 Lưu</button>
+      </div>
+
+      <div class="content" id="content-area">
+        <h3>Danh sách Câu hỏi</h3>
+        <div id="info-area"></div>
+        <div id="questions-container"></div>
+        <div id="pagination-controls"></div>
+      </div>
+    </div>
+
+    <button id="scroll-up" onclick="scrollToTop()">⬆</button>
+    <button id="scroll-down" onclick="scrollToBottom()">⬇</button>
+    <button id="back-btn" onclick="goBack()">←</button>
+    <button id="admin-dashboard-btn">
+      <a href="admin-dashboard.htm">🏆</a>
+    </button>
+
+    <div class="modal-overlay" id="imgOverlay" onclick="closeImage()"></div>
+    <img id="modalImage" class="modal-img" onclick="closeImage()" />
+
+    <script src="admin.js"></script>
+  </body>
 </html>
