@@ -360,7 +360,7 @@
     "id": "30"
   },
   {
-    "question": "Hình vẽ trên khi thiết kế chương trình song song theo mô hình gì? (Giả định hình là mô hình truyền thông điệp)",
+    "question": "Hình vẽ trên khi thiết kế chương trình song song theo mô hình gì? ",
     "answers": [
       "Mô hình truyền thông điệp",
       "Mô hình chia sẻ bộ nhớ",
@@ -411,7 +411,7 @@
     "id": "34"
   },
   {
-    "question": "Hình trên phát biểu nào đúng? (Giả định hình là mô hình Truyền thông điệp)",
+    "question": "Hình trên phát biểu nào đúng? ",
     "answers": [
       "Proc1 có thể truy cập vào dữ liệu của mem1, mem2, mem3",
       "Proc1 có thể truy cập vào dữ liệu của mem2, mem3",
@@ -423,7 +423,7 @@
     "id": "35"
   },
   {
-    "question": "Hình vẽ trên phát biểu nào sai? (Giả định hình là mô hình Truyền thông điệp)",
+    "question": "Hình vẽ trên phát biểu nào sai? ",
     "answers": [
       "Proc1 có thể truy cập vào dữ liệu của mem1",
       "Mỗi BXL chỉ có thể truy cập vào một vùng bộ nhớ riêng của BXL đó",
@@ -435,7 +435,7 @@
     "id": "36"
   },
   {
-    "question": "Hình vẽ trên là theo mô hình song song nào? (Giả định hình là mô hình Bộ nhớ chia sẻ)",
+    "question": "Hình vẽ trên là theo mô hình song song nào? ",
     "answers": [
       "Mô hình chia sẻ bộ nhớ",
       "Mô hình truyền thông điệp",
@@ -447,7 +447,7 @@
     "id": "37"
   },
   {
-    "question": "Hình vẽ trên là theo mô hình song song nào? (Giả định hình là mô hình Bộ nhớ chia sẻ)",
+    "question": "Hình vẽ trên là theo mô hình song song nào? ",
     "answers": [
       "Mô hình chia sẻ bộ nhớ",
       "Mô hình truyền thông điệp",
@@ -459,7 +459,7 @@
     "id": "38"
   },
   {
-    "question": "Hình vẽ trên phát biểu nào đúng? (Giả định hình là mô hình Bộ nhớ chia sẻ)",
+    "question": "Hình vẽ trên phát biểu nào đúng? ",
     "answers": [
       "Chỉ có BXL1 được phép truy cập vào bộ nhớ",
       "Chỉ có BXL2 được phép truy cập vào bộ nhớ",
@@ -471,7 +471,7 @@
     "id": "39"
   },
   {
-    "question": "Hình vẽ trên phát biểu nào sai? (Giả định hình là mô hình Bộ nhớ chia sẻ)",
+    "question": "Hình vẽ trên phát biểu nào sai? ",
     "answers": [
       "Các BXL không có không gian nhớ riêng",
       "Các BXL đều có quyền truy cập vào bộ nhớ như nhau",
@@ -555,7 +555,7 @@
     "id": "46"
   },
   {
-    "question": "Mô hình trên thuộc loại mô hình nào? (Giả định hình là SIMD)",
+    "question": "Mô hình trên thuộc loại mô hình nào? ",
     "answers": [
       "Mô hình SISD",
       "Mô hình SIMD",
@@ -663,7 +663,7 @@
     "id": "55"
   },
   {
-    "question": "Căn cứ vào yếu tố nào trong mô hình trên khẳng định đây là mô hình SIMD? (Giả định IS là Single Instruction, DS1..DSn là Multiple Data)",
+    "question": "Căn cứ vào yếu tố nào trong mô hình trên khẳng định đây là mô hình SIMD? ",
     "answers": [
       "Ký hiệu IS, DS1, DS2, …, DSn",
       "Ký hiệu CU, IS",
@@ -675,7 +675,7 @@
     "id": "56"
   },
   {
-    "question": "Mô hình trên thể hiện điều gì? (Giả định hình là SIMD)",
+    "question": "Mô hình trên thể hiện điều gì? ",
     "answers": [
       "Đơn luồng lệnh, đa luồng dữ liệu",
       "Đơn luồng dữ liệu, đơn luồng dữ liệu",
@@ -687,7 +687,7 @@
     "id": "57"
   },
   {
-    "question": "Mô hình trên là mô hình gì? (Giả định hình là SIMD)",
+    "question": "Mô hình trên là mô hình gì? ",
     "answers": [
       "Single Instruction, Multiple Data",
       "Multiple Instruction, Single Data",
@@ -699,7 +699,7 @@
     "id": "58"
   },
   {
-    "question": "Mô hình trên thuộc loại mô hình nào? (Giả định hình là MISD)",
+    "question": "Mô hình trên thuộc loại mô hình nào? ",
     "answers": [
       "Single Instruction, Multiple Data",
       "Multiple Instruction, Single Data",
@@ -711,7 +711,7 @@
     "id": "59"
   },
   {
-    "question": "Mô hình trên có tên gọi là gì? (Giả định hình là MISD)",
+    "question": "Mô hình trên có tên gọi là gì? ",
     "answers": [
       "MISD",
       "SISD",
@@ -723,7 +723,7 @@
     "id": "60"
   },
   {
-    "question": "Mô hình trên có nghĩa là gì? (Giả định hình là MISD)",
+    "question": "Mô hình trên có nghĩa là gì? ",
     "answers": [
       "Đa luồng lệnh, đơn luồng dữ liệu",
       "Đơn luồng lệnh, đơn luồng dữ liệu",
@@ -735,7 +735,7 @@
     "id": "61"
   },
   {
-    "question": "Căn cứ vào yếu tố nào để xác định đây là mô hình đa luồng lệnh? (Giả định IS có nhiều luồng lệnh, CU là đơn vị điều khiển)",
+    "question": "Căn cứ vào yếu tố nào để xác định đây là mô hình đa luồng lệnh? ",
     "answers": [
       "IS",
       "CU",
@@ -747,7 +747,7 @@
     "id": "62"
   },
   {
-    "question": "Căn cứ vào yếu tố nào để xác định đây là mô hình đơn luồng dữ liệu? (Giả định DS là một luồng dữ liệu)",
+    "question": "Căn cứ vào yếu tố nào để xác định đây là mô hình đơn luồng dữ liệu? ",
     "answers": [
       "IS",
       "CU",
@@ -771,7 +771,7 @@
     "id": "64"
   },
   {
-    "question": "Hình trên thuộc mô hình gì? (Giả định hình là MIMD)",
+    "question": "Hình trên thuộc mô hình gì? ",
     "answers": [
       "MISD",
       "SISD",
@@ -783,7 +783,7 @@
     "id": "65"
   },
   {
-    "question": "Hình ảnh trên diễn tả điều gì? (Giả định hình là MIMD)",
+    "question": "Hình ảnh trên diễn tả điều gì? ",
     "answers": [
       "Đa luồng lệnh, đơn luồng dữ liệu",
       "Đơn luồng lệnh, đơn luồng dữ liệu",
@@ -795,7 +795,7 @@
     "id": "66"
   },
   {
-    "question": "Hình ảnh trên viết tên gọi đầy đủ là gì? (Giả định hình là MIMD)",
+    "question": "Hình ảnh trên viết tên gọi đầy đủ là gì? ",
     "answers": [
       "Multiple Instruction, Multiple Data",
       "Multiple Instruction, Single Data",
@@ -867,7 +867,7 @@
     "id": "72"
   },
   {
-    "question": "Mô hình nào? (Giả định hình là MIMD)",
+    "question": "Mô hình nào? ",
     "answers": [
       "Mô hình MIMD",
       "Mô hình MISD",
@@ -879,7 +879,7 @@
     "id": "73"
   },
   {
-    "question": "Hình trên thực hiện như thế nào? (Giả định hình là MIMD)",
+    "question": "Hình trên thực hiện như thế nào? ",
     "answers": [
       "Multiple Instruction, Multiple Data",
       "Single Instruction, Multiple Data",
@@ -892,7 +892,7 @@
     "image": "/admin/images/gtss73-80.png"
   },
   {
-    "question": "Hình trên thực hiện như thế nào? (Giả định hình là MIMD)",
+    "question": "Hình trên thực hiện như thế nào? ",
     "answers": [
       "Đa luồng lệnh, đơn luồng dữ liệu",
       "Đơn luồng lệnh, đơn luồng dữ liệu",
@@ -940,7 +940,7 @@
     "id": "35"
   },
   {
-    "question": "Trong hình trên căn cứ vào đâu để xác định đa luồng lệnh? (Giả định hình có nhiều Instruction Stream: A, B, C...)",
+    "question": "Trong hình trên căn cứ vào đâu để xác định đa luồng lệnh? ",
     "answers": [
       "Instruction Stream A, Instruction Stream B, Instruction Stream C",
       "Data Input Stream A, Data Input Stream B, Data Input Stream C",
@@ -952,7 +952,7 @@
     "id": "36"
   },
   {
-    "question": "Trong hình trên căn cứ vào đâu để xác định đa luồng lệnh? (Giả định hình có nhiều Instruction Stream: A, B, C...)",
+    "question": "Trong hình trên căn cứ vào đâu để xác định đa luồng lệnh? ",
     "answers": [
       "Instruction Stream A, Instruction Stream B, Instruction Stream C",
       "Data Input Stream A, Data Input Stream B, Data Input Stream C",
@@ -964,7 +964,7 @@
     "id": "37"
   },
   {
-    "question": "Hình trên thuộc mô hình gì? (Giả định hình là SIMD)",
+    "question": "Hình trên thuộc mô hình gì? ",
     "answers": [
       "Mô hình MIMD",
       "Mô hình MISD",
@@ -976,7 +976,7 @@
     "id": "38"
   },
   {
-    "question": "Hình trên tên gọi là gì? (Giả định hình là SIMD)",
+    "question": "Hình trên tên gọi là gì? ",
     "answers": [
       "Multiple Instruction, Multiple Data",
       "Multiple Instruction, Single Data",
@@ -988,7 +988,7 @@
     "id": "39"
   },
   {
-    "question": "Hình trên có thực hiện theo cách thức nào gì? (Giả định hình là SIMD)",
+    "question": "Hình trên có thực hiện theo cách thức nào gì? ",
     "answers": [
       "Đa luồng lệnh, đơn luồng dữ liệu",
       "Đơn luồng lệnh, đơn luồng dữ liệu",
@@ -1000,7 +1000,7 @@
     "id": "40"
   },
   {
-    "question": "Hình trên tại một thời điểm thực hiện lệnh như thế nào? (Giả định hình là SIMD)",
+    "question": "Hình trên tại một thời điểm thực hiện lệnh như thế nào? ",
     "answers": [
       "Một mục dữ liệu được xử lý",
       "Hai mục dữ liệu được xử lý",
@@ -1012,7 +1012,7 @@
     "id": "41"
   },
   {
-    "question": "Hình trên, một thời điểm thực hiện bao nhiêu lệnh? (Giả định hình là SIMD)",
+    "question": "Hình trên, một thời điểm thực hiện bao nhiêu lệnh? ",
     "answers": [
       "Một lệnh",
       "Nhiều lệnh",
@@ -1024,7 +1024,7 @@
     "id": "42"
   },
   {
-    "question": "Hình trên phát biểu nào sai? (Giả định hình là SIMD)",
+    "question": "Hình trên phát biểu nào sai? ",
     "answers": [
       "Một thời điểm các BXL nhiều mục dữ liệu",
       "Một thời điểm các BXL một mục dữ liệu",
@@ -1168,7 +1168,7 @@
     "id": "54"
   },
   {
-    "question": "Hình trên thuộc loại nào? (Giả định hình là Pipelining theo đơn vị số học)",
+    "question": "Hình trên thuộc loại nào? ",
     "answers": [
       "Hình ống theo đơn vị số học",
       "Hình ống theo đơn vị câu lệnh",
@@ -1180,7 +1180,7 @@
     "id": "55"
   },
   {
-    "question": "Hình trên thuộc loại nào? (Giả định hình là Pipelining theo đơn vị câu lệnh)",
+    "question": "Hình trên thuộc loại nào? ",
     "answers": [
       "Hình ống theo đơn vị số học",
       "Hình ống theo đơn vị câu lệnh",
@@ -1192,7 +1192,7 @@
     "id": "56"
   },
   {
-    "question": "Hình trên thực hiện theo nguyên lý nào? (Giả định hình là Pipelining)",
+    "question": "Hình trên thực hiện theo nguyên lý nào? ",
     "answers": [
       "Nguyên lý hình ống",
       "Nguyên lý Greedy",
@@ -1204,7 +1204,7 @@
     "id": "57"
   },
   {
-    "question": "Hình trên xây dựng theo công thức nào? (Giả định hình là bộ cộng dồn Pipelining)",
+    "question": "Hình trên xây dựng theo công thức nào? ",
     "answers": [
       "S = S + a[i]",
       "S(in)=S(out) + a[i]",
@@ -1216,7 +1216,7 @@
     "id": "58"
   },
   {
-    "question": "Hình trên xây dựng theo cách thức nào? (Giả định hình là Pipelining)",
+    "question": "Hình trên xây dựng theo cách thức nào? ",
     "answers": [
       "Đầu ra của BXL này không là đầu vào của BXL kia",
       "Tất cả đều sai",
@@ -1228,7 +1228,7 @@
     "id": "59"
   },
   {
-    "question": "Hình trên là bộ nhớ song song nào? (Giả định hình là mô hình Bộ nhớ chia sẻ)",
+    "question": "Hình trên là bộ nhớ song song nào? ",
     "answers": [
       "Bộ nhớ kết hợp",
       "Bộ nhớ truy cập ngẫu nhiên song song",
@@ -1265,7 +1265,7 @@
     "id": "62"
   },
   {
-    "question": "Hình trên là loại bộ nhớ nào của máy tính song song? (Giả định hình là Bộ nhớ kết hợp)",
+    "question": "Hình trên là loại bộ nhớ nào của máy tính song song? ",
     "answers": [
       "Bộ nhớ kết hợp",
       "Bộ nhớ chia sẻ",
@@ -1313,7 +1313,7 @@
     "id": "66"
   },
   {
-    "question": "Hình trên là loại bộ nhớ nào của máy tính song song? (Giả định hình là Bộ nhớ phân tán)",
+    "question": "Hình trên là loại bộ nhớ nào của máy tính song song? ",
     "answers": [
       "Bộ nhớ kết hợp",
       "Bộ nhớ chia sẻ",
@@ -1349,7 +1349,7 @@
     "id": "69"
   },
   {
-    "question": "Hình trên thuộc loại bộ nhớ nào của máy tính song song? (Giả định hình là Bộ nhớ lai/Hybrid)",
+    "question": "Hình trên thuộc loại bộ nhớ nào của máy tính song song? ",
     "answers": [
       "Bộ nhớ lai",
       "Bộ nhớ phân tán",
@@ -1434,7 +1434,7 @@
     "id": "76"
   },
   {
-    "question": "Hình trên là mô hình nào? (Giả định hình là mô hình mạng liên kết tuyến tính)",
+    "question": "Hình trên là mô hình nào? ",
     "answers": [
       "Mô hình mạng liên kết tuyến tính",
       "Mô hình mạng kết vòng",
@@ -1518,7 +1518,7 @@
     "id": "83"
   },
   {
-    "question": "Mô hình trên là mô hình nào? (Giả định hình là mô hình mạng liên kết vòng)",
+    "question": "Mô hình trên là mô hình nào? ",
     "answers": [
       "Mô hình mạng liên kết tuyến tính",
       "Mô hình mạng liên kết vòng",
@@ -1566,7 +1566,7 @@
     "id": "87"
   },
   {
-    "question": "Hình sau thuộc mô hình mạng liên kết gì? (Giả định hình là Mạng liên kết lưới 2 chiều)",
+    "question": "Hình sau thuộc mô hình mạng liên kết gì? ",
     "answers": [
       "Mạng liên kết lưới 2 chiều",
       "Mạng liên kết vòng",
@@ -1578,7 +1578,7 @@
     "id": "88"
   },
   {
-    "question": "Hình 1 thuộc mô hình mạng liên kết gì? (Giả định hình 1 là Mạng liên kết lưới quay vòng)",
+    "question": "Hình 1 thuộc mô hình mạng liên kết gì? ",
     "answers": [
       "Mạng liên kết lưới quay vòng",
       "Mạng liên kết tuyến tính",
@@ -1590,7 +1590,7 @@
     "id": "89"
   },
   {
-    "question": "Hình 2 thuộc mô hình mạng liên kết gì? (Giả định hình 2 là Mạng liên kết lưới không quay vòng)",
+    "question": "Hình 2 thuộc mô hình mạng liên kết gì? ",
     "answers": [
       "Mạng liên kết lưới quay vòng",
       "Mạng liên kết tuyến tính",
@@ -1602,7 +1602,7 @@
     "id": "90"
   },
   {
-    "question": "Hình 3 thuộc mô hình mạng liên kết gì? (Giả định hình 3 là Mạng liên kết lưới quay vòng)",
+    "question": "Hình 3 thuộc mô hình mạng liên kết gì? ",
     "answers": [
       "Mạng liên kết tuyến tính",
       "Mạng liên kết lưới không quay vòng",
@@ -1614,7 +1614,7 @@
     "id": "91"
   },
   {
-    "question": "Hình sau thuộc mô hình mạng liên kết gì? (Giả định hình là Mạng liên kết xáo trộn hoàn hảo quay vòng)",
+    "question": "Hình sau thuộc mô hình mạng liên kết gì? ",
     "answers": [
       "Mạng liên kết xáo trộn hoàn hảo quay vòng",
       "Mạng liên kết hình hộp",
@@ -1626,7 +1626,7 @@
     "id": "92"
   },
   {
-    "question": "Hình sau thuộc mô hình mạng liên kết gì? (Giả định hình là Mạng liên kết hình hộp)",
+    "question": "Hình sau thuộc mô hình mạng liên kết gì? ",
     "answers": [
       "Mạng liên kết xáo trộn hoàn hảo quay vòng",
       "Mạng liên kết hình hộp",
@@ -1650,7 +1650,7 @@
     "id": "94"
   },
   {
-    "question": "Hình sau thuộc mô hình mạng liên kết gì? (Giả định hình là Mạng liên kết hình hộp)",
+    "question": "Hình sau thuộc mô hình mạng liên kết gì? ",
     "answers": [
       "Mạng liên kết xáo trộn hoàn hảo quay vòng",
       "Mạng liên kết hình hộp",
