@@ -15,8 +15,8 @@ let isWrongQuestionsMode = false; // Cờ để xác định chế độ làm l�
 const API_BASE = 'http://localhost:5000/api';
 
 // 🔊 KHAI BÁO CÁC ĐỐI TƯỢNG ÂM THANH MỚI
-const correctSound = new Audio('./sounds/correct.mp3'); 
-const incorrectSound = new Audio('./sounds/incorrect.mp3'); 
+const correctSound = new Audio('./sounds/correct.mp3');
+const incorrectSound = new Audio('./sounds/incorrect.mp3');
 
 // Hàm khởi tạo khi tải trang
 window.onload = async () => {
@@ -234,7 +234,7 @@ function updateQuestionButtons() {
 
 function selectAnswer(index) {
     selectedAnswers[currentQuestionIndex] = index;
-    
+
     const question = questions[currentQuestionIndex];
     if (question && question.correct) {
         const correctIndex = getCorrectIndex(question.correct);
@@ -249,15 +249,16 @@ function selectAnswer(index) {
             incorrectSound.play();
         }
     }
-    
+
     // Cập nhật giao diện câu hỏi, giữ các đáp án hiển thị
     renderQuestion();
-    
-    // Chỉ tự động chuyển câu nếu không ở chế độ hiển thị đáp án
-    if (autoNextDelay > 0 && !showAnswerMode) {
+
+    // 🔥 ĐÃ SỬA: Tự động chuyển câu nếu autoNextDelay > 0, 
+    //            BỎ QUA kiểm tra showAnswerMode
+    if (autoNextDelay > 0) {
         setTimeout(() => nextQuestion(), autoNextDelay);
     }
-    
+
     updateQuizProgress();
 }
 
@@ -418,7 +419,7 @@ function startCountdown() {
 function handleSubmit() {
     clearInterval(countdownInterval);
     timeLeftInSeconds = 0;
-    
+
     const unanswered = selectedAnswers.filter(ans => ans === null).length;
     if (unanswered > 0) {
         document.getElementById('confirm-submit-popup').classList.remove('hidden');
