@@ -448,7 +448,7 @@
     "id": "37"
   },
   {
-    "question": "Hình vẽ trên là theo mô hình song song nào? ",
+    "question": "Hình vẽ trên là theo mô hình song song nào?",
     "answers": [
       "Mô hình chia sẻ bộ nhớ",
       "Mô hình truyền thông điệp",
@@ -457,10 +457,11 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "38"
+    "id": "38",
+    "image": "/admin/images/gtss38-40.png"
   },
   {
-    "question": "Hình vẽ trên phát biểu nào đúng? ",
+    "question": "Hình vẽ trên phát biểu nào đúng?",
     "answers": [
       "Chỉ có BXL1 được phép truy cập vào bộ nhớ",
       "Chỉ có BXL2 được phép truy cập vào bộ nhớ",
@@ -469,10 +470,11 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "39"
+    "id": "39",
+    "image": "/admin/images/gtss38-40.png"
   },
   {
-    "question": "Hình vẽ trên phát biểu nào sai? ",
+    "question": "Hình vẽ trên phát biểu nào sai?",
     "answers": [
       "Các BXL không có không gian nhớ riêng",
       "Các BXL đều có quyền truy cập vào bộ nhớ như nhau",
@@ -481,7 +483,8 @@
     ],
     "correct": "A",
     "favorite": false,
-    "id": "40"
+    "id": "40",
+    "image": "/admin/images/gtss38-40.png"
   },
   {
     "question": "Tiêu chí nào không dùng để đánh giá thuật giải song song?",
